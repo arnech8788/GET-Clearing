@@ -8,8 +8,14 @@
 // die Standard-App bleibt schlank und voll offline-fähig.
 
 import { ICO, escapeHtml, openModal, closeModal, toast } from './ui.js';
+import { DEFAULT_FIREBASE_CONFIG } from './data/firebase-config.js';
 
 const CFG_KEY = 'getclr-sync';
+
+// Effektive Firebase-Config: vom Nutzer eingetragene hat Vorrang, sonst Standard.
+function effectiveConfig() {
+  return (cfg && cfg.config) || DEFAULT_FIREBASE_CONFIG || null;
+}
 
 let cfg = null;          // { config:{...}, team:'code', enabled:true }
 let db = null;
@@ -43,12 +49,13 @@ export function initSync(notes, onMerge) {
 }
 
 async function connect() {
-  if (!cfg || !cfg.config || !cfg.team) return;
+  const config = effectiveConfig();
+  if (!cfg || !config || !cfg.team) return;
   status = 'connecting';
   try {
     const { initializeApp } = await import('firebase/app');
     const { getFirestore, doc, onSnapshot } = await import('firebase/firestore');
-    const app = initializeApp(cfg.config, 'getclr-' + cfg.team);
+    const app = initializeApp(config, 'getclr-' + cfg.team);
     db = getFirestore(app);
     const ref = doc(db, 'teams', cfg.team);
     if (unsub) unsub();
@@ -117,14 +124,17 @@ export function openSyncModal() {
     ${active ? `<div class="callout callout-tip">${ICO.check}<div>Sync aktiv für Team „<b>${escapeHtml(cfg.team)}</b>" (${escapeHtml(syncStatusLabel())}).</div></div>` : ''}
     <form id="syncForm" onsubmit="return false">
       <label class="fld">
-        <span>Team-Code</span>
-        <input name="team" type="text" value="${escapeHtml(cfg?.team || '')}" placeholder="z. B. rar25-clearing">
+        <span>Team-Code (geheimer Zugriffsschlüssel)</span>
+        <input name="team" type="text" value="${escapeHtml(cfg?.team || '')}" placeholder="z. B. rar25-clearing-7f3k9q2x" autocomplete="off">
       </label>
-      <label class="fld">
-        <span>Firebase-Konfiguration</span>
-        <textarea name="config" rows="9" placeholder='Konfig-Block aus der Firebase-Konsole hier einfügen, z. B.:&#10;const firebaseConfig = {&#10;  apiKey: "…",&#10;  projectId: "…",&#10;  …&#10;};'>${cfg?.config ? escapeHtml(JSON.stringify(cfg.config, null, 2)) : ''}</textarea>
-      </label>
-      <div class="callout callout-note">${ICO.info}<div>Du kannst den Code-Block aus der Firebase-Konsole direkt einfügen. Wähle einen langen, schwer zu erratenden Team-Code – er ist der Zugriffsschlüssel. Eigene Kontakte werden <b>nicht</b> gesynct.</div></div>
+      ${DEFAULT_FIREBASE_CONFIG ? `<div class="callout callout-tip">${ICO.check}<div>Firebase-Projekt „<b>${escapeHtml(DEFAULT_FIREBASE_CONFIG.projectId)}</b>" ist hinterlegt – du brauchst nur einen langen, schwer zu erratenden Team-Code. Alle mit demselben Code sehen dieselben Fälle. Eigene Kontakte werden <b>nicht</b> gesynct.</div></div>` : ''}
+      <details class="advanced">
+        <summary>Erweitert: eigenes Firebase-Projekt verwenden</summary>
+        <label class="fld" style="margin-top:12px">
+          <span>Firebase-Konfiguration (leer = Standardprojekt)</span>
+          <textarea name="config" rows="8" placeholder='Konfig-Block aus der Firebase-Konsole, z. B.:&#10;const firebaseConfig = { apiKey: "…", projectId: "…", … };'>${cfg?.config ? escapeHtml(JSON.stringify(cfg.config, null, 2)) : ''}</textarea>
+        </label>
+      </details>
       <div class="modal-actions">
         ${active ? `<button type="button" class="btn btn-danger" onclick="disableSync()">Sync deaktivieren</button>` : '<span></span>'}
         <button type="button" class="btn btn-primary" onclick="enableSync()">${active ? 'Speichern & neu verbinden' : 'Aktivieren'}</button>
@@ -166,15 +176,23 @@ export function enableSync() {
   const team = (fd.get('team') || '').toString().trim();
   const cfgText = (fd.get('config') || '').toString().trim();
   if (!team) { toast('Team-Code fehlt', 'err'); return; }
-  const config = parseFirebaseConfig(cfgText);
-  if (!config) {
-    toast('Firebase-Konfiguration konnte nicht gelesen werden', 'err');
+  let config = null;
+  if (cfgText) {
+    config = parseFirebaseConfig(cfgText);
+    if (!config) {
+      toast('Firebase-Konfiguration konnte nicht gelesen werden', 'err');
+      return;
+    }
+    if (!config.apiKey || !config.projectId) {
+      toast('Konfiguration unvollständig (apiKey/projectId)', 'err');
+      return;
+    }
+  }
+  if (!config && !DEFAULT_FIREBASE_CONFIG) {
+    toast('Keine Firebase-Konfiguration hinterlegt', 'err');
     return;
   }
-  if (!config.apiKey || !config.projectId) {
-    toast('Konfiguration unvollständig (apiKey/projectId)', 'err');
-    return;
-  }
+  // config === null => Standardprojekt (effectiveConfig) wird verwendet.
   cfg = { config, team, enabled: true };
   localStorage.setItem(CFG_KEY, JSON.stringify(cfg));
   closeModal();
