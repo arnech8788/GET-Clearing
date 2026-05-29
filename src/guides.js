@@ -28,15 +28,10 @@ export function setGuideSearch(q) {
   renderGuides({ keepFocus: true });
 }
 
-export function openGuide(id) {
-  view.guideId = id;
-  renderGuides();
-}
-
-function backToList() {
-  view.guideId = null;
-  renderGuides();
-}
+// Detail-State (wird von der zentralen Navigation in main.js gesteuert).
+export function setDetailGuide(id) { view.guideId = id || null; }
+export function getDetailGuide() { return view.guideId; }
+export function isGuideDetail() { return !!view.guideId; }
 
 export function renderGuides(opts = {}) {
   const el = document.getElementById('screen-guides');
@@ -146,7 +141,7 @@ function renderDetail(id) {
 
   return `
     <header class="topbar detail-bar">
-      <button class="icon-btn" onclick="backToGuideList()" aria-label="Zurück">${ICO.back}</button>
+      <button class="icon-btn" onclick="navBack()" aria-label="Zurück">${ICO.back}</button>
       <span class="detail-cat" style="color:${cat ? cat.color : ''}">${escapeHtml(cat ? cat.name : '')}</span>
       <button class="icon-btn ${fav ? 'fav-active' : ''}" onclick="favGuide('${g.id}')" aria-label="Favorit">${ICO.star}</button>
     </header>
@@ -174,10 +169,9 @@ function renderBlock(b) {
 }
 
 // onclick-Helfer (global registriert)
-export function backToGuideList() { backToList(); }
 export function favGuide(id) {
   toggleFavorite(id);
   renderGuides();
 }
 
-Object.assign(window, { backToGuideList, favGuide });
+Object.assign(window, { favGuide });

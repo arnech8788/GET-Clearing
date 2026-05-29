@@ -1,6 +1,6 @@
 // Eigene Fälle / Notizen: anlegen, bearbeiten, Status verfolgen, durchsuchen.
-import { ICO, escapeHtml, highlight, openModal, closeModal, toast, confirmDialog } from './ui.js';
-import { state, save, showScreen } from './main.js';
+import { ICO, escapeHtml, highlight, openModal, closeModal, removeModalDOM, toast, confirmDialog } from './ui.js';
+import { state, save, navReplaceGuide } from './main.js';
 import { getEvent } from './data/events.js';
 import { getGuide } from './data/guides.js';
 
@@ -208,10 +208,10 @@ export async function deleteNote(id) {
 
 export function closeNoteModal() { closeModal(); }
 export function goToGuide(id) {
-  closeModal();
-  showScreen('guides');
-  // openGuide ist global registriert
-  if (window.openGuide) window.openGuide(id);
+  // Modal schließen (ohne extra Zurück-Schritt) und dessen History-Eintrag
+  // durch die Detailansicht ersetzen.
+  removeModalDOM();
+  navReplaceGuide(id);
 }
 
 Object.assign(window, {

@@ -56,6 +56,12 @@ Statische Hülle (`index.html`) + `styles.css`, App-Logik in ES-Modulen unter `s
 - **Geteilter State**: `export let state` in `main.js` (live binding). Schreiben nur
   über die Modulfunktionen; nach Änderungen `save()` aufrufen.
 - **Rendering**: Jede `render*`-Funktion schreibt `innerHTML` ihres Screens.
+- **Navigation/History**: zentral in `main.js`. Jede tiefere Aktion (Tab-Wechsel,
+  Detailansicht via `navGuide`, Modal via `window.__navModalOpen`) pusht einen
+  History-Eintrag; der `popstate`-Handler ruft `applyNav()` und baut genau eine
+  Ebene ab. Modals schließen über `closeModal()` → `history.back()` →
+  `removeModalDOM()`. Der Zurück-Pfeil ruft `navBack()` (= `history.back()`).
+  So beendet die Zurück-Geste die installierte PWA erst an der Wurzel.
 
 ### Neues Festival hinzufügen
 
