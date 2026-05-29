@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#15171e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Clearing">
+<meta name="description" content="Anleitungen und Fallnotizen für das Festival-Clearing (GET Cashless).">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<title>GET Clearing &amp; Troubleshooting</title>
+</head>
+<body>
+<div class="app" id="app">
+  <main class="screens">
+    <section class="screen active" id="screen-guides"></section>
+    <section class="screen" id="screen-notes"></section>
+    <section class="screen" id="screen-reference"></section>
+    <section class="screen" id="screen-more"></section>
+  </main>
+
+  <nav class="nav">
+    <button id="nav-guides" class="active" onclick="showScreen('guides')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      <span>Anleitungen</span>
+    </button>
+    <button id="nav-notes" onclick="showScreen('notes')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+      <span>Fälle</span>
+    </button>
+    <button id="nav-reference" onclick="showScreen('reference')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <span>Referenz</span>
+    </button>
+    <button id="nav-more" onclick="showScreen('more')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+      <span>Mehr</span>
+    </button>
+  </nav>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
