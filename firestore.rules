@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// Firestore-Sicherheitsregeln für den optionalen Team-Sync der Clearing-App.
+//
+// Sicherheitsmodell "Code = Geheimnis":
+//  - Es gibt keine Benutzeranmeldung. Zugriffsschlüssel ist die Kombination aus
+//    Firebase-Web-Config + Team-Code (= Dokument-ID). Beides NUR im Team teilen
+//    und NICHT ins (öffentliche) Repo committen.
+//  - `get`/`write` sind erlaubt, `list` ist verboten: Ein Team-Dokument lässt sich
+//    nur lesen/schreiben, wenn man seine exakte ID (den Team-Code) kennt. Die
+//    Sammlung kann nicht durchsucht/aufgezählt werden.
+//  - Daher unbedingt einen langen, zufälligen Team-Code wählen
+//    (z. B. "rar25-clearing-7f3k9q2x").
+//
+// Übertragen werden nur Fallnotizen. Eigene Kontakte bleiben lokal auf dem Gerät.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /teams/{teamId} {
+      allow get, write: if true;
+      allow list: if false;
+    }
+
+    // Alles andere ist gesperrt.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

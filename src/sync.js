@@ -121,16 +121,42 @@ export function openSyncModal() {
         <input name="team" type="text" value="${escapeHtml(cfg?.team || '')}" placeholder="z. B. rar25-clearing">
       </label>
       <label class="fld">
-        <span>Firebase-Konfiguration (JSON)</span>
-        <textarea name="config" rows="8" placeholder='{ "apiKey": "…", "projectId": "…", … }'>${cfg?.config ? escapeHtml(JSON.stringify(cfg.config, null, 2)) : ''}</textarea>
+        <span>Firebase-Konfiguration</span>
+        <textarea name="config" rows="9" placeholder='Konfig-Block aus der Firebase-Konsole hier einfügen, z. B.:&#10;const firebaseConfig = {&#10;  apiKey: "…",&#10;  projectId: "…",&#10;  …&#10;};'>${cfg?.config ? escapeHtml(JSON.stringify(cfg.config, null, 2)) : ''}</textarea>
       </label>
-      <div class="callout callout-note">${ICO.info}<div>Firestore-Regeln so setzen, dass nur dein Team schreiben darf. Eigene Kontakte werden <b>nicht</b> gesynct.</div></div>
+      <div class="callout callout-note">${ICO.info}<div>Du kannst den Code-Block aus der Firebase-Konsole direkt einfügen. Wähle einen langen, schwer zu erratenden Team-Code – er ist der Zugriffsschlüssel. Eigene Kontakte werden <b>nicht</b> gesynct.</div></div>
       <div class="modal-actions">
         ${active ? `<button type="button" class="btn btn-danger" onclick="disableSync()">Sync deaktivieren</button>` : '<span></span>'}
         <button type="button" class="btn btn-primary" onclick="enableSync()">${active ? 'Speichern & neu verbinden' : 'Aktivieren'}</button>
       </div>
     </form>
     ${active ? `<button class="btn btn-ghost full" style="margin-top:10px" onclick="pullNotes()">${ICO.cloud} Jetzt manuell abrufen</button>` : ''}`);
+}
+
+// Akzeptiert sowohl reines JSON als auch den JS-Snippet aus der Firebase-Konsole
+// (z. B. `const firebaseConfig = { apiKey: "…", … };`).
+export function parseFirebaseConfig(text) {
+  let t = (text || '').trim();
+  if (!t) return null;
+  // Nur den Objekt-Teil { … } herausziehen
+  const first = t.indexOf('{');
+  const last = t.lastIndexOf('}');
+  if (first === -1 || last === -1) return null;
+  t = t.slice(first, last + 1);
+  try {
+    return JSON.parse(t);
+  } catch {
+    // Lenient: unquoted keys quoten, trailing commas entfernen, ' → "
+    try {
+      const fixed = t
+        .replace(/([,{]\s*)([A-Za-z0-9_]+)\s*:/g, '$1"$2":')
+        .replace(/'/g, '"')
+        .replace(/,(\s*[}\]])/g, '$1');
+      return JSON.parse(fixed);
+    } catch {
+      return null;
+    }
+  }
 }
 
 export function enableSync() {
@@ -140,11 +166,9 @@ export function enableSync() {
   const team = (fd.get('team') || '').toString().trim();
   const cfgText = (fd.get('config') || '').toString().trim();
   if (!team) { toast('Team-Code fehlt', 'err'); return; }
-  let config;
-  try {
-    config = JSON.parse(cfgText);
-  } catch {
-    toast('Firebase-Konfiguration ist kein gültiges JSON', 'err');
+  const config = parseFirebaseConfig(cfgText);
+  if (!config) {
+    toast('Firebase-Konfiguration konnte nicht gelesen werden', 'err');
     return;
   }
   if (!config.apiKey || !config.projectId) {

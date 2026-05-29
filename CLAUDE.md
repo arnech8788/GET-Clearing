@@ -25,7 +25,7 @@ manuelles `sw.js`. Update-Toast via `registerSW({ onNeedRefresh })` in `src/main
 
 Push auf `main` → GitHub Action (`.github/workflows/pages.yml`) baut mit Vite und
 deployt `dist/` nach GitHub Pages. Custom Domain via `CNAME`
-(`clearing.arne-chudobba.de`). Base ist `/`.
+(`get-clearing.arne-chudobba.de`). Base ist `/`.
 
 ## Architektur
 
