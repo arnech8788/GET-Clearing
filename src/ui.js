@@ -35,8 +35,21 @@ export function toast(msg, type = '') {
 }
 
 // Generisches Modal. content = HTML-String. Gibt das Modal-Element zurück.
+// History-Integration: beim Öffnen wird (über window.__navModalOpen) ein
+// History-Eintrag gepusht, sodass die Zurück-Geste das Modal schließt.
+let activeOverlay = null;
+let activeOnClose = null;
+let escHandler = null;
+
+export function isModalOpen() {
+  return !!activeOverlay;
+}
+
 export function openModal(title, contentHtml, { onClose } = {}) {
-  closeModal();
+  // Ersetzt ein bereits offenes Modal, das schon einen History-Eintrag hat?
+  // Dann KEINEN neuen Eintrag pushen (sonst wäre das Zurück doppelt).
+  const replacingModalEntry = !!activeOverlay && !!(history.state && history.state.modal);
+  removeModalDOM(); // immer nur ein Modal gleichzeitig
   const overlay = document.createElement('div');
   overlay.className = 'modal-overlay';
   overlay.id = 'modalOverlay';
@@ -49,40 +62,49 @@ export function openModal(title, contentHtml, { onClose } = {}) {
       <div class="modal-body">${contentHtml}</div>
     </div>`;
   document.body.appendChild(overlay);
-  const close = () => {
-    overlay.remove();
-    if (onClose) onClose();
-  };
-  overlay.querySelector('.modal-close').addEventListener('click', close);
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) close();
-  });
-  document.addEventListener('keydown', escClose);
-  function escClose(e) {
-    if (e.key === 'Escape') {
-      close();
-      document.removeEventListener('keydown', escClose);
-    }
-  }
+  activeOverlay = overlay;
+  activeOnClose = onClose || null;
+  overlay.querySelector('.modal-close').addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  escHandler = (e) => { if (e.key === 'Escape') closeModal(); };
+  document.addEventListener('keydown', escHandler);
+  if (window.__navModalOpen && !replacingModalEntry) window.__navModalOpen();
   return overlay;
 }
 
+// Benutzer-/Programm-Schließen: geht – wenn das Modal einen History-Eintrag hat –
+// über history.back(), damit der Browserverlauf konsistent bleibt. Das eigentliche
+// Entfernen passiert dann im popstate-Handler via removeModalDOM().
 export function closeModal() {
-  const ex = document.getElementById('modalOverlay');
-  if (ex) ex.remove();
+  if (!activeOverlay) return;
+  if (history.state && history.state.modal) history.back();
+  else removeModalDOM();
+}
+
+// Low-Level: DOM entfernen + onClose feuern. Wird vom popstate-Handler aufgerufen.
+export function removeModalDOM() {
+  if (escHandler) { document.removeEventListener('keydown', escHandler); escHandler = null; }
+  const cb = activeOnClose;
+  const ov = activeOverlay;
+  activeOverlay = null;
+  activeOnClose = null;
+  if (ov) ov.remove();
+  if (cb) cb();
 }
 
 // Confirm-Dialog (Promise<boolean>)
 export function confirmDialog(message, { okLabel = 'OK', cancelLabel = 'Abbrechen', danger = false } = {}) {
   return new Promise((resolve) => {
+    let done = false;
+    const finish = (v) => { if (!done) { done = true; resolve(v); } };
     const overlay = openModal('Bestätigen', `
       <p style="margin:0 0 16px;line-height:1.5">${escapeHtml(message)}</p>
       <div class="modal-actions">
         <button class="btn btn-ghost" data-act="cancel">${escapeHtml(cancelLabel)}</button>
         <button class="btn ${danger ? 'btn-danger' : 'btn-primary'}" data-act="ok">${escapeHtml(okLabel)}</button>
-      </div>`, { onClose: () => resolve(false) });
-    overlay.querySelector('[data-act="ok"]').addEventListener('click', () => { overlay.remove(); resolve(true); });
-    overlay.querySelector('[data-act="cancel"]').addEventListener('click', () => { overlay.remove(); resolve(false); });
+      </div>`, { onClose: () => finish(false) });
+    overlay.querySelector('[data-act="ok"]').addEventListener('click', () => { finish(true); closeModal(); });
+    overlay.querySelector('[data-act="cancel"]').addEventListener('click', () => { closeModal(); });
   });
 }
 

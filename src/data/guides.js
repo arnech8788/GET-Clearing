@@ -742,6 +742,44 @@ export const GUIDES = [
     ]
   },
   {
+    id: 'rar-checkin-c',
+    cat: 'rar',
+    events: ['rar'],
+    title: 'Check-In C – Standort & Öffnungszeiten',
+    problem: 'Wo ist Check-In C, wann ist geöffnet und wie ist er erreichbar?',
+    tags: ['rar', 'check-in c', 'standort', 'd10', 'öffnungszeiten', 'anreise', 'crew'],
+    source: 'RaR Check-In C (Pick-Up Details)',
+    body: [
+      { h: 'Standort' },
+      { ul: [
+        'Nürburgring, Parkplatz D10',
+        '50°20\'18.1"N 6°57\'04.5"E',
+        '53520 Nürburg'
+      ] },
+      { h: 'Anreise' },
+      { ul: [
+        'Google Maps: https://maps.app.goo.gl/FgiCbdug5JNLWUYk6',
+        'Staufreie Anreise mit der NUNAV-App: www.rock-am-ring.com/directions/check-in-b-c'
+      ] },
+      { h: 'Kontakt' },
+      { ul: [
+        'Telefon: +49 2691 8099291',
+        'E-Mail: checkin@rock-am-ring.com'
+      ] },
+      { note: 'Klickbare Links (Karte, Telefon, E-Mail) findest du unter „Referenz → Kontakte".' },
+      { h: 'Öffnungszeiten 2026' },
+      { ul: [
+        'Mo, 01.06.2026: 07:00 – 20:00 Uhr',
+        'Di, 02.06.2026: 07:00 – 20:00 Uhr',
+        'Mi, 03.06.2026: 07:00 – 23:00 Uhr',
+        'Do, 04.06.2026: 07:00 – 23:00 Uhr',
+        'Fr, 05.06.2026: 07:00 – 19:00 Uhr',
+        'Sa, 06.06.2026: 10:00 – 19:00 Uhr',
+        'So, 07.06.2026: 10:00 – 19:00 Uhr'
+      ] }
+    ]
+  },
+  {
     id: 'rar-cashless-kommunikation',
     cat: 'rar',
     events: ['rar'],

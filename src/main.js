@@ -1,9 +1,9 @@
 // Entry Point: globaler State, Persistenz, Navigation, Theme, PWA, "Mehr"-Screen.
 import { registerSW } from 'virtual:pwa-register';
-import { ICO, toast, openModal, escapeHtml } from './ui.js';
+import { ICO, toast, openModal, escapeHtml, isModalOpen, removeModalDOM } from './ui.js';
 import { EVENTS, getEvent } from './data/events.js';
 import { GUIDES } from './data/guides.js';
-import { renderGuides, openGuide, setGuideCategory, setGuideSearch } from './guides.js';
+import { renderGuides, setGuideCategory, setGuideSearch, setDetailGuide, getDetailGuide, isGuideDetail } from './guides.js';
 import { renderNotes, newNote, editNote, deleteNote, openNote } from './notes.js';
 import { renderReference, setRefTab } from './reference.js';
 import { syncStatusLabel, openSyncModal, initSync, pushNotes, pullNotes } from './sync.js';
@@ -99,21 +99,76 @@ export function renderEventChips() {
             onclick="setActiveEvent('${e.id}')">${escapeHtml(e.short)}</button>`).join('');
 }
 
-// ---- Navigation -----------------------------------------------------------
-export function showScreen(name) {
-  currentScreen = name;
+// ---- Navigation (History-gesteuert) ---------------------------------------
+// Jede „tiefere" Aktion (Tab-Wechsel, Detailansicht, Modal) pusht einen
+// History-Eintrag. Der popstate-Handler (Zurück-Geste / Hardware-Button /
+// Zurück-Pfeil) baut genau eine Ebene ab; erst an der Wurzel verlässt man die App.
+
+function updateScreenVisibility(name) {
   document.querySelectorAll('.screen').forEach((s) => s.classList.remove('active'));
   document.querySelectorAll('.nav button').forEach((b) => b.classList.remove('active'));
-  const screen = document.getElementById('screen-' + name);
-  if (screen) screen.classList.add('active');
-  const btn = document.getElementById('nav-' + name);
-  if (btn) btn.classList.add('active');
+  document.getElementById('screen-' + name)?.classList.add('active');
+  document.getElementById('nav-' + name)?.classList.add('active');
   window.scrollTo(0, 0);
+}
 
+function renderActive(name) {
   if (name === 'guides') renderGuides();
-  if (name === 'notes') renderNotes();
-  if (name === 'reference') renderReference();
-  if (name === 'more') renderMore();
+  else if (name === 'notes') renderNotes();
+  else if (name === 'reference') renderReference();
+  else if (name === 'more') renderMore();
+}
+
+// Rendert den Zielzustand OHNE History-Änderung.
+function applyScreen(name) {
+  currentScreen = name;
+  updateScreenVisibility(name);
+  renderActive(name);
+}
+
+function pushNav(stateObj) {
+  history.pushState(stateObj, '');
+}
+
+function currentNavState() {
+  return { app: true, screen: currentScreen, guide: isGuideDetail() ? getDetailGuide() : null, modal: false };
+}
+
+// Wendet einen History-Zustand an (von popstate).
+function applyNav(st) {
+  const s = st || { screen: 'guides', guide: null };
+  if (isModalOpen() && !s.modal) removeModalDOM();
+  const screen = s.screen || 'guides';
+  setDetailGuide(screen === 'guides' ? (s.guide || null) : null);
+  applyScreen(screen);
+}
+
+// Benutzer-Navigation: Tab-Wechsel über die untere Leiste.
+export function showScreen(name) {
+  const sameRoot = name === currentScreen && !isGuideDetail() && !isModalOpen();
+  setDetailGuide(null); // ein Tab-Tipp zeigt immer die Wurzelansicht
+  if (!sameRoot) pushNav({ app: true, screen: name, guide: null, modal: false });
+  applyScreen(name);
+}
+
+// Benutzer-Navigation: Anleitung öffnen (Detailansicht).
+export function navGuide(id) {
+  setDetailGuide(id);
+  pushNav({ app: true, screen: 'guides', guide: id, modal: false });
+  applyScreen('guides');
+}
+
+// Zurück (Pfeil oben links / programmatisch): nutzt den Browserverlauf.
+export function navBack() {
+  history.back();
+}
+
+// Aus einem Modal heraus in eine Anleitung springen: aktuellen (Modal-)Eintrag
+// durch die Detailansicht ersetzen, damit der Verlauf konsistent bleibt.
+export function navReplaceGuide(id) {
+  setDetailGuide(id);
+  history.replaceState({ app: true, screen: 'guides', guide: id, modal: false }, '');
+  applyScreen('guides');
 }
 
 // ---- Theme ----------------------------------------------------------------
@@ -134,8 +189,10 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.2.0';
 const CHANGELOG = [
+  ['1.2.0', 'Rock am Ring: Check-In C ergänzt – Standort (Parkplatz D10), Öffnungszeiten und Kontakt (Anleitung + klickbare Kontakte in der Referenz).'],
+  ['1.1.0', 'Zurück-Geste / Zurück-Pfeil navigieren jetzt innerhalb der App (schließen Modal → Detail → Startansicht), statt die App zu beenden. Firebase-Team-Sync vereinfacht (Standardprojekt hinterlegt, nur Team-Code nötig).'],
   ['1.0.0', 'Erste Version: GET-Anleitungskatalog (Chip, Ticket, Guthaben, Swap, Top-Up, Tools), Rock-am-Ring-Clearing, eigene Fallnotizen, Referenz (Scan-Matrix, Bändchen, Kontakte), Suche, optionaler Team-Sync.']
 ];
 
@@ -259,20 +316,32 @@ function initPWA() {
   });
 }
 
+// ---- History-Verdrahtung --------------------------------------------------
+function initHistory() {
+  // Wurzelzustand (Anleitungen-Liste). Beim Zurück von hier wird die App verlassen.
+  history.replaceState({ app: true, screen: 'guides', guide: null, modal: false }, '');
+  // Beim Öffnen eines Modals einen History-Eintrag pushen (aus ui.js aufgerufen).
+  window.__navModalOpen = () => pushNav({ ...currentNavState(), modal: true });
+  window.addEventListener('popstate', (e) => {
+    applyNav(e.state || { screen: 'guides', guide: null, modal: false });
+  });
+}
+
 // ---- Init -----------------------------------------------------------------
 function init() {
   initTheme();
   load();
   initSync(state.notes, mergeRemoteNotes);
+  initHistory();
   renderEventChips();
-  showScreen('guides');
+  applyScreen('guides');
   initPWA();
 }
 
 // Alle für onclick benötigten Funktionen global registrieren (ES-Module sind nicht global).
 Object.assign(window, {
-  showScreen, setActiveEvent, toggleTheme,
-  openGuide, setGuideCategory, setGuideSearch,
+  showScreen, navBack, setActiveEvent, toggleTheme,
+  openGuide: navGuide, navGuide, setGuideCategory, setGuideSearch,
   newNote, editNote, deleteNote, openNote,
   setRefTab,
   openSyncModal, pullNotes,
