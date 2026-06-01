@@ -471,7 +471,7 @@ export const GUIDES = [
         'seine Transaktionen einsehen,',
         'Rechnungen / Belege herunterladen.'
       ] },
-      { note: 'Rock am Ring 2025: Pay-Out ab Montag, 9.6., 18:00 Uhr über die RaR-Website (Cashless) per Eingabe der Chipnummer.' }
+      { note: 'Rock am Ring: Pay-Out nach dem Festival über die RaR-Website (Cashless) per Eingabe der Chipnummer – genaues Datum siehe Website.' }
     ]
   },
 
@@ -725,20 +725,27 @@ export const GUIDES = [
     id: 'rar-checkin-ablauf',
     cat: 'rar',
     events: ['rar'],
-    title: 'Check-In on site – Ablauf',
-    problem: 'Wie läuft der Check-In am Bändchentausch ab?',
-    tags: ['rar', 'check-in', 'ablauf', 'bändchen', 'scan'],
-    source: 'RaR25 Briefing Bändchentausch',
+    title: 'Einlassprozess – Festival & Camping',
+    problem: 'Wie läuft der Check-In / Bändchentausch ab?',
+    tags: ['rar', 'check-in', 'ablauf', 'bändchen', 'swap', 'festival', 'camping'],
+    source: 'RaR26 Briefing Bändchentausch (Klangpiraten)',
     body: [
-      { ol: [
-        'Gast betritt die Check-In-Station mit Ticket(s).',
-        'Gültigkeitsvalidierung jedes einzelnen Tickets durch den Scanprozess.',
-        'Individuelle Bandanlage durch Mitarbeiter:in inkl. Zuziehen (pro Gast 1 Bändchen pro Ticket; „Mitnahme für Freunde" ist ausgeschlossen).',
-        'Ist ein Ticket gültig (Scanner grün), bekommt der Gast sein Bändchen. Die Bezeichnung auf dem Ticket ist deckungsgleich mit dem Text auf dem Bändchen.',
-        'Ist der Scanner rot, muss die Person zum Clearing. Das Clearing befindet sich im Container neben jeder Bändchentauschstation.'
+      { warn: 'Festivalticket UND Campingticket sind zusammen zwingend erforderlich! Immer zuerst fragen, ob der Gast auch ein Campingticket hat → dann Kombi-Band statt Festivalband.' },
+      { ul: [
+        'Nur Festivalticket = erst ab Freitag (Donnerstag Preparty) gültig → Einlass nur an B3.',
+        'Nur Campingticket → an Info-/Clearingpoint verweisen.'
       ] },
-      { h: 'Check-In-Stationen 2025' },
-      { p: 'C6, B9, B3, B5, B5c, B5b, D5, A5, D9, Krebsberg, Schwalbenschwanz, Tor23, USC – und für VIPs am Nürburgring info°center.' }
+      { h: 'Ablaufschritte' },
+      { steps: [
+        { t: 'Festivalticket scannen', d: '' },
+        { t: 'Campingticket scannen', d: '' },
+        { t: 'Passendes Armband auswählen', d: 'Das richtige Band wird vom Scanner angezeigt.' },
+        { t: 'Festivalband/Chip koppeln (Swap)', d: 'Scanner an den Chip des Armbands halten – der Swap wird automatisch durchgeführt.' },
+        { t: 'Bestätigung am Scanner prüfen', d: 'Scanner zeigt einen grünen Bildschirm – diesen dem Gast unbedingt zeigen.' },
+        { t: 'Vorgebuchtes Guthaben anzeigen', d: 'Bildschirm mit dem Guthaben dem Gast zwingend zeigen und aktive Bestätigung per Blickkontakt einholen. Hinweis: Guthaben ist jetzt auf dem Armband.' },
+        { t: 'Festivalband anlegen', d: 'Nicht zu fest, nicht zu locker (Richtwert: ca. 2 Finger breit Platz). Sicherstellen, dass es nicht mehr abgenommen werden kann.' }
+      ] },
+      { note: 'Ist der Scanner rot, muss die Person zum Clearing – im Container neben jeder Bändchentauschstation.' }
     ]
   },
   {
@@ -793,7 +800,7 @@ export const GUIDES = [
         { t: 'Register & Top-Up', d: 'Vor dem Festival das Ticket registrieren und direkt Guthaben aufladen.' },
         { t: 'Wristband', d: 'Am Festival-Check-In wird das Ticket gegen ein Wristband inkl. Cashless-Chip getauscht.' },
         { t: 'Pay', d: 'Bargeldlos auf dem Festival zahlen. Über App und Top-Up-Stationen jederzeit nachladen.' },
-        { t: 'Pay-Out', d: 'Ab dem 9. Juni, 18:00 Uhr Restguthaben nach dem Festival zurückfordern.' }
+        { t: 'Pay-Out', d: 'Restguthaben nach dem Festival über die RaR-Website zurückfordern (genaues Datum siehe Website).' }
       ] }
     ]
   },
@@ -801,37 +808,33 @@ export const GUIDES = [
     id: 'rar-wristband-typen',
     cat: 'rar',
     events: ['rar'],
-    title: 'Wristband-Typen & Aktivierung',
-    problem: 'Welche Bändchen gibt es und welche haben einen Cashless-Chip?',
-    tags: ['rar', 'wristband', 'bändchen', 'vinyl', 'stoff', 'vip', 'chip', 'aktivierung'],
-    source: 'RaR25 Briefing Bändchentausch',
+    title: 'Ticket- & Bändchen-Typen 2026',
+    problem: 'Welche Tickets/Bändchen gibt es und wo werden sie getauscht?',
+    tags: ['rar', 'wristband', 'bändchen', 'kombi', 'vip', 'fastlane', 'experience', 'utopia', 'papierband'],
+    source: 'RaR26 Briefing Bändchentausch (Klangpiraten)',
     body: [
-      { h: 'Weekend Festival Wristband' },
-      { p: 'Gültig für das Konzertgelände (Infield) an allen 3 Festivaltagen (Fr 6.6.–So 8.6.). Hat einen Cashless-Chip, der vor der Bandanlage aktiviert werden muss (Swap-Prozess). Keine Aktivierungsgebühr.' },
-      { h: 'Vinyl Camping Wristbands' },
-      { p: 'Gültig Mi 4.6. bis Mo 9.6. Aus Vinyl, OHNE Cashless-Chip – zusätzlich zum Festivalbändchen.' },
+      { h: 'Festival Ticket (ohne Camping)' },
+      { p: 'Gültig an allen drei Veranstaltungstagen 05.–07. Juni 2026 (jeweilige Öffnungszeiten). Nur Zutritt zum Infield (Konzertgelände) – zum Parken/Campen ist ein zusätzliches Parking-/Camping-Ticket nötig.' },
+      { warn: 'Immer erst fragen, ob der Gast auch ein Camping Ticket hat. Dann Kombi-Band statt Festivalband ausgeben!' },
+      { h: 'Kombi-Ticket (Festival + Camping)' },
+      { p: 'Kombi-Stoffband (Festival + Camping in einem), mit Cashless-Chip → Swap nötig.' },
+      { h: 'Experience & Utopia Stage Camping' },
+      { p: 'Diese Tickets sind 2× gültig (Camping & Festival für 2 Personen). Das Ticket kann aber nur einmal entwertet werden – die zweite Person wird über einen Universal Code eingecheckt.' },
+      { h: 'VIP Ticket (kein Upgrade)' },
       { ul: [
-        'Glitzer-Rot = General Camping',
-        'Glitzer-Grün = Green Camping',
-        'Glitzer-Blau = Rock\'n\'Roll Camping',
-        'Glitzer-Pink = Caravan Camping'
+        'Check-In im Nürburgring Info Center.',
+        'Kombi-Stoffband – die Person braucht KEIN zusätzliches Festivalticket.',
+        'Hat Zugang zum VIP Camp/Parken → beim Check-In erfragen, ob eine VIP-Parking-Vignette benötigt wird.'
       ] },
-      { note: 'Nur Camping (kein Cashless-Chip)? Gast kann sich am Infopoint auf B3 eine Cashless-Karte abholen. Bei der ersten Transaktion werden 5 € Aktivierungsgebühr abgebucht.' },
-      { h: 'Stoff Festival- & Camping-Kombibändchen' },
-      { p: 'Premium-Kategorien Utopia Stage Camping, Experience Camping, Racetrack Rock\'n\'Roll Camping erhalten ein Kombibändchen (Festival + Camping in einem, mit Cashless-Chip → Swap nötig, keine Gebühr). Kein zusätzliches Vinylbändchen, aber beide Tickets beim Check-In vorzeigen.' },
-      { ul: [
-        'Gelb = Utopia Stage Camping',
-        'Grün = Experience Camping',
-        'Lila = Racetrack Camping'
-      ] },
-      { note: 'Experience- und Utopia-Stage-Camping-Tickets gelten je für 2 Personen → idealerweise kommen 2 Gäste mit 1× Camping- + 2× Festivaltickets.' },
-      { h: 'VIP Wristbands' },
-      { p: 'Gültig an allen 3 Tagen oder je einem Spieltag, mit Cashless-Chip (Swap nötig). Ausgabe Do–So am info°center des Nürburgrings. Nächste Clearing-Station bei rotem Scanner: B3 nahe Haupteingang.' },
-      { h: 'VIP Upgrade Vinyls & Fast Lane' },
-      { ul: [
-        'VIP Upgrades: im Infield am Infopoint einlösen, Ausgabe nur am Gültigkeitstag. Sonntag-Upgrade erhält am So das Weekend-Bändchen.',
-        'Fast Lane: direkt am Haupteinlass an der Fast-Lane-Schleuse am Gültigkeitstag. Gibt es als Weekend und Daily. Sonntag Fast Lane erhält das Weekend-Vinyl.'
-      ] }
+      { h: 'VIP Upgrade' },
+      { p: 'Zusatzticket zum Festivalticket; Zugang zu Boxendach, Balkon (Laubengang) und je nach Auslastung Zonen A & B vor der Utopia Stage. Einlösen im Outfield- oder Infield-Infopoint: Ticket scannen → Band ausgeben. Bei Kauf im Cashless Shop / als Bundle wird beim Festival-Check-In eine Flag auf den Chip gespielt, die an den Infopoints ausgelesen wird.' },
+      { h: 'Fast Lane Upgrade' },
+      { p: 'Zusatzticket, garantiert schnellen Zugang zu Zone A & B der Utopia Stage. Einlösen im Outfield- oder Infield-Infopoint (Ticket scannen → Band). Bei Cashless-Shop-/Bundle-Kauf Flag auf dem Chip (wie VIP Upgrade).' },
+      { note: 'Fastlane Friday: exklusiv für den Linkin-Park-Fanclub und ausschließlich am Check-In Outfield.' },
+      { h: 'Nur Camping (kein Festivalticket)' },
+      { p: 'Gäste mit nur Campingticket erhalten KEIN Stoffband, sondern ein Papierband (ohne Chip) am Clearing Counter (Container) neben der Check-In-Station. Für Käufe gibt es eine Cashless Card für 5 € an B3 (KB1). Die Anzahl ausgegebener Papierbänder wird pro Station dokumentiert.' },
+      { h: 'rockAbility Camping' },
+      { p: 'Voraussetzung: reguläres Festivalticket + Schwerbehindertenausweis mit Merkzeichen (B, G, aG, H, BL). Platz ist limitiert/ausgebucht, nur nach vorheriger Anmeldung, max. zwei Begleitpersonen, gemeinsame Anreise im Fahrzeug. Die zweite Begleitperson benötigt ein reguläres General-Camping-Ticket.' }
     ]
   },
   {
@@ -846,11 +849,41 @@ export const GUIDES = [
       { h: 'Wie lade ich den Chip mit Geld auf?' },
       { p: 'An 15 Self-Service-Stationen im Outfield (mit Top-Up-Symbol im Geländeplan) und an Top-Up-Möglichkeiten im Infield.' },
       { h: 'Was passiert mit meinem Restguthaben? (Pay-Out)' },
-      { p: 'Ab Montag 9.6., 18:00 Uhr auf der RaR-Website unter „Cashless" mit Eingabe der Chipnummer das nicht verbrauchte Guthaben aufs Konto gutschreiben lassen.' },
+      { p: 'Nach dem Festival auf der RaR-Website unter „Cashless" mit Eingabe der Chipnummer das nicht verbrauchte Guthaben aufs Konto gutschreiben lassen (genaues Datum/Uhrzeit siehe Website).' },
       { h: 'Gibt es Shuttle- oder Duschbändchen?' },
       { p: 'Nein. Nutzung aller sanitären Einrichtungen und des Bus-Shuttleservice ist in allen Tickets inklusive.' },
       { h: 'Wo gibt es das Fast-Lane-Bändchen?' },
-      { p: 'Direkt am Haupteinlass an der Fast-Lane-Schleuse am Gültigkeitstag. Garantiert schnellen Einlass aufs Infield und Zugang zu den ersten beiden Wellenbrechern der Utopia Stage.' }
+      { p: 'Fast Lane ist ein Upgrade und wird im Outfield- oder Infield-Infopoint gegen Band getauscht (siehe „Ticket- & Bändchen-Typen 2026"). Es garantiert schnellen Zugang zu Zone A & B der Utopia Stage.' }
+    ]
+  },
+  {
+    id: 'rar-awareness',
+    cat: 'rar',
+    events: ['rar'],
+    title: 'Awareness – was tun, wenn sich jemand meldet?',
+    problem: 'Eine Person braucht Unterstützung oder meldet sich mit einem Code.',
+    tags: ['rar', 'awareness', 'code', 'panama', 'luisa', 'guardian angels', 'hilfe', 'übergriff'],
+    source: 'RaR26 Awareness Crew-Briefing',
+    body: [
+      { warn: 'Codes, mit denen sich Betroffene möglicherweise melden: „AWARENESS" · „WO IST LUISA?" · „WO GEHT\'S NACH PANAMA?". Solche Personen immer ernst nehmen – sie brauchen Hilfe.' },
+      { h: 'So verhältst du dich' },
+      { ul: [
+        'Person ernst nehmen und nicht allein stehen lassen.',
+        'Nicht nach (Hinter-)Gründen fragen und das Anliegen nicht bewerten.',
+        'An deine Supervisor:innen wenden, damit schnell passende Hilfe organisiert wird – oder das Awareness-Team direkt kontaktieren.'
+      ] },
+      { h: 'Notfälle zuerst' },
+      { ul: [
+        'Bei körperlicher Gewalt zuerst Sicherheitsdienst oder Polizei rufen.',
+        'Bei medizinischen Notfällen zuerst den Sanitätsdienst rufen.'
+      ] },
+      { h: 'Awareness-Team (Guardian Angels)' },
+      { ul: [
+        'Rund um die Uhr für Besuchende da, erkennbar an den pinken Awareness-Westen.',
+        'Telefon: +49 1523 6161051 · Funkkanal 28.',
+        'Awareness Points: Infield (neben Infopoint) IH 20 · Outfield ai 47.'
+      ] },
+      { note: 'Kein Platz für Rassismus, Sexismus, Queerfeindlichkeit oder andere Diskriminierung. Grenzen respektieren, auf gegenseitiges Einverständnis achten.' }
     ]
   }
 ];

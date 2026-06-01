@@ -15,9 +15,9 @@ export const EVENTS = [
   },
   {
     id: 'rar',
-    name: 'Rock am Ring 2025',
+    name: 'Rock am Ring 2026',
     short: 'RaR',
-    desc: 'Nürburgring · 6.–8. Juni 2025 · Clearing / Cashless (Klangpiraten)',
+    desc: 'Nürburgring · Festival 5.–7. Juni 2026 · Camping Mi 03.06.–Mo 08.06. · Clearing / Cashless (Klangpiraten)',
     color: '#e23b3b',
     selectable: true
   },

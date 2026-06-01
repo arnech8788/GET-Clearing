@@ -43,13 +43,13 @@ export const SHIPPED_CONTACTS = [
 export const QUICK_INFO = [
   {
     event: 'rar',
-    title: 'Awareness-Code',
-    text: 'Kommt eine Person mit dem Code „WO IST PANAMA?" auf dich zu, ernst nehmen – diese Person braucht Hilfe. An Supervisor / Vorgesetzten / Bereichsleiter wenden.'
+    title: 'Awareness-Codes',
+    text: 'Meldet sich jemand mit „AWARENESS", „WO IST LUISA?" oder „WO GEHT\'S NACH PANAMA?" – ernst nehmen, Person nicht allein lassen, nicht nach Gründen fragen. An Supervisor:in wenden oder Awareness-Team (Guardian Angels, pinke Westen): +49 1523 6161051 / Funkkanal 28. Awareness Points: Infield (neben Infopoint) IH 20, Outfield ai 47.'
   },
   {
     event: 'rar',
-    title: 'Jugendschutz (Einlass)',
-    text: 'unter 8 Jahren = kein Zutritt · 8–14 Jahre = nur in Begleitung einer personensorgeberechtigten Person · 14–16 Jahre = allein mit schriftlicher Erlaubnis der Eltern · ab 16 Jahren = ok.'
+    title: 'Jugendschutz (Einlass, 2026)',
+    text: 'Unter 8 Jahren = kein Zutritt. Unter 14 = nur mit personensorgeberechtigter Person. Unter 16 = Campen nur mit personensorgeberechtigter Person. 14–16 Jahre = Konzerte bis 24:00 Uhr ohne Begleitung mit schriftlicher Erlaubnis der Eltern (Nachweis bei Zutritt). Ab 16 = auch nach Mitternacht ohne Begleitung. Personensorgeberechtigt sind i. d. R. die Eltern, nicht erziehungsbeauftragte Personen.'
   },
   {
     event: 'rar',
