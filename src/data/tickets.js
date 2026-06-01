@@ -41,27 +41,29 @@ export const SCAN_MATRIX = [
     rows: [
       { type: 'WEEKEND CAR PASS', days: 'FR / SA / SO – 1× pro Tag scanbar', where: 'Nur auf den Dayparking-Parkplätzen' },
       { type: 'DAY CAR PASS', days: 'FR / SA / SO – 1× scanbar', where: 'Nur auf den Dayparking-Parkplätzen' },
-      { type: 'CARAVAN PASS – Zone B', days: '—', where: 'Werden nicht gescannt' },
-      { type: 'CARAVAN PASS – Zone C', days: '—', where: 'Werden nicht gescannt' },
-      { type: 'CARAVAN PASS – Zone D', days: '—', where: 'Werden nicht gescannt' },
-      { type: 'CAR & TENT PASS', days: '—', where: 'Werden nicht gescannt' }
+      { type: 'CARAVAN PLAKETTE – Zone B', days: '—', where: 'Werden nicht gescannt' },
+      { type: 'CARAVAN PLAKETTE – Zone C', days: '—', where: 'Werden nicht gescannt' },
+      { type: 'CARAVAN PLAKETTE – Zone D', days: '—', where: 'Werden nicht gescannt' },
+      { type: 'CAR & TENT PLAKETTE', days: '—', where: 'Werden nicht gescannt' }
     ]
   }
 ];
 
-// Camping-Kategorien & benötigte Tickets (Ticketübersicht).
+// Camping-Kategorien & benötigte Tickets (Ticketübersicht 2026).
+// Camping-/Parkingflächen geöffnet: Mi 03.06.2026 12:00 – Mo 08.06.2026 12:00.
+// Für den Zutritt zum Infield ist immer zusätzlich ein Festivalticket nötig.
 export const CATEGORY_OVERVIEW = [
-  { cat: 'General Camping', ticket: 'General Camping Ticket pro Person', add: '—', right: 'Zutritt zu allen General Campingplätzen' },
-  { cat: 'Green Camping', ticket: 'Green Camping Ticket pro Person', add: '—', right: 'Zutritt zu allen Green Campingplätzen' },
-  { cat: 'Car & Tent Camping', ticket: 'General Camping Ticket pro Person', add: 'Car & Tent Pass pro PKW', right: 'Zutritt + Zufahrt zum Car & Tent Campingbereich' },
-  { cat: 'Caravan Camping', ticket: 'Caravan Camping Ticket pro Person', add: 'Caravan Pass pro Fahrzeug', right: 'Zutritt zu allen Caravan Campingplätzen + Zufahrt zu Zonen B/C/D' },
-  { cat: "Rock'n'Roll Camping", ticket: "Rock'n'Roll Camping Ticket pro Person", add: '—', right: "Zutritt zum Rock'n'Roll Campingplatz" },
-  { cat: "Racetrack Rock'n'Roll Camping", ticket: "Racetrack Rock'n'Roll Camping Ticket pro Person", add: '—', right: "Zutritt zum Racetrack Rock'n'Roll Campingplatz" },
-  { cat: 'Utopia Stage Camping', ticket: 'Utopia Stage Camping Ticket (für 2 Personen)', add: '—', right: 'Zutritt zum Utopia Stage Campingbereich' },
-  { cat: 'Experience Camping', ticket: 'Experience Camping Ticket (Rockotel/Comfotel/Lodge – je 2 Personen)', add: '—', right: 'Zutritt zum Experience Campingbereich' },
-  { cat: 'Rockability Camping', ticket: 'mind. General Camping pro Person', add: 'Voranmeldung: specialneeds@rock-am-ring.com', right: 'Zutritt & Zufahrt zum Rockability Campingplatz B2a' },
-  { cat: 'Weekend Festivalpass', ticket: 'Weekend Festivalticket pro Person', add: '—', right: 'Zutritt zum Infield / Konzertgelände, kein Camping' },
-  { cat: 'Weekend Car Pass', ticket: '—', add: '—', right: 'Zufahrt zu Tagesparkplätzen (kein Bändchen)' }
+  { cat: 'Festival Ticket (ohne Camping)', ticket: 'Festivalticket pro Person', add: '—', right: 'Zutritt zum Infield 05.–07.06.2026; kein Parken/Camping' },
+  { cat: 'General Camping + Parking', ticket: 'General Camping Ticket pro Person', add: '—', right: 'Camping + Parken auf ausgewiesenen Flächen' },
+  { cat: 'Green Camping + Parking', ticket: 'Green Camping Ticket pro Person', add: '—', right: 'Green Camping (Naturschutz/Mülltrennung, Nachtruhe 01–08 Uhr) + Parken' },
+  { cat: 'Green Power Camping + Parking', ticket: 'Green Power Camping Ticket pro Person', add: '—', right: 'Wie Green Camping + gemeinschaftliche Stromanschlüsse (Verlängerungskabel mitbringen)' },
+  { cat: "Rock'n'Roll Camping + Parking", ticket: "Rock'n'Roll Camping Ticket pro Person", add: '—', right: 'Camping + Parken, gemeinschaftlicher Strom' },
+  { cat: "Racetrack Rock'n'Roll Camping + Parking", ticket: "Racetrack Camping Ticket pro Person", add: '—', right: 'Zelten auf der Rennstrecke (nur Zelte!), WiFi, Strom, eigener Check-in/Parkplatz; Zugang über Treppe (nicht barrierefrei)' },
+  { cat: 'Caravan Camping', ticket: 'Caravan Camping Ticket pro Person', add: 'Caravan Plakette pro Fahrzeug', right: 'Zutritt + Zufahrt zu Zone B, C, D oder Nord, mit gemeinschaftlichem Strom' },
+  { cat: 'Car & Tent Camping', ticket: 'Car & Tent Camping Ticket pro Person', add: 'Car & Tent Plakette pro Fahrzeug', right: 'Camping + Zufahrt; kein Strom' },
+  { cat: 'Utopia Stage Camping', ticket: 'Utopia Stage Camping Ticket (gilt 2×)', add: '—', right: '2 Personen; 2. Person per Universal Code; Camping + Festival' },
+  { cat: 'Experience Camping', ticket: 'Experience Camping Ticket (Lodge/Rockotel/Rocksuite, gilt 2×)', add: '—', right: '2 Personen; 2. Person per Universal Code; Camping + Festival' },
+  { cat: 'rockAbility Camping', ticket: 'Festivalticket + Schwerbehindertenausweis (B/G/aG/H/BL)', add: 'Voranmeldung erforderlich (ausgebucht)', right: 'Max. 2 Begleitpersonen, gemeinsame Anreise; 2. Begleitung braucht General Camping' }
 ];
 
 // Bändchenfarben (Schnellreferenz).

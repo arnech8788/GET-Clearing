@@ -30,7 +30,7 @@ export function renderReference() {
 // ---- Tickets --------------------------------------------------------------
 function renderTickets() {
   return `
-    <div class="muted small" style="margin-bottom:8px">Rock am Ring 2025 · Quelle: Ticketing Clearing / Briefing Bändchentausch</div>
+    <div class="muted small" style="margin-bottom:8px">Rock am Ring · Camping-Kategorien Stand 2026. Die Scan-Matrix (Tage/KB) basiert auf dem 2025-Stand – für 2026 ggf. mit der Stationsleitung abgleichen.</div>
 
     <div class="card">
       <div class="card-title">Bändchenfarben (Schnellblick)</div>
