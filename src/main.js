@@ -189,8 +189,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '1.1.0';
+const APP_VERSION = '1.2.0';
 const CHANGELOG = [
+  ['1.2.0', 'Rock am Ring: Check-In C ergänzt – Standort (Parkplatz D10), Öffnungszeiten und Kontakt (Anleitung + klickbare Kontakte in der Referenz).'],
   ['1.1.0', 'Zurück-Geste / Zurück-Pfeil navigieren jetzt innerhalb der App (schließen Modal → Detail → Startansicht), statt die App zu beenden. Firebase-Team-Sync vereinfacht (Standardprojekt hinterlegt, nur Team-Code nötig).'],
   ['1.0.0', 'Erste Version: GET-Anleitungskatalog (Chip, Ticket, Guthaben, Swap, Top-Up, Tools), Rock-am-Ring-Clearing, eigene Fallnotizen, Referenz (Scan-Matrix, Bändchen, Kontakte), Suche, optionaler Team-Sync.']
 ];

@@ -19,6 +19,16 @@ export const SHIPPED_CONTACTS = [
     ]
   },
   {
+    event: 'rar',
+    group: 'Rock am Ring – Check-In C',
+    entries: [
+      { name: 'Check-In C – Hotline', value: '+49 2691 8099291', tel: '+4926918099291' },
+      { name: 'Check-In C – E-Mail', value: 'checkin@rock-am-ring.com', mail: 'checkin@rock-am-ring.com' },
+      { name: 'Standort (Parkplatz D10)', value: 'Google Maps öffnen', url: 'https://maps.app.goo.gl/FgiCbdug5JNLWUYk6' },
+      { name: 'Staufreie Anreise (NUNAV)', value: 'rock-am-ring.com/directions/check-in-b-c', url: 'https://www.rock-am-ring.com/directions/check-in-b-c' }
+    ]
+  },
+  {
     event: 'all',
     group: 'GET – Online-Plattformen',
     entries: [
