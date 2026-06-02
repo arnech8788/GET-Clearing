@@ -1,23 +1,18 @@
 // Dienstpläne (Einsatzpläne) – Klangpiraten, Rock am Ring 2026.
 //
-// Enthält mehrere Plan-Typen (z. B. Bändertausch/Ticketscan, Clearing/Cashless),
-// je als Eintrag in DIENSTPLAN_DAYS mit `plan`-Feld. Weitere Tage/Pläne werden
-// ergänzt, sobald sie vorliegen.
+// Enthält mehrere Plan-Typen (Bändertausch/Ticketscan, Clearing/Cashless),
+// je als Eintrag in DIENSTPLAN_DAYS mit `plan`-Feld. `short` = Plan + Tag.
 //
-// DIENSTPLAN_CONTACTS = Ansprechpersonen/wichtige Telefonnummern (Leitung,
-// Runner, Stationsleitungen). ACHTUNG: private Nummern – auf Wunsch hinter
-// Zugangscode legen.
+// DIENSTPLAN_CONTACTS = Ansprechpersonen/wichtige Telefonnummern. ACHTUNG:
+// private Nummern – auf Wunsch hinter Zugangscode legen.
 //
-// Schichttausche werden als Overrides in SHIFT_CHANGES gepflegt (per Repo-Update,
-// auf Basis der zugeschickten WhatsApp-Nachrichten). Ein Override referenziert
-// Tag-ID + Nr. und kann Name/Zeiten/Position überschreiben oder die Schicht als
-// gestrichen markieren.
-//   { day:"do-04", nr:2, name:"…", von:"…", bis:"…", pos:"…",
-//     cancelled:false, note:"getauscht mit … (WhatsApp 03.06.)" }
+// Schichttausche als Overrides in SHIFT_CHANGES (per Repo-Update aus WhatsApp):
+//   { day:"clearing-fr-05", nr:4, name:"…", von:"…", bis:"…", pos:"…",
+//     cancelled:false, note:"getauscht mit … (WhatsApp …)" }
 
 export const DIENSTPLAN_META = {
-  event: "rar",
-  title: "Klangpiraten · Rock am Ring 2026 – Einsatzpläne"
+  "event": "rar",
+  "title": "Klangpiraten · Rock am Ring 2026 – Einsatzpläne"
 };
 
 export const SHIFT_CHANGES = [];
@@ -1822,6 +1817,1746 @@ export const DIENSTPLAN_DAYS = [
     ]
   },
   {
+    "id": "clearing-mi-03",
+    "short": "Clearing · Mi",
+    "label": "Clearing/Cashless · Mittwoch, 3. Juni 2026",
+    "plan": "Clearing / Cashless",
+    "stations": [
+      {
+        "name": "Clearing Station D9",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Michelle Quedenbaum",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 2,
+            "name": "Mary Narewski",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station A5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 3,
+            "name": "Borschi Borsch",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Arne Chudobba",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Krebsberg",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 5,
+            "name": "Lina Eggebrecht",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Fabian Gayer",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Schwalbenschwanz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 7,
+            "name": "Julia Schäfer",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Julian Großhans",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Pflanzgarten",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 9,
+            "name": "Pascal Rosen",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Alexander Hofmann",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station D5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 11,
+            "name": "Felix Schlaf",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Lena Gebhardt",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "01:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station C6",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 13,
+            "name": "Jens Krämer",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Alina Gerland",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "01:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B9",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 15,
+            "name": "Annika Endres",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Dennis Herrmann",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "01:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B3",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 17,
+            "name": "Jana Kuch",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Tom Khuu",
+            "pos": "2",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 19,
+            "name": "Tamara Melissa Temnur",
+            "pos": "3",
+            "von": "11:00",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Philipp Jansen",
+            "pos": "4",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lea Dichter",
+            "pos": "5",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Valentin Silvonik",
+            "pos": "6",
+            "von": "00:00",
+            "bis": "08:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 23,
+            "name": "Leon Schmitz",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 24,
+            "name": "Björn Münker",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5b",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 25,
+            "name": "Joana Schnubel",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Kristin Walter",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5c",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 27,
+            "name": "Sarah Böhm",
+            "pos": "1",
+            "von": "06:00",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 28,
+            "name": "Amy Wilkens",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Utopia",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 29,
+            "name": "Anna Stegink",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Dennis Beck",
+            "pos": "2",
+            "von": "17:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "EXTRA / BÜRO",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 31,
+            "name": "Pia Hiller",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Holger Tingelhoff",
+            "pos": "Büro / Mobil",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Lena Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Anna Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 36,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 37,
+            "name": "Martin Collatz",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Mandy Ilgner",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Max Bilski",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Ulrich Endemann",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Lukas Heinkel",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Annika Czekalla",
+            "pos": "1",
+            "von": "10:00",
+            "bis": "15:00",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 44,
+            "name": "Susi Czekalla",
+            "pos": "2",
+            "von": "10:00",
+            "bis": "15:00",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clearing-do-04",
+    "short": "Clearing · Do",
+    "label": "Clearing/Cashless · Donnerstag, 4. Juni 2026",
+    "plan": "Clearing / Cashless",
+    "stations": [
+      {
+        "name": "Clearing Station D9",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Michelle Quedenbaum",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 2,
+            "name": "Mary Narewski",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station A5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 3,
+            "name": "Borschi Borsch",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Arne Chudobba",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Krebsberg",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 5,
+            "name": "Lina Eggebrecht",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Fabian Gayer",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Schwalbenschwanz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 7,
+            "name": "Julia Schäfer",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Julian Großhans",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Pflanzgarten",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 9,
+            "name": "Pascal Rosen",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Alexander Hofmann",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station D5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 11,
+            "name": "Felix Schlaf",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Lena Gebhardt",
+            "pos": "2",
+            "von": "16:30",
+            "bis": "01:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station C6",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 13,
+            "name": "Jens Krämer",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Alina Gerland",
+            "pos": "2",
+            "von": "16:30",
+            "bis": "01:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B9",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 15,
+            "name": "Annika Endres",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Dennis Herrmann",
+            "pos": "2",
+            "von": "16:30",
+            "bis": "01:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B3",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 17,
+            "name": "Jana Kuch",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Tom Khuu",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 19,
+            "name": "Tamara Melissa Temnur",
+            "pos": "3",
+            "von": "12:00",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Philipp Jansen",
+            "pos": "4",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lea Dichter",
+            "pos": "5",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Valentin Silvonik",
+            "pos": "6",
+            "von": "00:00",
+            "bis": "08:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 23,
+            "name": "Leon Schmitz",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 24,
+            "name": "Björn Münker",
+            "pos": "2",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5b",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 25,
+            "name": "Joana Schnubel",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Kristin Walter",
+            "pos": "2",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5c",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 27,
+            "name": "Sarah Böhm",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 28,
+            "name": "Amy Wilkens",
+            "pos": "2",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Utopia",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 29,
+            "name": "Anna Stegink",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Dennis Beck",
+            "pos": "2",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "EXTRA / BÜRO",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 31,
+            "name": "Pia Hiller",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Holger Tingelhoff",
+            "pos": "Büro / Mobil",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Lena Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Anna Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 36,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 37,
+            "name": "Martin Collatz",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Mandy Ilgner",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Max Bilski",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Ulrich Endemann",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Lukas Heinkel",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Annika Czekalla",
+            "pos": "1",
+            "von": "10:00",
+            "bis": "15:00",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 44,
+            "name": "Susi Czekalla",
+            "pos": "2",
+            "von": "10:00",
+            "bis": "15:00",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clearing-fr-05",
+    "short": "Clearing · Fr",
+    "label": "Clearing/Cashless · Freitag, 5. Juni 2026",
+    "plan": "Clearing / Cashless",
+    "stations": [
+      {
+        "name": "Clearing Station D9 & INFIELD",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Michelle Quedenbaum",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "18:00",
+            "note": "Clearing D9 · Stationsschließung!"
+          },
+          {
+            "nr": 2,
+            "name": "Mary Narewski",
+            "pos": "1 Früh",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": "Clearing INFIELD"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station A5 & INFIELD",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 3,
+            "name": "Borschi Borsch",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "18:00",
+            "note": "Clearing A5 · Stationsschließung!"
+          },
+          {
+            "nr": 4,
+            "name": "Arne Chudobba",
+            "pos": "2 Früh",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": "Clearing INFIELD"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Krebsberg & INFIELD",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 5,
+            "name": "Lina Eggebrecht",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "18:00",
+            "note": "Clearing Krebsberg · Stationsschließung!"
+          },
+          {
+            "nr": 6,
+            "name": "Fabian Gayer",
+            "pos": "3 SL",
+            "von": "13:00",
+            "bis": "01:00",
+            "note": "Clearing INFIELD - Stationsleitung"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Schwalbenschwanz & INFIELD",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 7,
+            "name": "Julia Schäfer",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "18:00",
+            "note": "Clearing Schwalbenschwanz · Stationsschließung!"
+          },
+          {
+            "nr": 8,
+            "name": "Julian Großhans",
+            "pos": "1 Spät",
+            "von": "19:00",
+            "bis": "01:00",
+            "note": "Clearing INFIELD"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Pflanzgarten & INFIELD",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 9,
+            "name": "Pascal Rosen",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "18:00",
+            "note": "Stationsschließung!"
+          },
+          {
+            "nr": 10,
+            "name": "Alexander Hofmann",
+            "pos": "2 Spät",
+            "von": "19:00",
+            "bis": "01:00",
+            "note": "Clearing INFIELD"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station D5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 11,
+            "name": "Felix Schlaf",
+            "pos": "1",
+            "von": "08:30",
+            "bis": "14:30",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Lena Gebhardt",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "21:00",
+            "note": "Stationsschließung!"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station C6",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 13,
+            "name": "Jens Krämer",
+            "pos": "1",
+            "von": "08:30",
+            "bis": "14:30",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Alina Gerland",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "21:00",
+            "note": "Stationsschließung!"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B9",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 15,
+            "name": "Annika Endres",
+            "pos": "1",
+            "von": "08:30",
+            "bis": "14:30",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Dennis Herrmann",
+            "pos": "2",
+            "von": "14:30",
+            "bis": "21:00",
+            "note": "Stationsschließung!"
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B3",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 17,
+            "name": "Jana Kuch",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Tom Khuu",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 19,
+            "name": "Tamara Melissa Temnur",
+            "pos": "3",
+            "von": "12:00",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Philipp Jansen",
+            "pos": "4",
+            "von": "16:00",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lea Dichter",
+            "pos": "5",
+            "von": "16:00",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Valentin Silvonik",
+            "pos": "6",
+            "von": "01:00",
+            "bis": "08:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 23,
+            "name": "Leon Schmitz",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": "Stationsschließung!"
+          },
+          {
+            "nr": 24,
+            "name": "Björn Münker",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5b",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 25,
+            "name": "Joana Schnubel",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": "Stationsschließung!"
+          },
+          {
+            "nr": 26,
+            "name": "Kristin Walter",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B5c",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 27,
+            "name": "Sarah Böhm",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": "Stationsschließung!"
+          },
+          {
+            "nr": 28,
+            "name": "Amy Wilkens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station Utopia",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 29,
+            "name": "Anna Stegink",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "12:00",
+            "note": "Stationsschließung!"
+          },
+          {
+            "nr": 30,
+            "name": "Dennis Beck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "EXTRA / BÜRO",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 31,
+            "name": "Pia Hiller",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Holger Tingelhoff",
+            "pos": "Büro / Mobil",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Lena Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Anna Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 36,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 37,
+            "name": "Martin Collatz",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Mandy Ilgner",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Max Bilski",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Ulrich Endemann",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Lukas Heinkel",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Annika Czekalla",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 44,
+            "name": "Susi Czekalla",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clearing-sa-06",
+    "short": "Clearing · Sa",
+    "label": "Clearing/Cashless · Samstag, 6. Juni 2026",
+    "plan": "Clearing / Cashless",
+    "stations": [
+      {
+        "name": "Clearing Infield",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Michelle Quedenbaum",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 2,
+            "name": "Mary Narewski",
+            "pos": "1 Früh",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": "Clearing INFIELD"
+          },
+          {
+            "nr": 3,
+            "name": "Borschi Borsch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Arne Chudobba",
+            "pos": "2 Früh",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": "Clearing INFIELD"
+          },
+          {
+            "nr": 5,
+            "name": "Lina Eggebrecht",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Fabian Gayer",
+            "pos": "Stationsleitung",
+            "von": "13:00",
+            "bis": "01:00",
+            "note": "Clearing INFIELD - Stationsleitung"
+          },
+          {
+            "nr": 7,
+            "name": "Julia Schäfer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Julian Großhans",
+            "pos": "1 Spät",
+            "von": "19:00",
+            "bis": "01:00",
+            "note": "Clearing INFIELD"
+          },
+          {
+            "nr": 9,
+            "name": "Pascal Rosen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Alexander Hofmann",
+            "pos": "1 Spät",
+            "von": "19:00",
+            "bis": "01:00",
+            "note": "Clearing INFIELD"
+          }
+        ]
+      },
+      {
+        "name": "(ohne feste Station)",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 11,
+            "name": "Felix Schlaf",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Lena Gebhardt",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 13,
+            "name": "Jens Krämer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Alina Gerland",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 15,
+            "name": "Annika Endres",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Dennis Herrmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 23,
+            "name": "Leon Schmitz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 24,
+            "name": "Björn Münker",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 25,
+            "name": "Joana Schnubel",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Kristin Walter",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Sarah Böhm",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 28,
+            "name": "Amy Wilkens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Anna Stegink",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Dennis Beck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B3",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 17,
+            "name": "Jana Kuch",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Tom Khuu",
+            "pos": "2",
+            "von": "10:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 19,
+            "name": "Tamara Melissa Temnur",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Philipp Jansen",
+            "pos": "4",
+            "von": "17:30",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lea Dichter",
+            "pos": "5",
+            "von": "17:30",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Valentin Silvonik",
+            "pos": "6",
+            "von": "01:00",
+            "bis": "08:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "EXTRA / BÜRO",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 31,
+            "name": "Pia Hiller",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Holger Tingelhoff",
+            "pos": "Büro / Mobil",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Lena Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Anna Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 36,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 37,
+            "name": "Martin Collatz",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Mandy Ilgner",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Max Bilski",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Ulrich Endemann",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Lukas Heinkel",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Annika Czekalla",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 44,
+            "name": "Susi Czekalla",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "clearing-so-07",
     "plan": "Clearing / Cashless",
     "label": "Clearing/Cashless · Sonntag, 7. Juni 2026",
@@ -1889,7 +3624,7 @@ export const DIENSTPLAN_DAYS = [
           },
           {
             "nr": 8,
-            "name": "Julian Grotbans",
+            "name": "Julian Großhans",
             "pos": "1 Spät",
             "von": "19:00",
             "bis": "01:00",
@@ -1983,7 +3718,7 @@ export const DIENSTPLAN_DAYS = [
           },
           {
             "nr": 19,
-            "name": "Tamara Melissa Temmur",
+            "name": "Tamara Melissa Temnur",
             "pos": "3",
             "von": "17:00",
             "bis": "00:00",
@@ -2007,7 +3742,7 @@ export const DIENSTPLAN_DAYS = [
           },
           {
             "nr": 22,
-            "name": "Valentin Slivonik",
+            "name": "Valentin Silvonik",
             "pos": "6",
             "von": "23:30",
             "bis": "03:30",
@@ -2055,7 +3790,7 @@ export const DIENSTPLAN_DAYS = [
           },
           {
             "nr": 28,
-            "name": "Amy Wilkans",
+            "name": "Amy Wilkens",
             "pos": "",
             "von": "",
             "bis": "",
@@ -2441,5 +4176,11 @@ export const DIENSTPLAN_CONTACTS = [
     "role": "Stationsleitung B5c Spät",
     "phone": "0151 44930330",
     "tel": "015144930330"
+  },
+  {
+    "name": "Fabian Gayer",
+    "role": "Stationsleitung Infield",
+    "phone": "0176 30608317",
+    "tel": "017630608317"
   }
 ];
