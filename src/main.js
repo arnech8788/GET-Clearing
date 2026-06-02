@@ -191,8 +191,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.4.0';
+const APP_VERSION = '2.4.1';
 const CHANGELOG = [
+  ['2.4.1', 'Dienstplan: statt eines Reiters pro Tag jetzt zwei Plan-Reiter („Bändchentausch" / „Clearing"); die Tage erscheinen darunter als Auswahl.'],
   ['2.4.0', 'Clearing-Dienstpläne vervollständigt: offizielle Pläne Mittwoch–Samstag ergänzt (zusätzlich zum Sonntag), inkl. Freitags-Hinweisen (Stationsschließung, Clearing INFIELD). Sonntag-Namen anhand der offiziellen Liste korrigiert. Ansprechperson „Fabian Gayer (Stationsleitung Infield)" ergänzt.'],
   ['2.3.0', 'Dienstplan erweitert: Clearing/Cashless-Plan (Sonntag 7.6.) ergänzt – der Tab enthält jetzt beide Plan-Typen (Bändertausch & Clearing), die Namenssuche geht über alle Pläne. Neuer Bereich „Ansprechpersonen" mit Telefonnummern (Leitung, Runner, Stationsleitungen) und Anruf-Links.'],
   ['2.2.0', 'Neuer Tab „Dienstplan" (Klangpiraten RaR 2026, Bändertausch/Ticketscan): Tagesbrowser nach Stationen/KB und Namenssuche – einen Namen suchen zeigt alle Schichten dieser Person. Schichttausche werden gepflegt und als „geändert" markiert.'],
