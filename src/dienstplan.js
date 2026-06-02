@@ -2,7 +2,7 @@
 // Schichten: Tagesbrowser (Stationen/Schichten) + Namenssuche über alle Tage/Pläne.
 // Ansprechpersonen: wichtige Telefonnummern (Leitung, Runner, Stationsleitungen).
 // Schichttausche werden als Overrides (SHIFT_CHANGES) angewandt und markiert.
-import { ICO, escapeHtml, highlight } from './ui.js';
+import { ICO, escapeHtml, highlight, toast } from './ui.js';
 import { DIENSTPLAN_META, DIENSTPLAN_DAYS, DIENSTPLAN_CONTACTS, SHIFT_CHANGES } from './data/dienstplan.js';
 
 let dp = { plan: null, day: null, query: '', mode: 'plan' };
@@ -42,6 +42,79 @@ function applyOverride(dayId, row) {
     origName: row.name,
     changed: true
   };
+}
+
+// ---- Kalender-Export (.ics) -----------------------------------------------
+function pad(n) { return String(n).padStart(2, '0'); }
+function escIcs(s) {
+  return String(s || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+}
+// Datum (Tag im Juni 2026) aus dem Label lesen.
+function dayDate(day) {
+  const m = (day.label || '').match(/(\d{1,2})\.\s*Juni\s*2026/);
+  return m ? { y: 2026, mo: 6, d: parseInt(m[1], 10) } : null;
+}
+
+// Kalender-Button (nur bei vorhandener Uhrzeit und nicht gestrichen).
+function calBtn(dayId, r) {
+  if (!r.von || !r.bis || r.cancelled) return '';
+  return `<button class="dp-cal" onclick="addShiftToCalendar('${dayId}',${r.nr})" title="In Kalender speichern" aria-label="In Kalender speichern">${ICO.calPlus}</button>`;
+}
+
+export function addShiftToCalendar(dayId, nr) {
+  const day = DIENSTPLAN_DAYS.find((d) => d.id === dayId);
+  if (!day) return;
+  let raw = null, station = null;
+  for (const s of day.stations) { const f = s.rows.find((x) => x.nr === nr); if (f) { raw = f; station = s; break; } }
+  if (!raw) return;
+  const r = applyOverride(dayId, raw);
+  if (!r.von || !r.bis) { toast('Für diese Schicht ist keine Uhrzeit hinterlegt', 'err'); return; }
+  const date = dayDate(day);
+  if (!date) { toast('Datum nicht erkannt', 'err'); return; }
+
+  const [vh, vm] = r.von.split(':').map(Number);
+  const [bh, bm] = r.bis.split(':').map(Number);
+  const startDay = date.d;
+  const endDay = (bh * 60 + bm) <= (vh * 60 + vm) ? date.d + 1 : date.d; // über Mitternacht
+  const mo = pad(date.mo);
+  const dtStart = `${date.y}${mo}${pad(startDay)}T${pad(vh)}${pad(vm)}00`;
+  const dtEnd = `${date.y}${mo}${pad(endDay)}T${pad(bh)}${pad(bm)}00`;
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+
+  const planLbl = planShort(day.plan);
+  const loc = station.name + (station.kb ? ` (${station.kb})` : '');
+  const summary = `${planLbl} – ${station.name}${r.pos ? ` (${fmtPos(r.pos)})` : ''}`;
+  const descParts = [`${planLbl} · ${day.label}`, `Position: ${fmtPos(r.pos) || '–'}`, `Zeit: ${r.von}–${r.bis}`];
+  if (r.note) descParts.push(`Hinweis: ${r.note}`);
+  if (r.changed && r.changeNote) descParts.push(`Änderung: ${r.changeNote}`);
+
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//GET Clearing//Dienstplan//DE',
+    'CALSCALE:GREGORIAN',
+    'BEGIN:VEVENT',
+    `UID:${dayId}-${nr}-${Date.now()}@get-clearing`,
+    `DTSTAMP:${stamp}`,
+    `DTSTART:${dtStart}`,
+    `DTEND:${dtEnd}`,
+    `SUMMARY:${escIcs(summary)}`,
+    `LOCATION:${escIcs(loc)}`,
+    `DESCRIPTION:${escIcs(descParts.join('\n'))}`,
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `schicht-${dayId}-${nr}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  toast('Kalender-Termin erstellt', 'ok');
 }
 
 export function setDpPlan(plan) {
@@ -121,6 +194,7 @@ function shiftLine(day, station, r) {
         <span class="dp-time">${time}</span>
         ${r.pos ? `<span class="dp-pos">${escapeHtml(fmtPos(r.pos))}</span>` : ''}
         ${r.changed ? `<span class="dp-badge">geändert</span>` : ''}
+        ${calBtn(day.id, r)}
       </div>
       ${r.note ? `<div class="dp-note">${escapeHtml(r.note)}</div>` : ''}
       ${r.changed && r.changeNote ? `<div class="dp-note dp-change">↹ ${escapeHtml(r.changeNote)}${r.origName && r.origName !== r.name ? ` (vorher: ${escapeHtml(r.origName)})` : ''}</div>` : ''}
@@ -158,6 +232,7 @@ function renderBrowser() {
           <div class="dp-row-meta">
             ${r.pos ? `<span class="dp-pos">${escapeHtml(fmtPos(r.pos))}</span>` : ''}
             <span class="dp-time">${time}</span>
+            ${calBtn(day.id, r)}
           </div>
           ${r.note ? `<div class="dp-note">${escapeHtml(r.note)}</div>` : ''}
           ${r.changed && r.changeNote ? `<div class="dp-note dp-change">↹ ${escapeHtml(r.changeNote)}${r.origName && r.origName !== r.name ? ` (vorher: ${escapeHtml(r.origName)})` : ''}</div>` : ''}
@@ -198,4 +273,4 @@ function renderContacts(q) {
     </div>`;
 }
 
-Object.assign(window, { setDpPlan, setDpDay, setDpSearch, setDpMode });
+Object.assign(window, { setDpPlan, setDpDay, setDpSearch, setDpMode, addShiftToCalendar });

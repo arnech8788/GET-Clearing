@@ -191,8 +191,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.4.1';
+const APP_VERSION = '2.5.0';
 const CHANGELOG = [
+  ['2.5.0', 'Dienstplan: Kalender-Button neben jeder Schicht (mit Uhrzeit) – speichert die Schicht als Termin (.ics) direkt in den eigenen Kalender. Funktioniert in Tagesansicht und Namenssuche; berücksichtigt Schichten über Mitternacht.'],
   ['2.4.1', 'Dienstplan: statt eines Reiters pro Tag jetzt zwei Plan-Reiter („Bändchentausch" / „Clearing"); die Tage erscheinen darunter als Auswahl.'],
   ['2.4.0', 'Clearing-Dienstpläne vervollständigt: offizielle Pläne Mittwoch–Samstag ergänzt (zusätzlich zum Sonntag), inkl. Freitags-Hinweisen (Stationsschließung, Clearing INFIELD). Sonntag-Namen anhand der offiziellen Liste korrigiert. Ansprechperson „Fabian Gayer (Stationsleitung Infield)" ergänzt.'],
   ['2.3.0', 'Dienstplan erweitert: Clearing/Cashless-Plan (Sonntag 7.6.) ergänzt – der Tab enthält jetzt beide Plan-Typen (Bändertausch & Clearing), die Namenssuche geht über alle Pläne. Neuer Bereich „Ansprechpersonen" mit Telefonnummern (Leitung, Runner, Stationsleitungen) und Anruf-Links.'],
