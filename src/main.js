@@ -191,8 +191,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.6.0';
+const APP_VERSION = '2.6.1';
 const CHANGELOG = [
+  ['2.6.1', 'Kalender-Button jetzt auch bei Schichten ohne Uhrzeit (z. B. Sa/So) – wird als ganztägiger Termin gespeichert.'],
   ['2.6.0', 'Bändchentausch-Dienstplan vervollständigt: alle Tage Mittwoch–Sonntag (bisher nur Donnerstag). Damit sind im Dienstplan beide Pläne mit je 5 Tagen vorhanden und die Namenssuche findet alle Schichten einer Person (z. B. Stationsleitungen über die ganze Woche).'],
   ['2.5.0', 'Dienstplan: Kalender-Button neben jeder Schicht (mit Uhrzeit) – speichert die Schicht als Termin (.ics) direkt in den eigenen Kalender. Funktioniert in Tagesansicht und Namenssuche; berücksichtigt Schichten über Mitternacht.'],
   ['2.4.1', 'Dienstplan: statt eines Reiters pro Tag jetzt zwei Plan-Reiter („Bändchentausch" / „Clearing"); die Tage erscheinen darunter als Auswahl.'],
