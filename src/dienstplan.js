@@ -1,16 +1,17 @@
-// Dienstplan-Rubrik: Tagesbrowser (Stationen/Schichten) + Namenssuche.
-// Schichttausche werden als Overrides (SHIFT_CHANGES) angewandt und sichtbar markiert.
+// Dienstplan-Rubrik: Umschalter Schichten / Ansprechpersonen.
+// Schichten: Tagesbrowser (Stationen/Schichten) + Namenssuche über alle Tage/Pläne.
+// Ansprechpersonen: wichtige Telefonnummern (Leitung, Runner, Stationsleitungen).
+// Schichttausche werden als Overrides (SHIFT_CHANGES) angewandt und markiert.
 import { ICO, escapeHtml, highlight } from './ui.js';
-import { DIENSTPLAN_META, DIENSTPLAN_DAYS, SHIFT_CHANGES } from './data/dienstplan.js';
+import { DIENSTPLAN_META, DIENSTPLAN_DAYS, DIENSTPLAN_CONTACTS, SHIFT_CHANGES } from './data/dienstplan.js';
 
-let dp = { day: DIENSTPLAN_DAYS[0] ? DIENSTPLAN_DAYS[0].id : null, query: '' };
+let dp = { day: DIENSTPLAN_DAYS[0] ? DIENSTPLAN_DAYS[0].id : null, query: '', mode: 'plan' };
 
 function fmtPos(pos) {
   if (pos == null || pos === '') return '';
   return /^\d+$/.test(String(pos)) ? 'Platz ' + pos : pos;
 }
 
-// Override (Schichttausch) auf eine Zeile anwenden.
 function applyOverride(dayId, row) {
   const ch = SHIFT_CHANGES.find((c) => c.day === dayId && c.nr === row.nr);
   if (!ch) return { ...row, changed: false, cancelled: false };
@@ -27,30 +28,31 @@ function applyOverride(dayId, row) {
   };
 }
 
-export function setDpDay(id) {
-  dp.day = id;
-  renderDienstplan();
-}
-
-export function setDpSearch(q) {
-  dp.query = q;
-  renderDienstplan({ keepFocus: true });
-}
+export function setDpDay(id) { dp.day = id; renderDienstplan(); }
+export function setDpSearch(q) { dp.query = q; renderDienstplan({ keepFocus: true }); }
+export function setDpMode(m) { dp.mode = m; renderDienstplan(); }
 
 export function renderDienstplan(opts = {}) {
   const el = document.getElementById('screen-dienstplan');
   if (!el) return;
   const q = dp.query.trim();
+  const placeholder = dp.mode === 'plan'
+    ? 'Name suchen (z. B. Arne Chudobba)…'
+    : 'Ansprechpartner suchen (Name/Rolle)…';
   el.innerHTML = `
     <header class="topbar"><h1>Dienstplan</h1></header>
     <div class="pad">
       <div class="muted small" style="margin-bottom:10px">${escapeHtml(DIENSTPLAN_META.title)}</div>
+      <div class="tabbar">
+        <button class="tab ${dp.mode === 'plan' ? 'tab-active' : ''}" onclick="setDpMode('plan')">Schichten</button>
+        <button class="tab ${dp.mode === 'kontakte' ? 'tab-active' : ''}" onclick="setDpMode('kontakte')">Ansprechpersonen</button>
+      </div>
       <div class="search-wrap">
         ${ICO.search}
-        <input id="dpSearch" type="search" placeholder="Name suchen (z. B. Arne Chudobba)…"
+        <input id="dpSearch" type="search" placeholder="${escapeHtml(placeholder)}"
                value="${escapeHtml(dp.query)}" oninput="setDpSearch(this.value)" autocomplete="off">
       </div>
-      ${q ? renderResults(q) : renderBrowser()}
+      ${dp.mode === 'plan' ? (q ? renderResults(q) : renderBrowser()) : renderContacts(q)}
     </div>`;
   if (opts.keepFocus) {
     const inp = document.getElementById('dpSearch');
@@ -58,10 +60,10 @@ export function renderDienstplan(opts = {}) {
   }
 }
 
-// ---- Namenssuche (über alle Tage) -----------------------------------------
+// ---- Namenssuche (über alle Tage/Pläne) -----------------------------------
 function renderResults(q) {
   const ql = q.toLowerCase();
-  const groups = new Map(); // name -> [{day, station, kb, row}]
+  const groups = new Map();
   for (const day of DIENSTPLAN_DAYS) {
     for (const st of day.stations) {
       for (const raw of st.rows) {
@@ -139,7 +141,28 @@ function renderBrowser() {
     ${dayChips}
     <div class="dp-daytitle">${escapeHtml(day.label)} <span class="muted small">· ${total} Einträge</span></div>
     ${stations}
-    <div class="muted small" style="margin-top:14px">Tipp: Oben nach einem Namen suchen, um alle Schichten einer Person zu sehen.</div>`;
+    <div class="muted small" style="margin-top:14px">Tipp: Oben nach einem Namen suchen, um alle Schichten einer Person (über alle Pläne) zu sehen.</div>`;
 }
 
-Object.assign(window, { setDpDay, setDpSearch });
+// ---- Ansprechpersonen -----------------------------------------------------
+function renderContacts(q) {
+  let list = DIENSTPLAN_CONTACTS || [];
+  if (q) {
+    const ql = q.toLowerCase();
+    list = list.filter((c) => (c.name + ' ' + c.role).toLowerCase().includes(ql));
+  }
+  if (!list.length) {
+    return `<div class="empty">${ICO.phone}<p>Keine Ansprechperson gefunden${q ? ` für „${escapeHtml(q)}"` : ''}.</p></div>`;
+  }
+  return `
+    <div class="callout callout-note">${ICO.info}<div>Wichtige Telefonnummern (Leitung, Runner, Stationsleitungen). Bitte vertraulich behandeln.</div></div>
+    <div class="card">
+      ${list.map((c) => `
+        <div class="contact-row">
+          <div class="contact-meta"><b>${highlight(escapeHtml(c.name), q)}</b><small>${highlight(escapeHtml(c.role), q)} · ${escapeHtml(c.phone)}</small></div>
+          <a class="contact-act" href="tel:${escapeHtml(c.tel)}" aria-label="Anrufen">${ICO.phone}</a>
+        </div>`).join('')}
+    </div>`;
+}
+
+Object.assign(window, { setDpDay, setDpSearch, setDpMode });

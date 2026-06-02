@@ -1,7 +1,12 @@
-// Dienstpläne (Einsatzplan Bändertausch/Ticketscan) – Klangpiraten, Rock am Ring 2026.
+// Dienstpläne (Einsatzpläne) – Klangpiraten, Rock am Ring 2026.
 //
-// Quelle: DP_RaR_Bänder_2026_KP (Stand bei Einpflege). Weitere Tage werden ergänzt,
-// sobald die Pläne vorliegen.
+// Enthält mehrere Plan-Typen (z. B. Bändertausch/Ticketscan, Clearing/Cashless),
+// je als Eintrag in DIENSTPLAN_DAYS mit `plan`-Feld. Weitere Tage/Pläne werden
+// ergänzt, sobald sie vorliegen.
+//
+// DIENSTPLAN_CONTACTS = Ansprechpersonen/wichtige Telefonnummern (Leitung,
+// Runner, Stationsleitungen). ACHTUNG: private Nummern – auf Wunsch hinter
+// Zugangscode legen.
 //
 // Schichttausche werden als Overrides in SHIFT_CHANGES gepflegt (per Repo-Update,
 // auf Basis der zugeschickten WhatsApp-Nachrichten). Ein Override referenziert
@@ -12,7 +17,7 @@
 
 export const DIENSTPLAN_META = {
   event: "rar",
-  title: "Klangpiraten · Rock am Ring 2026 – Bändertausch / Ticketscan"
+  title: "Klangpiraten · Rock am Ring 2026 – Einsatzpläne"
 };
 
 export const SHIFT_CHANGES = [];
@@ -20,8 +25,9 @@ export const SHIFT_CHANGES = [];
 export const DIENSTPLAN_DAYS = [
   {
     "id": "do-04",
-    "label": "Donnerstag, 4. Juni 2026",
-    "short": "Do 04.06.",
+    "plan": "Bändertausch / Ticketscan",
+    "label": "Bändertausch · Donnerstag, 4. Juni 2026",
+    "short": "Bändertausch · Do",
     "stations": [
       {
         "name": "Station D9",
@@ -1814,5 +1820,626 @@ export const DIENSTPLAN_DAYS = [
         ]
       }
     ]
+  },
+  {
+    "id": "clearing-so-07",
+    "plan": "Clearing / Cashless",
+    "label": "Clearing/Cashless · Sonntag, 7. Juni 2026",
+    "short": "Clearing · So",
+    "stations": [
+      {
+        "name": "Clearing Infield",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Michelle Quedenbaum",
+            "pos": "",
+            "von": "",
+            "bis": " ",
+            "note": ""
+          },
+          {
+            "nr": 2,
+            "name": "Mary Narewski",
+            "pos": "1 Früh",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": ""
+          },
+          {
+            "nr": 3,
+            "name": "Borschi Borsch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Arne Chudobba",
+            "pos": "2 Früh",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": ""
+          },
+          {
+            "nr": 5,
+            "name": "Lina Eggebrecht",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Fabian Gayer",
+            "pos": "Stationsleitung",
+            "von": "13:00",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 7,
+            "name": "Julia Schäfer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Julian Grotbans",
+            "pos": "1 Spät",
+            "von": "19:00",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 9,
+            "name": "Pascal Rosen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Alexander Hofmann",
+            "pos": "2 Spät",
+            "von": "19:00",
+            "bis": "01:00",
+            "note": ""
+          },
+          {
+            "nr": 11,
+            "name": "Felix Schlaf",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Lena Gebhardt",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 13,
+            "name": "Jens Krämer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Alina Gerland",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 15,
+            "name": "Annika Endres",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Dennis Herrmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Clearing Station B3",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 17,
+            "name": "Jana Kuch",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Tom Khuu",
+            "pos": "2",
+            "von": "10:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 19,
+            "name": "Tamara Melissa Temmur",
+            "pos": "3",
+            "von": "17:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Philipp Jansen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lea Dichter",
+            "pos": "4",
+            "von": "17:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Valentin Slivonik",
+            "pos": "6",
+            "von": "23:30",
+            "bis": "03:30",
+            "note": ""
+          },
+          {
+            "nr": 23,
+            "name": "Leon Schmitz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 24,
+            "name": "Björn Münker",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 25,
+            "name": "Joana Schnubel",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Kristin Walter",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Sarah Böhm",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 28,
+            "name": "Amy Wilkans",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Anna Stegink",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Dennis Beck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "EXTRA / BÜRO",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 31,
+            "name": "Pia Hiller",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Holger Tingelhoff",
+            "pos": "Büro / Mobil",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Lena Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Anna Grießl",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 36,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 37,
+            "name": "Martin Collatz",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Mandy Ilgner",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Max Bilski",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Ulrich Endemann",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Lukas Heinkel",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": null,
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Annika Czekalla",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 44,
+            "name": "Susi Czekalla",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      }
+    ]
+  }
+];
+
+export const DIENSTPLAN_CONTACTS = [
+  {
+    "name": "Raphael Siemers",
+    "role": "Gesamtleitung",
+    "phone": "0152 27605462",
+    "tel": "015227605462"
+  },
+  {
+    "name": "Pia Hiller",
+    "role": "Büroleitung",
+    "phone": "0178 1326632",
+    "tel": "01781326632"
+  },
+  {
+    "name": "Holger Tingelhoff",
+    "role": "Büro / Mobil",
+    "phone": "0151 16792582",
+    "tel": "015116792582"
+  },
+  {
+    "name": "Mark Schrader",
+    "role": "Runner*in Früh",
+    "phone": "0176 10815723",
+    "tel": "017610815723"
+  },
+  {
+    "name": "Lena Grießl",
+    "role": "Runner*in Früh",
+    "phone": "0178 1801429",
+    "tel": "01781801429"
+  },
+  {
+    "name": "Anna Grießl",
+    "role": "Runner*in Früh",
+    "phone": "0178 6809537",
+    "tel": "01786809537"
+  },
+  {
+    "name": "Manu Jäger",
+    "role": "Runner*in Spät",
+    "phone": "0152 08952076",
+    "tel": "015208952076"
+  },
+  {
+    "name": "Martin Collatz",
+    "role": "Runner*in Spät",
+    "phone": "0172 8667681",
+    "tel": "01728667681"
+  },
+  {
+    "name": "Mandy Ilgner",
+    "role": "Runner*in Spät",
+    "phone": "0173 4677108",
+    "tel": "01734677108"
+  },
+  {
+    "name": "Max Bilski",
+    "role": "Runner*in Früh",
+    "phone": "0162 6449695",
+    "tel": "01626449695"
+  },
+  {
+    "name": "Ulrich Endemann",
+    "role": "Runner*in Spät",
+    "phone": "0174 7397888",
+    "tel": "01747397888"
+  },
+  {
+    "name": "Lukas Heinkel",
+    "role": "Runner*in Früh",
+    "phone": "0152 27886584",
+    "tel": "015227886584"
+  },
+  {
+    "name": "Franziska Pietzonka",
+    "role": "Runner*in Spät",
+    "phone": "0176 36375316",
+    "tel": "017636375316"
+  },
+  {
+    "name": "Jo Frank",
+    "role": "INFO Ansprech",
+    "phone": "0157 36447320",
+    "tel": "015736447320"
+  },
+  {
+    "name": "Tina Müller",
+    "role": "CLEARING Ansprech",
+    "phone": "0152 53457718",
+    "tel": "015253457718"
+  },
+  {
+    "name": "Moritz Weigel",
+    "role": "Stationsleitung D9 Früh",
+    "phone": "0152 23804355",
+    "tel": "015223804355"
+  },
+  {
+    "name": "Helena Kaden",
+    "role": "Stationsleitung D9 Spät",
+    "phone": "0152 03453710",
+    "tel": "015203453710"
+  },
+  {
+    "name": "Lui Schmidt",
+    "role": "Stationsleitung A5 Früh",
+    "phone": "0176 21827255",
+    "tel": "017621827255"
+  },
+  {
+    "name": "Julia Reichert",
+    "role": "Stationsleitung A5 Spät",
+    "phone": "0157 73562463",
+    "tel": "015773562463"
+  },
+  {
+    "name": "Malin Hirschfeld",
+    "role": "Stationsleitung Krebsberg Früh",
+    "phone": "0157 85448553",
+    "tel": "015785448553"
+  },
+  {
+    "name": "Frida Funke",
+    "role": "Stationsleitung Krebsberg Spät",
+    "phone": "01578 0475598",
+    "tel": "015780475598"
+  },
+  {
+    "name": "Sarah Lergenmüller",
+    "role": "Stationsleitung Schwalbenschwanz Früh",
+    "phone": "0152 31701669",
+    "tel": "015231701669"
+  },
+  {
+    "name": "Justin Stoidtner",
+    "role": "Stationsleitung Schwalbenschwanz Spät",
+    "phone": "0151 51381920",
+    "tel": "015151381920"
+  },
+  {
+    "name": "Elly Wistuba",
+    "role": "Stationsleitung Pflanzgarten Früh",
+    "phone": "0177 8060195",
+    "tel": "01778060195"
+  },
+  {
+    "name": "Hannah Greitemann",
+    "role": "Stationsleitung Pflanzgarten Spät",
+    "phone": "0151 59134110",
+    "tel": "015159134110"
+  },
+  {
+    "name": "Shawn Gigla",
+    "role": "Stationsleitung D5 Früh",
+    "phone": "0162 9061748",
+    "tel": "01629061748"
+  },
+  {
+    "name": "Tom Blödorn",
+    "role": "Stationsleitung D5 Früh",
+    "phone": "0157 39623429",
+    "tel": "015739623429"
+  },
+  {
+    "name": "Anki Brinkmann",
+    "role": "Stationsleitung C6 Früh",
+    "phone": "0172 2883173",
+    "tel": "01722883173"
+  },
+  {
+    "name": "Laura Fleischer",
+    "role": "Stationsleitung C6 Spät",
+    "phone": "0178 8050347",
+    "tel": "01788050347"
+  },
+  {
+    "name": "Eva Baasch",
+    "role": "Stationsleitung B9 Früh",
+    "phone": "0151 46108441",
+    "tel": "015146108441"
+  },
+  {
+    "name": "Jacquelin Reith",
+    "role": "Stationsleitung B9 Spät",
+    "phone": "0160 5286563",
+    "tel": "01605286563"
+  },
+  {
+    "name": "Chloe Schmedes",
+    "role": "Stationsleitung B3 Früh",
+    "phone": "0172 6405259",
+    "tel": "01726405259"
+  },
+  {
+    "name": "Nina Guthmann",
+    "role": "Stationsleitung B3 Spät",
+    "phone": "0151 51959381",
+    "tel": "015151959381"
+  },
+  {
+    "name": "Sundri Althoff",
+    "role": "Stationsleitung B5 Früh",
+    "phone": "0176 84767584",
+    "tel": "017684767584"
+  },
+  {
+    "name": "Giovanna Scigliano",
+    "role": "Stationsleitung B5 Spät",
+    "phone": "0160 93395567",
+    "tel": "016093395567"
+  },
+  {
+    "name": "Lisa Mann",
+    "role": "Stationsleitung B5b Früh",
+    "phone": "0172 8623061",
+    "tel": "01728623061"
+  },
+  {
+    "name": "Erika Wilches Quintero",
+    "role": "Stationsleitung B5b Spät",
+    "phone": "0162 4421574",
+    "tel": "01624421574"
+  },
+  {
+    "name": "Sophie Bährens",
+    "role": "Stationsleitung B5c Früh",
+    "phone": "0160 6803526",
+    "tel": "01606803526"
+  },
+  {
+    "name": "Martha Gilles",
+    "role": "Stationsleitung B5c Spät",
+    "phone": "0151 44930330",
+    "tel": "015144930330"
   }
 ];

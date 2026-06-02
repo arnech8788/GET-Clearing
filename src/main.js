@@ -191,8 +191,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.2.0';
+const APP_VERSION = '2.3.0';
 const CHANGELOG = [
+  ['2.3.0', 'Dienstplan erweitert: Clearing/Cashless-Plan (Sonntag 7.6.) ergänzt – der Tab enthält jetzt beide Plan-Typen (Bändertausch & Clearing), die Namenssuche geht über alle Pläne. Neuer Bereich „Ansprechpersonen" mit Telefonnummern (Leitung, Runner, Stationsleitungen) und Anruf-Links.'],
   ['2.2.0', 'Neuer Tab „Dienstplan" (Klangpiraten RaR 2026, Bändertausch/Ticketscan): Tagesbrowser nach Stationen/KB und Namenssuche – einen Namen suchen zeigt alle Schichten dieser Person. Schichttausche werden gepflegt und als „geändert" markiert.'],
   ['2.1.0', 'Support-Tool-Anleitung um „Voraussetzungen" (Chip-Repair-Gerät, Manage-Account, Internet) und „Support Case"-Begriffe ergänzt (GET Support handling tool 2026). GET-Troubleshooting-Fälle für 2026 als unverändert bestätigt.'],
   ['2.0.0', 'Rock am Ring 2026: Event-Daten, Einlassprozess (Festival + Camping, 7 Schritte), Ticket-/Bändchen-Typen (Kombi, VIP, Fast Lane, Camping-only-Papierband, rockAbility), Camping-Kategorien (inkl. Green Power), Jugendschutz und neue Awareness-Anleitung (Codes, Guardian Angels, Points) aktualisiert.'],
