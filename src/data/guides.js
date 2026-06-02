@@ -1,10 +1,12 @@
 // Troubleshooting-/Clearing-Anleitungen.
 //
-// Quellen (Stand 2025):
-//  - GET Troubleshooting Guideline 2025
-//  - GET Ticket Swap Leitfaden 2025
+// Quellen:
+//  - GET Troubleshooting Guideline (2025; 2026 inhaltlich unverändert)
+//  - GET Support handling tool 2026
+//  - GET Ticket Swap Leitfaden (2025/2026, identisch)
 //  - GET Bemanntes Top-Up via P400 2025
-//  - RaR25 Ticketing Clearing / Briefing Bändchentausch / Ticketoverview
+//  - RaR26 Briefing Bändchentausch + Awareness-Crew-Briefing, RaR Check-In C
+//  - RaR Ticketing Clearing / Ticketoverview
 //
 // Block-Format für `body` (wird in src/guides.js gerendert):
 //   { h:  'Zwischenüberschrift' }
@@ -35,7 +37,7 @@ export const GUIDES = [
     title: 'Was macht GET & was ist Troubleshooting?',
     problem: 'Grundverständnis: Cashless-System, Aufgabe als Troubleshooter.',
     tags: ['intro', 'grundlagen', 'cashless', 'einführung'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { p: 'GET verwendet für Zutrittskontrolle und Cashless Payment Mobilgeräte. Für bargeldloses Bezahlen braucht der Gast ein Cashless-Armband oder eine Cashless-Karte. Diese können vorab online oder vor Ort mit Bargeld, EC oder Kreditkarte aufgeladen werden. Alle Transaktionen samt Rechnungen sind danach im Online-Eventportal einsehbar.' },
       { h: 'Vorteile des Systems' },
@@ -56,7 +58,7 @@ export const GUIDES = [
     title: 'Hardware-Überblick',
     problem: 'Welche Geräte stehen zur Verfügung und wofür?',
     tags: ['hardware', 'geräte', 'xcover', 'zebra', 'laptop', 'reader'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { steps: [
         { t: 'Troubleshooting-Gerät (Samsung xCover)', d: 'Damit wird das Troubleshooting durchgeführt – und du kannst GET direkt kontaktieren.' },
@@ -81,7 +83,7 @@ export const GUIDES = [
     title: 'Geräte entsperren',
     problem: 'Wie entsperre ich Handheld bzw. Laptop?',
     tags: ['entsperren', 'pin', 'login', 'manager-karte', 'manage'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Handheld (Option 1)' },
       { ol: ['Eigenes Cashless-Armband / die Manager-Karte auf die Rückseite des Gerätes halten.'] },
@@ -102,7 +104,7 @@ export const GUIDES = [
     title: 'Chip Info auslesen',
     problem: 'Ich möchte Informationen zu einem Chip sehen (Guthaben, Berechtigungen, Transaktionen).',
     tags: ['chip info', 'guthaben', 'auslesen', 'handheld', 'transaktionen'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Der Prozess' },
       { steps: [
@@ -130,7 +132,7 @@ export const GUIDES = [
     title: 'Problemlösung in GET Manage',
     problem: 'Wie finde ich einen Chip/Gast in GET Manage und welche Suchfelder gibt es?',
     tags: ['manage', 'suche', 'chipnummer', 'barcode', 'tag assignment'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { p: 'Login unter manage.get.systems. Kannst du dich nicht einloggen, wende dich an deinen Manager oder GET.' },
       { h: 'Suchfelder in der Troubleshoot-Sektion' },
@@ -160,27 +162,33 @@ export const GUIDES = [
     cat: 'tools',
     events: ['all'],
     title: 'Support-Tool in GET Manage nutzen',
-    problem: 'Ich brauche Hilfe von GET und möchte einen Support-Fall anlegen.',
-    tags: ['support', 'fall', 'chat', 'qr', 'manage', 'get kontakt'],
-    source: 'GET Troubleshooting Guideline 2025',
+    problem: 'Ich brauche Hilfe von GET und möchte einen Support-Fall (Support Case) anlegen.',
+    tags: ['support', 'fall', 'case', 'chat', 'qr', 'manage', 'get kontakt', 'voraussetzungen'],
+    source: 'GET Support handling tool 2026',
     body: [
+      { h: 'Voraussetzungen' },
+      { ul: [
+        'Chip-Repair-Gerät, das von GET eingestellt wurde.',
+        'Laptop mit Manage-Account – bitte vor Schichtbeginn unter manage.get.systems anmelden.',
+        'Internet: Das Gerät muss online sein, um uns eine Nachricht senden zu können.'
+      ] },
       { h: '1. Support-Tool öffnen' },
-      { p: 'Auf manage.get.systems einloggen → zu „Troubleshoot" (1) und „Support Fälle" (2).' },
+      { p: 'Auf manage.get.systems einloggen → zu „Troubleshoot" (1) und „Support Cases / Support Fälle" (2).' },
       { h: '2. Mobilgerät verbinden' },
       { ol: [
         'QR-Code im Support-Tool im Manage anzeigen.',
         'Auf dem Chip-Repair-Gerät auf „Chat login" tippen.',
         'QR-Code mit dem Gerät abscannen.'
       ] },
-      { h: '3. Neuen Support-Fall anlegen' },
-      { p: 'Fall am Mobilgerät öffnen – wahlweise per Chip, Ticketnummer oder Handynummer:' },
+      { h: '3. Neuen Support-Case anlegen' },
+      { p: 'Case am Mobilgerät öffnen – wahlweise per Chip, Ticketnummer oder Handynummer – und erste Informationen mitteilen:' },
       { ul: [
         'Ticket: Ticketnummer abscannen.',
         'Chip: Chip an den Reader halten oder Chipnummer eintippen.',
         'Nächster Schritt: Kurzbeschreibung eingeben.'
       ] },
-      { h: '4. Support-Fall bearbeiten' },
-      { p: 'Ein Fall läuft als Chat – du kannst am Laptop oder am Chip-Repair-Gerät arbeiten und folgst den Anweisungen des Support-Teams. Status: Geöffnet → In Bearbeitung → Geschlossen.' }
+      { h: '4. Support-Case bearbeiten' },
+      { p: 'Ein Case läuft als Chat – du kannst am Laptop oder am Chip-Repair-Gerät arbeiten und folgst den Anweisungen des Support-Teams. Status: Geöffnet → In Bearbeitung → Geschlossen.' }
     ]
   },
   {
@@ -190,7 +198,7 @@ export const GUIDES = [
     title: 'Ansprechpartner auf dem Event',
     problem: 'An wen wende ich mich bei Fragen oder Problemen?',
     tags: ['kontakt', 'ansprechpartner', 'hilfe', 'support'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { ul: [
         'Der Veranstalter: direkt an den Ansprechpartner vom Veranstalter-Team wenden – telefonisch oder per Mail.',
@@ -208,7 +216,7 @@ export const GUIDES = [
     title: 'Chip reagiert nicht / ist defekt',
     problem: 'Der Chip reagiert / funktioniert nicht mehr.',
     tags: ['chip', 'defekt', 'reparatur', 'reagiert nicht', 'kaputt'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Lösung: Chip-Reparatur' },
       { steps: [
@@ -228,7 +236,7 @@ export const GUIDES = [
     title: 'Chip funktioniert, Band muss ersetzt werden',
     problem: 'Der Chip funktioniert, aber der Gast braucht ein neues Band (z. B. zu eng / falsche Farbe / beschädigt).',
     tags: ['chip', 'tausch', 'band', 'ersetzen', 'zu eng', 'farbe'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Lösung: Chip-Tausch' },
       { steps: [
@@ -250,7 +258,7 @@ export const GUIDES = [
     title: 'Chip verloren / gestohlen',
     problem: 'Der Chip wurde verloren oder gestohlen.',
     tags: ['chip', 'verloren', 'gestohlen', 'sperren', 'neu'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Lösung: Chip Verloren' },
       { steps: [
@@ -272,7 +280,7 @@ export const GUIDES = [
     title: 'QR-Code auf dem Chip funktioniert nicht',
     problem: 'Der QR-Code auf dem Cashless-Armband funktioniert nicht (Schnelles Top-Up).',
     tags: ['qr', 'code', 'top-up', 'eventportal', 'aufladen'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Lösung: Schnelles Top-Up' },
       { steps: [
@@ -293,7 +301,7 @@ export const GUIDES = [
     title: 'Falsche / fehlende Berechtigung',
     problem: 'Besucher hat keinen oder falschen Zutritt in einen Bereich (z. B. fehlende Duschrate, Camping, Geld).',
     tags: ['berechtigung', 'zutritt', 'camping', 'dusche', 'swap', 'flags'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Lösung' },
       { ol: [
@@ -310,7 +318,7 @@ export const GUIDES = [
     title: 'Ticket ist nicht gültig',
     problem: 'Das Ticket des Besuchers ist nicht gültig.',
     tags: ['ticket', 'ungültig', 'gültigkeit', 'storno', 'gefälscht'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Mögliche Gründe' },
       { ul: [
@@ -331,7 +339,7 @@ export const GUIDES = [
     title: 'Roter Punkt beim Ticketscan („Tap again")',
     problem: 'Das Gerät zeigt einen roten Punkt beim Ticketscan.',
     tags: ['roter punkt', 'scan', 'tap again', 'success', 'transaktion'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { p: 'Der Transaktions-Vorgang wurde nicht durchgeführt.' },
       { h: 'Lösung' },
@@ -345,7 +353,7 @@ export const GUIDES = [
     title: 'Ticket / Chip hinzufügen (Eventportal)',
     problem: 'Wie kann ich mein Ticket bzw. meinen Chip hinzufügen?',
     tags: ['eventportal', 'ticket hinzufügen', 'chip verlinken', 'pin', 'barcode'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { p: 'Auf eventportal.io gehen.' },
       { steps: [
@@ -365,7 +373,7 @@ export const GUIDES = [
     title: 'Pre-/Online-Top-Up ist nicht auf dem Chip',
     problem: 'Vorab/online aufgeladenes Guthaben ist nicht auf dem Chip.',
     tags: ['online top-up', 'pre top-up', 'guthaben fehlt', 'chip info'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { h: 'Lösung' },
       { ol: [
@@ -388,7 +396,7 @@ export const GUIDES = [
     title: 'Self-Service CASH: Geldschein eingezogen, kein Guthaben',
     problem: 'Stornierte Transaktion an der Cash-Station: Geldschein eingezogen – aber kein Guthaben auf dem Chip.',
     tags: ['self-service', 'cash', 'bargeld', 'storno', 'korrekturbuchung'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { steps: [
         { t: 'Guthaben überprüfen', d: 'Beim Gast nachfragen, wie viel einbezahlt wurde und ob EC oder CASH.' },
@@ -405,7 +413,7 @@ export const GUIDES = [
     title: 'Self-Service EC: Zahlung erfolgt, Betrag nicht auf dem Chip',
     problem: 'Stornierte Transaktion an der EC-Station: Zahlung per EC erfolgt – Betrag nicht auf dem Chip.',
     tags: ['self-service', 'ec', 'karte', 'storno', 'retour'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { steps: [
         { t: 'Guthaben überprüfen', d: 'Beim Gast nachfragen, wie viel einbezahlt wurde und ob EC oder CASH.' },
@@ -423,7 +431,7 @@ export const GUIDES = [
     title: 'Fehlbuchung: Guthaben ≠ gezahlter Betrag',
     problem: 'Aufgeladenes Guthaben stimmt nicht mit dem gezahlten Betrag überein.',
     tags: ['fehlbuchung', 'guthaben', 'kulanz', 'veranstalter', 'betreiber'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { steps: [
         { t: 'Chipnummer suchen', d: 'In GET Manage raussuchen und Transaktionen abrufen.' },
@@ -440,7 +448,7 @@ export const GUIDES = [
     title: 'Guthaben auf anderen Chip übertragen',
     problem: 'Das Guthaben soll von einem Chip auf einen anderen übertragen werden.',
     tags: ['transfer', 'guthaben', 'übertragen', 'chip wechsel'],
-    source: 'GET Troubleshooting Guideline 2025 (RaR)',
+    source: 'GET Troubleshooting Guideline 2025/2026 (RaR, unverändert)',
     body: [
       { h: 'Lösung: Guthaben-Transfer' },
       { steps: [
@@ -461,7 +469,7 @@ export const GUIDES = [
     title: 'Gast möchte Geld auszahlen (Pay-Out)',
     problem: 'Der Besucher möchte sein Restguthaben auszahlen lassen.',
     tags: ['auszahlung', 'pay-out', 'restguthaben', 'eventportal', 'rückerstattung'],
-    source: 'GET Troubleshooting Guideline 2025',
+    source: 'GET Troubleshooting Guideline 2025/2026 (unverändert)',
     body: [
       { p: 'Nach der Veranstaltung kann das Geld online über das Eventportal ausbezahlt werden. Wann genau, bestimmt der Veranstalter – das Datum steht auf seiner Website.' },
       { h: 'Auf eventportal.io kann der Besucher außerdem' },
@@ -483,7 +491,7 @@ export const GUIDES = [
     title: 'Ticketscanner entsperren',
     problem: 'Wie entsperre ich das Ticket-Swap-Gerät?',
     tags: ['swap', 'scanner', 'entsperren', 'pin', '0000', 'worker-karte'],
-    source: 'GET Ticket Swap Leitfaden 2025',
+    source: 'GET Ticket Swap Leitfaden 2026',
     body: [
       { h: 'Option 1 – PIN' },
       { p: 'Lange auf den gelben Button drücken und den PIN-Code eingeben (Standard: 0000).' },
@@ -498,7 +506,7 @@ export const GUIDES = [
     title: 'Ticket Swap – der Prozess',
     problem: 'Ticket(s) auf ein Cashless-Armband übertragen.',
     tags: ['swap', 'übertragen', 'armband', 'warenkorb', 'prozess'],
-    source: 'GET Ticket Swap Leitfaden 2025',
+    source: 'GET Ticket Swap Leitfaden 2026',
     body: [
       { steps: [
         { t: 'Gerät entsperren', d: 'Karte/Armband ans Gerät halten oder lange auf den gelben Button drücken und PIN eingeben.' },
@@ -518,7 +526,7 @@ export const GUIDES = [
     title: 'Gerät sperren / abmelden',
     problem: 'Wie melde ich mich vom Swap-Gerät ab?',
     tags: ['swap', 'abmelden', 'sperren', 'logout'],
-    source: 'GET Ticket Swap Leitfaden 2025',
+    source: 'GET Ticket Swap Leitfaden 2026',
     body: [
       { steps: [
         { t: 'Menü öffnen', d: 'Direkt vom linken Bildschirmrand nach rechts wischen.' },
@@ -534,7 +542,7 @@ export const GUIDES = [
     title: 'Häufige Swap-Probleme',
     problem: 'Ticket Swap nicht erfolgreich oder Ticket nicht gültig.',
     tags: ['swap', 'fehler', 'nicht erfolgreich', 'ungültig'],
-    source: 'GET Ticket Swap Leitfaden 2025',
+    source: 'GET Ticket Swap Leitfaden 2026',
     body: [
       { h: 'Ticket Swap nicht erfolgreich' },
       { p: 'Der Vorgang wurde nicht durchgeführt. Lösung: Chip nochmals an die Stirnseite des Gerätes halten, bis der grüne „ERFOLGREICH"-Screen erscheint.' },
