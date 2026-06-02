@@ -40,6 +40,10 @@ Statische Hülle (`index.html`) + `styles.css`, App-Logik in ES-Modulen unter `s
 - **`src/notes.js`** – Eigene Fälle/Notizen (CRUD, Status, Verknüpfung mit Anleitung).
 - **`src/reference.js`** – Referenz-Tabs: Ticket-Scan-Matrix, Camping-Kategorien,
   Bändchenfarben, Kontakte (offiziell + eigene lokale), Infos.
+- **`src/dienstplan.js`** – Tab „Dienstplan": Tagesbrowser (Stationen/KB, einklappbar)
+  + Namenssuche über alle Tage. Daten in `src/data/dienstplan.js`
+  (`DIENSTPLAN_DAYS`, `DIENSTPLAN_META`); Schichttausche als `SHIFT_CHANGES`-Overrides
+  (Tag-ID + Nr.), die im Render angewandt und als „geändert" markiert werden.
 - **`src/sync.js`** – Optionaler Firebase-Team-Sync (lazy `import('firebase/…')`,
   Standard AUS).
 - **`src/data/`** – Reiner Content (keine Logik):
