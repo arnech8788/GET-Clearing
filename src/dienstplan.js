@@ -55,9 +55,9 @@ function dayDate(day) {
   return m ? { y: 2026, mo: 6, d: parseInt(m[1], 10) } : null;
 }
 
-// Kalender-Button (nur bei vorhandener Uhrzeit und nicht gestrichen).
+// Kalender-Button (nicht bei gestrichenen Schichten). Ohne Uhrzeit -> ganztägig.
 function calBtn(dayId, r) {
-  if (!r.von || !r.bis || r.cancelled) return '';
+  if (r.cancelled) return '';
   return `<button class="dp-cal" onclick="addShiftToCalendar('${dayId}',${r.nr})" title="In Kalender speichern" aria-label="In Kalender speichern">${ICO.calPlus}</button>`;
 }
 
@@ -68,23 +68,35 @@ export function addShiftToCalendar(dayId, nr) {
   for (const s of day.stations) { const f = s.rows.find((x) => x.nr === nr); if (f) { raw = f; station = s; break; } }
   if (!raw) return;
   const r = applyOverride(dayId, raw);
-  if (!r.von || !r.bis) { toast('Für diese Schicht ist keine Uhrzeit hinterlegt', 'err'); return; }
   const date = dayDate(day);
   if (!date) { toast('Datum nicht erkannt', 'err'); return; }
-
-  const [vh, vm] = r.von.split(':').map(Number);
-  const [bh, bm] = r.bis.split(':').map(Number);
-  const startDay = date.d;
-  const endDay = (bh * 60 + bm) <= (vh * 60 + vm) ? date.d + 1 : date.d; // über Mitternacht
-  const mo = pad(date.mo);
-  const dtStart = `${date.y}${mo}${pad(startDay)}T${pad(vh)}${pad(vm)}00`;
-  const dtEnd = `${date.y}${mo}${pad(endDay)}T${pad(bh)}${pad(bm)}00`;
   const stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+  const fmtDate = (dt) => `${dt.getUTCFullYear()}${pad(dt.getUTCMonth() + 1)}${pad(dt.getUTCDate())}`;
+
+  const hasTime = !!(r.von && r.bis);
+  let dtLines;
+  let timeInfo;
+  if (hasTime) {
+    const [vh, vm] = r.von.split(':').map(Number);
+    const [bh, bm] = r.bis.split(':').map(Number);
+    const start = new Date(Date.UTC(date.y, date.mo - 1, date.d, vh, vm));
+    const endBase = new Date(Date.UTC(date.y, date.mo - 1, date.d, bh, bm));
+    if (bh * 60 + bm <= vh * 60 + vm) endBase.setUTCDate(endBase.getUTCDate() + 1); // über Mitternacht
+    const f = (dt) => `${fmtDate(dt)}T${pad(dt.getUTCHours())}${pad(dt.getUTCMinutes())}00`;
+    dtLines = [`DTSTART:${f(start)}`, `DTEND:${f(endBase)}`];
+    timeInfo = `Zeit: ${r.von}–${r.bis}`;
+  } else {
+    // Ganztägig: DTEND ist der Folgetag (exklusiv)
+    const start = new Date(Date.UTC(date.y, date.mo - 1, date.d));
+    const end = new Date(start.getTime() + 86400000);
+    dtLines = [`DTSTART;VALUE=DATE:${fmtDate(start)}`, `DTEND;VALUE=DATE:${fmtDate(end)}`];
+    timeInfo = 'Zeit: ganztägig (keine Uhrzeit im Plan)';
+  }
 
   const planLbl = planShort(day.plan);
   const loc = station.name + (station.kb ? ` (${station.kb})` : '');
   const summary = `${planLbl} – ${station.name}${r.pos ? ` (${fmtPos(r.pos)})` : ''}`;
-  const descParts = [`${planLbl} · ${day.label}`, `Position: ${fmtPos(r.pos) || '–'}`, `Zeit: ${r.von}–${r.bis}`];
+  const descParts = [`${planLbl} · ${day.label}`, `Position: ${fmtPos(r.pos) || '–'}`, timeInfo];
   if (r.note) descParts.push(`Hinweis: ${r.note}`);
   if (r.changed && r.changeNote) descParts.push(`Änderung: ${r.changeNote}`);
 
@@ -96,8 +108,7 @@ export function addShiftToCalendar(dayId, nr) {
     'BEGIN:VEVENT',
     `UID:${dayId}-${nr}-${Date.now()}@get-clearing`,
     `DTSTAMP:${stamp}`,
-    `DTSTART:${dtStart}`,
-    `DTEND:${dtEnd}`,
+    ...dtLines,
     `SUMMARY:${escIcs(summary)}`,
     `LOCATION:${escIcs(loc)}`,
     `DESCRIPTION:${escIcs(descParts.join('\n'))}`,
@@ -114,7 +125,7 @@ export function addShiftToCalendar(dayId, nr) {
   a.click();
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  toast('Kalender-Termin erstellt', 'ok');
+  toast(hasTime ? 'Kalender-Termin erstellt' : 'Ganztägiger Termin erstellt', 'ok');
 }
 
 export function setDpPlan(plan) {
