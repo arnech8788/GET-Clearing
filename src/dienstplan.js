@@ -5,12 +5,28 @@
 import { ICO, escapeHtml, highlight } from './ui.js';
 import { DIENSTPLAN_META, DIENSTPLAN_DAYS, DIENSTPLAN_CONTACTS, SHIFT_CHANGES } from './data/dienstplan.js';
 
-let dp = { day: DIENSTPLAN_DAYS[0] ? DIENSTPLAN_DAYS[0].id : null, query: '', mode: 'plan' };
+let dp = { plan: null, day: null, query: '', mode: 'plan' };
 
 function fmtPos(pos) {
   if (pos == null || pos === '') return '';
   return /^\d+$/.test(String(pos)) ? 'Platz ' + pos : pos;
 }
+
+// Plan-Gruppierung: Reihenfolge wie in den Daten, ein Reiter je Plan.
+function planKey(d) { return d.plan || 'Sonstige'; }
+function planShort(plan) {
+  if (/bänd/i.test(plan)) return 'Bändchentausch';
+  if (/clearing/i.test(plan)) return 'Clearing';
+  return plan;
+}
+function getPlans() {
+  const seen = [];
+  for (const d of DIENSTPLAN_DAYS) { const p = planKey(d); if (!seen.includes(p)) seen.push(p); }
+  return seen;
+}
+function daysOfPlan(plan) { return DIENSTPLAN_DAYS.filter((d) => planKey(d) === plan); }
+// Tages-Kurzlabel (ohne Plan-Präfix), z. B. "Clearing · Mi" -> "Mi".
+function dayShort(d) { return (d.short || '').split('·').pop().trim() || d.short; }
 
 function applyOverride(dayId, row) {
   const ch = SHIFT_CHANGES.find((c) => c.day === dayId && c.nr === row.nr);
@@ -28,6 +44,12 @@ function applyOverride(dayId, row) {
   };
 }
 
+export function setDpPlan(plan) {
+  dp.plan = plan;
+  const days = daysOfPlan(plan);
+  dp.day = days[0] ? days[0].id : null;
+  renderDienstplan();
+}
 export function setDpDay(id) { dp.day = id; renderDienstplan(); }
 export function setDpSearch(q) { dp.query = q; renderDienstplan({ keepFocus: true }); }
 export function setDpMode(m) { dp.mode = m; renderDienstplan(); }
@@ -110,10 +132,20 @@ function renderBrowser() {
   if (!DIENSTPLAN_DAYS.length) {
     return `<div class="empty">${ICO.calendar}<p>Noch keine Dienstpläne hinterlegt.</p></div>`;
   }
-  const day = DIENSTPLAN_DAYS.find((d) => d.id === dp.day) || DIENSTPLAN_DAYS[0];
-  const dayChips = DIENSTPLAN_DAYS.length > 1
-    ? `<div class="cat-chips">${DIENSTPLAN_DAYS.map((d) => `
-        <button class="catchip ${d.id === day.id ? 'catchip-active' : ''}" onclick="setDpDay('${d.id}')">${escapeHtml(d.short)}</button>`).join('')}</div>`
+  const plans = getPlans();
+  // Plan/Tag-Auswahl absichern
+  if (!dp.plan || !plans.includes(dp.plan)) dp.plan = plans[0];
+  let days = daysOfPlan(dp.plan);
+  if (!dp.day || !days.some((d) => d.id === dp.day)) dp.day = days[0] ? days[0].id : null;
+  const day = days.find((d) => d.id === dp.day) || days[0];
+
+  const planChips = plans.length > 1
+    ? `<div class="cat-chips">${plans.map((p) => `
+        <button class="catchip ${p === dp.plan ? 'catchip-active' : ''}" onclick="setDpPlan('${escapeHtml(p)}')">${escapeHtml(planShort(p))}</button>`).join('')}</div>`
+    : '';
+  const dayChips = days.length > 1
+    ? `<div class="cat-chips">${days.map((d) => `
+        <button class="catchip ${d.id === day.id ? 'catchip-active' : ''}" onclick="setDpDay('${d.id}')">${escapeHtml(dayShort(d))}</button>`).join('')}</div>`
     : '';
   const total = day.stations.reduce((a, s) => a + s.rows.length, 0);
   const stations = day.stations.map((st) => {
@@ -138,6 +170,7 @@ function renderBrowser() {
       </details>`;
   }).join('');
   return `
+    ${planChips}
     ${dayChips}
     <div class="dp-daytitle">${escapeHtml(day.label)} <span class="muted small">· ${total} Einträge</span></div>
     ${stations}
@@ -165,4 +198,4 @@ function renderContacts(q) {
     </div>`;
 }
 
-Object.assign(window, { setDpDay, setDpSearch, setDpMode });
+Object.assign(window, { setDpPlan, setDpDay, setDpSearch, setDpMode });
