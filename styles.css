@@ -312,6 +312,10 @@ svg { width: 22px; height: 22px; flex: none; }
 .dp-row:first-child { border-top: none; }
 .dp-row-name { font-weight: 600; font-size: 14px; }
 .dp-row-meta { display: flex; align-items: center; gap: 8px; margin-top: 3px; }
+.dp-cal { margin-left: auto; flex: none; background: var(--bg3); border: 1px solid var(--bdr); color: var(--accent); width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; cursor: pointer; }
+.dp-cal svg { width: 17px; height: 17px; }
+.dp-cal:active { transform: scale(.94); }
+.dp-shift-sub .dp-cal { margin-left: auto; }
 
 /* ===== Bottom nav ===== */
 .nav {
