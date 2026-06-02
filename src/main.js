@@ -6,6 +6,7 @@ import { GUIDES } from './data/guides.js';
 import { renderGuides, setGuideCategory, setGuideSearch, setDetailGuide, getDetailGuide, isGuideDetail } from './guides.js';
 import { renderNotes, newNote, editNote, deleteNote, openNote } from './notes.js';
 import { renderReference, setRefTab } from './reference.js';
+import { renderDienstplan } from './dienstplan.js';
 import { syncStatusLabel, openSyncModal, initSync, pushNotes, pullNotes } from './sync.js';
 
 const STORE_KEY = 'getclr-v1';
@@ -116,6 +117,7 @@ function renderActive(name) {
   if (name === 'guides') renderGuides();
   else if (name === 'notes') renderNotes();
   else if (name === 'reference') renderReference();
+  else if (name === 'dienstplan') renderDienstplan();
   else if (name === 'more') renderMore();
 }
 
@@ -189,8 +191,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.1.0';
+const APP_VERSION = '2.2.0';
 const CHANGELOG = [
+  ['2.2.0', 'Neuer Tab „Dienstplan" (Klangpiraten RaR 2026, Bändertausch/Ticketscan): Tagesbrowser nach Stationen/KB und Namenssuche – einen Namen suchen zeigt alle Schichten dieser Person. Schichttausche werden gepflegt und als „geändert" markiert.'],
   ['2.1.0', 'Support-Tool-Anleitung um „Voraussetzungen" (Chip-Repair-Gerät, Manage-Account, Internet) und „Support Case"-Begriffe ergänzt (GET Support handling tool 2026). GET-Troubleshooting-Fälle für 2026 als unverändert bestätigt.'],
   ['2.0.0', 'Rock am Ring 2026: Event-Daten, Einlassprozess (Festival + Camping, 7 Schritte), Ticket-/Bändchen-Typen (Kombi, VIP, Fast Lane, Camping-only-Papierband, rockAbility), Camping-Kategorien (inkl. Green Power), Jugendschutz und neue Awareness-Anleitung (Codes, Guardian Angels, Points) aktualisiert.'],
   ['1.2.0', 'Rock am Ring: Check-In C ergänzt – Standort (Parkplatz D10), Öffnungszeiten und Kontakt (Anleitung + klickbare Kontakte in der Referenz).'],
