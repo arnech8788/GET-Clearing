@@ -21,7 +21,7 @@ let cfg = null;          // { config:{...}, team:'code', enabled:true }
 let db = null;
 let unsub = null;
 let mergeCb = null;
-let localNotesRef = [];
+let localData = { notes: [], stock: [] };
 let status = 'off';      // off | connecting | active | error
 let pushTimer = null;
 
@@ -41,8 +41,8 @@ export function syncStatusLabel() {
   return 'aus';
 }
 
-export function initSync(notes, onMerge) {
-  localNotesRef = notes;
+export function initSync(payload, onMerge) {
+  if (payload) localData = payload;
   mergeCb = onMerge;
   loadCfg();
   if (cfg && cfg.enabled) connect();
@@ -62,7 +62,7 @@ async function connect() {
     unsub = onSnapshot(ref, (snap) => {
       status = 'active';
       const data = snap.data();
-      if (data && Array.isArray(data.notes) && mergeCb) mergeCb(data.notes);
+      if (data && mergeCb) mergeCb(data);
       refreshMore();
     }, (err) => {
       console.warn('sync snapshot error', err);
@@ -78,27 +78,28 @@ async function connect() {
 }
 
 // Wird bei jedem save() aufgerufen – no-op, wenn Sync aus.
-export function pushNotes(notes) {
-  localNotesRef = notes;
+// payload = { notes:[...], stock:[...] }
+export function pushSync(payload) {
+  if (payload) localData = payload;
   if (!cfg || !cfg.enabled || !db) return;
   clearTimeout(pushTimer);
   pushTimer = setTimeout(async () => {
     try {
       const { doc, setDoc } = await import('firebase/firestore');
-      await setDoc(doc(db, 'teams', cfg.team), { notes, updatedAt: Date.now() }, { merge: true });
+      await setDoc(doc(db, 'teams', cfg.team), { notes: localData.notes || [], stock: localData.stock || [], updatedAt: Date.now() }, { merge: true });
     } catch (e) {
       console.warn('push failed', e);
     }
   }, 800);
 }
 
-export async function pullNotes() {
+export async function pullSync() {
   if (!cfg || !cfg.enabled || !db) { toast('Sync ist nicht aktiv', 'err'); return; }
   try {
     const { doc, getDoc } = await import('firebase/firestore');
     const snap = await getDoc(doc(db, 'teams', cfg.team));
     const data = snap.data();
-    if (data && Array.isArray(data.notes) && mergeCb) mergeCb(data.notes);
+    if (data && mergeCb) mergeCb(data);
     toast('Aktualisiert', 'ok');
   } catch (e) {
     toast('Abruf fehlgeschlagen', 'err');
@@ -140,7 +141,7 @@ export function openSyncModal() {
         <button type="button" class="btn btn-primary" onclick="enableSync()">${active ? 'Speichern & neu verbinden' : 'Aktivieren'}</button>
       </div>
     </form>
-    ${active ? `<button class="btn btn-ghost full" style="margin-top:10px" onclick="pullNotes()">${ICO.cloud} Jetzt manuell abrufen</button>` : ''}`);
+    ${active ? `<button class="btn btn-ghost full" style="margin-top:10px" onclick="pullSync()">${ICO.cloud} Jetzt manuell abrufen</button>` : ''}`);
 }
 
 // Akzeptiert sowohl reines JSON als auch den JS-Snippet aus der Firebase-Konsole
@@ -197,8 +198,8 @@ export function enableSync() {
   localStorage.setItem(CFG_KEY, JSON.stringify(cfg));
   closeModal();
   toast('Sync aktiviert', 'ok');
-  // direkt Push der aktuellen lokalen Notizen + verbinden
-  connect().then(() => pushNotes(localNotesRef));
+  // direkt Push der aktuellen lokalen Daten + verbinden
+  connect().then(() => pushSync(localData));
   refreshMore();
 }
 
@@ -212,4 +213,4 @@ export function disableSync() {
   refreshMore();
 }
 
-Object.assign(window, { openSyncModal, enableSync, disableSync, pullNotes });
+Object.assign(window, { openSyncModal, enableSync, disableSync, pullSync });
