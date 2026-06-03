@@ -191,8 +191,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.6.1';
+const APP_VERSION = '2.7.0';
 const CHANGELOG = [
+  ['2.7.0', 'Support-Tool-Anleitung: Support-Chat ohne Bändchen/Chip per Ticketnummer oder Handynummer klargestellt. Neue RaR-Anleitung „Welches Bändchen an welcher Station?" (Festival ohne Camping nur an B3, Festival+Camping an allen KBs).'],
   ['2.6.1', 'Kalender-Button jetzt auch bei Schichten ohne Uhrzeit (z. B. Sa/So) – wird als ganztägiger Termin gespeichert.'],
   ['2.6.0', 'Bändchentausch-Dienstplan vervollständigt: alle Tage Mittwoch–Sonntag (bisher nur Donnerstag). Damit sind im Dienstplan beide Pläne mit je 5 Tagen vorhanden und die Namenssuche findet alle Schichten einer Person (z. B. Stationsleitungen über die ganze Woche).'],
   ['2.5.0', 'Dienstplan: Kalender-Button neben jeder Schicht (mit Uhrzeit) – speichert die Schicht als Termin (.ics) direkt in den eigenen Kalender. Funktioniert in Tagesansicht und Namenssuche; berücksichtigt Schichten über Mitternacht.'],

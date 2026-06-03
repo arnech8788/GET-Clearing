@@ -163,7 +163,7 @@ export const GUIDES = [
     events: ['all'],
     title: 'Support-Tool in GET Manage nutzen',
     problem: 'Ich brauche Hilfe von GET und möchte einen Support-Fall (Support Case) anlegen.',
-    tags: ['support', 'fall', 'case', 'chat', 'qr', 'manage', 'get kontakt', 'voraussetzungen'],
+    tags: ['support', 'fall', 'case', 'chat', 'qr', 'manage', 'get kontakt', 'voraussetzungen', 'ohne bändchen', 'kein chip', 'ohne chip', 'handynummer'],
     source: 'GET Support handling tool 2026',
     body: [
       { h: 'Voraussetzungen' },
@@ -185,8 +185,10 @@ export const GUIDES = [
       { ul: [
         'Ticket: Ticketnummer abscannen.',
         'Chip: Chip an den Reader halten oder Chipnummer eintippen.',
+        'Handynummer: Mobilnummer des Gastes eingeben.',
         'Nächster Schritt: Kurzbeschreibung eingeben.'
       ] },
+      { note: 'Kein Bändchen / kein Chip? Du brauchst ihn nicht – öffne den Fall einfach per Ticketnummer (Barcode scannen) oder Handynummer. Der Chip ist nur eine von drei Möglichkeiten. In GET Manage findest du die Person zusätzlich über Barcode, Name oder E-Mail.' },
       { h: '4. Support-Case bearbeiten' },
       { p: 'Ein Case läuft als Chat – du kannst am Laptop oder am Chip-Repair-Gerät arbeiten und folgst den Anweisungen des Support-Teams. Status: Geöffnet → In Bearbeitung → Geschlossen.' }
     ]
@@ -843,6 +845,46 @@ export const GUIDES = [
       { p: 'Gäste mit nur Campingticket erhalten KEIN Stoffband, sondern ein Papierband (ohne Chip) am Clearing Counter (Container) neben der Check-In-Station. Für Käufe gibt es eine Cashless Card für 5 € an B3 (KB1). Die Anzahl ausgegebener Papierbänder wird pro Station dokumentiert.' },
       { h: 'rockAbility Camping' },
       { p: 'Voraussetzung: reguläres Festivalticket + Schwerbehindertenausweis mit Merkzeichen (B, G, aG, H, BL). Platz ist limitiert/ausgebucht, nur nach vorheriger Anmeldung, max. zwei Begleitpersonen, gemeinsame Anreise im Fahrzeug. Die zweite Begleitperson benötigt ein reguläres General-Camping-Ticket.' }
+    ]
+  },
+  {
+    id: 'rar-baendchen-station',
+    cat: 'rar',
+    events: ['rar'],
+    title: 'Welches Bändchen an welcher Station?',
+    problem: 'An welcher Check-In-Station wird welches Ticket/Bändchen getauscht?',
+    tags: ['rar', 'bändchen', 'station', 'b3', 'kb', 'festival only', 'kombi', 'camping', 'tausch', 'eingang'],
+    source: 'RaR26 Festivalbändchen-Übersicht',
+    body: [
+      { h: 'Festival ONLY (ohne Camping) → NUR an B3' },
+      { ul: [
+        'Festival Ticket',
+        'Fast Lane Pass & Festival Ticket',
+        'VIP Upgrade & Festival Ticket'
+      ] },
+      { warn: 'Reine Festivaltickets (ohne Campingticket) werden ausschließlich an Station B3 getauscht – nicht an den anderen KBs.' },
+      { h: 'Festival + Camping (Kombi) → an ALLEN KBs' },
+      { p: 'Kombinationen aus Festival- + Campingticket (auch mit Fast Lane Pass bzw. VIP Upgrade) werden an allen Kassenbereichen getauscht – für folgende Camping-Kategorien:' },
+      { ul: [
+        'General Camping + Parking',
+        'Green Camping + Parking',
+        'Green Power Camping + Parking',
+        "Rock'n'Roll Camping + Parking",
+        'Caravan Camping',
+        'Car & Tent Camping',
+        'Utopia Stage Camping + Parking',
+        "Racetrack Rock'n'Roll Camping + Parking",
+        'Experience Camping – The Rockotel / The Rocksuite / The Lodge / The Rockrelax / The Rockrelax Premium'
+      ] },
+      { note: 'Diese Kombi-Tickets gibt es jeweils auch als „Fast Lane Pass & Festival" und „VIP Upgrade & Festival" – ebenfalls an allen KBs.' },
+      { h: 'Upgrades' },
+      { ul: [
+        'VIP Upgrade – Weekend',
+        'Fast Lane Pass – Weekend'
+      ] },
+      { p: 'Upgrades werden an den Infopoints eingelöst (siehe „Ticket- & Bändchen-Typen 2026").' },
+      { h: 'Besonderheit' },
+      { ul: ['Festival Ticket mit Rabattstufe „VIP Comps".'] }
     ]
   },
   {
