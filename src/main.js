@@ -7,7 +7,8 @@ import { renderGuides, setGuideCategory, setGuideSearch, setDetailGuide, getDeta
 import { renderNotes, newNote, editNote, deleteNote, openNote } from './notes.js';
 import { renderReference, setRefTab } from './reference.js';
 import { renderDienstplan } from './dienstplan.js';
-import { syncStatusLabel, openSyncModal, initSync, pushNotes, pullNotes } from './sync.js';
+import { renderBestand } from './bestand.js';
+import { syncStatusLabel, openSyncModal, initSync, pushSync, pullSync } from './sync.js';
 
 const STORE_KEY = 'getclr-v1';
 const THEME_KEY = 'getclr-theme';
@@ -15,6 +16,7 @@ const THEME_KEY = 'getclr-theme';
 // ---- State ----------------------------------------------------------------
 export let state = {
   notes: [],
+  stock: [], // Bestandslisten (Bändchen-Bestand pro Station/Tag) – synchronisierbar
   favorites: [],
   contacts: [], // eigene, NUR lokale Kontakte (werden nicht in die Cloud gesynct)
   activeEvent: 'rar',
@@ -31,7 +33,7 @@ export function save() {
     console.warn('save failed', e);
   }
   // Optionaler Cloud-Sync (no-op, wenn nicht konfiguriert)
-  pushNotes(state.notes);
+  pushSync({ notes: state.notes, stock: state.stock });
 }
 
 export function load() {
@@ -41,6 +43,7 @@ export function load() {
       const parsed = JSON.parse(raw);
       state = { ...state, ...parsed };
       if (!Array.isArray(state.notes)) state.notes = [];
+      if (!Array.isArray(state.stock)) state.stock = [];
       if (!Array.isArray(state.favorites)) state.favorites = [];
       if (!Array.isArray(state.contacts)) state.contacts = [];
       if (!getEvent(state.activeEvent)) state.activeEvent = 'rar';
@@ -68,6 +71,30 @@ export function mergeRemoteNotes(remoteNotes) {
     if (currentScreen === 'notes') renderNotes();
     toast('Notizen synchronisiert', 'ok');
   }
+}
+
+// Merge entfernter Bestandslisten (Last-Write-Wins über `updated`).
+export function mergeRemoteStock(remoteStock) {
+  if (!Array.isArray(remoteStock)) return;
+  const byId = new Map((state.stock || []).map((r) => [r.id, r]));
+  let changed = false;
+  for (const r of remoteStock) {
+    const local = byId.get(r.id);
+    if (!local || (r.updated || 0) > (local.updated || 0)) { byId.set(r.id, r); changed = true; }
+  }
+  if (changed) {
+    state.stock = [...byId.values()];
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch {}
+    if (currentScreen === 'bestand') renderBestand();
+    toast('Bestand synchronisiert', 'ok');
+  }
+}
+
+// Wird vom Team-Sync mit dem gesamten Remote-Dokument aufgerufen.
+export function mergeRemote(data) {
+  if (!data) return;
+  if (Array.isArray(data.notes)) mergeRemoteNotes(data.notes);
+  if (Array.isArray(data.stock)) mergeRemoteStock(data.stock);
 }
 
 // ---- Favoriten ------------------------------------------------------------
@@ -118,6 +145,7 @@ function renderActive(name) {
   else if (name === 'notes') renderNotes();
   else if (name === 'reference') renderReference();
   else if (name === 'dienstplan') renderDienstplan();
+  else if (name === 'bestand') renderBestand();
   else if (name === 'more') renderMore();
 }
 
@@ -191,8 +219,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.7.0';
+const APP_VERSION = '2.8.0';
 const CHANGELOG = [
+  ['2.8.0', 'Neuer Tab „Bestand": Mitarbeiter*innen-Bestandsliste digital führen – pro Station/Tag je Bändchen-Typ Erst-/Restbestand, „Angelegt" wird automatisch berechnet (überschreibbar). Stationen & Namen werden vorgeschlagen (Freitext möglich), Datum nur heute–Sonntag, jederzeit editierbar, optional übers Team synchronisiert. „Fälle/Notizen" sind jetzt über den „Mehr"-Tab erreichbar.'],
   ['2.7.0', 'Support-Tool-Anleitung: Support-Chat ohne Bändchen/Chip per Ticketnummer oder Handynummer klargestellt. Neue RaR-Anleitung „Welches Bändchen an welcher Station?" (Festival ohne Camping nur an B3, Festival+Camping an allen KBs).'],
   ['2.6.1', 'Kalender-Button jetzt auch bei Schichten ohne Uhrzeit (z. B. Sa/So) – wird als ganztägiger Termin gespeichert.'],
   ['2.6.0', 'Bändchentausch-Dienstplan vervollständigt: alle Tage Mittwoch–Sonntag (bisher nur Donnerstag). Damit sind im Dienstplan beide Pläne mit je 5 Tagen vorhanden und die Namenssuche findet alle Schichten einer Person (z. B. Stationsleitungen über die ganze Woche).'],
@@ -216,6 +245,14 @@ export function renderMore() {
   el.innerHTML = `
     <header class="topbar"><h1>Mehr</h1></header>
     <div class="pad">
+      <div class="card">
+        <div class="card-title">Eigene Fälle / Notizen</div>
+        <button class="row-btn" onclick="showScreen('notes')">
+          <span class="row-ic">${ICO.note}</span>
+          <span>Meine Fälle</span>
+          <span class="row-arrow">${noteCount} ${noteCount === 1 ? 'Notiz' : 'Notizen'}</span>
+        </button>
+      </div>
       <div class="card">
         <div class="card-title">Darstellung</div>
         <button class="row-btn" onclick="toggleTheme()">
@@ -343,7 +380,7 @@ function initHistory() {
 function init() {
   initTheme();
   load();
-  initSync(state.notes, mergeRemoteNotes);
+  initSync({ notes: state.notes, stock: state.stock }, mergeRemote);
   initHistory();
   renderEventChips();
   applyScreen('guides');
@@ -356,7 +393,7 @@ Object.assign(window, {
   openGuide: navGuide, navGuide, setGuideCategory, setGuideSearch,
   newNote, editNote, deleteNote, openNote,
   setRefTab,
-  openSyncModal, pullNotes,
+  openSyncModal, pullSync,
   renderMore, openChangelog, exportData, importData,
   toggleFavorite
 });

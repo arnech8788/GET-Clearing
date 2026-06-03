@@ -317,6 +317,16 @@ svg { width: 22px; height: 22px; flex: none; }
 .dp-cal:active { transform: scale(.94); }
 .dp-shift-sub .dp-cal { margin-left: auto; }
 
+/* ===== Bestand (Bestandsliste) ===== */
+.bestand-head { display: grid; grid-template-columns: 1fr 56px 56px 56px; gap: 6px; align-items: end; margin: 10px 0 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; color: var(--tx3); }
+.bestand-head span:not(:first-child) { text-align: center; }
+.bestand-row { display: grid; grid-template-columns: 1fr 56px 56px 56px; gap: 6px; align-items: center; margin-bottom: 6px; }
+.bestand-type { font-size: 13px; font-weight: 600; line-height: 1.2; }
+.bestand-num { width: 100%; padding: 8px 4px; border-radius: 8px; border: 1px solid var(--bdr); background: var(--bg); color: var(--tx); font-size: 14px; text-align: center; -moz-appearance: textfield; }
+.bestand-num::-webkit-outer-spin-button, .bestand-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.bestand-num:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.bestand-ang { background: var(--bg3); font-weight: 700; }
+
 /* ===== Bottom nav ===== */
 .nav {
   position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
