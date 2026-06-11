@@ -25,10 +25,9 @@ export const EVENTS = [
     id: 'parookaville',
     name: 'Parookaville',
     short: 'PV',
-    desc: 'Weeze · Inhalte folgen, sobald Unterlagen vorliegen.',
+    desc: 'Weeze · Festival 17.–19.07.2026 (Pre-Party 16.07.) · Crew-Infos',
     color: '#2d9cdb',
-    selectable: true,
-    placeholder: true
+    selectable: true
   }
 ];
 
