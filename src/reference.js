@@ -1,6 +1,6 @@
 // Referenz: Ticket-Scan-Matrix, Camping-Kategorien, Bändchenfarben, Kontakte, Infos.
 import { ICO, escapeHtml, openModal, closeModal, toast, confirmDialog } from './ui.js';
-import { state, save } from './main.js';
+import { state, save, eventChipsHtml } from './main.js';
 import { getEvent } from './data/events.js';
 import { SCAN_MATRIX, CATEGORY_OVERVIEW, WRISTBAND_COLORS } from './data/tickets.js';
 import { SHIPPED_CONTACTS, QUICK_INFO } from './data/contacts.js';
@@ -16,7 +16,7 @@ export function renderReference() {
   const el = document.getElementById('screen-reference');
   if (!el) return;
   el.innerHTML = `
-    <header class="topbar"><h1>Referenz</h1></header>
+    <header class="topbar"><h1>Referenz</h1>${eventChipsHtml()}</header>
     <div class="pad">
       <div class="tabbar">
         <button class="tab ${tab === 'tickets' ? 'tab-active' : ''}" onclick="setRefTab('tickets')">Tickets &amp; Bändchen</button>
@@ -29,6 +29,9 @@ export function renderReference() {
 
 // ---- Tickets --------------------------------------------------------------
 function renderTickets() {
+  if (state.activeEvent !== 'rar') {
+    return `<div class="empty">${ICO.info}<p>Ticket- &amp; Bändchen-Referenz ist aktuell nur für Rock am Ring hinterlegt.</p></div>`;
+  }
   return `
     <div class="muted small" style="margin-bottom:8px">Rock am Ring · Camping-Kategorien Stand 2026. Die Scan-Matrix (Tage/KB) basiert auf dem 2025-Stand – für 2026 ggf. mit der Stationsleitung abgleichen.</div>
 

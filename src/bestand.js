@@ -2,7 +2,7 @@
 // CRUD wie src/notes.js; Stationen/Namen werden aus dem Dienstplan vorgeschlagen
 // (Freitext erlaubt); Datum nur heute..Sonntag; lokal + optionaler Team-Sync.
 import { ICO, escapeHtml, highlight, openModal, closeModal, toast, confirmDialog } from './ui.js';
-import { state, save } from './main.js';
+import { state, save, eventChipsHtml } from './main.js';
 import { DIENSTPLAN_DAYS } from './data/dienstplan.js';
 
 // Bändchen-Typen (Zeilen, wie auf dem Blatt).
@@ -65,12 +65,21 @@ export function setBestandSearch(q) { filter.query = q; renderBestand({ keepFocu
 export function renderBestand(opts = {}) {
   const el = document.getElementById('screen-bestand');
   if (!el) return;
+  // Bestandslisten sind Rock-am-Ring-spezifisch (Bändchen-Typen, Festivaltage).
+  if (state.activeEvent !== 'rar') {
+    el.innerHTML = `
+      <header class="topbar"><h1>Bestand</h1>${eventChipsHtml()}</header>
+      <div class="pad">
+        <div class="empty">${ICO.clipboard}<p>Bestandslisten gibt es aktuell nur für Rock am Ring.</p></div>
+      </div>`;
+    return;
+  }
   const q = filter.query.trim().toLowerCase();
   let list = [...(state.stock || [])].sort((a, b) => (b.updated || 0) - (a.updated || 0));
   if (q) list = list.filter((r) => `${r.plan} ${r.station} ${r.name} ${r.date}`.toLowerCase().includes(q));
 
   el.innerHTML = `
-    <header class="topbar"><h1>Bestand</h1></header>
+    <header class="topbar"><h1>Bestand</h1>${eventChipsHtml()}</header>
     <div class="pad">
       <div class="muted small" style="margin-bottom:10px">Mitarbeiter*innen-Bestandsliste · Bändchen-Bestand pro Station &amp; Tag</div>
       <div class="search-wrap">
@@ -160,7 +169,7 @@ function editorHtml(r) {
 
 export function newStock() {
   const opts = dateOptions();
-  const r = { id: uid(), plan: PLANS[0], date: opts.includes(isoToday()) ? isoToday() : opts[0], station: '', name: '', rows: {}, bemerkung: '', created: Date.now(), updated: Date.now() };
+  const r = { id: uid(), event: state.activeEvent, plan: PLANS[0], date: opts.includes(isoToday()) ? isoToday() : opts[0], station: '', name: '', rows: {}, bemerkung: '', created: Date.now(), updated: Date.now() };
   openModal('Neue Bestandsliste', editorHtml(r));
 }
 
@@ -186,7 +195,7 @@ export function saveStockForm(id) {
   });
   let r = (state.stock || []).find((x) => x.id === id);
   const isNew = !r;
-  if (isNew) { r = { id, created: Date.now() }; if (!Array.isArray(state.stock)) state.stock = []; state.stock.push(r); }
+  if (isNew) { r = { id, event: state.activeEvent, created: Date.now() }; if (!Array.isArray(state.stock)) state.stock = []; state.stock.push(r); }
   r.plan = (fd.get('plan') || PLANS[0]).toString();
   r.date = (fd.get('date') || '').toString();
   r.station = station;

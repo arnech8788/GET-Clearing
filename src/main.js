@@ -112,19 +112,14 @@ export function toggleFavorite(id) {
 export function setActiveEvent(id) {
   state.activeEvent = id;
   save();
-  renderEventChips();
-  if (currentScreen === 'guides') renderGuides();
-  if (currentScreen === 'reference') renderReference();
+  // Den aktuell sichtbaren Tab neu rendern – jeder Tab respektiert das aktive Event.
+  renderActive(currentScreen);
 }
 
-export function renderEventChips() {
-  const wrap = document.getElementById('eventChips');
-  if (!wrap) return;
-  const selectable = EVENTS.filter((e) => e.selectable);
-  wrap.innerHTML = selectable.map((e) => `
-    <button class="chip ${state.activeEvent === e.id ? 'chip-active' : ''}"
-            style="--chip:${e.color}"
-            onclick="setActiveEvent('${e.id}')">${escapeHtml(e.short)}</button>`).join('');
+// Wiederverwendbarer Event-Umschalter (RaR/PV-Chips) für den Kopf jedes Tabs.
+export function eventChipsHtml() {
+  return `<div class="event-chips">${EVENTS.filter((e) => e.selectable).map((e) => `
+    <button class="chip ${state.activeEvent === e.id ? 'chip-active' : ''}" style="--chip:${e.color}" onclick="setActiveEvent('${e.id}')">${escapeHtml(e.short)}</button>`).join('')}</div>`;
 }
 
 // ---- Navigation (History-gesteuert) ---------------------------------------
@@ -219,8 +214,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.8.0';
+const APP_VERSION = '2.9.0';
 const CHANGELOG = [
+  ['2.9.0', 'Strikte Event-Trennung: Der RaR/PV-Umschalter ist jetzt im Kopf jedes Tabs sichtbar, und jeder Tab zeigt nur die Daten des aktiven Events. Dienstplan, Bestand und Referenz → Tickets/Bändchen sind Rock-am-Ring-spezifisch und zeigen unter Parookaville einen Hinweis statt RaR-Daten. Eigene Fälle/Notizen bleiben bewusst über beide Events sichtbar (mit Event-Badge).'],
   ['2.8.0', 'Neuer Tab „Bestand": Mitarbeiter*innen-Bestandsliste digital führen – pro Station/Tag je Bändchen-Typ Erst-/Restbestand, „Angelegt" wird automatisch berechnet (überschreibbar). Stationen & Namen werden vorgeschlagen (Freitext möglich), Datum nur heute–Sonntag, jederzeit editierbar, optional übers Team synchronisiert. „Fälle/Notizen" sind jetzt über den „Mehr"-Tab erreichbar.'],
   ['2.7.0', 'Support-Tool-Anleitung: Support-Chat ohne Bändchen/Chip per Ticketnummer oder Handynummer klargestellt. Neue RaR-Anleitung „Welches Bändchen an welcher Station?" (Festival ohne Camping nur an B3, Festival+Camping an allen KBs).'],
   ['2.6.1', 'Kalender-Button jetzt auch bei Schichten ohne Uhrzeit (z. B. Sa/So) – wird als ganztägiger Termin gespeichert.'],
@@ -382,7 +378,6 @@ function init() {
   load();
   initSync({ notes: state.notes, stock: state.stock }, mergeRemote);
   initHistory();
-  renderEventChips();
   applyScreen('guides');
   initPWA();
 }
