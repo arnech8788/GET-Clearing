@@ -25,7 +25,8 @@ export const CATEGORIES = [
   { id: 'swap', name: 'Ticket Swap', icon: 'swap', color: '#9b59b6' },
   { id: 'topup', name: 'Top-Up (P400)', icon: 'topup', color: '#1abc9c' },
   { id: 'tools', name: 'Geräte, GET Manage & Support', icon: 'tool', color: '#7f8c9a' },
-  { id: 'rar', name: 'Rock am Ring – Clearing & Bändchen', icon: 'flag', color: '#e23b3b' }
+  { id: 'rar', name: 'Rock am Ring – Clearing & Bändchen', icon: 'flag', color: '#e23b3b' },
+  { id: 'pv', name: 'Parookaville – Crew-Infos', icon: 'flag', color: '#2d9cdb' }
 ];
 
 export const GUIDES = [
@@ -934,6 +935,96 @@ export const GUIDES = [
         'Awareness Points: Infield (neben Infopoint) IH 20 · Outfield ai 47.'
       ] },
       { note: 'Kein Platz für Rassismus, Sexismus, Queerfeindlichkeit oder andere Diskriminierung. Grenzen respektieren, auf gegenseitiges Einverständnis achten.' }
+    ]
+  },
+
+  // ---- Parookaville 2026 -----------------------------------------------------
+  {
+    id: 'pv-oeffnungszeiten',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Öffnungszeiten – Büro, Zufahrt & Crew-Check-in',
+    problem: 'Wann haben Produktionsbüro, Zufahrt und Crew-Check-in geöffnet?',
+    tags: ['parookaville', 'pv', 'öffnungszeiten', 'produktionsbüro', 'klever tor', 'zufahrt', 'check-in', 'crew', 'p21', 'p23'],
+    source: 'Parookaville 2026 – Crew-Infos (parookaville.com/de/crew-info)',
+    body: [
+      { h: 'Produktionsbüro' },
+      { ul: [
+        '29.06.–03.07.2026: 07:00–20:00 Uhr',
+        'ab 04.07.2026: 08:00–14:00 Uhr'
+      ] },
+      { h: 'Klever Tor 2 (Produktionszufahrt)' },
+      { ul: [
+        '06.07.–16.07.2026: 07:00–20:00 Uhr'
+      ] },
+      { h: 'Festival Crew-Check-in (P21)' },
+      { ul: [
+        '14.07.2026: 16:00–20:00 Uhr',
+        '15.07.–16.07.2026: 07:00–22:00 Uhr',
+        '17.07.–19.07.2026: 07:00–00:00 Uhr'
+      ] },
+      { h: 'Campsite Crew-Check-in (P23)' },
+      { ul: [
+        '14.07.2026: 09:00–14:00 Uhr & 18:00–22:00 Uhr',
+        '15.07.–19.07.2026: 07:00–22:00 Uhr'
+      ] },
+      { note: 'Angaben ohne Gewähr – Zeiten können sich kurzfristig ändern. Im Zweifel an der Quelle (parookaville.com/de/crew-info) prüfen.' }
+    ]
+  },
+  {
+    id: 'pv-crew-catering',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Crew-Catering – Essenszeiten',
+    problem: 'Wann gibt es Frühstück, Mittag- und Abendessen für die Crew?',
+    tags: ['parookaville', 'pv', 'catering', 'essen', 'essenszeiten', 'frühstück', 'mittagessen', 'abendessen', 'crew', 'mahlzeit'],
+    source: 'Parookaville 2026 – Crew-Infos (parookaville.com/de/crew-info)',
+    body: [
+      { h: 'Frühstück' },
+      { ul: [
+        '29.06.–12.07.2026: 07:00–09:00 Uhr',
+        '13.07.–15.07.2026: 07:00–11:30 Uhr',
+        'Pre-Party 16.07.2026: 07:00–11:30 Uhr',
+        'Festival 17.–19.07.2026: 07:00–11:30 Uhr',
+        '20.07.–30.07.2026: 07:00–09:00 Uhr',
+        '31.07.2026: 07:00–09:00 Uhr'
+      ] },
+      { h: 'Mittagessen' },
+      { ul: [
+        '29.06.–12.07.2026: 12:00–14:00 Uhr',
+        '13.07.–15.07.2026: 12:00–18:00 Uhr',
+        'Pre-Party 16.07.2026: 12:00–18:00 Uhr',
+        'Festival 17.–19.07.2026: 12:00–18:00 Uhr',
+        '20.07.–30.07.2026: 12:00–14:00 Uhr',
+        '31.07.2026: 12:00–14:00 Uhr'
+      ] },
+      { h: 'Abendessen' },
+      { ul: [
+        '29.06.–12.07.2026: 18:00–19:30 Uhr',
+        '13.07.–15.07.2026: 18:00–21:00 Uhr',
+        'Pre-Party 16.07.2026: 18:00–01:00 Uhr',
+        'Festival 17.–19.07.2026: 18:00–01:00 Uhr'
+      ] },
+      { note: 'Für 20.07.–31.07.2026 ist kein Abendessen ausgewiesen. Angaben ohne Gewähr.' }
+    ]
+  },
+  {
+    id: 'pv-anreise-p22',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Anreise & Parken – P22 Crew York',
+    problem: 'Wie komme ich zum Parkplatz P22 Crew York und weiter aufs Gelände?',
+    tags: ['parookaville', 'pv', 'anreise', 'parken', 'p22', 'crew york', 'shuttle', 'weeze', 'route'],
+    source: 'Parookaville 2026 – Crew-Infos (parookaville.com/de/crew-info)',
+    body: [
+      { warn: 'Nur für Crew, die in Crew York untergebracht ist (Parkticket P22).' },
+      { h: 'Route' },
+      { steps: [
+        { t: 'Beschilderung zum Flughafen Weeze folgen', d: '' },
+        { t: 'Nicht durch die Hauptschranke fahren', d: 'Stattdessen die 2. Ausfahrt im Kreisverkehr nutzen.' },
+        { t: 'Einfahrt Crew York', d: 'Nach ca. 800 m auf der rechten Seite – hier ist auch der Parkplatz P22 Crew York.' },
+        { t: 'Mit dem Crew-Shuttle aufs Festivalgelände', d: 'Vom Parkplatz P22 fährt der Crew-Shuttle zum Gelände.' }
+      ] }
     ]
   }
 ];
