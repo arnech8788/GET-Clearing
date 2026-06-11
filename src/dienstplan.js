@@ -3,6 +3,7 @@
 // Ansprechpersonen: wichtige Telefonnummern (Leitung, Runner, Stationsleitungen).
 // Schichttausche werden als Overrides (SHIFT_CHANGES) angewandt und markiert.
 import { ICO, escapeHtml, highlight, toast } from './ui.js';
+import { state, eventChipsHtml } from './main.js';
 import { DIENSTPLAN_META, DIENSTPLAN_DAYS, DIENSTPLAN_CONTACTS, SHIFT_CHANGES } from './data/dienstplan.js';
 
 let dp = { plan: null, day: null, query: '', mode: 'plan' };
@@ -141,12 +142,21 @@ export function setDpMode(m) { dp.mode = m; renderDienstplan(); }
 export function renderDienstplan(opts = {}) {
   const el = document.getElementById('screen-dienstplan');
   if (!el) return;
+  // Dienstplan gibt es nur für das Event, dem die Daten gehören (Rock am Ring).
+  if (state.activeEvent !== DIENSTPLAN_META.event) {
+    el.innerHTML = `
+      <header class="topbar"><h1>Dienstplan</h1>${eventChipsHtml()}</header>
+      <div class="pad">
+        <div class="empty">${ICO.calendar}<p>Dienstplan ist nur für Rock am Ring – für Parookaville sind noch keine Einsatzpläne hinterlegt.</p></div>
+      </div>`;
+    return;
+  }
   const q = dp.query.trim();
   const placeholder = dp.mode === 'plan'
     ? 'Name suchen (z. B. Arne Chudobba)…'
     : 'Ansprechpartner suchen (Name/Rolle)…';
   el.innerHTML = `
-    <header class="topbar"><h1>Dienstplan</h1></header>
+    <header class="topbar"><h1>Dienstplan</h1>${eventChipsHtml()}</header>
     <div class="pad">
       <div class="muted small" style="margin-bottom:10px">${escapeHtml(DIENSTPLAN_META.title)}</div>
       <div class="tabbar">

@@ -1,8 +1,8 @@
 // Anleitungen: Browse-Liste (nach Kategorie), Detailansicht, Favoriten.
 import { GUIDES, CATEGORIES, getGuide, getCategory } from './data/guides.js';
-import { EVENTS, getEvent } from './data/events.js';
+import { getEvent } from './data/events.js';
 import { ICO, escapeHtml, highlight } from './ui.js';
-import { state, isFavorite, toggleFavorite, currentScreen } from './main.js';
+import { state, isFavorite, toggleFavorite, currentScreen, eventChipsHtml } from './main.js';
 
 let view = { guideId: null, category: null, query: '' };
 
@@ -67,8 +67,7 @@ function renderList() {
   const header = `
     <header class="topbar">
       <h1>Anleitungen</h1>
-      <div class="event-chips" id="eventChipsInline">${EVENTS.filter((e) => e.selectable).map((e) => `
-        <button class="chip ${state.activeEvent === e.id ? 'chip-active' : ''}" style="--chip:${e.color}" onclick="setActiveEvent('${e.id}')">${escapeHtml(e.short)}</button>`).join('')}</div>
+      ${eventChipsHtml()}
     </header>
     <div class="pad">
       <div class="search-wrap">
