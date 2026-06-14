@@ -110,7 +110,7 @@ function renderList() {
   return header + favBlock + body + `</div>`;
 }
 
-function guideCard(g, q) {
+export function guideCard(g, q) {
   const cat = getCategory(g.cat);
   // Badges zeigen die "anderen" Bereiche einer Guide (nicht den aktuell gewählten),
   // z. B. ein "GET"-Badge an allgemeinen Guides während man ein Festival ansieht.

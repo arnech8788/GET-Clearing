@@ -8,6 +8,7 @@ import { renderNotes, newNote, editNote, deleteNote, openNote } from './notes.js
 import { renderReference, setRefTab } from './reference.js';
 import { renderDienstplan } from './dienstplan.js';
 import { renderBestand } from './bestand.js';
+import { renderKlangpiraten } from './klangpiraten.js';
 import { syncStatusLabel, openSyncModal, initSync, pushSync, pullSync } from './sync.js';
 
 const STORE_KEY = 'getclr-v1';
@@ -46,7 +47,8 @@ export function load() {
       if (!Array.isArray(state.stock)) state.stock = [];
       if (!Array.isArray(state.favorites)) state.favorites = [];
       if (!Array.isArray(state.contacts)) state.contacts = [];
-      if (!getEvent(state.activeEvent)) state.activeEvent = 'rar';
+      // Umschalter wählt nur Festivals; früher konnten GET/Klangpiraten aktiv sein.
+      if (getEvent(state.activeEvent).kind !== 'festival') state.activeEvent = 'rar';
     }
   } catch (e) {
     console.warn('load failed', e);
@@ -141,6 +143,7 @@ function renderActive(name) {
   else if (name === 'reference') renderReference();
   else if (name === 'dienstplan') renderDienstplan();
   else if (name === 'bestand') renderBestand();
+  else if (name === 'klangpiraten') renderKlangpiraten();
   else if (name === 'more') renderMore();
 }
 
@@ -214,8 +217,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.0.0';
+const APP_VERSION = '3.1.0';
 const CHANGELOG = [
+  ['3.1.0', 'Klangpiraten ist jetzt ein eigener Tab (unten) statt einer Umschalt-Auswahl – festivalunabhängig erreichbar für arbeitgeberweite Crew-Infos. Der Umschalter oben wählt nur noch das Festival (Rock am Ring, Parookaville …); die allgemeinen GET-Cashless-Anleitungen werden in jedem Festival automatisch mitgezeigt.'],
   ['3.0.0', 'Festival-übergreifend umgebaut: Die App ist jetzt allgemein für Festival-Crews gedacht. Der Umschalter (oben auf jedem Tab) wählt den Bereich – zwei allgemeine Bereiche „GET Cashless" (systemweites Cashless-Wissen, erscheint zusätzlich in jedem Festival) und „Klangpiraten" (Arbeitgeber, festivalübergreifend) plus die Festivals (Rock am Ring, Parookaville …). Jeder Bereich zeigt nur seine Inhalte; neue Festivals lassen sich einfach ergänzen. Umbenannt zu „Festival Clearing & Crew".'],
   ['2.9.0', 'Strikte Event-Trennung: Der RaR/PV-Umschalter ist jetzt im Kopf jedes Tabs sichtbar, und jeder Tab zeigt nur die Daten des aktiven Events. Dienstplan, Bestand und Referenz → Tickets/Bändchen sind Rock-am-Ring-spezifisch und zeigen unter Parookaville einen Hinweis statt RaR-Daten. Eigene Fälle/Notizen bleiben bewusst über beide Events sichtbar (mit Event-Badge).'],
   ['2.8.0', 'Neuer Tab „Bestand": Mitarbeiter*innen-Bestandsliste digital führen – pro Station/Tag je Bändchen-Typ Erst-/Restbestand, „Angelegt" wird automatisch berechnet (überschreibbar). Stationen & Namen werden vorgeschlagen (Freitext möglich), Datum nur heute–Sonntag, jederzeit editierbar, optional übers Team synchronisiert. „Fälle/Notizen" sind jetzt über den „Mehr"-Tab erreichbar.'],
@@ -260,8 +264,8 @@ export function renderMore() {
       </div>
 
       <div class="card">
-        <div class="card-title">Bereich / Festival</div>
-        <p class="muted small" style="margin:0 0 10px">Wähle, worum es gerade geht – die App zeigt dann nur Inhalte dieses Bereichs. „GET Cashless" erscheint zusätzlich in jedem Festival.</p>
+        <div class="card-title">Aktives Festival</div>
+        <p class="muted small" style="margin:0 0 10px">Wähle das Festival – die App zeigt dessen Inhalte plus die allgemeinen GET-Cashless-Anleitungen. Klangpiraten-Infos liegen im eigenen Tab.</p>
         <div class="event-list">
           ${EVENTS.filter((e) => e.selectable).map((e) => `
             <button class="event-row ${state.activeEvent === e.id ? 'event-row-active' : ''}" onclick="setActiveEvent('${e.id}')">
