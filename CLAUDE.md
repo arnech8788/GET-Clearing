@@ -7,12 +7,14 @@ Guidance for Claude Code when working in this repository.
 **Festival Clearing & Crew** ist eine PWA für Festival-Crews: **Anleitungen für
 Problemfälle** (Cashless-Clearing/Troubleshooting), Referenzdaten, Dienstpläne und
 **eigene Fallnotizen**, damit man Vorgänge wiederfindet, wenn ein Gast später nochmal
-kommt. Die App ist **festivalübergreifend** aufgebaut: oben (auf jedem Tab) wählt man
-einen **Bereich** – zwei allgemeine Buckets **„GET Cashless"** (`kind: 'general'`,
-`alwaysOn`, systemweit – erscheint zusätzlich in jedem Festival) und **„Klangpiraten"**
-(`kind: 'employer'`, Arbeitgeber, festivalübergreifend) sowie die **Festivals**
-(`kind: 'festival'`, z. B. Rock am Ring, Parookaville). Jeder Bereich zeigt nur seine
-Inhalte; `scopeIncludes()` in `src/data/events.js` entscheidet die Sichtbarkeit. Läuft
+kommt. Die App ist **festivalübergreifend** aufgebaut: der **Umschalter** oben (auf
+jedem Tab) wählt nur das **Festival** (`kind: 'festival'`, z. B. Rock am Ring,
+Parookaville). Die allgemeinen **GET-Cashless**-Anleitungen (`id: 'all'`,
+`kind: 'general'`, `alwaysOn`) sind nicht wählbar, sondern werden in jedem Festival
+automatisch mitgezeigt. **Klangpiraten** (`kind: 'employer'`, Arbeitgeber) ist ein
+**eigener Tab** unten – festivalunabhängig (Inhalte mit `events: ['klangpiraten']`).
+`scopeIncludes(active, candidate)` in `src/data/events.js` entscheidet die Sichtbarkeit
+(Festival + `alwaysOn`-Inhalte). Läuft
 komplett im Browser, ist offline-fähig und mit **Vite** (+ `vite-plugin-pwa`) gebaut.
 Notizen liegen lokal (`localStorage`) mit optionalem Firebase-Team-Sync.
 
@@ -43,6 +45,9 @@ Statische Hülle (`index.html`) + `styles.css`, App-Logik in ES-Modulen unter `s
 - **`src/guides.js`** – Anleitungsliste (nach Kategorie/Suche/Event) + Detailansicht,
   Favoriten.
 - **`src/notes.js`** – Eigene Fälle/Notizen (CRUD, Status, Verknüpfung mit Anleitung).
+- **`src/klangpiraten.js`** – Tab „Klangpiraten": festivalübergreifender Arbeitgeber-
+  Bereich; listet Guides mit `events: ['klangpiraten']` (kategoriegruppiert, Suche),
+  Detail-/Notiz-Flow via `guideCard`/`openGuide` aus `guides.js`.
 - **`src/reference.js`** – Referenz-Tabs: Ticket-Scan-Matrix, Camping-Kategorien,
   Bändchenfarben, Kontakte (offiziell + eigene lokale), Infos.
 - **`src/dienstplan.js`** – Tab „Dienstplan": Tagesbrowser (Stationen/KB, einklappbar)
@@ -52,10 +57,11 @@ Statische Hülle (`index.html`) + `styles.css`, App-Logik in ES-Modulen unter `s
 - **`src/sync.js`** – Optionaler Firebase-Team-Sync (lazy `import('firebase/…')`,
   Standard AUS).
 - **`src/data/`** – Reiner Content (keine Logik):
-  - `events.js` – Bereiche: allgemeine Buckets (`kind: 'general'`/`'employer'`) +
-    Festivals (`kind: 'festival'`). `scopeIncludes(active, candidate)` regelt, welche
-    Inhalte in welcher Ansicht erscheinen (`alwaysOn` = überall in Festivals mitgezeigt).
-    Die ID `'all'` ist der GET-Cashless-Bucket (Bestands-Tags `events: ['all']`).
+  - `events.js` – Bereiche mit `kind`: `'festival'` (im Umschalter wählbar,
+    `selectable: true`), `'general'` (GET Cashless, `id: 'all'`, `alwaysOn`,
+    nicht wählbar) und `'employer'` (Klangpiraten, eigener Tab, nicht wählbar).
+    `scopeIncludes(active, candidate)` regelt die Sichtbarkeit (`alwaysOn` = überall
+    in Festivals mitgezeigt). Bestands-Tags der GET-Guides: `events: ['all']`.
   - `guides.js` – Alle Anleitungen + `CATEGORIES`. Block-Format siehe Datei-Kopf.
   - `tickets.js` – Scan-Matrix, Kategorien, Bändchenfarben (RaR).
   - `contacts.js` – NUR offizielle Hotlines + `QUICK_INFO`.

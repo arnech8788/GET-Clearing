@@ -19,7 +19,7 @@ export const EVENTS = [
     short: 'GET',
     desc: 'Cashless-System (Chip, Tickets, Top-up, Troubleshooting) – auf jedem Festival relevant.',
     color: '#f5a623',
-    selectable: true,
+    selectable: false, // nicht im Umschalter wählbar; via alwaysOn überall mitgezeigt
     alwaysOn: true
   },
   {
@@ -29,7 +29,7 @@ export const EVENTS = [
     short: 'KP',
     desc: 'Arbeitgeber – festivalübergreifende Crew-Infos & Abläufe.',
     color: '#9b59b6',
-    selectable: true
+    selectable: false // eigener Tab „Klangpiraten" statt Umschalter-Auswahl
   },
   {
     id: 'rar',
