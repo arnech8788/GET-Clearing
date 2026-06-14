@@ -73,7 +73,7 @@ svg { width: 22px; height: 22px; flex: none; }
 .icon-btn.fav-active svg { fill: var(--accent); }
 
 /* ===== Event chips ===== */
-.event-chips { display: flex; gap: 6px; }
+.event-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   background: var(--bg3); border: 1px solid var(--bdr); color: var(--tx2);
   padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer;

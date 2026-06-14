@@ -1,7 +1,7 @@
 {
-  "name": "GET Clearing & Troubleshooting",
-  "short_name": "Clearing",
-  "description": "Anleitungen und Fallnotizen für das Festival-Clearing (GET Cashless)",
+  "name": "Festival Clearing & Crew",
+  "short_name": "Festival",
+  "description": "Anleitungen, Referenz & Fallnotizen für Festival-Crews (Cashless-Clearing, Dienstpläne u. a.)",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#15171e",

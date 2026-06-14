@@ -1,7 +1,7 @@
 // Referenz: Ticket-Scan-Matrix, Camping-Kategorien, Bändchenfarben, Kontakte, Infos.
 import { ICO, escapeHtml, openModal, closeModal, toast, confirmDialog } from './ui.js';
 import { state, save, eventChipsHtml } from './main.js';
-import { getEvent } from './data/events.js';
+import { getEvent, scopeIncludes } from './data/events.js';
 import { SCAN_MATRIX, CATEGORY_OVERVIEW, WRISTBAND_COLORS } from './data/tickets.js';
 import { SHIPPED_CONTACTS, QUICK_INFO } from './data/contacts.js';
 
@@ -75,7 +75,7 @@ function renderTickets() {
 
 // ---- Kontakte -------------------------------------------------------------
 function renderContacts() {
-  const shipped = SHIPPED_CONTACTS.filter((g) => g.event === 'all' || g.event === state.activeEvent);
+  const shipped = SHIPPED_CONTACTS.filter((g) => scopeIncludes(state.activeEvent, g.event));
   const own = state.contacts || [];
   return `
     <div class="callout callout-note" style="margin-bottom:14px">${ICO.info}<div>Mitgelieferte Nummern sind offizielle Festival-Hotlines. Private Team-Nummern bitte als <b>eigene Kontakte</b> anlegen – diese bleiben nur auf diesem Gerät.</div></div>
@@ -157,8 +157,8 @@ export async function deleteOwnContact(id) {
 
 // ---- Infos ----------------------------------------------------------------
 function renderInfo() {
-  const infos = QUICK_INFO.filter((i) => i.event === 'all' || i.event === state.activeEvent);
-  if (!infos.length) return '<div class="empty">' + ICO.info + '<p>Keine Infos für dieses Event.</p></div>';
+  const infos = QUICK_INFO.filter((i) => scopeIncludes(state.activeEvent, i.event));
+  if (!infos.length) return '<div class="empty">' + ICO.info + '<p>Keine Infos für diesen Bereich.</p></div>';
   return infos.map((i) => `
     <div class="card">
       <div class="card-title">${escapeHtml(i.title)}</div>

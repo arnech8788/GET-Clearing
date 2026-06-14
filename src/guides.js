@@ -1,14 +1,14 @@
 // Anleitungen: Browse-Liste (nach Kategorie), Detailansicht, Favoriten.
 import { GUIDES, CATEGORIES, getGuide, getCategory } from './data/guides.js';
-import { getEvent } from './data/events.js';
+import { getEvent, scopeIncludes } from './data/events.js';
 import { ICO, escapeHtml, highlight } from './ui.js';
 import { state, isFavorite, toggleFavorite, currentScreen, eventChipsHtml } from './main.js';
 
 let view = { guideId: null, category: null, query: '' };
 
-// Gilt die Guide für das aktuell gewählte Event?
+// Gilt die Guide für den aktuell gewählten Bereich (Festival oder allgemeiner Bucket)?
 function matchesEvent(g) {
-  return g.events.includes('all') || g.events.includes(state.activeEvent);
+  return g.events.some((id) => scopeIncludes(state.activeEvent, id));
 }
 
 function matchesQuery(g, q) {
@@ -112,7 +112,9 @@ function renderList() {
 
 function guideCard(g, q) {
   const cat = getCategory(g.cat);
-  const evBadges = g.events.filter((e) => e !== 'all').map((eid) => {
+  // Badges zeigen die "anderen" Bereiche einer Guide (nicht den aktuell gewählten),
+  // z. B. ein "GET"-Badge an allgemeinen Guides während man ein Festival ansieht.
+  const evBadges = g.events.filter((e) => e !== state.activeEvent).map((eid) => {
     const e = getEvent(eid);
     return `<span class="ev-badge" style="background:${e.color}">${escapeHtml(e.short)}</span>`;
   }).join('');
