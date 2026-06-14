@@ -4,12 +4,17 @@ Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-**GET Clearing & Troubleshooting** ist eine PWA für das Festival-Clearing mit dem
-GET-Cashless-System (Rock am Ring u. a.). Sie bündelt **Anleitungen für Problemfälle**
-und erlaubt **eigene Fallnotizen**, damit man Vorgänge wiederfindet, wenn ein Gast
-später nochmal kommt. Läuft komplett im Browser, ist offline-fähig und mit **Vite**
-(+ `vite-plugin-pwa`) gebaut. Notizen liegen lokal (`localStorage`) mit optionalem
-Firebase-Team-Sync.
+**Festival Clearing & Crew** ist eine PWA für Festival-Crews: **Anleitungen für
+Problemfälle** (Cashless-Clearing/Troubleshooting), Referenzdaten, Dienstpläne und
+**eigene Fallnotizen**, damit man Vorgänge wiederfindet, wenn ein Gast später nochmal
+kommt. Die App ist **festivalübergreifend** aufgebaut: oben (auf jedem Tab) wählt man
+einen **Bereich** – zwei allgemeine Buckets **„GET Cashless"** (`kind: 'general'`,
+`alwaysOn`, systemweit – erscheint zusätzlich in jedem Festival) und **„Klangpiraten"**
+(`kind: 'employer'`, Arbeitgeber, festivalübergreifend) sowie die **Festivals**
+(`kind: 'festival'`, z. B. Rock am Ring, Parookaville). Jeder Bereich zeigt nur seine
+Inhalte; `scopeIncludes()` in `src/data/events.js` entscheidet die Sichtbarkeit. Läuft
+komplett im Browser, ist offline-fähig und mit **Vite** (+ `vite-plugin-pwa`) gebaut.
+Notizen liegen lokal (`localStorage`) mit optionalem Firebase-Team-Sync.
 
 ## Build & Entwicklung
 
@@ -47,7 +52,10 @@ Statische Hülle (`index.html`) + `styles.css`, App-Logik in ES-Modulen unter `s
 - **`src/sync.js`** – Optionaler Firebase-Team-Sync (lazy `import('firebase/…')`,
   Standard AUS).
 - **`src/data/`** – Reiner Content (keine Logik):
-  - `events.js` – Festivals (erweiterbar; `'all'` = generisch).
+  - `events.js` – Bereiche: allgemeine Buckets (`kind: 'general'`/`'employer'`) +
+    Festivals (`kind: 'festival'`). `scopeIncludes(active, candidate)` regelt, welche
+    Inhalte in welcher Ansicht erscheinen (`alwaysOn` = überall in Festivals mitgezeigt).
+    Die ID `'all'` ist der GET-Cashless-Bucket (Bestands-Tags `events: ['all']`).
   - `guides.js` – Alle Anleitungen + `CATEGORIES`. Block-Format siehe Datei-Kopf.
   - `tickets.js` – Scan-Matrix, Kategorien, Bändchenfarben (RaR).
   - `contacts.js` – NUR offizielle Hotlines + `QUICK_INFO`.
@@ -67,11 +75,14 @@ Statische Hülle (`index.html`) + `styles.css`, App-Logik in ES-Modulen unter `s
   `removeModalDOM()`. Der Zurück-Pfeil ruft `navBack()` (= `history.back()`).
   So beendet die Zurück-Geste die installierte PWA erst an der Wurzel.
 
-### Neues Festival hinzufügen
+### Neues Festival / neuen Bereich hinzufügen
 
-1. Eintrag in `src/data/events.js` (`selectable: true`).
-2. Event-spezifische Guides in `src/data/guides.js` mit `events: ['<id>']`.
-3. Optional Referenzdaten/Kontakte ergänzen (`tickets.js`, `contacts.js`).
+1. Eintrag in `src/data/events.js` (`kind: 'festival'`, `selectable: true`).
+2. Festival-spezifische Guides in `src/data/guides.js` mit `events: ['<id>']`
+   (Bereich-übergreifende GET-Inhalte tragen `events: ['all']`).
+3. Optional Kontakte/Infos (`contacts.js`, je Eintrag `event: '<id>'`) und
+   Referenzdaten ergänzen. Reine RaR-Tabs (Referenz→Tickets, Dienstplan, Bestand)
+   zeigen außerhalb von RaR derzeit einen Platzhalter.
 
 ## Datenschutz
 

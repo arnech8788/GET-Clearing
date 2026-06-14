@@ -1,20 +1,39 @@
-// Festivals / Events. Erweiterbar: neues Festival = neuer Eintrag + passende
+// Bereiche der App: zwei allgemeine Buckets (System / Arbeitgeber) + die Festivals.
+// Erweiterbar: neues Festival = neuer Eintrag (kind: 'festival') + passende
 // `events`-Tags in den Guides (src/data/guides.js).
 //
-// Der Wert 'all' in einer Guide bedeutet "gilt für alle Events" (generische
-// GET-Anleitungen). Event-spezifische Guides tragen die jeweilige Event-ID.
+// kind:
+//   'general'  – systemweites Wissen (z. B. GET Cashless), für jedes Festival relevant.
+//   'employer' – Arbeitgeber-/Crew-Bereich (z. B. Klangpiraten), festivalübergreifend.
+//   'festival' – konkretes Festival.
+//
+// alwaysOn: true → diese Inhalte erscheinen zusätzlich in jeder Festival-Ansicht
+// (z. B. GET-Cashless-Basics gelten auf jedem Festival). Die allgemeinen Buckets
+// selbst zeigen nur ihre eigenen Inhalte (strikt getrennt).
 
 export const EVENTS = [
   {
-    id: 'all',
-    name: 'GET allgemein',
+    id: 'all', // ID bleibt 'all' für Bestands-Tags (events: ['all']) der GET-Guides
+    kind: 'general',
+    name: 'GET Cashless',
     short: 'GET',
-    desc: 'Generische GET Cashless-Anleitungen – gelten auf jedem Event.',
+    desc: 'Cashless-System (Chip, Tickets, Top-up, Troubleshooting) – auf jedem Festival relevant.',
     color: '#f5a623',
-    selectable: false // kein eigener Event-Filter, immer mitgezeigt
+    selectable: true,
+    alwaysOn: true
+  },
+  {
+    id: 'klangpiraten',
+    kind: 'employer',
+    name: 'Klangpiraten',
+    short: 'KP',
+    desc: 'Arbeitgeber – festivalübergreifende Crew-Infos & Abläufe.',
+    color: '#9b59b6',
+    selectable: true
   },
   {
     id: 'rar',
+    kind: 'festival',
     name: 'Rock am Ring 2026',
     short: 'RaR',
     desc: 'Nürburgring · Festival 5.–7. Juni 2026 · Camping Mi 03.06.–Mo 08.06. · Clearing / Cashless (Klangpiraten)',
@@ -23,6 +42,7 @@ export const EVENTS = [
   },
   {
     id: 'parookaville',
+    kind: 'festival',
     name: 'Parookaville',
     short: 'PV',
     desc: 'Weeze · Festival 17.–19.07.2026 (Pre-Party 16.07.) · Crew-Infos',
@@ -33,4 +53,15 @@ export const EVENTS = [
 
 export function getEvent(id) {
   return EVENTS.find((e) => e.id === id) || EVENTS[0];
+}
+
+// Gehört `candidateId`-Inhalt in die aktuell gewählte Ansicht `activeId`?
+// - identischer Bereich → ja
+// - Festival aktiv → zusätzlich alle `alwaysOn`-Bereiche (z. B. GET Cashless)
+// - allgemeiner Bucket aktiv (general/employer) → nur eigene Inhalte (strikt)
+export function scopeIncludes(activeId, candidateId) {
+  if (candidateId === activeId) return true;
+  const active = getEvent(activeId);
+  if (active.kind === 'festival') return !!getEvent(candidateId).alwaysOn;
+  return false;
 }

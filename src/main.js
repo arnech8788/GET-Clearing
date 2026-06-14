@@ -214,8 +214,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '2.9.0';
+const APP_VERSION = '3.0.0';
 const CHANGELOG = [
+  ['3.0.0', 'Festival-übergreifend umgebaut: Die App ist jetzt allgemein für Festival-Crews gedacht. Der Umschalter (oben auf jedem Tab) wählt den Bereich – zwei allgemeine Bereiche „GET Cashless" (systemweites Cashless-Wissen, erscheint zusätzlich in jedem Festival) und „Klangpiraten" (Arbeitgeber, festivalübergreifend) plus die Festivals (Rock am Ring, Parookaville …). Jeder Bereich zeigt nur seine Inhalte; neue Festivals lassen sich einfach ergänzen. Umbenannt zu „Festival Clearing & Crew".'],
   ['2.9.0', 'Strikte Event-Trennung: Der RaR/PV-Umschalter ist jetzt im Kopf jedes Tabs sichtbar, und jeder Tab zeigt nur die Daten des aktiven Events. Dienstplan, Bestand und Referenz → Tickets/Bändchen sind Rock-am-Ring-spezifisch und zeigen unter Parookaville einen Hinweis statt RaR-Daten. Eigene Fälle/Notizen bleiben bewusst über beide Events sichtbar (mit Event-Badge).'],
   ['2.8.0', 'Neuer Tab „Bestand": Mitarbeiter*innen-Bestandsliste digital führen – pro Station/Tag je Bändchen-Typ Erst-/Restbestand, „Angelegt" wird automatisch berechnet (überschreibbar). Stationen & Namen werden vorgeschlagen (Freitext möglich), Datum nur heute–Sonntag, jederzeit editierbar, optional übers Team synchronisiert. „Fälle/Notizen" sind jetzt über den „Mehr"-Tab erreichbar.'],
   ['2.7.0', 'Support-Tool-Anleitung: Support-Chat ohne Bändchen/Chip per Ticketnummer oder Handynummer klargestellt. Neue RaR-Anleitung „Welches Bändchen an welcher Station?" (Festival ohne Camping nur an B3, Festival+Camping an allen KBs).'],
@@ -259,7 +260,8 @@ export function renderMore() {
       </div>
 
       <div class="card">
-        <div class="card-title">Aktives Event</div>
+        <div class="card-title">Bereich / Festival</div>
+        <p class="muted small" style="margin:0 0 10px">Wähle, worum es gerade geht – die App zeigt dann nur Inhalte dieses Bereichs. „GET Cashless" erscheint zusätzlich in jedem Festival.</p>
         <div class="event-list">
           ${EVENTS.filter((e) => e.selectable).map((e) => `
             <button class="event-row ${state.activeEvent === e.id ? 'event-row-active' : ''}" onclick="setActiveEvent('${e.id}')">
@@ -289,8 +291,8 @@ export function renderMore() {
 
       <div class="card">
         <div class="card-title">Info</div>
-        <div class="muted small">GET Clearing &amp; Troubleshooting · v${APP_VERSION}</div>
-        <div class="muted small" style="margin-top:6px">Inhalte basieren auf den GET-Leitfäden 2025 und den Rock-am-Ring-Briefings. Ohne Gewähr – im Zweifel Teamlead / GET-Support fragen.</div>
+        <div class="muted small">Festival Clearing &amp; Crew · v${APP_VERSION}</div>
+        <div class="muted small" style="margin-top:6px">Anleitungen, Referenz &amp; Fallnotizen für Festival-Crews (Cashless-Clearing, Dienstpläne u. a.). Inhalte ohne Gewähr – im Zweifel Teamlead / Support fragen.</div>
         <button class="row-btn" style="margin-top:10px" onclick="openChangelog()"><span class="row-ic">${ICO.info}</span><span>Changelog</span><span class="row-arrow">v${APP_VERSION}</span></button>
       </div>
 
