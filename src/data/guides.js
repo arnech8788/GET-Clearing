@@ -1026,6 +1026,143 @@ export const GUIDES = [
         { t: 'Mit dem Crew-Shuttle aufs Festivalgelände', d: 'Vom Parkplatz P22 fährt der Crew-Shuttle zum Gelände.' }
       ] }
     ]
+  },
+  {
+    id: 'pv-kp-meeting',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Klangpiraten-Meeting & Anreise',
+    problem: 'Wann/wo ist das Gesamtmeeting, und wie plane ich An- und Abreise?',
+    tags: ['parookaville', 'pv', 'meeting', 'anreise', 'abreise', 'schulung', 'fahrgemeinschaft', 'klangpiraten', 'p23'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { h: 'Gesamtmeeting' },
+      { ul: ['Dienstag, 14.07.2026, 17:30 Uhr', 'Treffpunkt: Eingang Basic Camping', 'Parken auf P23, dann zu Fuß zum Treffpunkt'] },
+      { h: 'Inhalt' },
+      { ul: ['Begrüßung & Allgemeines', 'Schulung/Einweisung für Bändertausch & Cashless', 'Im Anschluss gemeinsam ins Crew-Catering zum Abendessen'] },
+      { warn: 'Vorher zur Akkreditierung gehen! Ohne Akkreditierung kein Zutritt aufs Gelände oder ins Catering.' },
+      { h: 'Anreise' },
+      { ul: ['Rechtzeitig anreisen, um 17:30 Uhr am Meeting zu sein', 'Fahrgemeinschaften über die Fahrgemeinschaftsgruppe in der WhatsApp-Community organisieren'] },
+      { h: 'Abreise' },
+      { p: 'Selbstständig nach der letzten Schicht planbar.' },
+      { note: 'Sonstige Meetings werden separat in der Gruppe oder per DM angekündigt.' }
+    ]
+  },
+  {
+    id: 'pv-kp-akkreditierung',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Akkreditierung & Crew-Check-in',
+    problem: 'Wo hole ich Bändchen/Carpass, und was muss ich mitbringen?',
+    tags: ['parookaville', 'pv', 'akkreditierung', 'check-in', 'bändchen', 'carpass', 'ausweis', 'basic camping', 'crew york'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { p: 'Akkreditierung / Bändchen / Carpässe gibt es bei Ankunft vor Ort an der Akkreditierung.' },
+      { warn: 'Gültiges Ausweisdokument zwingend erforderlich!' },
+      { h: 'Check-in-Standorte (Dienstag)' },
+      { ul: ['Eingang Basic Camping: Di 10:00–22:00 Uhr', 'Eingang Crew York: Di 16:00–22:00 Uhr'] },
+      { h: 'Vorab online' },
+      { p: 'Die Akkreditierung muss jede*r selbstständig online vervollständigt haben (die E-Mail dazu wurde im Vorfeld verschickt).' },
+      { note: 'Auch während der Arbeitszeit stets ein gültiges Ausweisdokument mitführen (für eventuelle Kontrollen).' }
+    ]
+  },
+  {
+    id: 'pv-kp-crew-camp',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Crew-Camp – Crew York (Fläche E)',
+    problem: 'Wo campt die Klangpiraten-Crew?',
+    tags: ['parookaville', 'pv', 'camping', 'crew york', 'fläche e', 'hausordnung'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { ul: ['Gecampt wird im Crew York', 'Für die Klangpiraten ist die Fläche E reserviert (wie letztes Jahr) – wir campen als Crew zusammen'] },
+      { note: 'Der genaue Standort kommt am Montag in die Ankündigungen der WhatsApp-Community.' },
+      { warn: 'Crew-York-Hausordnung durchlesen und an die Regeln halten!' }
+    ]
+  },
+  {
+    id: 'pv-kp-kleidung',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Arbeits- & Sicherheitskleidung',
+    problem: 'Was muss ich tragen (Warnweste, T-Shirt, Schuhe)?',
+    tags: ['parookaville', 'pv', 'kleidung', 'warnweste', 'sicherheit', 'cashless', 'ing', 'schuhe'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { h: 'Warnkleidung' },
+      { ul: ['Gelbe Warnwesten werden beim Gesamtmeeting ausgeteilt', 'Außerhalb der Showzeiten auf dem gesamten Gelände tragen'] },
+      { h: 'Bändertausch' },
+      { ul: ['Während der Arbeitszeit Warnweste tragen', 'Stationsleitungen tragen orange Warnwesten (gut erkennbar)'] },
+      { h: 'Cashless' },
+      { p: 'Für die Arbeit an den Cashless-Stationen gibt es von der ING gebrandete T-Shirts – bitte überziehen.' },
+      { h: 'Schuhwerk' },
+      { p: 'Festes, geschlossenes Schuhwerk tragen. Keine Flip-Flops oder Latschen!' },
+      { warn: 'Sicherheitsbestimmungen unbedingt einhalten – ein Verstoß kann zum Ausschluss von der Veranstaltung führen!' }
+    ]
+  },
+  {
+    id: 'pv-kp-catering',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Catering – Regeln & Ablauf',
+    problem: 'Wie funktioniert die Verpflegung im Crew-Catering?',
+    tags: ['parookaville', 'pv', 'catering', 'verpflegung', 'essen', 'abscannen', 'mahlzeiten'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { ul: ['An Arbeitstagen 3 Mahlzeiten im Crew-Catering (alle Klangpirat*innen sind eingebucht)', 'Dienstagabend nach dem Gesamtmeeting sind alle im Catering eingeplant'] },
+      { warn: 'Essen immer abscannen! Wird es nicht an den Arbeitsplatz geliefert, selbstständig im Catering einnehmen oder zumindest abscannen. Nicht abgeholte/abgescannte Mahlzeiten führen zur Verantwortung – für euch und uns.' },
+      { ul: ['Genug Zeit vor der Schicht fürs Catering und die Wege zum Einsatzort einplanen', 'Kein Arbeitstag = kein Zutritt zum Catering', 'Kaffee/Getränke gibt es auch im Bereich vor dem Scan-Eingang'] },
+      { note: 'Das Essenskontingent ist begrenzt – nehmt nur, was euch zusteht.' }
+    ]
+  },
+  {
+    id: 'pv-kp-dienstplan',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Dienstplan & Schichttausch',
+    problem: 'Wann kommt der Einsatzplan, und wie tausche ich Schichten?',
+    tags: ['parookaville', 'pv', 'dienstplan', 'einsatzplan', 'schichttausch', 'whatsapp'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { h: 'Dienstplan' },
+      { p: 'Der Einsatzplan wird spätestens am Dienstag per Mail verschickt.' },
+      { h: 'Schichttausch' },
+      { ul: ['Über die Schichttausch-WhatsApp-Gruppe möglich', 'Mittwoch und Donnerstag sind keine Tausche möglich', 'Kein Tausch mit Personen aus dem Akkreditierungsteam', 'Jeder Tausch muss genehmigt werden – nicht alle Wünsche können erfüllt werden'] },
+      { note: 'Genaue Anleitung in der Gruppenbeschreibung. Die Infomail nennt „ab Freitag 17.06." – der Festival-Freitag ist der 17.07.2026; im Zweifel mit dem Büro / der Schichttausch-Gruppe abklären.' }
+    ]
+  },
+  {
+    id: 'pv-kp-arbeitszeiten',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Arbeitszeiten & Pausen',
+    problem: 'Wie werden Arbeitszeiten dokumentiert, welche Pausen gelten?',
+    tags: ['parookaville', 'pv', 'arbeitszeit', 'pausen', 'pausenregelung', 'unterschrift'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { ul: ['Arbeits- und Pausenzeiten werden von der Stationsleitung vor Ort dokumentiert', 'Alle müssen für ihre Arbeitszeiten unterschreiben', 'Bei Fragen direkt die Stationsleitung und/oder die zuständige Schichttausch-Person ansprechen'] },
+      { h: 'Pausen (verpflichtend)' },
+      { ul: ['0–6 h Arbeitszeit: keine Pause', '6,1–8 h: 30 min', '8,1–10 h: 45 min', '10,1–12 h: 60 min'] },
+      { warn: 'Keine selbstständige Pausennahme – nur nach Bestätigung durch die Stationsleitung. Pausenzeiten genau einhalten!' },
+      { note: 'Arbeitszeit über 10 h nur in Ausnahmesituationen und ausschließlich mit Einverständnis der Mitarbeiter*innen & der Gesamtleitung.' }
+    ]
+  },
+  {
+    id: 'pv-kp-leitfaeden',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Leitfäden & Verhaltensregeln',
+    problem: 'Welche Anhänge/Leitfäden gelten, und was erwartet Klangpiraten?',
+    tags: ['parookaville', 'pv', 'leitfäden', 'anhänge', 'verhaltensregeln', 'crewlove', 'bargeld', 'bänder', 'topup', 'ticket swap', 'hausordnung'],
+    source: 'Klangpiraten Infomail – Parookaville 2026',
+    body: [
+      { h: 'Bitte sorgfältig lesen (Anhänge der Infomail)' },
+      { ul: ['Klangpiraten-Verhaltensregeln', 'Anweisung Bargeld', 'Anweisung Bänder', 'Leitfaden Top-Up', 'Leitfaden Ticket Swap', 'Crew-York-Hausordnung'] },
+      { note: 'Die eigentlichen Leitfäden sind separate Dokumente. Allgemeine GET-Anleitungen zu Top-Up und Ticket Swap findest du im Bereich „GET Cashless".' },
+      { h: 'Crewlove' },
+      { ul: ['Zuverlässigkeit und verantwortliches Handeln', 'Achtsamer, wertschätzender Umgang mit allen Menschen', 'Keine Diskriminierung oder Diffamierung'] },
+      { p: 'Nach Feierabend sind wir auch „Gäste des Festivals" – genießt Parookaville, schaut euch Bands und DJ-Sets an, habt Spaß.' }
+    ]
   }
 ];
 
