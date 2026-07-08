@@ -1128,7 +1128,7 @@ export const GUIDES = [
       { p: 'Der Einsatzplan wird spätestens am Dienstag per Mail verschickt.' },
       { h: 'Schichttausch' },
       { ul: ['Über die Schichttausch-WhatsApp-Gruppe möglich', 'Mittwoch und Donnerstag sind keine Tausche möglich', 'Kein Tausch mit Personen aus dem Akkreditierungsteam', 'Jeder Tausch muss genehmigt werden – nicht alle Wünsche können erfüllt werden'] },
-      { note: 'Genaue Anleitung in der Gruppenbeschreibung. Die Infomail nennt „ab Freitag 17.06." – der Festival-Freitag ist der 17.07.2026; im Zweifel mit dem Büro / der Schichttausch-Gruppe abklären.' }
+      { note: 'Genaue Anleitung in der Gruppenbeschreibung (siehe Guide „Schichttausch – Nachrichten-Vorlagen"). Die Infomail nennt „ab Freitag 17.06." – der Festival-Freitag ist der 17.07.2026; im Zweifel mit dem Büro / der Schichttausch-Gruppe abklären.' }
     ]
   },
   {
@@ -1162,6 +1162,30 @@ export const GUIDES = [
       { h: 'Crewlove' },
       { ul: ['Zuverlässigkeit und verantwortliches Handeln', 'Achtsamer, wertschätzender Umgang mit allen Menschen', 'Keine Diskriminierung oder Diffamierung'] },
       { p: 'Nach Feierabend sind wir auch „Gäste des Festivals" – genießt Parookaville, schaut euch Bands und DJ-Sets an, habt Spaß.' }
+    ]
+  },
+  {
+    id: 'pv-kp-schichttausch-vorlagen',
+    cat: 'pv',
+    events: ['parookaville'],
+    title: 'Schichttausch – Nachrichten-Vorlagen',
+    problem: 'Wie schreibe ich Angebot/Suche/Tausch/Übernahme in der Schichttausch-Gruppe aus?',
+    tags: ['parookaville', 'pv', 'schichttausch', 'tausch', 'übernahme', 'whatsapp', 'vorlage', 'gruppe'],
+    source: 'Klangpiraten Schichttausch-Gruppe – Parookaville 2026 (Gruppenbeschreibung)',
+    body: [
+      { p: 'So werden Schichten in der WhatsApp-Schichttausch-Gruppe der Klangpiraten-Crew (Parookaville 2026) ausgeschrieben. Bitte genau an die Vorlagen halten.' },
+      { h: 'Schicht anbieten' },
+      { p: 'Ich „Nr. + Vor- und Nachname" BIETE „Tag, Schichtdaten (Dienstzeiten & Position), Station"' },
+      { h: 'Schicht suchen' },
+      { p: 'Ich „Nr. + Vor- und Nachname" SUCHE „Tag, Schichtdaten (Tag & Dienstzeiten & Position), Station"' },
+      { h: 'Fixer Tausch' },
+      { p: '„Vor- und Nachname" „Tag, Schichtdaten" TAUSCHT mit „Vor- und Nachname" „Tag + Schichtdaten"' },
+      { h: 'Übernahme (ohne Tausch)' },
+      { p: '„Vor- und Nachname" ÜBERNIMMT die Schicht von „Vor- und Nachname" „Tag, Schichtdaten"' },
+      { h: 'Bestätigung' },
+      { ul: ['Der Tausch bzw. die Übernahme wird durch das Büro bestätigt', 'Nach Bestätigung selbstständig der Stationsleitung mitteilen!'] },
+      { warn: 'Erst nach Bestätigung durch das Büro gilt der Tausch – danach unbedingt die Stationsleitung informieren!' },
+      { note: 'Wann Tausche möglich sind (nicht Mittwoch/Donnerstag, kein Tausch mit dem Akkreditierungsteam, Genehmigungspflicht), steht im Guide „Dienstplan & Schichttausch".' }
     ]
   }
 ];
