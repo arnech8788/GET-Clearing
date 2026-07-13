@@ -26,7 +26,8 @@ export const CATEGORIES = [
   { id: 'topup', name: 'Top-Up (P400)', icon: 'topup', color: '#1abc9c' },
   { id: 'tools', name: 'Geräte, GET Manage & Support', icon: 'tool', color: '#7f8c9a' },
   { id: 'rar', name: 'Rock am Ring – Clearing & Bändchen', icon: 'flag', color: '#e23b3b' },
-  { id: 'pv', name: 'Parookaville – Crew-Infos', icon: 'flag', color: '#2d9cdb' }
+  { id: 'pv', name: 'Parookaville – Crew-Infos', icon: 'flag', color: '#2d9cdb' },
+  { id: 'pv-checkin', name: 'Parookaville – Check-in & Akkreditierung', icon: 'ticket', color: '#1abc9c' }
 ];
 
 export const GUIDES = [
@@ -1186,6 +1187,116 @@ export const GUIDES = [
       { ul: ['Der Tausch bzw. die Übernahme wird durch das Büro bestätigt', 'Nach Bestätigung selbstständig der Stationsleitung mitteilen!'] },
       { warn: 'Erst nach Bestätigung durch das Büro gilt der Tausch – danach unbedingt die Stationsleitung informieren!' },
       { note: 'Wann Tausche möglich sind (nicht Mittwoch/Donnerstag, kein Tausch mit dem Akkreditierungsteam, Genehmigungspflicht), steht im Guide „Dienstplan & Schichttausch".' }
+    ]
+  },
+  {
+    id: 'pv-org-ueberblick',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'Organized – Akkreditierungstool im Überblick',
+    problem: 'Was ist Organized, was TicketPay/Festivaldesk – und wann hilft das Backoffice?',
+    tags: ['parookaville', 'pv', 'organized', 'akkreditierung', 'ticketpay', 'festivaldesk', 'backoffice', 'check-in'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { ul: ['Organized löst das bisherige Akkreditierungstool TicketPay ab', 'TicketPay bleibt Dienstleister für alle Endkunden-Tickets (Besucher) sowie FREE Tickets (eingeladene Besucher)'] },
+      { h: 'Festivaldesk' },
+      { p: 'Festivaldesk ist das Tool, über das ein Gewerkeleiter Parkplätze, Zufahrtsscheine und Crew-Profile beantragt.' },
+      { warn: 'Das Ausfüllen des Festivaldesk-Formulars bedeutet NICHT, dass die Akkreditierung abgeschlossen ist. In solchen Fällen hilft das Ticketing&Accreditation Backoffice.' },
+      { note: 'Die Telefonnummern von Backoffice und technischem Support (Hardware) stehen im Briefing-PDF. Aus Datenschutzgründen sind sie nicht in der App hinterlegt – bei Bedarf als eigenen Kontakt speichern (Referenz → Kontakte).' }
+    ]
+  },
+  {
+    id: 'pv-org-checkin',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'Check-in mit ausgedrucktem Crew-Ticket',
+    problem: 'Wie checke ich eine Person mit Crew-Ticket ein und prüfe die Daten?',
+    tags: ['parookaville', 'pv', 'organized', 'check-in', 'crew ticket', 'qr', 'extra data', 'badge', 'wristband', 'ausweis'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { h: 'Check-in-Screen' },
+      { ol: ['Tab CHECK-IN wählen', 'Event: Parookaville 2026 (PV26) einstellen', 'QR-Code des Crew-Tickets mit dem QR-Scanner scannen', 'Das Attendee-Profil erscheint', 'Es wird angezeigt, ob ein Badge oder ein Wristband ausgegeben werden muss'] },
+      { h: 'EXTRA DATA – Datenabgleich' },
+      { ul: ['Daten mit dem Ausweisdokument abgleichen', 'Die Ausweisdaten müssen 1:1 mit den EXTRA DATA übereinstimmen', 'Stimmen sie nicht überein, Daten anpassen (siehe „Fehler: Accreditation incomplete & falsche Daten")'] },
+      { note: 'Besteht jemand auf einen Badge, es wird aber nur ein Wristband angezeigt: an den eigenen Gewerkeleiter wenden (kann im External Link einen Badge als Item auswählen). Ist er nicht erreichbar, hilft das Backoffice.' }
+    ]
+  },
+  {
+    id: 'pv-org-rfid',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'RFID-Chip bespielen & Check-in abschließen',
+    problem: 'Wie bespiele ich den Chip (Badge/Wristband) und schließe den Check-in ab?',
+    tags: ['parookaville', 'pv', 'organized', 'rfid', 'chip', 'badge', 'wristband', 'scanner', 'get'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { h: 'Badge' },
+      { ol: ['Chipmedium (Badge) ausdrucken', 'Ticketscanner (get) mit dem EIGENEN RFID-Chip entsperren', 'QR-Code auf dem Badge (oben rechts) der Person mit dem Ticketscanner (get) scannen', 'Lange auf den grünen Button am Get-Scanner drücken', 'RFID-Chip des Crew-Mitglieds an die Rückseite des Scanners halten', 'Bildschirm des Scanners wird grün'] },
+      { h: 'Wristband' },
+      { ol: ['Ticketscanner (get) mit dem EIGENEN RFID-Chip entsperren', 'QR-Code auf dem Monitor (Computer) der Person mit dem Ticketscanner (get) scannen', 'Wristband wird auf dem Scanner angezeigt', 'Lange auf den grünen Button am Get-Scanner drücken', 'RFID-Chip des Crew-Mitglieds an die Rückseite des Scanners halten', 'Bildschirm des Scanners wird grün'] },
+      { tip: 'Grüner Bildschirm = Chip erfolgreich bespielt und Check-in abgeschlossen.' }
+    ]
+  },
+  {
+    id: 'pv-org-suche',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'Person ohne ausgedrucktes Crew-Ticket finden',
+    problem: 'Die Person hat kein Ticket dabei – wie finde ich sie im System?',
+    tags: ['parookaville', 'pv', 'organized', 'suche', 'attendee', 'crew', 'guest', 'artist', 'reset filters'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { p: 'Im Check-in-Screen über die Suchfelder nach der Person suchen.' },
+      { ul: ['Suchfeld „search" für die freie Suche', 'Type: CREW / GUEST / ARTIST (grobe Eingrenzung)', 'First Name: Vorname', 'Last Name: Nachname', 'Partner: Gewerk / Firma', 'Email: E-Mail (v. a. für den Artist-Check-in nützlich)'] },
+      { note: 'Wird niemand gefunden: „Reset filters" und in jedes Suchfeld schauen, ob dort noch ein fälschlicher Suchauftrag steht.' }
+    ]
+  },
+  {
+    id: 'pv-org-fehler',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'Fehler: Accreditation incomplete & falsche Daten',
+    problem: 'Was tun bei „Accreditation incomplete", falscher Mail/Daten oder Badge ohne Bild?',
+    tags: ['parookaville', 'pv', 'organized', 'fehler', 'accreditation incomplete', 'rsvp', 'daten', 'mail', 'badge ohne bild'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { h: 'Accreditation incomplete' },
+      { ul: ['Bedeutet: Person hat die Akkreditierung nicht vollständig ausgefüllt', 'Unter EXTRA DATA prüfen, welche Daten fehlen', 'RSVP-Form erneut abschicken anbieten'] },
+      { warn: 'Kommt die E-Mail nicht an, prüfen, ob eine falsche Mail hinterlegt ist.' },
+      { h: 'Falsche Mail / Daten hinterlegt' },
+      { ol: ['CHECK-IN → ATTENDEES → Attendee Insights', 'Person suchen', 'Ins Attendee-Profil klicken', 'EXTRA DATA → Edit', 'Neue Daten / Mail-Adresse eingeben', 'Update'] },
+      { warn: 'Bei Änderung personenbezogener Daten (Vorname, Nachname, Adresse, Geburtsdatum …) MUSS die Änderung aufgeschrieben und ans Ticketing/Accreditation Backoffice gesendet werden – am besten 1× täglich kurz vor Feierabend.' },
+      { h: 'Badge ohne Bild' },
+      { ul: ['Beim Druck ist kein Bild zu sehen; in EXTRA DATA fehlt „click to open"', 'ATTENDEES → Attendee Insights → Person suchen → Profil öffnen und prüfen, dass kein Bild hinterlegt ist', 'Über Actions → Send Confirmation eine Bestätigung schicken', 'Die Person bekommt eine Mail und kann das Bild (Personal Briefing → Change photo) austauschen'] }
+    ]
+  },
+  {
+    id: 'pv-org-ticket-vergeben',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'Fehler: „Ticket bereits vergeben"',
+    problem: 'Scanner wird rot und meldet „Ticket bereits vergeben" – was tun?',
+    tags: ['parookaville', 'pv', 'organized', 'ticket bereits vergeben', 'scanner rot', 'produktionsbüro', 'chip-repair'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { ul: ['Scanner rot + „Ticket bereits vergeben" = die Akkreditierung wurde bereits verwendet', 'Die Person muss zum Produktionsbüro', 'Dort wird der RFID-Chip mit dem Chip-Repair-Scanner gesperrt und eine neue Akkreditierung ausgegeben'] }
+    ]
+  },
+  {
+    id: 'pv-org-zeitraeume',
+    cat: 'pv-checkin',
+    events: ['parookaville'],
+    title: 'Akkreditierungs-Zeiträume & Scan-Regeln',
+    problem: 'Welche Zeiträume (Aufbau/Show/Abbau) gelten, und wann wird gescannt?',
+    tags: ['parookaville', 'pv', 'organized', 'zeitraum', 'aufbau', 'abbau', 'scan', 'z4', 'pre-party'],
+    source: 'Briefing Klangpiraten „Organized" – Parookaville 2026',
+    body: [
+      { h: 'Zeiträume' },
+      { ul: ['A (Aufbau): Produktionsstart bis einschließlich Freitag, 17.07.2026, 12:00 Uhr', 'FR (Freitag): 17.07.2026, 12:00 – 18.07.2026, 05:00 Uhr', 'SA (Samstag): 18.07.2026, 12:00 – 19.07.2026, 05:00 Uhr', 'SO (Sonntag): 19.07.2026, 12:00 – 20.07.2026, 05:00 Uhr', 'Z (Abbau): 20.07.2026, 05:00 Uhr – 01.08.2026'] },
+      { h: 'Scan-Regeln' },
+      { p: 'In den Aufbau- und Abbau-Zeiträumen wird nicht gescannt.' },
+      { warn: 'Ausnahme: Am 16.07.2026 (Donnerstag vor Show, Pre-Party) wird an FOH (2), Artist Village (4), Side Stages (7) und Creator Backstage (8) gescannt.' },
+      { note: 'Die „1" wird dennoch nicht am Klever Tor o. Ä. gescannt, da sonst die Z4-Regel nicht greifen könnte (Lieferanten ohne Akkreditierung, die mit Z4-Ware anliefern – jeden Tag bis zum jeweiligen Showtag ab 12:00 Uhr).' }
     ]
   }
 ];
