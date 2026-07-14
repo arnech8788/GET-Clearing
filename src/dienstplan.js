@@ -20,12 +20,14 @@ function planShort(plan) {
   if (/clearing/i.test(plan)) return 'Clearing';
   return plan;
 }
+// Tage des aktuell gewählten Festivals (Bestandstage ohne event-Feld = RaR).
+function activeDays() { return DIENSTPLAN_DAYS.filter((d) => (d.event || 'rar') === state.activeEvent); }
 function getPlans() {
   const seen = [];
-  for (const d of DIENSTPLAN_DAYS) { const p = planKey(d); if (!seen.includes(p)) seen.push(p); }
+  for (const d of activeDays()) { const p = planKey(d); if (!seen.includes(p)) seen.push(p); }
   return seen;
 }
-function daysOfPlan(plan) { return DIENSTPLAN_DAYS.filter((d) => planKey(d) === plan); }
+function daysOfPlan(plan) { return activeDays().filter((d) => planKey(d) === plan); }
 // Tages-Kurzlabel (ohne Plan-Präfix), z. B. "Clearing · Mi" -> "Mi".
 function dayShort(d) { return (d.short || '').split('·').pop().trim() || d.short; }
 
@@ -50,10 +52,13 @@ function pad(n) { return String(n).padStart(2, '0'); }
 function escIcs(s) {
   return String(s || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
 }
-// Datum (Tag im Juni 2026) aus dem Label lesen.
+// Datum aus dem Label lesen (z. B. "3. Juni 2026" / "14. Juli 2026").
+const MONTHS_DE = { 'Januar': 1, 'Februar': 2, 'März': 3, 'April': 4, 'Mai': 5, 'Juni': 6, 'Juli': 7, 'August': 8, 'September': 9, 'Oktober': 10, 'November': 11, 'Dezember': 12 };
 function dayDate(day) {
-  const m = (day.label || '').match(/(\d{1,2})\.\s*Juni\s*2026/);
-  return m ? { y: 2026, mo: 6, d: parseInt(m[1], 10) } : null;
+  const m = (day.label || '').match(/(\d{1,2})\.\s*([A-Za-zäöüÄÖÜ]+)\s*(\d{4})/);
+  if (!m) return null;
+  const mo = MONTHS_DE[m[2]];
+  return mo ? { y: parseInt(m[3], 10), mo, d: parseInt(m[1], 10) } : null;
 }
 
 // Kalender-Button (nicht bei gestrichenen Schichten). Ohne Uhrzeit -> ganztägig.
@@ -142,12 +147,12 @@ export function setDpMode(m) { dp.mode = m; renderDienstplan(); }
 export function renderDienstplan(opts = {}) {
   const el = document.getElementById('screen-dienstplan');
   if (!el) return;
-  // Dienstplan gibt es nur für das Event, dem die Daten gehören (Rock am Ring).
-  if (state.activeEvent !== DIENSTPLAN_META.event) {
+  // Dienstplan nur für Festivals mit hinterlegten Einsatzplänen.
+  if (!activeDays().length) {
     el.innerHTML = `
       <header class="topbar"><h1>Dienstplan</h1>${eventChipsHtml()}</header>
       <div class="pad">
-        <div class="empty">${ICO.calendar}<p>Dienstplan ist nur für Rock am Ring – für Parookaville sind noch keine Einsatzpläne hinterlegt.</p></div>
+        <div class="empty">${ICO.calendar}<p>Für dieses Festival ist noch kein Dienstplan hinterlegt.</p></div>
       </div>`;
     return;
   }
@@ -158,7 +163,7 @@ export function renderDienstplan(opts = {}) {
   el.innerHTML = `
     <header class="topbar"><h1>Dienstplan</h1>${eventChipsHtml()}</header>
     <div class="pad">
-      <div class="muted small" style="margin-bottom:10px">${escapeHtml(DIENSTPLAN_META.title)}</div>
+      <div class="muted small" style="margin-bottom:10px">${escapeHtml((DIENSTPLAN_META[state.activeEvent] || {}).title || 'Einsatzpläne')}</div>
       <div class="tabbar">
         <button class="tab ${dp.mode === 'plan' ? 'tab-active' : ''}" onclick="setDpMode('plan')">Schichten</button>
         <button class="tab ${dp.mode === 'kontakte' ? 'tab-active' : ''}" onclick="setDpMode('kontakte')">Ansprechpersonen</button>
@@ -180,7 +185,7 @@ export function renderDienstplan(opts = {}) {
 function renderResults(q) {
   const ql = q.toLowerCase();
   const groups = new Map();
-  for (const day of DIENSTPLAN_DAYS) {
+  for (const day of activeDays()) {
     for (const st of day.stations) {
       for (const raw of st.rows) {
         const r = applyOverride(day.id, raw);
@@ -275,7 +280,7 @@ function renderBrowser() {
 
 // ---- Ansprechpersonen -----------------------------------------------------
 function renderContacts(q) {
-  let list = DIENSTPLAN_CONTACTS || [];
+  let list = DIENSTPLAN_CONTACTS[state.activeEvent] || [];
   if (q) {
     const ql = q.toLowerCase();
     list = list.filter((c) => (c.name + ' ' + c.role).toLowerCase().includes(ql));
