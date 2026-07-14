@@ -217,8 +217,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.1.0';
+const APP_VERSION = '3.2.0';
 const CHANGELOG = [
+  ['3.2.0', 'Parookaville-Dienstplan hinterlegt: kompletter Einsatzplan „Bändertausch / Cashless / Akkreditierung" für Mittwoch 15.07. bis Sonntag 19.07. (alle Stationen inkl. Bänder, Cashless, Troubleshoot/Akkreditierung, Runner, Springer). Tag über PV wählen; Namenssuche und Kalender-Export funktionieren auch für Parookaville. Zusätzlich die PV-Ansprechpersonen im Reiter „Ansprechpersonen".'],
   ['3.1.0', 'Klangpiraten ist jetzt ein eigener Tab (unten) statt einer Umschalt-Auswahl – festivalunabhängig erreichbar für arbeitgeberweite Crew-Infos. Der Umschalter oben wählt nur noch das Festival (Rock am Ring, Parookaville …); die allgemeinen GET-Cashless-Anleitungen werden in jedem Festival automatisch mitgezeigt.'],
   ['3.0.0', 'Festival-übergreifend umgebaut: Die App ist jetzt allgemein für Festival-Crews gedacht. Der Umschalter (oben auf jedem Tab) wählt den Bereich – zwei allgemeine Bereiche „GET Cashless" (systemweites Cashless-Wissen, erscheint zusätzlich in jedem Festival) und „Klangpiraten" (Arbeitgeber, festivalübergreifend) plus die Festivals (Rock am Ring, Parookaville …). Jeder Bereich zeigt nur seine Inhalte; neue Festivals lassen sich einfach ergänzen. Umbenannt zu „Festival Clearing & Crew".'],
   ['2.9.0', 'Strikte Event-Trennung: Der RaR/PV-Umschalter ist jetzt im Kopf jedes Tabs sichtbar, und jeder Tab zeigt nur die Daten des aktiven Events. Dienstplan, Bestand und Referenz → Tickets/Bändchen sind Rock-am-Ring-spezifisch und zeigen unter Parookaville einen Hinweis statt RaR-Daten. Eigene Fälle/Notizen bleiben bewusst über beide Events sichtbar (mit Event-Badge).'],
