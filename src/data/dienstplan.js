@@ -11134,28 +11134,5538 @@ export const DIENSTPLAN_DAYS = [
     ]
   },
   {
-    "id": "pv-akkr-di-14",
+    "id": "pv-dp-15-07",
     "event": "parookaville",
-    "plan": "Troubleshoot / Akkreditierung",
-    "label": "Akkreditierung · Dienstag, 14. Juli 2026",
-    "short": "Akkreditierung · Di",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Mittwoch, 15. Juli 2026",
+    "short": "Mi 15.07.",
     "stations": [
       {
-        "name": "Akkreditierung – Basic Camping",
-        "kb": "BC",
+        "name": "Bänder - Haupteingang",
+        "kb": "",
         "rows": [
-          { "nr": 89, "name": "Arne Chudobba", "pos": "BC 1 Früh", "von": "09:00", "bis": "16:00", "note": "" },
-          { "nr": 90, "name": "Philipp Jansen", "pos": "BC 2 Früh", "von": "09:00", "bis": "16:00", "note": "" },
-          { "nr": 93, "name": "Lotte Hauer", "pos": "BC 1 Spät", "von": "15:30", "bis": "22:00", "note": "" },
-          { "nr": 94, "name": "Simon Kröger", "pos": "BC 2 Spät", "von": "15:30", "bis": "22:00", "note": "" }
+          {
+            "nr": 1,
+            "name": "Alexander Hofmann",
+            "pos": "BC - Früh - 1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 2,
+            "name": "Fabio von Dornis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "ersetzt durch: Pos 100 - Naomi Kron da Silva"
+          },
+          {
+            "nr": 3,
+            "name": "Max Schild",
+            "pos": "BC - Früh - 3",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 4,
+            "name": "Paul Förster",
+            "pos": "BC - Früh - 4",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 5,
+            "name": "Marie Förster",
+            "pos": "BC - Früh - 5",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 6,
+            "name": "Enie Bibow",
+            "pos": "BC - Früh - 6",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 7,
+            "name": "Svenja Gehrmann",
+            "pos": "BC - Früh - 7",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 8,
+            "name": "Theresa Hartmann",
+            "pos": "BC - Früh - 8",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 9,
+            "name": "Celina Dittrich",
+            "pos": "BC - Früh - 9",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 10,
+            "name": "René Jacke",
+            "pos": "BC - Früh - 10",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 11,
+            "name": "Silke Nichau",
+            "pos": "BC - Früh - 11",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 12,
+            "name": "Pascal Fabio Schilde",
+            "pos": "BC - Früh - 12",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 13,
+            "name": "Sarah Hißmann",
+            "pos": "BC - Früh - 13",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 14,
+            "name": "Julia Richter",
+            "pos": "BC - Früh - 14",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 15,
+            "name": "Felix Schlaf",
+            "pos": "BC - Früh - 15",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 16,
+            "name": "Jens Krämer",
+            "pos": "BC - Früh - 16",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 17,
+            "name": "Nele Scheil",
+            "pos": "BC - Früh - 17",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 18,
+            "name": "Silvana Gietmanns",
+            "pos": "BC - Früh - 18",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 19,
+            "name": "Sebastian Maik Köhler",
+            "pos": "BC - Früh - 19",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 20,
+            "name": "Leon Riedel",
+            "pos": "BC - Früh - 20",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Wachs",
+            "pos": "VIP Früh",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 22,
+            "name": "Gina Michele Köhler",
+            "pos": "VIP Früh",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 23,
+            "name": "Pascal Grünheit",
+            "pos": "Flexibel",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 24,
+            "name": "Jo Lang",
+            "pos": "BC - Spät - 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 25,
+            "name": "Cecilia Thoms",
+            "pos": "BC - Spät - 2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 26,
+            "name": "Lars Kattenbeck",
+            "pos": "BC - Spät - 3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 27,
+            "name": "Luca Patricia Hüren",
+            "pos": "BC - Spät - 4",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 28,
+            "name": "Justin Kummen-Bojer",
+            "pos": "BC - Spät - 5",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 29,
+            "name": "Jan Scholz",
+            "pos": "BC - Spät - 6",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 30,
+            "name": "Sophie Paß",
+            "pos": "BC - Spät - 7",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 31,
+            "name": "Dennis Knoll",
+            "pos": "BC - Spät - 8",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 32,
+            "name": "Marius Preuß",
+            "pos": "BC - Spät - 9",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 33,
+            "name": "Mareike Preuß",
+            "pos": "BC - Spät - 10",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 34,
+            "name": "Julian Heck",
+            "pos": "BC - Spät - 11",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 35,
+            "name": "Leon Molé",
+            "pos": "BC - Spät - 12",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 36,
+            "name": "Annika Heinrich",
+            "pos": "BC - Spät - 13",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 37,
+            "name": "Neo Kecht",
+            "pos": "BC - Spät - 14",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 38,
+            "name": "Axel Schoppe",
+            "pos": "BC - Spät - 15",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 39,
+            "name": "Celine Krieg",
+            "pos": "BC - Spät - 16",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 40,
+            "name": "Sonja Pleines",
+            "pos": "BC - Spät - 17",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 41,
+            "name": "Franziska Lueg",
+            "pos": "BC - Spät - 18",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 42,
+            "name": "Celina Sisting",
+            "pos": "BC - Spät - 19",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 43,
+            "name": "Lara Sisting",
+            "pos": "BC - Spät - 20",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 44,
+            "name": "Julie Steeger",
+            "pos": "VIP Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 45,
+            "name": "Emil Witt",
+            "pos": "VIP Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 46,
+            "name": "Henrik Reichardt",
+            "pos": "Flexibel",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 47,
+            "name": "Aileen von Arnstadt",
+            "pos": "Nachtschicht",
+            "von": "23:30",
+            "bis": "08:00",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Basti Walther",
+            "pos": "Nachtschicht",
+            "von": "23:30",
+            "bis": "08:00",
+            "note": ""
+          },
+          {
+            "nr": 49,
+            "name": "Philipp Klose-Vogel",
+            "pos": "Stationsleitung 1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 50,
+            "name": "Chloe Schmedes",
+            "pos": "Stationsleitung 2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 51,
+            "name": "Tom Blödorn",
+            "pos": "Stationsleitung 3",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 52,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 4",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
         ]
       },
       {
-        "name": "Akkreditierung – Crew York",
-        "kb": "CY",
+        "name": "Bänder - Relax Camp",
+        "kb": "",
         "rows": [
-          { "nr": 100, "name": "Sara Witjes Cuervo", "pos": "CY 1 Spät", "von": "15:30", "bis": "22:00", "note": "" },
-          { "nr": 101, "name": "Demian Mursic", "pos": "CY 2 Spät", "von": "15:30", "bis": "22:00", "note": "" }
+          {
+            "nr": 53,
+            "name": "Constantin Klinger",
+            "pos": "1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Sophie Schubert",
+            "pos": "2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Jennifer Kalinowski",
+            "pos": "3",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": null,
+            "name": "+3 Personen von Akkre-Team",
+            "pos": "",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "+3 Personen von Akkre-Team"
+          },
+          {
+            "nr": 57,
+            "name": "Eva Flören",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Annalena Ehren",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Neele Armbrecht",
+            "pos": "3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": null,
+            "name": "+3 Personen von Akkre-Team",
+            "pos": "",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "+3 Personen von Akkre-Team"
+          },
+          {
+            "nr": 61,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 5",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 62,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 6",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 63,
+            "name": "Tobias Wamhof",
+            "pos": "1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Kyara Hielscher",
+            "pos": "2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 65,
+            "name": "Nicole Petri",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Filiz Dilara Nergiz",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 67,
+            "name": "Ulrich Endemann",
+            "pos": "Stationsleitung 7",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Jan Lohmeier",
+            "pos": "Stationsleitung 8",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Comfort & Deluxe",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 69,
+            "name": "Jana Althoff",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 70,
+            "name": "Jana Möller",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 71,
+            "name": "Mieke Möller",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 72,
+            "name": "Toni Knoche",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 73,
+            "name": "Jana Schäfer",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 74,
+            "name": "Paula Mergehen",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 75,
+            "name": "Lara Dold",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 76,
+            "name": "Clara Stett",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 77,
+            "name": "Elly Wistuba",
+            "pos": "Stationsleitung 9",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 78,
+            "name": "Mandy Ilgner",
+            "pos": "Stationsleitung 10",
+            "von": "07:00",
+            "bis": "14:00",
+            "note": "Unterstützend an Basic Camping Haupteingang"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping&Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 79,
+            "name": "Lisa Petsch",
+            "pos": "1",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 80,
+            "name": "Zoé Siewert",
+            "pos": "2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 81,
+            "name": "Elin Kanes",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 82,
+            "name": "Lina Eggebrecht",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 83,
+            "name": "Julia Schäfer",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 84,
+            "name": "Maike Roggendorf",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 85,
+            "name": "Nele Roggendorf",
+            "pos": "5",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 86,
+            "name": "Chiara Claasen",
+            "pos": "6",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 87,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 11",
+            "von": "17:00",
+            "bis": "18:00",
+            "note": ""
+          },
+          {
+            "nr": 88,
+            "name": "Nina Guthmann",
+            "pos": "Stationsleitung 12",
+            "von": "14:00",
+            "bis": "23:00",
+            "note": "Base Camp · inkl. Troubleshoot"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 89,
+            "name": "Arne Chudobba",
+            "pos": "BC 1 Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 90,
+            "name": "Philipp Jansen",
+            "pos": "BC 2 Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 91,
+            "name": "Sarah Egbert",
+            "pos": "RELAX Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 92,
+            "name": "Runa Rolf",
+            "pos": "RELAX Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 93,
+            "name": "Lotte Hauer",
+            "pos": "BC 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 94,
+            "name": "Simon Kröger",
+            "pos": "BC 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 95,
+            "name": "Kathi Stremel",
+            "pos": "RELAX Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 96,
+            "name": "Borschi Borsch",
+            "pos": "CY 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 97,
+            "name": "Sara Hennings",
+            "pos": "CY 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 98,
+            "name": "Pfitzi Pfitzner",
+            "pos": "RELAX Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 99,
+            "name": "Naomi Kron da Silva",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 100,
+            "name": "Sara Witjes Cuervo",
+            "pos": "CY 1 Spät",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 101,
+            "name": "Demian Mursic",
+            "pos": "CY 2 Spät",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 102,
+            "name": "Shawn Gigla",
+            "pos": "RELAX Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 103,
+            "name": "Lilu Habicht",
+            "pos": "RELAX Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 104,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": "Troubleshooting - Basic Camping Eingang"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 105,
+            "name": "Mark Schrader",
+            "pos": "Runner (Head)",
+            "von": "06:30",
+            "bis": "18:00",
+            "note": ""
+          },
+          {
+            "nr": 106,
+            "name": "Max Bilski",
+            "pos": "Runner",
+            "von": "06:30",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 107,
+            "name": "Lukas Heinkel",
+            "pos": "Runner",
+            "von": "06:30",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 108,
+            "name": "Manu Jäger",
+            "pos": "Runner",
+            "von": "14:30",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 109,
+            "name": "Martin Collatz",
+            "pos": "Runner",
+            "von": "14:30",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 110,
+            "name": "Anna Böker",
+            "pos": "Runnerin",
+            "von": "14:30",
+            "bis": "00:30",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 111,
+            "name": "Isabelle Payeur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 112,
+            "name": "Corinna Janke",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 113,
+            "name": "Tatjana Pesch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 114,
+            "name": "Tamara Melissa Temnur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 115,
+            "name": "Simon Hoberg",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 116,
+            "name": "Eli Denis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 117,
+            "name": "Marie Liebkowsky",
+            "pos": "BC - Früh - 2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - BASIC CAMP (keine Akkre)"
+          },
+          {
+            "nr": 118,
+            "name": "Christian Behrens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 119,
+            "name": "Louisa Hövelmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 120,
+            "name": "Tanja Maaßen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 121,
+            "name": "Tamara Moll",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 122,
+            "name": "Lena Hoffmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 123,
+            "name": "Maren Straten",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 124,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 125,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      },
+      {
+        "name": "Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 126,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 127,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 128,
+            "name": "Jo Frank",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": "Schichttäusche, Arbeitszeiten"
+          },
+          {
+            "nr": 129,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "",
+            "bis": "",
+            "note": "Cashless, Lohnbuchhaltung"
+          },
+          {
+            "nr": 130,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "",
+            "bis": "",
+            "note": "Bänderverteilung & Koordination"
+          },
+          {
+            "nr": 131,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": "Gesamtleitung"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pv-dp-16-07",
+    "event": "parookaville",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Donnerstag, 16. Juli 2026",
+    "short": "Do 16.07.",
+    "stations": [
+      {
+        "name": "Bänder - Haupteingang",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Alexander Hofmann",
+            "pos": "BC - Früh - 1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 2,
+            "name": "Fabio von Dornis",
+            "pos": "BC - Früh - 2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 3,
+            "name": "Max Schild",
+            "pos": "BC - Früh - 3",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 4,
+            "name": "Paul Förster",
+            "pos": "BC - Früh - 4",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 5,
+            "name": "Marie Förster",
+            "pos": "BC - Früh - 5",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 6,
+            "name": "Enie Bibow",
+            "pos": "BC - Früh - 6",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 7,
+            "name": "Svenja Gehrmann",
+            "pos": "BC - Früh - 7",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 8,
+            "name": "Theresa Hartmann",
+            "pos": "BC - Früh - 8",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 9,
+            "name": "Celina Dittrich",
+            "pos": "BC - Früh - 9",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 10,
+            "name": "René Jacke",
+            "pos": "BC - Früh - 10",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 11,
+            "name": "Silke Nichau",
+            "pos": "BC - Früh - 11",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 12,
+            "name": "Pascal Fabio Schilde",
+            "pos": "BC - Früh - 12",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 13,
+            "name": "Sarah Hißmann",
+            "pos": "BC - Früh - 13",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 14,
+            "name": "Julia Richter",
+            "pos": "BC - Früh - 14",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 15,
+            "name": "Felix Schlaf",
+            "pos": "BC - Früh - 15",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 16,
+            "name": "Jens Krämer",
+            "pos": "BC - Früh - 16",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 17,
+            "name": "Nele Scheil",
+            "pos": "BC - Früh - 17",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 18,
+            "name": "Silvana Gietmanns",
+            "pos": "BC - Früh - 18",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 19,
+            "name": "Sebastian Maik Köhler",
+            "pos": "BC - Früh - 19",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 20,
+            "name": "Leon Riedel",
+            "pos": "BC - Früh - 20",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Wachs",
+            "pos": "VIP Früh",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 22,
+            "name": "Gina Michele Köhler",
+            "pos": "VIP Früh",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 23,
+            "name": "Pascal Grünheit",
+            "pos": "Flexibel",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 24,
+            "name": "Jo Lang",
+            "pos": "BC - Spät - 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 25,
+            "name": "Cecilia Thoms",
+            "pos": "BC - Spät - 2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 26,
+            "name": "Lars Kattenbeck",
+            "pos": "BC - Spät - 3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 27,
+            "name": "Luca Patricia Hüren",
+            "pos": "BC - Spät - 4",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 28,
+            "name": "Justin Kummen-Bojer",
+            "pos": "BC - Spät - 5",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 29,
+            "name": "Jan Scholz",
+            "pos": "BC - Spät - 6",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 30,
+            "name": "Sophie Paß",
+            "pos": "BC - Spät - 7",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 31,
+            "name": "Dennis Knoll",
+            "pos": "BC - Spät - 8",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 32,
+            "name": "Marius Preuß",
+            "pos": "BC - Spät - 9",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 33,
+            "name": "Mareike Preuß",
+            "pos": "BC - Spät - 10",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 34,
+            "name": "Julian Heck",
+            "pos": "BC - Spät - 11",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 35,
+            "name": "Leon Molé",
+            "pos": "BC - Spät - 12",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 36,
+            "name": "Annika Heinrich",
+            "pos": "BC - Spät - 13",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 37,
+            "name": "Neo Kecht",
+            "pos": "BC - Spät - 14",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 38,
+            "name": "Axel Schoppe",
+            "pos": "BC - Spät - 15",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 39,
+            "name": "Celine Krieg",
+            "pos": "BC - Spät - 16",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 40,
+            "name": "Sonja Pleines",
+            "pos": "BC - Spät - 17",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 41,
+            "name": "Franziska Lueg",
+            "pos": "BC - Spät - 18",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 42,
+            "name": "Celina Sisting",
+            "pos": "BC - Spät - 19",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 43,
+            "name": "Lara Sisting",
+            "pos": "BC - Spät - 20",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 44,
+            "name": "Julie Steeger",
+            "pos": "VIP Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 45,
+            "name": "Emil Witt",
+            "pos": "VIP Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 46,
+            "name": "Henrik Reichardt",
+            "pos": "Flexibel",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 47,
+            "name": "Aileen von Arnstadt",
+            "pos": "Nachtschicht",
+            "von": "23:30",
+            "bis": "08:00",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Basti Walther",
+            "pos": "Nachtschicht",
+            "von": "23:30",
+            "bis": "08:00",
+            "note": ""
+          },
+          {
+            "nr": 49,
+            "name": "Philipp Klose-Vogel",
+            "pos": "Stationsleitung 1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 50,
+            "name": "Chloe Schmedes",
+            "pos": "Stationsleitung 2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 51,
+            "name": "Tom Blödorn",
+            "pos": "Stationsleitung 3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 52,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 4",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Relax Camp",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 53,
+            "name": "Constantin Klinger",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Sophie Schubert",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Jennifer Kalinowski",
+            "pos": "3",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": null,
+            "name": "+3 Personen von Akkre-Team",
+            "pos": "",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "+3 Personen von Akkre-Team"
+          },
+          {
+            "nr": 57,
+            "name": "Eva Flören",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Annalena Ehren",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Neele Armbrecht",
+            "pos": "3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": null,
+            "name": "+3 Personen von Akkre-Team",
+            "pos": "",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "+3 Personen von Akkre-Team"
+          },
+          {
+            "nr": 61,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 5",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 62,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 6",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 63,
+            "name": "Tobias Wamhof",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Kyara Hielscher",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 65,
+            "name": "Nicole Petri",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Filiz Dilara Nergiz",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 67,
+            "name": "Ulrich Endemann",
+            "pos": "Stationsleitung 7",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Jan Lohmeier",
+            "pos": "Stationsleitung 8",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Comfort & Deluxe",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 69,
+            "name": "Jana Althoff",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 70,
+            "name": "Jana Möller",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 71,
+            "name": "Mieke Möller",
+            "pos": "3",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 72,
+            "name": "Toni Knoche",
+            "pos": "4",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 73,
+            "name": "Jana Schäfer",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 74,
+            "name": "Paula Mergehen",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 75,
+            "name": "Lara Dold",
+            "pos": "3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 76,
+            "name": "Clara Stett",
+            "pos": "4",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 77,
+            "name": "Elly Wistuba",
+            "pos": "Stationsleitung 9",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 78,
+            "name": "Mandy Ilgner",
+            "pos": "Stationsleitung 10",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping&Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 79,
+            "name": "Lisa Petsch",
+            "pos": "1",
+            "von": "11:30",
+            "bis": "17:30",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 80,
+            "name": "Zoé Siewert",
+            "pos": "2",
+            "von": "11:30",
+            "bis": "17:30",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 81,
+            "name": "Elin Kanes",
+            "pos": "1",
+            "von": "17:00",
+            "bis": "23:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 82,
+            "name": "Lina Eggebrecht",
+            "pos": "2",
+            "von": "17:00",
+            "bis": "23:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 83,
+            "name": "Julia Schäfer",
+            "pos": "3",
+            "von": "17:00",
+            "bis": "23:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 84,
+            "name": "Maike Roggendorf",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 85,
+            "name": "Nele Roggendorf",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 86,
+            "name": "Chiara Claasen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 87,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 11",
+            "von": "11:00",
+            "bis": "17:30",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 88,
+            "name": "Nina Guthmann",
+            "pos": "Stationsleitung 12",
+            "von": "16:30",
+            "bis": "23:00",
+            "note": "Base Camp · inkl. Troubleshoot"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 89,
+            "name": "Arne Chudobba",
+            "pos": "BC 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 90,
+            "name": "Philipp Jansen",
+            "pos": "BC 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 91,
+            "name": "Sarah Egbert",
+            "pos": "RELAX Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 92,
+            "name": "Runa Rolf",
+            "pos": "RELAX Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 93,
+            "name": "Lotte Hauer",
+            "pos": "BC 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 94,
+            "name": "Simon Kröger",
+            "pos": "BC 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 95,
+            "name": "Kathi Stremel",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 96,
+            "name": "Borschi Borsch",
+            "pos": "CY 1 Früh",
+            "von": "07:00",
+            "bis": "15:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 97,
+            "name": "Sara Hennings",
+            "pos": "CY 2 Früh",
+            "von": "07:00",
+            "bis": "15:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 98,
+            "name": "Pfitzi Pfitzner",
+            "pos": "RELAX Früh",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 99,
+            "name": "Naomi Kron da Silva",
+            "pos": "Troubleshoot",
+            "von": "11:30",
+            "bis": "17:30",
+            "note": "Troubleshoot - Cashless Base Camp"
+          },
+          {
+            "nr": 100,
+            "name": "Sara Witjes Cuervo",
+            "pos": "CY 1 Spät",
+            "von": "14:30",
+            "bis": "22:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 101,
+            "name": "Demian Mursic",
+            "pos": "CY 2 Spät",
+            "von": "14:30",
+            "bis": "22:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 102,
+            "name": "Shawn Gigla",
+            "pos": "RELAX Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 103,
+            "name": "Lilu Habicht",
+            "pos": "RELAX Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 104,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "17:00",
+            "bis": "00:00",
+            "note": "Troubleshooting - Basic Camping Eingang"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 105,
+            "name": "Mark Schrader",
+            "pos": "Runner (Head)",
+            "von": "07:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 106,
+            "name": "Max Bilski",
+            "pos": "Runner",
+            "von": "07:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 107,
+            "name": "Lukas Heinkel",
+            "pos": "Runner",
+            "von": "07:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 108,
+            "name": "Manu Jäger",
+            "pos": "Runner",
+            "von": "15:00",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 109,
+            "name": "Martin Collatz",
+            "pos": "Runner",
+            "von": "15:00",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 110,
+            "name": "Anna Böker",
+            "pos": "Runnerin",
+            "von": "15:00",
+            "bis": "00:30",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 111,
+            "name": "Isabelle Payeur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 112,
+            "name": "Corinna Janke",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 113,
+            "name": "Tatjana Pesch",
+            "pos": "",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "BÄNDERAUSGABE - RELAX CAMP (keine Akkre)"
+          },
+          {
+            "nr": 114,
+            "name": "Tamara Melissa Temnur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 115,
+            "name": "Simon Hoberg",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 116,
+            "name": "Eli Denis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 117,
+            "name": "Marie Liebkowsky",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 118,
+            "name": "Christian Behrens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 119,
+            "name": "Louisa Hövelmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 120,
+            "name": "Tanja Maaßen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 121,
+            "name": "Tamara Moll",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 122,
+            "name": "Lena Hoffmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 123,
+            "name": "Maren Straten",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 124,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 125,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      },
+      {
+        "name": "Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 126,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 127,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 128,
+            "name": "Jo Frank",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": "Schichttäusche, Arbeitszeiten"
+          },
+          {
+            "nr": 129,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "",
+            "bis": "",
+            "note": "Cashless, Lohnbuchhaltung"
+          },
+          {
+            "nr": 130,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "",
+            "bis": "",
+            "note": "Bänderverteilung & Koordination"
+          },
+          {
+            "nr": 131,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": "Gesamtleitung"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pv-dp-17-07",
+    "event": "parookaville",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Freitag, 17. Juli 2026",
+    "short": "Fr 17.07.",
+    "stations": [
+      {
+        "name": "Bänder - Haupteingang",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Alexander Hofmann",
+            "pos": "BC - Früh - 1",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 2,
+            "name": "Fabio von Dornis",
+            "pos": "BC - Früh - 2",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 3,
+            "name": "Max Schild",
+            "pos": "BC - Früh - 3",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 4,
+            "name": "Paul Förster",
+            "pos": "BC - Früh - 4",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 5,
+            "name": "Marie Förster",
+            "pos": "BC - Früh - 5",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 6,
+            "name": "Enie Bibow",
+            "pos": "BC - Früh - 6",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 7,
+            "name": "Svenja Gehrmann",
+            "pos": "Tages - 1",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 8,
+            "name": "Theresa Hartmann",
+            "pos": "Tages - 2",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 9,
+            "name": "Celina Dittrich",
+            "pos": "Tages - 3",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 10,
+            "name": "René Jacke",
+            "pos": "Tages - 4",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 11,
+            "name": "Silke Nichau",
+            "pos": "Tages - 5",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 12,
+            "name": "Pascal Fabio Schilde",
+            "pos": "Tages - 6",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 13,
+            "name": "Sarah Hißmann",
+            "pos": "Tages - 7",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 14,
+            "name": "Julia Richter",
+            "pos": "Tages - 8",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 15,
+            "name": "Felix Schlaf",
+            "pos": "Tages - 9",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 16,
+            "name": "Jens Krämer",
+            "pos": "Tages - 10",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 17,
+            "name": "Nele Scheil",
+            "pos": "Tages - 11",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 18,
+            "name": "Silvana Gietmanns",
+            "pos": "Tages - 12",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 19,
+            "name": "Sebastian Maik Köhler",
+            "pos": "Tages - 13",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 20,
+            "name": "Leon Riedel",
+            "pos": "Tages - 14",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Wachs",
+            "pos": "VIP Früh (BC)",
+            "von": "08:00",
+            "bis": "16:30",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 22,
+            "name": "Gina Michele Köhler",
+            "pos": "VIP Früh (Tag)",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 23,
+            "name": "Pascal Grünheit",
+            "pos": "Flexibel (Tag)",
+            "von": "12:30",
+            "bis": "21:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung · Flexibel - Tagesbesucher"
+          },
+          {
+            "nr": 24,
+            "name": "Jo Lang",
+            "pos": "BC - Spät - 1",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 25,
+            "name": "Cecilia Thoms",
+            "pos": "BC - Spät - 2",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 26,
+            "name": "Lars Kattenbeck",
+            "pos": "BC - Spät - 3",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 27,
+            "name": "Luca Patricia Hüren",
+            "pos": "BC - Spät - 4",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 28,
+            "name": "Justin Kummen-Bojer",
+            "pos": "BC - Spät - 5",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 29,
+            "name": "Jan Scholz",
+            "pos": "BC - Spät - 6",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 30,
+            "name": "Sophie Paß",
+            "pos": "Tages - 15",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 31,
+            "name": "Dennis Knoll",
+            "pos": "Tages - 16",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 32,
+            "name": "Marius Preuß",
+            "pos": "Tages - 17",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 33,
+            "name": "Mareike Preuß",
+            "pos": "Tages - 18",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 34,
+            "name": "Julian Heck",
+            "pos": "Tages - 19",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 35,
+            "name": "Leon Molé",
+            "pos": "Tages - 20",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 36,
+            "name": "Annika Heinrich",
+            "pos": "Tages - 21",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 37,
+            "name": "Neo Kecht",
+            "pos": "Tages - 22",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 38,
+            "name": "Axel Schoppe",
+            "pos": "Tages - 1",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 39,
+            "name": "Celine Krieg",
+            "pos": "Tages - 2",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 40,
+            "name": "Sonja Pleines",
+            "pos": "Tages - 3",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 41,
+            "name": "Franziska Lueg",
+            "pos": "Tages - 4",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 42,
+            "name": "Celina Sisting",
+            "pos": "Tages - 5",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 43,
+            "name": "Lara Sisting",
+            "pos": "Tages 23",
+            "von": "12:30",
+            "bis": "18:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 44,
+            "name": "Julie Steeger",
+            "pos": "VIP Spät (BC)",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 45,
+            "name": "Emil Witt",
+            "pos": "VIP Spät (Tag)",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "VIP Tagesbesucher"
+          },
+          {
+            "nr": 46,
+            "name": "Henrik Reichardt",
+            "pos": "Flexibel (Tag)",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 47,
+            "name": "Aileen von Arnstadt",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Basti Walther",
+            "pos": "Tag 2 Spät",
+            "von": "18:00",
+            "bis": "00:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 49,
+            "name": "Philipp Klose-Vogel",
+            "pos": "Stationsleitung 1",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 50,
+            "name": "Chloe Schmedes",
+            "pos": "Stationsleitung 2",
+            "von": "11:00",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 51,
+            "name": "Tom Blödorn",
+            "pos": "Stationsleitung 3",
+            "von": "16:30",
+            "bis": "01:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 52,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 4",
+            "von": "11:00",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Relax Camp",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 53,
+            "name": "Constantin Klinger",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Sophie Schubert",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Jennifer Kalinowski",
+            "pos": "3",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 57,
+            "name": "Eva Flören",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Annalena Ehren",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Neele Armbrecht",
+            "pos": "3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 61,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 5",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 62,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 6",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 63,
+            "name": "Tobias Wamhof",
+            "pos": "1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Kyara Hielscher",
+            "pos": "2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 65,
+            "name": "Nicole Petri",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Filiz Dilara Nergiz",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 67,
+            "name": "Ulrich Endemann",
+            "pos": "Stationsleitung 7",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Jan Lohmeier",
+            "pos": "Stationsleitung 8",
+            "von": "15:00",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Comfort & Deluxe",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 69,
+            "name": "Jana Althoff",
+            "pos": "1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 70,
+            "name": "Jana Möller",
+            "pos": "2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 71,
+            "name": "Mieke Möller",
+            "pos": "3",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 72,
+            "name": "Toni Knoche",
+            "pos": "4",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 73,
+            "name": "Jana Schäfer",
+            "pos": "1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 74,
+            "name": "Paula Mergehen",
+            "pos": "2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 75,
+            "name": "Lara Dold",
+            "pos": "3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 76,
+            "name": "Clara Stett",
+            "pos": "4",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 77,
+            "name": "Elly Wistuba",
+            "pos": "Stationsleitung 9",
+            "von": "07:00",
+            "bis": "16:30",
+            "note": "Abbau und Übergabe"
+          },
+          {
+            "nr": 78,
+            "name": "Mandy Ilgner",
+            "pos": "Stationsleitung 10",
+            "von": "18:00",
+            "bis": "03:00",
+            "note": "ACHTUNG! Neuer Einsatzort! · Tagesbesucher"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping&Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 79,
+            "name": "Lisa Petsch",
+            "pos": "1",
+            "von": "11:30",
+            "bis": "20:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 80,
+            "name": "Zoé Siewert",
+            "pos": "2",
+            "von": "11:30",
+            "bis": "20:00",
+            "note": "Base Camp"
+          },
+          {
+            "nr": 81,
+            "name": "Elin Kanes",
+            "pos": "1",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 82,
+            "name": "Lina Eggebrecht",
+            "pos": "2",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 83,
+            "name": "Julia Schäfer",
+            "pos": "3",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 84,
+            "name": "Maike Roggendorf",
+            "pos": "4",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 85,
+            "name": "Nele Roggendorf",
+            "pos": "5",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 86,
+            "name": "Chiara Claasen",
+            "pos": "6",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 87,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 11",
+            "von": "13:00",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 88,
+            "name": "Nina Guthmann",
+            "pos": "Stationsleitung 12",
+            "von": "11:00",
+            "bis": "20:00",
+            "note": "Base Camp · inkl. Troubleshoot"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 89,
+            "name": "Arne Chudobba",
+            "pos": "BC 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+          },
+          {
+            "nr": 90,
+            "name": "Philipp Jansen",
+            "pos": "BC 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 91,
+            "name": "Sarah Egbert",
+            "pos": "Tag 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 92,
+            "name": "Runa Rolf",
+            "pos": "Tag 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 93,
+            "name": "Lotte Hauer",
+            "pos": "BC 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+          },
+          {
+            "nr": 94,
+            "name": "Simon Kröger",
+            "pos": "BC 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping"
+          },
+          {
+            "nr": 95,
+            "name": "Kathi Stremel",
+            "pos": "Tag 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 96,
+            "name": "Borschi Borsch",
+            "pos": "CY 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 97,
+            "name": "Sara Hennings",
+            "pos": "CY 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 98,
+            "name": "Pfitzi Pfitzner",
+            "pos": "CY 3 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 99,
+            "name": "Naomi Kron da Silva",
+            "pos": "CY 4 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 100,
+            "name": "Sara Witjes Cuervo",
+            "pos": "CY 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 101,
+            "name": "Demian Mursic",
+            "pos": "CY 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 102,
+            "name": "Shawn Gigla",
+            "pos": "CY 3 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 103,
+            "name": "Lilu Habicht",
+            "pos": "CY 4 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 104,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "21:00",
+            "bis": "03:00",
+            "note": "Troubleshooting - Tagesbesucher Eingang"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 105,
+            "name": "Mark Schrader",
+            "pos": "Runner (Head)",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 106,
+            "name": "Max Bilski",
+            "pos": "Runner",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 107,
+            "name": "Lukas Heinkel",
+            "pos": "Runner",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 108,
+            "name": "Manu Jäger",
+            "pos": "Runner",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          },
+          {
+            "nr": 109,
+            "name": "Martin Collatz",
+            "pos": "Runner",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          },
+          {
+            "nr": 110,
+            "name": "Anna Böker",
+            "pos": "Runnerin",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 111,
+            "name": "Isabelle Payeur",
+            "pos": "Tages 24",
+            "von": "12:30",
+            "bis": "18:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 112,
+            "name": "Corinna Janke",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 113,
+            "name": "Tatjana Pesch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 114,
+            "name": "Tamara Melissa Temnur",
+            "pos": "Tages ACCES",
+            "von": "18:00",
+            "bis": "03:00",
+            "note": "Acces-Check tageseingang"
+          },
+          {
+            "nr": 115,
+            "name": "Simon Hoberg",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 116,
+            "name": "Eli Denis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 117,
+            "name": "Marie Liebkowsky",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 118,
+            "name": "Christian Behrens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 119,
+            "name": "Louisa Hövelmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 120,
+            "name": "Tanja Maaßen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 121,
+            "name": "Tamara Moll",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 122,
+            "name": "Lena Hoffmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 123,
+            "name": "Maren Straten",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 124,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 125,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      },
+      {
+        "name": "Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 126,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 127,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 128,
+            "name": "Jo Frank",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": "Schichttäusche, Arbeitszeiten"
+          },
+          {
+            "nr": 129,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "",
+            "bis": "",
+            "note": "Cashless, Lohnbuchhaltung"
+          },
+          {
+            "nr": 130,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "",
+            "bis": "",
+            "note": "Bänderverteilung & Koordination"
+          },
+          {
+            "nr": 131,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": "Gesamtleitung"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pv-dp-18-07",
+    "event": "parookaville",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Samstag, 18. Juli 2026",
+    "short": "Sa 18.07.",
+    "stations": [
+      {
+        "name": "Bänder - Haupteingang",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Alexander Hofmann",
+            "pos": "BC - Früh - 1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 2,
+            "name": "Fabio von Dornis",
+            "pos": "BC - Früh - 2",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 3,
+            "name": "Max Schild",
+            "pos": "BC - Früh - 3",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 4,
+            "name": "Paul Förster",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 5,
+            "name": "Marie Förster",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Enie Bibow",
+            "pos": "BC - Spät - 3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 7,
+            "name": "Svenja Gehrmann",
+            "pos": "Tages - 1",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 8,
+            "name": "Theresa Hartmann",
+            "pos": "Tages - 2",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 9,
+            "name": "Celina Dittrich",
+            "pos": "Tages - 3",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 10,
+            "name": "René Jacke",
+            "pos": "Tages - 4",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 11,
+            "name": "Silke Nichau",
+            "pos": "Tages - 5",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 12,
+            "name": "Pascal Fabio Schilde",
+            "pos": "Tages - 6",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 13,
+            "name": "Sarah Hißmann",
+            "pos": "Tages - 7",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 14,
+            "name": "Julia Richter",
+            "pos": "Tages - 8",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 15,
+            "name": "Felix Schlaf",
+            "pos": "Tages - 9",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 16,
+            "name": "Jens Krämer",
+            "pos": "Tages - 10",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 17,
+            "name": "Nele Scheil",
+            "pos": "Tages - 11",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 18,
+            "name": "Silvana Gietmanns",
+            "pos": "Tages - 12",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 19,
+            "name": "Sebastian Maik Köhler",
+            "pos": "Tages - 13",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 20,
+            "name": "Leon Riedel",
+            "pos": "Tages - 14",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Wachs",
+            "pos": "VIP Früh (BC)",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 22,
+            "name": "Gina Michele Köhler",
+            "pos": "VIP Früh (Tag)",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 23,
+            "name": "Pascal Grünheit",
+            "pos": "Flexibel (Tag)",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung · Flexibel - Tagesbesucher"
+          },
+          {
+            "nr": 24,
+            "name": "Jo Lang",
+            "pos": "BC - Spät - 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 25,
+            "name": "Cecilia Thoms",
+            "pos": "BC - Spät - 2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 26,
+            "name": "Lars Kattenbeck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Luca Patricia Hüren",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 28,
+            "name": "Justin Kummen-Bojer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Jan Scholz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Sophie Paß",
+            "pos": "Tages - 15",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 31,
+            "name": "Dennis Knoll",
+            "pos": "Tages - 16",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 32,
+            "name": "Marius Preuß",
+            "pos": "Tages - 17",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 33,
+            "name": "Mareike Preuß",
+            "pos": "Tages - 18",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 34,
+            "name": "Julian Heck",
+            "pos": "Tages - 19",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 35,
+            "name": "Leon Molé",
+            "pos": "Tages - 20",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 36,
+            "name": "Annika Heinrich",
+            "pos": "Tages - 1 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 37,
+            "name": "Neo Kecht",
+            "pos": "Tages - 2 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 38,
+            "name": "Axel Schoppe",
+            "pos": "Tages - 3 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 39,
+            "name": "Celine Krieg",
+            "pos": "Tages - 4 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 40,
+            "name": "Sonja Pleines",
+            "pos": "Tages - 5 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 41,
+            "name": "Franziska Lueg",
+            "pos": "Tages - 6 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 42,
+            "name": "Celina Sisting",
+            "pos": "Tages - 7 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 43,
+            "name": "Lara Sisting",
+            "pos": "Tages - 8 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 44,
+            "name": "Julie Steeger",
+            "pos": "VIP Spät (BC)",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 45,
+            "name": "Emil Witt",
+            "pos": "VIP Spät (Tag)",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 46,
+            "name": "Henrik Reichardt",
+            "pos": "VIP Früh (Tag)",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 47,
+            "name": "Aileen von Arnstadt",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Basti Walther",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 49,
+            "name": "Philipp Klose-Vogel",
+            "pos": "Stationsleitung 1",
+            "von": "08:00",
+            "bis": "17:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 50,
+            "name": "Chloe Schmedes",
+            "pos": "Stationsleitung 2",
+            "von": "11:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 51,
+            "name": "Tom Blödorn",
+            "pos": "Stationsleitung 3",
+            "von": "16:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 52,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 4",
+            "von": "11:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher · Basic Camping"
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Relax Camp",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 53,
+            "name": "Constantin Klinger",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Sophie Schubert",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Jennifer Kalinowski",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 57,
+            "name": "Eva Flören",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Annalena Ehren",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Neele Armbrecht",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 61,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 5",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 62,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 6",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 63,
+            "name": "Tobias Wamhof",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Kyara Hielscher",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 65,
+            "name": "Nicole Petri",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Filiz Dilara Nergiz",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 67,
+            "name": "Ulrich Endemann",
+            "pos": "Stationsleitung 7",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Jan Lohmeier",
+            "pos": "Stationsleitung 8",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Comfort & Deluxe",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 69,
+            "name": "Jana Althoff",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 70,
+            "name": "Jana Möller",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 71,
+            "name": "Mieke Möller",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 72,
+            "name": "Toni Knoche",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 73,
+            "name": "Jana Schäfer",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 74,
+            "name": "Paula Mergehen",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 75,
+            "name": "Lara Dold",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 76,
+            "name": "Clara Stett",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 77,
+            "name": "Elly Wistuba",
+            "pos": "Stationsleitung 9",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 78,
+            "name": "Mandy Ilgner",
+            "pos": "Stationsleitung 10",
+            "von": "18:00",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping&Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 79,
+            "name": "Lisa Petsch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 80,
+            "name": "Zoé Siewert",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 81,
+            "name": "Elin Kanes",
+            "pos": "1",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 82,
+            "name": "Lina Eggebrecht",
+            "pos": "2",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 83,
+            "name": "Julia Schäfer",
+            "pos": "3",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 84,
+            "name": "Maike Roggendorf",
+            "pos": "4",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 85,
+            "name": "Nele Roggendorf",
+            "pos": "5",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 86,
+            "name": "Chiara Claasen",
+            "pos": "6",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 87,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 11",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 88,
+            "name": "Nina Guthmann",
+            "pos": "Stationsleitung 12",
+            "von": "13:00",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 89,
+            "name": "Arne Chudobba",
+            "pos": "BC 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+          },
+          {
+            "nr": 90,
+            "name": "Philipp Jansen",
+            "pos": "Spare",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 91,
+            "name": "Sarah Egbert",
+            "pos": "Tag 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 92,
+            "name": "Runa Rolf",
+            "pos": "Tag 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 93,
+            "name": "Lotte Hauer",
+            "pos": "BC 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+          },
+          {
+            "nr": 94,
+            "name": "Simon Kröger",
+            "pos": "Tag 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 95,
+            "name": "Kathi Stremel",
+            "pos": "Tag 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 96,
+            "name": "Borschi Borsch",
+            "pos": "CY 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 97,
+            "name": "Sara Hennings",
+            "pos": "CY 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 98,
+            "name": "Pfitzi Pfitzner",
+            "pos": "CY 3 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 99,
+            "name": "Naomi Kron da Silva",
+            "pos": "CY 4 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 100,
+            "name": "Sara Witjes Cuervo",
+            "pos": "CY 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 101,
+            "name": "Demian Mursic",
+            "pos": "CY 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 102,
+            "name": "Shawn Gigla",
+            "pos": "CY 3 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 103,
+            "name": "Lilu Habicht",
+            "pos": "CY 4 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 104,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "21:00",
+            "bis": "03:00",
+            "note": "Troubleshoot - Tagesbesucher Eingang"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 105,
+            "name": "Mark Schrader",
+            "pos": "Runner (Head)",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 106,
+            "name": "Max Bilski",
+            "pos": "Runner",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 107,
+            "name": "Lukas Heinkel",
+            "pos": "Runner",
+            "von": "11:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 108,
+            "name": "Manu Jäger",
+            "pos": "Runner",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          },
+          {
+            "nr": 109,
+            "name": "Martin Collatz",
+            "pos": "Runner",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          },
+          {
+            "nr": 110,
+            "name": "Anna Böker",
+            "pos": "Runnerin",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 111,
+            "name": "Isabelle Payeur",
+            "pos": "Tages ACCES",
+            "von": "18:00",
+            "bis": "21:00",
+            "note": "Acces-Check Tageseingang"
+          },
+          {
+            "nr": 112,
+            "name": "Corinna Janke",
+            "pos": "Tages ACCES",
+            "von": "14:00",
+            "bis": "21:00",
+            "note": "Acces-Check Tageseingang"
+          },
+          {
+            "nr": 113,
+            "name": "Tatjana Pesch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 114,
+            "name": "Tamara Melissa Temnur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 115,
+            "name": "Simon Hoberg",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 116,
+            "name": "Eli Denis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 117,
+            "name": "Marie Liebkowsky",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 118,
+            "name": "Christian Behrens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 119,
+            "name": "Louisa Hövelmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 120,
+            "name": "Tanja Maaßen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 121,
+            "name": "Tamara Moll",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 122,
+            "name": "Lena Hoffmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 123,
+            "name": "Maren Straten",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 124,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 125,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      },
+      {
+        "name": "Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 126,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 127,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 128,
+            "name": "Jo Frank",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": "Schichttäusche, Arbeitszeiten"
+          },
+          {
+            "nr": 129,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "",
+            "bis": "",
+            "note": "Cashless, Lohnbuchhaltung"
+          },
+          {
+            "nr": 130,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "",
+            "bis": "",
+            "note": "Bänderverteilung & Koordination"
+          },
+          {
+            "nr": 131,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": "Gesamtleitung"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pv-dp-19-07",
+    "event": "parookaville",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Sonntag, 19. Juli 2026",
+    "short": "So 19.07.",
+    "stations": [
+      {
+        "name": "Bänder - Haupteingang",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Alexander Hofmann",
+            "pos": "BC - Früh - 1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 2,
+            "name": "Fabio von Dornis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 3,
+            "name": "Max Schild",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Paul Förster",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 5,
+            "name": "Marie Förster",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Enie Bibow",
+            "pos": "Tages - 1 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 7,
+            "name": "Svenja Gehrmann",
+            "pos": "Tages - 1",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 8,
+            "name": "Theresa Hartmann",
+            "pos": "Tages - 2",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 9,
+            "name": "Celina Dittrich",
+            "pos": "Tages - 3",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 10,
+            "name": "René Jacke",
+            "pos": "Tages - 4",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 11,
+            "name": "Silke Nichau",
+            "pos": "Tages - 5",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 12,
+            "name": "Pascal Fabio Schilde",
+            "pos": "Tages - 6",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 13,
+            "name": "Sarah Hißmann",
+            "pos": "Tages - 7",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 14,
+            "name": "Julia Richter",
+            "pos": "Tages - 8",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 15,
+            "name": "Felix Schlaf",
+            "pos": "Tages - 9",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 16,
+            "name": "Jens Krämer",
+            "pos": "Tages - 10",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 17,
+            "name": "Nele Scheil",
+            "pos": "Tages - 11",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 18,
+            "name": "Silvana Gietmanns",
+            "pos": "Tages - 12",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 19,
+            "name": "Sebastian Maik Köhler",
+            "pos": "Tages - 13",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 20,
+            "name": "Leon Riedel",
+            "pos": "Tages - 14",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Wachs",
+            "pos": "VIP Früh (BC)",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 22,
+            "name": "Gina Michele Köhler",
+            "pos": "VIP Früh (Tag)",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 23,
+            "name": "Pascal Grünheit",
+            "pos": "Flexibel (Tag)",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Keine Feste Schleuse! Unterstützend für Pausenvertetung und Bänderverteilung · Flexibel - Tagesbesucher"
+          },
+          {
+            "nr": 24,
+            "name": "Jo Lang",
+            "pos": "BC - Spät - 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 25,
+            "name": "Cecilia Thoms",
+            "pos": "Tages - 2 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 26,
+            "name": "Lars Kattenbeck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Luca Patricia Hüren",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 28,
+            "name": "Justin Kummen-Bojer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Jan Scholz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Sophie Paß",
+            "pos": "Tages - 15",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 31,
+            "name": "Dennis Knoll",
+            "pos": "Tages - 16",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 32,
+            "name": "Marius Preuß",
+            "pos": "Tages - 17",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 33,
+            "name": "Mareike Preuß",
+            "pos": "Tages - 18",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 34,
+            "name": "Julian Heck",
+            "pos": "Tages - 19",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 35,
+            "name": "Leon Molé",
+            "pos": "Tages - 20",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 36,
+            "name": "Annika Heinrich",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 37,
+            "name": "Neo Kecht",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Axel Schoppe",
+            "pos": "Tages - 3 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 39,
+            "name": "Celine Krieg",
+            "pos": "Tages - 4 Spät",
+            "von": "20:30",
+            "bis": "23:30",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 40,
+            "name": "Sonja Pleines",
+            "pos": "Tages - 5 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 41,
+            "name": "Franziska Lueg",
+            "pos": "Tages - 6 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 42,
+            "name": "Celina Sisting",
+            "pos": "Tages - 7 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 43,
+            "name": "Lara Sisting",
+            "pos": "Tages - 8 Spät",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 44,
+            "name": "Julie Steeger",
+            "pos": "VIP Spät (BC)",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "VIP - Basic Camping"
+          },
+          {
+            "nr": 45,
+            "name": "Emil Witt",
+            "pos": "VIP Spät (Tag)",
+            "von": "20:30",
+            "bis": "03:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 46,
+            "name": "Henrik Reichardt",
+            "pos": "VIP Früh (Tag)",
+            "von": "13:00",
+            "bis": "21:00",
+            "note": "VIP - Tagesbesucher"
+          },
+          {
+            "nr": 47,
+            "name": "Aileen von Arnstadt",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Basti Walther",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 49,
+            "name": "Philipp Klose-Vogel",
+            "pos": "Stationsleitung 1",
+            "von": "08:00",
+            "bis": "16:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 50,
+            "name": "Chloe Schmedes",
+            "pos": "Stationsleitung 2",
+            "von": "12:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 51,
+            "name": "Tom Blödorn",
+            "pos": "Stationsleitung 3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Basic Camping"
+          },
+          {
+            "nr": 52,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 4",
+            "von": "12:00",
+            "bis": "21:00",
+            "note": "Tagesbesucher"
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Relax Camp",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 53,
+            "name": "Constantin Klinger",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Sophie Schubert",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Jennifer Kalinowski",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 57,
+            "name": "Eva Flören",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Annalena Ehren",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Neele Armbrecht",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 61,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 5",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 62,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 6",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 63,
+            "name": "Tobias Wamhof",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Kyara Hielscher",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 65,
+            "name": "Nicole Petri",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Filiz Dilara Nergiz",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 67,
+            "name": "Ulrich Endemann",
+            "pos": "Stationsleitung 7",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Jan Lohmeier",
+            "pos": "Stationsleitung 8",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Comfort & Deluxe",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 69,
+            "name": "Jana Althoff",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 70,
+            "name": "Jana Möller",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 71,
+            "name": "Mieke Möller",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 72,
+            "name": "Toni Knoche",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 73,
+            "name": "Jana Schäfer",
+            "pos": "1",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 74,
+            "name": "Paula Mergehen",
+            "pos": "2",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 75,
+            "name": "Lara Dold",
+            "pos": "3",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 76,
+            "name": "Clara Stett",
+            "pos": "4",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 77,
+            "name": "Elly Wistuba",
+            "pos": "Stationsleitung 9",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 78,
+            "name": "Mandy Ilgner",
+            "pos": "Stationsleitung 10",
+            "von": "18:00",
+            "bis": "03:00",
+            "note": "Tagesbesucher"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping&Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 79,
+            "name": "Lisa Petsch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 80,
+            "name": "Zoé Siewert",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 81,
+            "name": "Elin Kanes",
+            "pos": "1",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 82,
+            "name": "Lina Eggebrecht",
+            "pos": "2",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 83,
+            "name": "Julia Schäfer",
+            "pos": "3",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 84,
+            "name": "Maike Roggendorf",
+            "pos": "4",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 85,
+            "name": "Nele Roggendorf",
+            "pos": "5",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 86,
+            "name": "Chiara Claasen",
+            "pos": "6",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 87,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 11",
+            "von": "13:00",
+            "bis": "22:00",
+            "note": "Tagesbesucher"
+          },
+          {
+            "nr": 88,
+            "name": "Nina Guthmann",
+            "pos": "Stationsleitung 12",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 89,
+            "name": "Arne Chudobba",
+            "pos": "BC 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+          },
+          {
+            "nr": 90,
+            "name": "Philipp Jansen",
+            "pos": "Tag 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 91,
+            "name": "Sarah Egbert",
+            "pos": "Tag 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 92,
+            "name": "Runa Rolf",
+            "pos": "Tag 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 93,
+            "name": "Lotte Hauer",
+            "pos": "BC 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+          },
+          {
+            "nr": 94,
+            "name": "Simon Kröger",
+            "pos": "Spare",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 12 Uhr - 21Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 95,
+            "name": "Kathi Stremel",
+            "pos": "Tag 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Tagesbesucher"
+          },
+          {
+            "nr": 96,
+            "name": "Borschi Borsch",
+            "pos": "CY 1 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 97,
+            "name": "Sara Hennings",
+            "pos": "CY 2 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 98,
+            "name": "Pfitzi Pfitzner",
+            "pos": "CY 3 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 99,
+            "name": "Naomi Kron da Silva",
+            "pos": "CY 4 Früh",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 100,
+            "name": "Sara Witjes Cuervo",
+            "pos": "CY 1 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 101,
+            "name": "Demian Mursic",
+            "pos": "CY 2 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 102,
+            "name": "Shawn Gigla",
+            "pos": "CY 3 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 103,
+            "name": "Lilu Habicht",
+            "pos": "CY 4 Spät",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": "Akkreditierung - Crew York"
+          },
+          {
+            "nr": 104,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "21:00",
+            "bis": "03:00",
+            "note": "Troubleshoot - Tagesbesucher Eingang"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 105,
+            "name": "Mark Schrader",
+            "pos": "Runner (Head)",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 106,
+            "name": "Max Bilski",
+            "pos": "Runner",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 107,
+            "name": "Lukas Heinkel",
+            "pos": "Runner",
+            "von": "11:00",
+            "bis": "16:30",
+            "note": ""
+          },
+          {
+            "nr": 108,
+            "name": "Manu Jäger",
+            "pos": "Runner",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          },
+          {
+            "nr": 109,
+            "name": "Martin Collatz",
+            "pos": "Runner",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          },
+          {
+            "nr": 110,
+            "name": "Anna Böker",
+            "pos": "Runnerin",
+            "von": "16:30",
+            "bis": "03:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 111,
+            "name": "Isabelle Payeur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 112,
+            "name": "Corinna Janke",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 113,
+            "name": "Tatjana Pesch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 114,
+            "name": "Tamara Melissa Temnur",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 115,
+            "name": "Simon Hoberg",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 116,
+            "name": "Eli Denis",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 117,
+            "name": "Marie Liebkowsky",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 118,
+            "name": "Christian Behrens",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 119,
+            "name": "Louisa Hövelmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 120,
+            "name": "Tanja Maaßen",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 121,
+            "name": "Tamara Moll",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 122,
+            "name": "Lena Hoffmann",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 123,
+            "name": "Maren Straten",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 124,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 125,
+            "name": "0",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      },
+      {
+        "name": "Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 126,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 127,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 128,
+            "name": "Jo Frank",
+            "pos": "Büro",
+            "von": "",
+            "bis": "",
+            "note": "Schichttäusche, Arbeitszeiten"
+          },
+          {
+            "nr": 129,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "",
+            "bis": "",
+            "note": "Cashless, Lohnbuchhaltung"
+          },
+          {
+            "nr": 130,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "",
+            "bis": "",
+            "note": "Bänderverteilung & Koordination"
+          },
+          {
+            "nr": 131,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": "Gesamtleitung"
+          }
         ]
       }
     ]
@@ -11406,5 +16916,138 @@ export const DIENSTPLAN_CONTACTS = {
     "tel": "017630608317"
   }
   ],
-  "parookaville": []
+  "parookaville": [
+    {
+      "name": "Raphael Siemers",
+      "role": "Gesamt",
+      "phone": "0152 27605462",
+      "tel": "015227605462"
+    },
+    {
+      "name": "Holger Tingelhoff",
+      "role": "Bänder",
+      "phone": "0151 16792582",
+      "tel": "015116792582"
+    },
+    {
+      "name": "Pia Hiller",
+      "role": "Cashless & Büro",
+      "phone": "0178 1326632",
+      "tel": "01781326632"
+    },
+    {
+      "name": "Jo Frank",
+      "role": "Büro",
+      "phone": "0157 36447320",
+      "tel": "015736447320"
+    },
+    {
+      "name": "Mark Schrader",
+      "role": "Runner (Head) Früh",
+      "phone": "0176 10815723",
+      "tel": "017610815723"
+    },
+    {
+      "name": "Max Bilski",
+      "role": "Runner Früh",
+      "phone": "0162 6449695",
+      "tel": "01626449695"
+    },
+    {
+      "name": "Lukas Heinkel",
+      "role": "Runner Früh",
+      "phone": "0152 27886584",
+      "tel": "015227886584"
+    },
+    {
+      "name": "Manu Jäger",
+      "role": "Runner Spät",
+      "phone": "0152 08952076",
+      "tel": "015208952076"
+    },
+    {
+      "name": "Martin Collatz",
+      "role": "Runner Spät",
+      "phone": "0172 8667681",
+      "tel": "01728667681"
+    },
+    {
+      "name": "Anna Böker",
+      "role": "Runnerin Spät",
+      "phone": "0170 1927767",
+      "tel": "01701927767"
+    },
+    {
+      "name": "Philipp Klose-Vogel",
+      "role": "Stationsleitung - Hauptstation - Früh",
+      "phone": "0179 7503259",
+      "tel": "01797503259"
+    },
+    {
+      "name": "Chloe Schmedes",
+      "role": "Stationsleitung - Hauptstation - Früh",
+      "phone": "0172 6405259",
+      "tel": "01726405259"
+    },
+    {
+      "name": "Tom Blödorn",
+      "role": "Stationsleitung - Hauptstation - Spät",
+      "phone": "0157 39623429",
+      "tel": "015739623429"
+    },
+    {
+      "name": "Anna Mischkalla",
+      "role": "Stationsleitung - Hauptstation - Spät",
+      "phone": "0176 34429926",
+      "tel": "017634429926"
+    },
+    {
+      "name": "Hannah Greitemann",
+      "role": "Stationsleitung - Relax Camp - Früh",
+      "phone": "0151 59134110",
+      "tel": "015159134110"
+    },
+    {
+      "name": "Lisa Mann",
+      "role": "Stationsleitung - Relax Camp - Spät",
+      "phone": "0172 8623061",
+      "tel": "01728623061"
+    },
+    {
+      "name": "Ulrich Endemann",
+      "role": "Stationsleitung - Caravan Camp - Früh",
+      "phone": "0174 7397888",
+      "tel": "01747397888"
+    },
+    {
+      "name": "Jan Lohmeier",
+      "role": "Stationsleitung - Caravan Camp - Spät",
+      "phone": "0160 4338723",
+      "tel": "01604338723"
+    },
+    {
+      "name": "Elly Wistuba",
+      "role": "Stationsleitung - Comfort Camp - Früh",
+      "phone": "0177 8060195",
+      "tel": "01778060195"
+    },
+    {
+      "name": "Mandy Ilgner",
+      "role": "Stationsleitung - Comfort Camp - Spät",
+      "phone": "0173 4677108",
+      "tel": "01734677108"
+    },
+    {
+      "name": "Erika Wilches Quintero",
+      "role": "Stationsleitung - Cashless - 1",
+      "phone": "0162 4421574",
+      "tel": "01624421574"
+    },
+    {
+      "name": "Nina Guthmann",
+      "role": "Stationsleitung - Cashless - 2",
+      "phone": "0151 51959381",
+      "tel": "015151959381"
+    }
+  ]
 };
