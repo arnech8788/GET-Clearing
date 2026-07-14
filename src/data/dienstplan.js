@@ -10,9 +10,10 @@
 //   { day:"baender-fr-05", nr:4, name:"…", von:"…", bis:"…", pos:"…",
 //     cancelled:false, note:"getauscht mit … (WhatsApp …)" }
 
+// Meta je Festival (event-id → { title }).
 export const DIENSTPLAN_META = {
-  "event": "rar",
-  "title": "Klangpiraten · Rock am Ring 2026 – Einsatzpläne"
+  "rar": { "title": "Klangpiraten · Rock am Ring 2026 – Einsatzpläne" },
+  "parookaville": { "title": "Klangpiraten · Parookaville 2026 – Einsatzpläne" }
 };
 
 export const SHIFT_CHANGES = [];
@@ -11131,10 +11132,39 @@ export const DIENSTPLAN_DAYS = [
         ]
       }
     ]
+  },
+  {
+    "id": "pv-akkr-di-14",
+    "event": "parookaville",
+    "plan": "Troubleshoot / Akkreditierung",
+    "label": "Akkreditierung · Dienstag, 14. Juli 2026",
+    "short": "Akkreditierung · Di",
+    "stations": [
+      {
+        "name": "Akkreditierung – Basic Camping",
+        "kb": "BC",
+        "rows": [
+          { "nr": 89, "name": "Arne Chudobba", "pos": "BC 1 Früh", "von": "09:00", "bis": "16:00", "note": "" },
+          { "nr": 90, "name": "Philipp Jansen", "pos": "BC 2 Früh", "von": "09:00", "bis": "16:00", "note": "" },
+          { "nr": 93, "name": "Lotte Hauer", "pos": "BC 1 Spät", "von": "15:30", "bis": "22:00", "note": "" },
+          { "nr": 94, "name": "Simon Kröger", "pos": "BC 2 Spät", "von": "15:30", "bis": "22:00", "note": "" }
+        ]
+      },
+      {
+        "name": "Akkreditierung – Crew York",
+        "kb": "CY",
+        "rows": [
+          { "nr": 100, "name": "Sara Witjes Cuervo", "pos": "CY 1 Spät", "von": "15:30", "bis": "22:00", "note": "" },
+          { "nr": 101, "name": "Demian Mursic", "pos": "CY 2 Spät", "von": "15:30", "bis": "22:00", "note": "" }
+        ]
+      }
+    ]
   }
 ];
 
-export const DIENSTPLAN_CONTACTS = [
+// Ansprechpersonen je Festival (event-id → Liste). ACHTUNG: private Nummern.
+export const DIENSTPLAN_CONTACTS = {
+  "rar": [
   {
     "name": "Raphael Siemers",
     "role": "Gesamtleitung",
@@ -11375,4 +11405,6 @@ export const DIENSTPLAN_CONTACTS = [
     "phone": "0176 30608317",
     "tel": "017630608317"
   }
-];
+  ],
+  "parookaville": []
+};

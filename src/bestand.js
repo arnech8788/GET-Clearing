@@ -25,14 +25,16 @@ function uid() { return 's' + Date.now().toString(36) + Math.random().toString(3
 function num(v) { const n = parseInt(v, 10); return Number.isFinite(n) ? n : null; }
 
 // ---- Vorschläge & Datum ----------------------------------------------------
+// Bestand ist RaR-spezifisch → Vorschläge nur aus RaR-Dienstplantagen.
+const rarDays = () => DIENSTPLAN_DAYS.filter((d) => (d.event || 'rar') === 'rar');
 function stationSuggestions() {
   const set = new Set();
-  for (const d of DIENSTPLAN_DAYS) for (const s of d.stations) if (s.name && !/ohne|Springer|EXTRA/i.test(s.name)) set.add(s.name);
+  for (const d of rarDays()) for (const s of d.stations) if (s.name && !/ohne|Springer|EXTRA/i.test(s.name)) set.add(s.name);
   return [...set].sort((a, b) => a.localeCompare(b, 'de'));
 }
 function nameSuggestions() {
   const set = new Set();
-  for (const d of DIENSTPLAN_DAYS) for (const s of d.stations) for (const r of s.rows) if (r.name) set.add(r.name);
+  for (const d of rarDays()) for (const s of d.stations) for (const r of s.rows) if (r.name) set.add(r.name);
   return [...set].sort((a, b) => a.localeCompare(b, 'de'));
 }
 function isoToday() {
