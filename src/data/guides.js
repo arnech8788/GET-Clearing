@@ -979,7 +979,7 @@ export const GUIDES = [
     title: 'Crew-Catering – Essenszeiten',
     problem: 'Wann gibt es Frühstück, Mittag- und Abendessen für die Crew?',
     tags: ['parookaville', 'pv', 'catering', 'essen', 'essenszeiten', 'frühstück', 'mittagessen', 'abendessen', 'crew', 'mahlzeit'],
-    source: 'Parookaville 2026 – Crew-Infos (parookaville.com/de/crew-info)',
+    source: 'Parookaville 2026 – Aushang Crew-Catering vor Ort (Stand 15.07.2026)',
     body: [
       { h: 'Frühstück' },
       { ul: [
@@ -1002,11 +1002,12 @@ export const GUIDES = [
       { h: 'Abendessen' },
       { ul: [
         '29.06.–12.07.2026: 18:00–19:30 Uhr',
-        '13.07.–15.07.2026: 18:00–21:00 Uhr',
-        'Pre-Party 16.07.2026: 18:00–01:00 Uhr',
-        'Festival 17.–19.07.2026: 18:00–01:00 Uhr'
+        '13.07.–15.07.2026: 18:30–21:00 Uhr',
+        'Pre-Party 16.07.2026: 18:30–01:00 Uhr',
+        'Festival 17.–19.07.2026: 18:30–01:00 Uhr',
+        '20.07.–30.07.2026: 18:00–20:30 Uhr'
       ] },
-      { note: 'Für 20.07.–31.07.2026 ist kein Abendessen ausgewiesen. Angaben ohne Gewähr.' }
+      { note: 'Am 31.07.2026 gibt es kein Abendessen. Stand: Aushang Crew-Catering vor Ort (15.07.2026), ohne Gewähr.' }
     ]
   },
   {

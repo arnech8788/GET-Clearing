@@ -14100,15 +14100,15 @@ export const DIENSTPLAN_DAYS = [
             "nr": 89,
             "name": "Arne Chudobba",
             "pos": "BC 1 Früh",
-            "von": "07:00",
+            "von": "08:00",
             "bis": "16:00",
-            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+            "note": "Akkreditierung - Basic Camping / inkl. GET Troubleshooting"
           },
           {
             "nr": 90,
             "name": "Philipp Jansen",
             "pos": "BC 1 Früh",
-            "von": "07:00",
+            "von": "08:00",
             "bis": "16:00",
             "note": "Akkreditierung - Basic Camping"
           },
@@ -14116,16 +14116,16 @@ export const DIENSTPLAN_DAYS = [
             "nr": 91,
             "name": "Sarah Egbert",
             "pos": "Tag 1 Früh",
-            "von": "07:00",
-            "bis": "16:00",
+            "von": "12:30",
+            "bis": "20:00",
             "note": "Akkreditierung - Tagesbesucher"
           },
           {
             "nr": 92,
             "name": "Runa Rolf",
             "pos": "Tag 2 Früh",
-            "von": "07:00",
-            "bis": "16:00",
+            "von": "12:30",
+            "bis": "20:00",
             "note": "Akkreditierung - Tagesbesucher"
           },
           {
@@ -14134,7 +14134,7 @@ export const DIENSTPLAN_DAYS = [
             "pos": "BC 1 Spät",
             "von": "15:30",
             "bis": "00:00",
-            "note": "Akkreditierung - Basic Camping / inkl. Troubleshooting"
+            "note": "Akkreditierung - Basic Camping / inkl. GET Troubleshooting"
           },
           {
             "nr": 94,
@@ -14148,8 +14148,8 @@ export const DIENSTPLAN_DAYS = [
             "nr": 95,
             "name": "Kathi Stremel",
             "pos": "Tag 1 Spät",
-            "von": "15:30",
-            "bis": "00:00",
+            "von": "19:30",
+            "bis": "03:00",
             "note": "Akkreditierung - Tagesbesucher"
           },
           {
