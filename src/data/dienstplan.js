@@ -13,7 +13,8 @@
 // Meta je Festival (event-id → { title }).
 export const DIENSTPLAN_META = {
   "rar": { "title": "Klangpiraten · Rock am Ring 2026 – Einsatzpläne" },
-  "parookaville": { "title": "Klangpiraten · Parookaville 2026 – Einsatzpläne" }
+  "parookaville": { "title": "Klangpiraten · Parookaville 2026 – Einsatzpläne" },
+  "natureone": { "title": "NATURE ONE 2026 · Spektralwerk – deine Einsatzzeiten" }
 };
 
 export const SHIFT_CHANGES = [];
@@ -16670,6 +16671,39 @@ export const DIENSTPLAN_DAYS = [
       }
     ]
   }
+,
+  {
+    "id": "no-dp-31-07",
+    "event": "natureone",
+    "plan": "Spektralwerk",
+    "label": "Freitag, 31. Juli 2026",
+    "short": "Fr 31.07.",
+    "stations": [
+      {
+        "name": "Theken Pydna – Theke 4 (Verkauf)",
+        "kb": "",
+        "rows": [
+          { "nr": 11414, "name": "Arne Chudobba", "pos": "Theke 4 – Verkauf", "von": "19:00", "bis": "04:00", "note": "Check-in 19:00, Check-out 04:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "no-dp-01-08",
+    "event": "natureone",
+    "plan": "Spektralwerk",
+    "label": "Samstag, 1. August 2026",
+    "short": "Sa 01.08.",
+    "stations": [
+      {
+        "name": "Theken Pydna – Theke 4 (Verkauf)",
+        "kb": "",
+        "rows": [
+          { "nr": 11414, "name": "Arne Chudobba", "pos": "Theke 4 – Verkauf", "von": "18:00", "bis": "04:00", "note": "Check-in 18:00, Check-out 04:00" }
+        ]
+      }
+    ]
+  }
 ];
 
 // Ansprechpersonen je Festival (event-id → Liste). ACHTUNG: private Nummern.
@@ -17049,5 +17083,10 @@ export const DIENSTPLAN_CONTACTS = {
       "phone": "0151 51959381",
       "tel": "015151959381"
     }
+  ],
+  "natureone": [
+    { "name": "Personalbüro (während des Einsatzes)", "role": "24h erreichbar", "phone": "01522 5255614", "tel": "015225255614" },
+    { "name": "Spektralwerk Hotline", "role": "WhatsApp & Call", "phone": "06541 8141222", "tel": "065418141222" },
+    { "name": "Spektralwerk", "role": "Telefon & SMS", "phone": "0171 3055115", "tel": "01713055115" }
   ]
 };

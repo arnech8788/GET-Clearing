@@ -166,6 +166,7 @@ function renderBlock(b) {
   if (b.note) return `<div class="callout callout-note">${ICO.info}<div>${escapeHtml(b.note)}</div></div>`;
   if (b.warn) return `<div class="callout callout-warn">${ICO.warn}<div>${escapeHtml(b.warn)}</div></div>`;
   if (b.tip) return `<div class="callout callout-tip">${ICO.check}<div>${escapeHtml(b.tip)}</div></div>`;
+  if (b.img) return `<figure class="blk-fig"><a href="${escapeHtml(b.img)}" target="_blank" rel="noopener"><img class="blk-img" src="${escapeHtml(b.img)}" alt="${escapeHtml(b.alt || '')}" loading="lazy"></a>${b.caption ? `<figcaption class="blk-cap">${escapeHtml(b.caption)}</figcaption>` : ''}</figure>`;
   return '';
 }
 

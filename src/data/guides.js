@@ -27,7 +27,8 @@ export const CATEGORIES = [
   { id: 'tools', name: 'Geräte, GET Manage & Support', icon: 'tool', color: '#7f8c9a' },
   { id: 'rar', name: 'Rock am Ring – Clearing & Bändchen', icon: 'flag', color: '#e23b3b' },
   { id: 'pv', name: 'Parookaville – Crew-Infos', icon: 'flag', color: '#2d9cdb' },
-  { id: 'pv-checkin', name: 'Parookaville – Check-in & Akkreditierung', icon: 'ticket', color: '#1abc9c' }
+  { id: 'pv-checkin', name: 'Parookaville – Check-in & Akkreditierung', icon: 'ticket', color: '#1abc9c' },
+  { id: 'no', name: 'NATURE ONE – Crew-Infos', icon: 'flag', color: '#27ae60' }
 ];
 
 export const GUIDES = [
@@ -1298,6 +1299,218 @@ export const GUIDES = [
       { p: 'In den Aufbau- und Abbau-Zeiträumen wird nicht gescannt.' },
       { warn: 'Ausnahme: Am 16.07.2026 (Donnerstag vor Show, Pre-Party) wird an FOH (2), Artist Village (4), Side Stages (7) und Creator Backstage (8) gescannt.' },
       { note: 'Die „1" wird dennoch nicht am Klever Tor o. Ä. gescannt, da sonst die Z4-Regel nicht greifen könnte (Lieferanten ohne Akkreditierung, die mit Z4-Ware anliefern – jeden Tag bis zum jeweiligen Showtag ab 12:00 Uhr).' }
+    ]
+  },
+  {
+    id: 'no-anreise-parken',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Anreise, Parken & CrewCampBell',
+    problem: 'Wie und wann reise ich an, wo parke ich, was sind die ersten Schritte?',
+    tags: ['natureone', 'no', 'anreise', 'parken', 'parkschein', 'crewcampbell', 'shuttle', 'fahrgemeinschaft', 'welcome center'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk) & Personal-Briefing (I-Motion)',
+    body: [
+      { h: 'Wann anreisen' },
+      { ul: ['Spätestens einen Tag vor der ersten Schicht anreisen', 'Ab Mittwoch lange Staus/Wartezeiten – mind. 4 Std. Puffer einplanen'] },
+      { h: 'Mit dem Auto' },
+      { ul: ['Parkausweis aktiv anfordern (member@spektralwerk.de oder WhatsApp) – bis spätestens 23.07.2026', 'Ohne gültigen, ausgedruckten Parkausweis keine Zufahrt zum CrewCampBell', 'Nur die offizielle Anfahrtsroute nutzen; Parken oberhalb vom CrewCampBell', 'Fahrgemeinschaften mit mind. 3 Personen bilden (Parkflächen begrenzt)'] },
+      { h: 'Mit Zug & Shuttle' },
+      { ul: ['Zug bis Koblenz Hbf, dann Shuttlebus', 'Haltepunkt B327, Abfahrt Hundheim → Fußweg Richtung Pydna', 'Fußweg bis Campingplatz beträgt mehrere Kilometer'] },
+      { h: 'Erste Schritte vor Ort' },
+      { ol: ['Auto parken → umgehend zum Welcome Center im CrewCampBell', 'Fürs Crew-Camping anmelden und direkt akkreditieren lassen (kann bis 1,5 Std. dauern)', 'Einrichten, Einsatzzeiten prüfen, Wecker mind. 1 Std. vor Schichtbeginn stellen'] },
+      { warn: 'Ohne Akkreditierung kein Zutritt zum Personalbüro – und damit keine Arbeit.' }
+    ]
+  },
+  {
+    id: 'no-crew-basics',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Crew-Basics, Orientierung & Funkkanäle',
+    problem: 'Wo sind Duschen, Toiletten, Schließfächer – und welche Funkkanäle gibt es?',
+    tags: ['natureone', 'no', 'crew', 'duschen', 'toiletten', 'schließfächer', 'funk', 'kanäle', 'app', 'infopoint', 'gehörschutz'],
+    source: 'NATURE ONE 2026 – Personal-Briefing (I-Motion)',
+    body: [
+      { h: 'Crew-Basics' },
+      { ul: ['Teamleitung: Tamara Nungesser (Kontakt siehe „Kontakt & Spektralwerk-Team")', 'Dienstplan/Schichten: siehe Running Order bzw. Nachfrage im Personalbüro', 'Crew-Getränke im Catering: Wasser, Cola, Limo', 'Duschen: Bereich F14', 'Personal-Toiletten: Produktionsbereich; Theken 3, 13, 18 und Gastro-Off am Turm', 'Schließfächer (Personal): CrewCampBell und am Personalbüro', 'ADAC: Bereich F11'] },
+      { h: 'Funkkanäle' },
+      { ul: ['1: Notruf', '2: Produktion', '3: Security', '4: Gastro / Personal', '5: Dispo'] },
+      { h: 'Orientierung' },
+      { ul: ['Festival-App: I-Motion App (TimeTables, Location Map, Infos) – App Store / Google Play', 'Infopoint / Fundbüro: Headquarter und Marketplace (F12)', 'Merchandise: Marketplace F12, Festivaleinlass, Food II', 'Zigaretten: Marketplace F12, am Turm, Food I + mobile Verkäufer', 'Comfort-Bereich: auf Bunker 1', 'Gehörschutz: kostenlos an Merchandise-Ständen', 'Müllpfand CampingVillage: 10 €'] }
+    ]
+  },
+  {
+    id: 'no-cashless',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Cashless & Zahlung',
+    problem: 'Wie funktioniert das bargeldlose Bezahlen (I-Motion) auf der NATURE ONE?',
+    tags: ['natureone', 'no', 'cashless', 'bargeldlos', 'topup', 'wiedereinlass', 'refund', 'eventportal'],
+    source: 'NATURE ONE 2026 – Personal-Briefing (I-Motion)',
+    body: [
+      { p: 'Die gesamte Veranstaltung ist bargeldlos (Cashless) – keine Barzahlung möglich.' },
+      { ul: ['Gäste zahlen per Cashless-Bändchen; Aufladen an den TopUp-Stationen', 'Wiedereinlass: über das Eventportal buchbar – 5 € werden auf das Cashless-Bändchen gebucht', 'Refund: 08.08.–22.08. über das Eventportal – nur digital möglich'] }
+    ]
+  },
+  {
+    id: 'no-notfall',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Notfall & Sicherheit (Gelände)',
+    problem: 'Wo sind Sanitäter, wie alarmiere ich, was tun bei Unwetter?',
+    tags: ['natureone', 'no', 'notfall', 'sanitäter', 'feuerwehr', 'polizei', 'unwetter', 'sicherheit'],
+    source: 'NATURE ONE 2026 – Personal-Briefing (I-Motion)',
+    body: [
+      { ul: ['Sanitäter: F2, F11, F23 (CampingVillage) / hinter Bunker 5 (Festivalgelände)', 'Feuerwehr/Alarm: Alarmierung über Interorga – Funkkanal 1', 'Polizei (24h): gegenüber dem Haupteingang Festivalgelände (Pydna)'] },
+      { warn: 'Unwetter: sofort unterstellen → Bunker oder PKW aufsuchen. NICHT in den Wald! Anderen helfen.' },
+      { note: 'Feuerlöscher-Standorte u. a.: DRK, Staffed TopUp, Duschen, Merch, ADAC, Buggies, Theken, Gästeliste, Abendkasse.' }
+    ]
+  },
+  {
+    id: 'no-checkliste',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Checkliste & Unterlagen vor der Anreise',
+    problem: 'Was muss ich vorab erledigen, mitbringen und einpacken?',
+    tags: ['natureone', 'no', 'checkliste', 'unterlagen', 'arbeitsvertrag', 'packliste', 'academy', 'vorbereitung'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { h: 'Einsatzzeiten' },
+      { ul: ['Running Order erhalten, geprüft und bestätigt?', 'Kannst du alle Schichten erfüllen?', 'Änderungsbedarf nur im Notfall bis spätestens 24.07.2026 (Mail/WhatsApp)'] },
+      { h: 'Unterlagen (ausgedruckt & unterschrieben zur 1. Schicht)' },
+      { ul: ['Erklärungsbogen', 'Arbeitsvertrag', 'Running Order', 'Schul-/Studienbescheinigung (falls zutreffend)', 'Gültiger Personalausweis oder Reisepass', 'Parkschein für CrewCampBell beantragt (per E-Mail)', 'I-Motion Academy absolviert (Einladung kurz vor der Veranstaltung)'] },
+      { h: 'Packliste (Auswahl)' },
+      { ul: ['Festes, geschlossenes Schuhwerk (keine Flipflops); Sicherheitsschuhe für Hands', 'Wetterfeste & warme Kleidung (auch für Nachtschichten), Regenponcho', 'Wechselsocken/-schuhe', 'Medikamente, Sonnencreme, Sonnenschutz', 'Rucksack, Trinkwasser, Ladekabel/Powerbank', 'Campingequipment (Zelt, Isomatte, Schlafsack …)'] }
+    ]
+  },
+  {
+    id: 'no-ablauf',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Ablauf & Öffnungszeiten',
+    problem: 'Welche Zeiträume/Öffnungszeiten gelten und wo ist was?',
+    tags: ['natureone', 'no', 'öffnungszeiten', 'welcome center', 'camping', 'personalbüro', 'ablauf', 'shuttle'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { h: 'Veranstaltungsort' },
+      { p: 'Raketenbasis Pydna, 56288 Kastellaun.' },
+      { h: 'Öffnungszeiten Welcome Center (Akkreditierung)' },
+      { ul: ['Sonntag 26.07.: 15:00–19:00 Uhr', 'Montag 27.07.: 08:00–19:00 Uhr', 'Dienstag 28.07.: ab 08:00 durchgängig – bis Samstag 02.08. 16:00 Uhr'] },
+      { h: 'Zeiträume' },
+      { ul: ['Camping: Mi 29.07. 10:00 – Mo 03.08. 18:00', 'Silent Camping: Do 30.07. 10:00 – So 02.08. 18:00', 'CrewCampBell: So 26.07. – Mo 03.08.', 'Event: Fr 31.07. 19:00 – Sa 01.08. 06:00 und Sa 01.08. 18:00 – So 02.08. 08:00'] },
+      { h: 'Wo ist was' },
+      { ul: ['CrewCampBell: Mitarbeiterparkplatz, -camping, Welcome Center', 'Welcome Center: Akkreditierung & Anmeldung fürs Camping', 'Personalbüro: Check-in & -out, Materialausgabe', 'Catering: Verpflegung (Trinkwasser & Mahlzeit nach der Schicht)'] },
+      { note: 'Shuttles fahren CrewCampBell ↔ Personalbüro 1× pro Stunde. Sei spätestens 45 Min. vor Schichtbeginn im Personalbüro – Fahr- und Wartezeit einplanen.' }
+    ]
+  },
+  {
+    id: 'no-akkreditierung',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Akkreditierung',
+    problem: 'Wo bekomme ich mein Bändchen und wofür brauche ich die Akkreditierung?',
+    tags: ['natureone', 'no', 'akkreditierung', 'bändchen', 'welcome center', 'ausweis', 'zugang'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { ul: ['Bändchen-Ausgabe im Welcome Center im CrewCampBell gegen gültigen Personalausweis', 'Ohne Akkreditierung kein Zugang zu: Festivalgelände, Personalbüro (Check-in/-out), Crew-Catering, Campingplatz', 'Mind. 1,5 Std. Puffer für die Abholung einplanen'] },
+      { warn: 'Bei unentschuldigtem Fehlen kann die Akkreditierung widerrufen und der volle Ticketpreis in Rechnung gestellt werden.' }
+    ]
+  },
+  {
+    id: 'no-catering',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Crew-Catering & Verpflegung',
+    problem: 'Was gibt es zu essen/trinken und wann?',
+    tags: ['natureone', 'no', 'catering', 'verpflegung', 'mahlzeit', 'lunchpaket', 'wasser', 'selbstversorger'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { ul: ['Crew-Catering unmittelbar am Personalbüro', 'Kostenlose warme Mahlzeit pro Schicht (nach dem Einsatz)', 'Lunchpaket für die Schicht: direkt beim Check-in', 'Getränke: Wasser & Tetrapaks im Personalbüro – mind. 4 Flaschen Wasser pro Schicht mitnehmen', 'Schließfächer: CrewCampBell (solange Vorrat reicht)'] },
+      { note: 'Außerhalb der Einsätze bist du Selbstversorger – eigene Verpflegung mitbringen.' }
+    ]
+  },
+  {
+    id: 'no-checkin',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Check-in, Check-out & Pausen',
+    problem: 'Wie läuft Check-in/Check-out ab und wo mache ich Pause?',
+    tags: ['natureone', 'no', 'check-in', 'check-out', 'pausen', 'personalbüro', 'material', 'unterschrift'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { h: 'Check-in' },
+      { ul: ['Akkreditierung ist Pflicht', 'Spätestens 45 Min. vor Schichtbeginn persönlich im Personalbüro melden', 'Dort: fehlende Unterlagen abgeben, Check-in, Ausgabe Material/Kassen, Lunchpaket & Wasser', 'Anschließend Begleitung zum Einsatzort & Einarbeitung'] },
+      { h: 'Check-out' },
+      { ul: ['Arbeitsplatz nur nach Absprache/Freigabe verlassen', 'Wartezeiten bis 1 Std. möglich (werden voll vergütet)', 'Zuerst Material/Kassen abgeben, dann auschecken', 'Check-out-Zeit & Arbeitszeit prüfen und per Unterschrift bestätigen'] },
+      { h: 'Pausen' },
+      { ul: ['Gesetzliche Pausenzeiten – ohne Ausnahme', 'Pause an der Position (nicht im Catering/Aufenthaltszelt)'] },
+      { warn: 'Verspätung/Ausfall sofort telefonisch abmelden. Personalbüro während des Einsatzes: 01522 5255614.' }
+    ]
+  },
+  {
+    id: 'no-kleidung-verhalten',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Arbeitskleidung, Sicherheit & Verhalten',
+    problem: 'Was ziehe ich an und welche Verhaltensregeln gelten?',
+    tags: ['natureone', 'no', 'kleidung', 'warnweste', 'sicherheit', 'verhalten', 'alkohol', 'drogen', 'schuhe'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { h: 'Arbeitskleidung' },
+      { ul: ['Festes, geschlossenes Schuhwerk Pflicht (keine offenen Schuhe/Absätze/Badelatschen)', 'Sicherheitsschuhe bei Auf-/Abbau (Hands)', 'Wetterfeste, robuste Kleidung; kleiner Rucksack empfehlenswert'] },
+      { h: 'Sicherheit' },
+      { ul: ['Warnweste/Warnkleidung ist Pflicht – jederzeit sichtbar tragen', 'Im Straßenverkehr: nie selbst gefährden, Sicherheitsabstände halten', 'Bei Gefahr sofort Teamleiter/Supervisor informieren, Ruhe bewahren'] },
+      { h: 'Verhalten (Null-Toleranz)' },
+      { ul: ['Kein Alkohol vor/während der Schicht', 'Drogenkonsum ausnahmslos verboten', 'Kein Rassismus/Sexismus/Homophobie/Diskriminierung/übergriffiges Verhalten'] },
+      { warn: 'Verstöße führen zur sofortigen Disakkreditierung und zum Ausschluss vom Gelände.' }
+    ]
+  },
+  {
+    id: 'no-funken',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Funken – Grundsätze & Ablauf',
+    problem: 'Wie funke ich richtig?',
+    tags: ['natureone', 'no', 'funk', 'funkgerät', 'kanal', 'notfall', 'funkdialog'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { h: 'Grundsätze' },
+      { ul: ['Sprechtaste drücken, kurz warten, dann sprechen', 'Klar und deutlich sprechen', 'Funkkarte mit allen Kanälen bei Ausgabe des Funkgeräts', 'Nie über Geld oder sensible Themen funken (Gäste hören mit)', 'Belegter Kanal: warten, nie dazwischenfunken; in Notfällen Kanal frei halten'] },
+      { h: 'Technik' },
+      { ul: ['Einschalten & Lautstärke über äußeres Drehrad', 'Kanal über zweites Drehrad wählen (siehe Funkkarte)', 'Akku regelmäßig wechseln'] },
+      { h: 'Funkdialog (Beispiel)' },
+      { ol: ['Sender ruft Empfänger: „Personalbüro für Thekenmanager Theke 1"', 'Empfänger bestätigt: „Personalbüro hört"', 'Sender trägt Anliegen klar und knapp vor'] },
+      { note: 'Im Notfall die W-Fragen nutzen: Wo? Wer? Was? Wie viele?' }
+    ]
+  },
+  {
+    id: 'no-kontakt',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Kontakt & Spektralwerk-Team',
+    problem: 'Wie erreiche ich das Team und die Fahrgemeinschaften-Gruppe?',
+    tags: ['natureone', 'no', 'kontakt', 'spektralwerk', 'personalbüro', 'hotline', 'whatsapp', 'fahrgemeinschaft'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    body: [
+      { ul: ['E-Mail: member@spektralwerk.de', 'WhatsApp: 06541 – 81 41 222 (Message & Call)', 'Telefon/SMS: 0171 – 30 55 115', 'Personalbüro während des Einsatzes (24h): 01522 5255614'] },
+      { note: 'Für Fahrgemeinschaften gibt es eine WhatsApp-Gruppe für die NATURE ONE 2026 – Beitritt über den von Spektralwerk verschickten Einladungslink.' }
+    ]
+  },
+  {
+    id: 'no-gelaende',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Geländekarten',
+    problem: 'Wo ist was auf dem Gelände (Übersicht, Festival-Kern, CampingVillage)?',
+    tags: ['natureone', 'no', 'karte', 'geländekarte', 'lageplan', 'plan', 'theken', 'camping', 'orientierung', 'pydna'],
+    source: 'NATURE ONE 2026 – Produktionsplan (I-Motion)',
+    body: [
+      { note: 'Zum Vergrößern auf eine Karte tippen – sie öffnet in voller Auflösung.' },
+      { h: 'Gesamtübersicht' },
+      { img: '/no-karte-uebersicht.jpg', alt: 'NATURE ONE 2026 – Geländeübersicht', caption: 'Gesamtübersicht: Camping (F1–F38), Parkplätze, Festival-Kern' },
+      { h: 'Festival-Kern (Pydna) – Detail' },
+      { img: '/no-karte-festival.jpg', alt: 'NATURE ONE 2026 – Detailplan Festival-Kern', caption: 'Floors, Theken (T…/K…), Cashless-Stationen, Crew/Dispo, Produktionsbüro, Einlass' },
+      { h: 'CampingVillage – Detail' },
+      { img: '/no-karte-camping.jpg', alt: 'NATURE ONE 2026 – Detailplan CampingVillage', caption: 'Campingfelder, Zufahrten, Kassierstellen, Marktplatz, Duschen' }
     ]
   }
 ];

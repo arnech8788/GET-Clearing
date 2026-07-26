@@ -29,6 +29,17 @@ export const SHIPPED_CONTACTS = [
     ]
   },
   {
+    event: 'natureone',
+    group: 'Spektralwerk / Personalbüro (NATURE ONE 2026)',
+    important: true,
+    entries: [
+      { name: 'Spektralwerk Hotline (WhatsApp & Call)', value: '06541 81 41 222', tel: '065418141222' },
+      { name: 'Spektralwerk (Telefon & SMS)', value: '0171 30 55 115', tel: '01713055115' },
+      { name: 'Personalbüro (während des Einsatzes, 24h)', value: '01522 52 55 614', tel: '015225255614' },
+      { name: 'Spektralwerk – E-Mail', value: 'member@spektralwerk.de', mail: 'member@spektralwerk.de' }
+    ]
+  },
+  {
     event: 'all',
     group: 'GET – Online-Plattformen',
     entries: [
