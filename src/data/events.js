@@ -48,6 +48,16 @@ export const EVENTS = [
     desc: 'Weeze · Festival 17.–19.07.2026 (Pre-Party 16.07.) · Crew-Infos',
     color: '#2d9cdb',
     selectable: true
+  },
+  {
+    id: 'natureone',
+    kind: 'festival',
+    name: 'NATURE ONE 2026',
+    short: 'NO',
+    desc: 'Raketenbasis Pydna, Kastellaun · 31.07.–02.08.2026 · Crew via Spektralwerk',
+    color: '#27ae60',
+    selectable: true,
+    standalone: true // eigener Cashless-/Arbeitgeber-Kontext → keine alwaysOn-Inhalte (z. B. GET) mitzeigen
   }
 ];
 
@@ -62,6 +72,8 @@ export function getEvent(id) {
 export function scopeIncludes(activeId, candidateId) {
   if (candidateId === activeId) return true;
   const active = getEvent(activeId);
-  if (active.kind === 'festival') return !!getEvent(candidateId).alwaysOn;
+  // Festivals zeigen zusätzlich alwaysOn-Inhalte (z. B. GET Cashless) – außer sie
+  // sind `standalone` (eigener Kontext, z. B. NATURE ONE mit anderem Cashless-System).
+  if (active.kind === 'festival' && !active.standalone) return !!getEvent(candidateId).alwaysOn;
   return false;
 }
