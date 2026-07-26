@@ -9,7 +9,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: null, // Registrierung erfolgt manuell in main.js via virtual:pwa-register
       workbox: {
-        globPatterns: ['**/*.{js,css,html,png,svg,json,ico}'],
+        globPatterns: ['**/*.{js,css,html,png,jpg,jpeg,svg,json,ico}'],
         navigateFallback: '/index.html',
         // Firebase wird nur bei aktiviertem Sync per dynamischem Import geladen.
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024

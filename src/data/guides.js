@@ -1494,6 +1494,24 @@ export const GUIDES = [
       { ul: ['E-Mail: member@spektralwerk.de', 'WhatsApp: 06541 – 81 41 222 (Message & Call)', 'Telefon/SMS: 0171 – 30 55 115', 'Personalbüro während des Einsatzes (24h): 01522 5255614'] },
       { note: 'Für Fahrgemeinschaften gibt es eine WhatsApp-Gruppe für die NATURE ONE 2026 – Beitritt über den von Spektralwerk verschickten Einladungslink.' }
     ]
+  },
+  {
+    id: 'no-gelaende',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Geländekarten',
+    problem: 'Wo ist was auf dem Gelände (Übersicht, Festival-Kern, CampingVillage)?',
+    tags: ['natureone', 'no', 'karte', 'geländekarte', 'lageplan', 'plan', 'theken', 'camping', 'orientierung', 'pydna'],
+    source: 'NATURE ONE 2026 – Produktionsplan (I-Motion)',
+    body: [
+      { note: 'Zum Vergrößern auf eine Karte tippen – sie öffnet in voller Auflösung.' },
+      { h: 'Gesamtübersicht' },
+      { img: '/no-karte-uebersicht.jpg', alt: 'NATURE ONE 2026 – Geländeübersicht', caption: 'Gesamtübersicht: Camping (F1–F38), Parkplätze, Festival-Kern' },
+      { h: 'Festival-Kern (Pydna) – Detail' },
+      { img: '/no-karte-festival.jpg', alt: 'NATURE ONE 2026 – Detailplan Festival-Kern', caption: 'Floors, Theken (T…/K…), Cashless-Stationen, Crew/Dispo, Produktionsbüro, Einlass' },
+      { h: 'CampingVillage – Detail' },
+      { img: '/no-karte-camping.jpg', alt: 'NATURE ONE 2026 – Detailplan CampingVillage', caption: 'Campingfelder, Zufahrten, Kassierstellen, Marktplatz, Duschen' }
+    ]
   }
 ];
 
