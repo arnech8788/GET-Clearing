@@ -19,6 +19,7 @@ export let state = {
   notes: [],
   stock: [], // Bestandslisten (Bändchen-Bestand pro Station/Tag) – synchronisierbar
   favorites: [],
+  lineupFavorites: [], // gemerkte Line-Up-Sets (Set-IDs)
   contacts: [], // eigene, NUR lokale Kontakte (werden nicht in die Cloud gesynct)
   activeEvent: 'rar',
   schema: 1
@@ -46,6 +47,7 @@ export function load() {
       if (!Array.isArray(state.notes)) state.notes = [];
       if (!Array.isArray(state.stock)) state.stock = [];
       if (!Array.isArray(state.favorites)) state.favorites = [];
+      if (!Array.isArray(state.lineupFavorites)) state.lineupFavorites = [];
       if (!Array.isArray(state.contacts)) state.contacts = [];
       // Umschalter wählt nur Festivals; früher konnten GET/Klangpiraten aktiv sein.
       if (getEvent(state.activeEvent).kind !== 'festival') state.activeEvent = 'rar';
@@ -217,8 +219,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.3.0';
+const APP_VERSION = '3.4.0';
 const CHANGELOG = [
+  ['3.4.0', 'NATURE ONE Line-Up jetzt durchsuchbar und mit Favoriten: alle Headfloor-Sets (Fr & Sa, Open Air Floor / Century Circus / Classic Terminal / Syndicate Zone) als Liste – nach Act suchen, einzelne Sets per Stern merken und über „Nur Favoriten" filtern. Die Original-Grafik lässt sich weiterhin in voller Auflösung öffnen.'],
   ['3.3.0', 'Neues Festival NATURE ONE 2026 (Crew via Spektralwerk): Crew-Infos aus Personal-Briefing (I-Motion) und Running Order (Spektralwerk) als Anleitungen – Anreise/Parken, Crew-Basics & Funk, Cashless, Notfall, Checkliste, Ablauf/Öffnungszeiten, Akkreditierung, Catering, Check-in/-out, Kleidung/Verhalten, Funken, Kontakt. Eigene Einsatzzeiten im Dienstplan; offizielle Kontakte in der Referenz; Geländekarten (Übersicht, Festival-Kern, CampingVillage) offline verfügbar. NATURE ONE nutzt ein eigenes (I-Motion) Cashless-System – die GET-Cashless-Anleitungen laufen dort bewusst nicht mit.'],
   ['3.2.0', 'Parookaville-Dienstplan hinterlegt: kompletter Einsatzplan „Bändertausch / Cashless / Akkreditierung" für Mittwoch 15.07. bis Sonntag 19.07. (alle Stationen inkl. Bänder, Cashless, Troubleshoot/Akkreditierung, Runner, Springer). Tag über PV wählen; Namenssuche und Kalender-Export funktionieren auch für Parookaville. Zusätzlich die PV-Ansprechpersonen im Reiter „Ansprechpersonen".'],
   ['3.1.0', 'Klangpiraten ist jetzt ein eigener Tab (unten) statt einer Umschalt-Auswahl – festivalunabhängig erreichbar für arbeitgeberweite Crew-Infos. Der Umschalter oben wählt nur noch das Festival (Rock am Ring, Parookaville …); die allgemeinen GET-Cashless-Anleitungen werden in jedem Festival automatisch mitgezeigt.'],
