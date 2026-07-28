@@ -1512,6 +1512,19 @@ export const GUIDES = [
       { h: 'CampingVillage – Detail' },
       { img: '/no-karte-camping.jpg', alt: 'NATURE ONE 2026 – Detailplan CampingVillage', caption: 'Campingfelder, Zufahrten, Kassierstellen, Marktplatz, Duschen' }
     ]
+  },
+  {
+    id: 'no-lineup',
+    cat: 'no',
+    events: ['natureone'],
+    title: 'Line-Up / Timetable (Headfloors)',
+    problem: 'Wer spielt wann auf den Headfloors (Freitag & Samstag)?',
+    tags: ['natureone', 'no', 'lineup', 'line-up', 'timetable', 'running order', 'floors', 'djs', 'artists', 'set times'],
+    source: 'NATURE ONE 2026 – Timetable Headfloors',
+    body: [
+      { note: 'Headfloors Freitag & Samstag – zum Vergrößern antippen. Timetable-Änderungen vorbehalten.' },
+      { img: '/no-lineup.jpg', alt: 'NATURE ONE 2026 – Timetable Headfloors (Freitag & Samstag)', caption: 'Open Air Floor · Century Circus · Classic Terminal · Syndicate Zone (Fr & Sa)' }
+    ]
   }
 ];
 
