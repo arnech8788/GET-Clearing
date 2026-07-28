@@ -140,6 +140,21 @@ svg { width: 22px; height: 22px; flex: none; }
 .blk-img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--bdr); background: #fff; }
 .blk-cap { font-size: 12px; color: var(--tx3); margin-top: 6px; text-align: center; }
 
+/* ===== Line-Up ===== */
+.icon-btn-spacer { width: 38px; flex: none; }
+.lu-graphic { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--accent); margin: 4px 0 2px; }
+.lu-graphic svg { width: 16px; height: 16px; }
+.lu-day { font-size: 18px; font-weight: 800; margin: 20px 0 6px; }
+.lu-floor { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--cc, var(--accent)); border-left: 3px solid var(--cc, var(--accent)); padding-left: 8px; margin: 14px 0 6px; }
+.lu-set { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--bdr); }
+.lu-time { flex: none; width: 92px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--tx2); }
+.lu-artist { flex: 1; min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.35; }
+.lu-note { font-size: 12px; font-weight: 600; color: var(--tx3); }
+.lu-star { flex: none; background: none; border: none; color: var(--tx3); cursor: pointer; padding: 4px; line-height: 0; }
+.lu-star svg { width: 22px; height: 22px; }
+.lu-star.on { color: var(--accent); }
+.lu-star.on svg { fill: var(--accent); }
+
 /* Steps */
 .steps { list-style: none; counter-reset: step; padding: 0; margin: 12px 0; }
 .step {

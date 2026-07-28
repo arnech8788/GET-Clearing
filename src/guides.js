@@ -1,6 +1,7 @@
 // Anleitungen: Browse-Liste (nach Kategorie), Detailansicht, Favoriten.
 import { GUIDES, CATEGORIES, getGuide, getCategory } from './data/guides.js';
 import { getEvent, scopeIncludes } from './data/events.js';
+import { renderLineup } from './lineup.js';
 import { ICO, escapeHtml, highlight } from './ui.js';
 import { state, isFavorite, toggleFavorite, currentScreen, eventChipsHtml } from './main.js';
 
@@ -37,6 +38,8 @@ export function renderGuides(opts = {}) {
   const el = document.getElementById('screen-guides');
   if (!el) return;
   if (view.guideId) {
+    const g = getGuide(view.guideId);
+    if (g && g.render === 'lineup') { renderLineup(opts); return; }
     el.innerHTML = renderDetail(view.guideId);
     return;
   }

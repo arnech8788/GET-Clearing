@@ -1517,14 +1517,12 @@ export const GUIDES = [
     id: 'no-lineup',
     cat: 'no',
     events: ['natureone'],
+    render: 'lineup',
     title: 'Line-Up / Timetable (Headfloors)',
-    problem: 'Wer spielt wann auf den Headfloors (Freitag & Samstag)?',
+    problem: 'Wer spielt wann auf den Headfloors (Freitag & Samstag)? Durchsuchbar, mit Favoriten.',
     tags: ['natureone', 'no', 'lineup', 'line-up', 'timetable', 'running order', 'floors', 'djs', 'artists', 'set times'],
     source: 'NATURE ONE 2026 – Timetable Headfloors',
-    body: [
-      { note: 'Headfloors Freitag & Samstag – zum Vergrößern antippen. Timetable-Änderungen vorbehalten.' },
-      { img: '/no-lineup.jpg', alt: 'NATURE ONE 2026 – Timetable Headfloors (Freitag & Samstag)', caption: 'Open Air Floor · Century Circus · Classic Terminal · Syndicate Zone (Fr & Sa)' }
-    ]
+    body: []
   }
 ];
 
