@@ -4,6 +4,7 @@ import { state, save, eventChipsHtml } from './main.js';
 import { getEvent, scopeIncludes } from './data/events.js';
 import { SCAN_MATRIX, CATEGORY_OVERVIEW, WRISTBAND_COLORS } from './data/tickets.js';
 import { SHIPPED_CONTACTS, QUICK_INFO } from './data/contacts.js';
+import { EVENT_MAPS } from './data/maps.js';
 
 let tab = 'tickets';
 
@@ -157,13 +158,28 @@ export async function deleteOwnContact(id) {
 
 // ---- Infos ----------------------------------------------------------------
 function renderInfo() {
+  const maps = EVENT_MAPS[state.activeEvent] || [];
   const infos = QUICK_INFO.filter((i) => scopeIncludes(state.activeEvent, i.event));
-  if (!infos.length) return '<div class="empty">' + ICO.info + '<p>Keine Infos für diesen Bereich.</p></div>';
-  return infos.map((i) => `
+  if (!maps.length && !infos.length) return '<div class="empty">' + ICO.info + '<p>Keine Infos für diesen Bereich.</p></div>';
+  let html = '';
+  if (maps.length) {
+    html += `
+      <div class="card">
+        <div class="card-title">Geländekarten</div>
+        <p class="muted small" style="margin:0 0 6px">Zum Vergrößern auf eine Karte tippen (öffnet in voller Auflösung).</p>
+        ${maps.map((m) => `
+          <figure class="blk-fig">
+            <a href="${escapeHtml(m.src)}" target="_blank" rel="noopener"><img class="blk-img" src="${escapeHtml(m.src)}" alt="${escapeHtml(m.title)}" loading="lazy"></a>
+            <figcaption class="blk-cap">${escapeHtml(m.title)}</figcaption>
+          </figure>`).join('')}
+      </div>`;
+  }
+  html += infos.map((i) => `
     <div class="card">
       <div class="card-title">${escapeHtml(i.title)}</div>
       <p class="blk-p" style="margin:0">${escapeHtml(i.text)}</p>
     </div>`).join('');
+  return html;
 }
 
 export function closeRefModal() { closeModal(); }
