@@ -9,6 +9,7 @@ import { renderReference, setRefTab } from './reference.js';
 import { renderDienstplan } from './dienstplan.js';
 import { renderBestand } from './bestand.js';
 import { renderKlangpiraten } from './klangpiraten.js';
+import { renderLineup } from './lineup.js';
 import { syncStatusLabel, openSyncModal, initSync, pushSync, pullSync } from './sync.js';
 
 const STORE_KEY = 'getclr-v1';
@@ -145,6 +146,7 @@ function renderActive(name) {
   else if (name === 'reference') renderReference();
   else if (name === 'dienstplan') renderDienstplan();
   else if (name === 'bestand') renderBestand();
+  else if (name === 'lineup') renderLineup();
   else if (name === 'klangpiraten') renderKlangpiraten();
   else if (name === 'more') renderMore();
 }
@@ -219,8 +221,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.4.0';
+const APP_VERSION = '3.5.0';
 const CHANGELOG = [
+  ['3.5.0', 'Line-Up ist jetzt ein eigener Tab (unten, statt „Bestand"; Bestand liegt jetzt unter „Mehr"). Alle Geländekarten – die illustrierten Übersichten (Pydna/Clubfloors, Camping Village, Camp-Floors, Silent Camp, Overview) und die Detailpläne – findest du bei NATURE ONE unter „Referenz → Infos".'],
   ['3.4.0', 'NATURE ONE Line-Up jetzt durchsuchbar und mit Favoriten: alle Headfloor-Sets (Fr & Sa, Open Air Floor / Century Circus / Classic Terminal / Syndicate Zone) als Liste – nach Act suchen, einzelne Sets per Stern merken und über „Nur Favoriten" filtern. Die Original-Grafik lässt sich weiterhin in voller Auflösung öffnen.'],
   ['3.3.0', 'Neues Festival NATURE ONE 2026 (Crew via Spektralwerk): Crew-Infos aus Personal-Briefing (I-Motion) und Running Order (Spektralwerk) als Anleitungen – Anreise/Parken, Crew-Basics & Funk, Cashless, Notfall, Checkliste, Ablauf/Öffnungszeiten, Akkreditierung, Catering, Check-in/-out, Kleidung/Verhalten, Funken, Kontakt. Eigene Einsatzzeiten im Dienstplan; offizielle Kontakte in der Referenz; Geländekarten (Übersicht, Festival-Kern, CampingVillage) offline verfügbar. NATURE ONE nutzt ein eigenes (I-Motion) Cashless-System – die GET-Cashless-Anleitungen laufen dort bewusst nicht mit.'],
   ['3.2.0', 'Parookaville-Dienstplan hinterlegt: kompletter Einsatzplan „Bändertausch / Cashless / Akkreditierung" für Mittwoch 15.07. bis Sonntag 19.07. (alle Stationen inkl. Bänder, Cashless, Troubleshoot/Akkreditierung, Runner, Springer). Tag über PV wählen; Namenssuche und Kalender-Export funktionieren auch für Parookaville. Zusätzlich die PV-Ansprechpersonen im Reiter „Ansprechpersonen".'],
@@ -252,11 +255,16 @@ export function renderMore() {
     <header class="topbar"><h1>Mehr</h1></header>
     <div class="pad">
       <div class="card">
-        <div class="card-title">Eigene Fälle / Notizen</div>
+        <div class="card-title">Eigene Fälle &amp; Bestand</div>
         <button class="row-btn" onclick="showScreen('notes')">
           <span class="row-ic">${ICO.note}</span>
           <span>Meine Fälle</span>
           <span class="row-arrow">${noteCount} ${noteCount === 1 ? 'Notiz' : 'Notizen'}</span>
+        </button>
+        <button class="row-btn" onclick="showScreen('bestand')">
+          <span class="row-ic">${ICO.clipboard}</span>
+          <span>Bestand (Bändchen-Bestandslisten)</span>
+          <span class="row-arrow">öffnen</span>
         </button>
       </div>
       <div class="card">

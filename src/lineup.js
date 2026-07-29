@@ -1,8 +1,9 @@
-// Interaktive Line-Up-Ansicht (durchsuchbar, Favoriten pro Set).
-// Wird aus guides.js im Guides-Screen gerendert, wenn ein Guide `render: 'lineup'`
-// trägt. Favoriten liegen in state.lineupFavorites (persistiert via save()).
+// Tab „Line-Up": durchsuchbares Timetable mit Favoriten pro Set.
+// Zeigt das Line-Up des aktiven Festivals (LINEUP[activeEvent]); Festivals ohne
+// Line-Up bekommen einen Platzhalter. Favoriten liegen in state.lineupFavorites
+// (persistiert via save()).
 import { ICO, escapeHtml, highlight } from './ui.js';
-import { state, save } from './main.js';
+import { state, save, eventChipsHtml } from './main.js';
 import { LINEUP } from './data/lineup.js';
 
 let lv = { query: '', favOnly: false };
@@ -36,7 +37,7 @@ function setRow(ev, day, floor, s, q) {
 }
 
 export function renderLineup(opts = {}) {
-  const el = document.getElementById('screen-guides');
+  const el = document.getElementById('screen-lineup');
   if (!el) return;
   const ev = state.activeEvent;
   const data = LINEUP[ev];
@@ -44,38 +45,37 @@ export function renderLineup(opts = {}) {
   const ql = q.toLowerCase();
   const favCount = (state.lineupFavorites || []).length;
 
-  let body = '';
   if (!data) {
-    body = `<div class="empty">${ICO.info}<p>Für dieses Festival ist kein Line-Up hinterlegt.</p></div>`;
-  } else {
-    for (const d of data.days) {
-      let dayHtml = '';
-      for (const f of d.floors) {
-        const sets = f.sets.filter((s) => {
-          if (lv.favOnly && !isFav(setId(ev, d.day, f.floor, s))) return false;
-          if (ql && !s.artist.toLowerCase().includes(ql)) return false;
-          return true;
-        });
-        if (!sets.length) continue;
-        dayHtml += `<div class="lu-floor" style="--cc:${f.color}">${escapeHtml(f.floor)}</div>` +
-          sets.map((s) => setRow(ev, d.day, f.floor, s, q)).join('');
-      }
-      if (dayHtml) body += `<div class="lu-day">${escapeHtml(d.day)}</div>` + dayHtml;
+    el.innerHTML = `
+      <header class="topbar"><h1>Line-Up</h1>${eventChipsHtml()}</header>
+      <div class="pad"><div class="empty">${ICO.calendar}<p>Für dieses Festival ist kein Line-Up hinterlegt.</p></div></div>`;
+    return;
+  }
+
+  let list = '';
+  for (const d of data.days) {
+    let dayHtml = '';
+    for (const f of d.floors) {
+      const sets = f.sets.filter((s) => {
+        if (lv.favOnly && !isFav(setId(ev, d.day, f.floor, s))) return false;
+        if (ql && !s.artist.toLowerCase().includes(ql)) return false;
+        return true;
+      });
+      if (!sets.length) continue;
+      dayHtml += `<div class="lu-floor" style="--cc:${f.color}">${escapeHtml(f.floor)}</div>` +
+        sets.map((s) => setRow(ev, d.day, f.floor, s, q)).join('');
     }
-    if (!body) {
-      body = `<div class="empty">${ICO.search}<p>${lv.favOnly ? 'Noch keine Favoriten markiert.' : `Nichts gefunden${q ? ` für „${escapeHtml(q)}"` : ''}.`}</p></div>`;
-    }
+    if (dayHtml) list += `<div class="lu-day">${escapeHtml(d.day)}</div>` + dayHtml;
+  }
+  if (!list) {
+    list = `<div class="empty">${ICO.search}<p>${lv.favOnly ? 'Noch keine Favoriten markiert.' : `Nichts gefunden${q ? ` für „${escapeHtml(q)}"` : ''}.`}</p></div>`;
   }
 
   el.innerHTML = `
-    <header class="topbar detail-bar">
-      <button class="icon-btn" onclick="navBack()" aria-label="Zurück">${ICO.back}</button>
-      <span class="detail-cat">Line-Up</span>
-      <span class="icon-btn-spacer"></span>
-    </header>
+    <header class="topbar"><h1>Line-Up</h1>${eventChipsHtml()}</header>
     <div class="pad">
-      <h1 class="detail-title">${escapeHtml(data ? data.title : 'Line-Up')}</h1>
-      ${data && data.imageSrc ? `<a class="lu-graphic" href="${escapeHtml(data.imageSrc)}" target="_blank" rel="noopener">${ICO.info} Grafik in voller Auflösung öffnen</a>` : ''}
+      <div class="muted small" style="margin-bottom:8px">${escapeHtml(data.title)}</div>
+      ${data.imageSrc ? `<a class="lu-graphic" href="${escapeHtml(data.imageSrc)}" target="_blank" rel="noopener">${ICO.info} Grafik in voller Auflösung öffnen</a>` : ''}
       <div class="search-wrap">
         ${ICO.search}
         <input id="luSearch" type="search" placeholder="Act suchen (z. B. Fatboy Slim)…"
@@ -84,7 +84,7 @@ export function renderLineup(opts = {}) {
       <div class="cat-chips">
         <button class="catchip ${lv.favOnly ? 'catchip-active' : ''}" style="--cc:var(--accent)" onclick="toggleLineupFavOnly()">★ Nur Favoriten <span class="cc-count">${favCount}</span></button>
       </div>
-      ${body}
+      ${list}
       <div class="muted small" style="margin-top:14px">Timetable-Änderungen vorbehalten. Tippe den Stern, um dir einen Act zu merken.</div>
     </div>`;
 
