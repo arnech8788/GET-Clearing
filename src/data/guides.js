@@ -1421,11 +1421,20 @@ export const GUIDES = [
     events: ['natureone'],
     title: 'Crew-Catering & Verpflegung',
     problem: 'Was gibt es zu essen/trinken und wann?',
-    tags: ['natureone', 'no', 'catering', 'verpflegung', 'mahlzeit', 'lunchpaket', 'wasser', 'selbstversorger'],
-    source: 'NATURE ONE 2026 – Running Order (Spektralwerk)',
+    tags: ['natureone', 'no', 'catering', 'verpflegung', 'mahlzeit', 'lunchpaket', 'wasser', 'selbstversorger', 'öffnungszeiten', 'essenszeiten'],
+    source: 'NATURE ONE 2026 – Running Order (Spektralwerk) & Aushang Catering (I-Motion)',
     body: [
+      { h: 'Öffnungszeiten' },
+      { ul: [
+        'Mittagessen: täglich 12:30–14:00 Uhr',
+        'Abendessen 22.–28.07.: 18:00–20:00 Uhr',
+        'Abendessen 29.–30.07.: 18:00–02:00 Uhr',
+        'Abendessen 31.07. + 01.08.: 18:00–05:00 Uhr',
+        'Abendessen 02.–06.08.: 18:00–20:00 Uhr'
+      ] },
+      { h: 'Gut zu wissen' },
       { ul: ['Crew-Catering unmittelbar am Personalbüro', 'Kostenlose warme Mahlzeit pro Schicht (nach dem Einsatz)', 'Lunchpaket für die Schicht: direkt beim Check-in', 'Getränke: Wasser & Tetrapaks im Personalbüro – mind. 4 Flaschen Wasser pro Schicht mitnehmen', 'Schließfächer: CrewCampBell (solange Vorrat reicht)'] },
-      { note: 'Außerhalb der Einsätze bist du Selbstversorger – eigene Verpflegung mitbringen.' }
+      { note: 'Außerhalb der Einsätze bist du Selbstversorger – eigene Verpflegung mitbringen. Öffnungszeiten laut Aushang vor Ort, ohne Gewähr.' }
     ]
   },
   {
