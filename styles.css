@@ -154,6 +154,22 @@ svg { width: 22px; height: 22px; flex: none; }
 .lu-star svg { width: 22px; height: 22px; }
 .lu-star.on { color: var(--accent); }
 .lu-star.on svg { fill: var(--accent); }
+/* Raster (Timetable-Ansicht) */
+.lu-grid-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--bdr); border-radius: 10px; margin-top: 4px; }
+.lu-grid { display: inline-block; min-width: 100%; }
+.lu-row { display: flex; align-items: stretch; border-top: 1px solid var(--bdr); }
+.lu-row:first-child { border-top: none; }
+.lu-rowlabel { position: sticky; left: 0; z-index: 2; flex: none; width: 78px; padding: 4px 8px; font-size: 11px; font-weight: 800; line-height: 1.15; background: var(--bg2); border-right: 1px solid var(--bdr); display: flex; align-items: center; }
+.lu-corner { z-index: 4; color: var(--tx3); font-weight: 700; }
+.lu-head .lu-track { height: 22px; }
+.lu-track { position: relative; height: 48px; flex: none; }
+.lu-tick { position: absolute; top: 5px; font-size: 10px; color: var(--tx3); border-left: 1px solid var(--bdr); padding-left: 3px; height: 12px; }
+.lu-block { position: absolute; top: 4px; bottom: 4px; overflow: hidden; border: none; border-radius: 6px; color: #fff; text-align: left; padding: 3px 5px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; gap: 1px; }
+.lu-block-t { font-size: 9px; opacity: .85; line-height: 1; }
+.lu-block-a { font-size: 11px; font-weight: 700; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lu-block.on { outline: 2px solid #fff; outline-offset: -2px; box-shadow: 0 0 0 2px var(--accent); }
+.lu-block-star { position: absolute; top: 1px; right: 2px; line-height: 0; }
+.lu-block-star svg { width: 12px; height: 12px; fill: #fff; }
 
 /* Steps */
 .steps { list-style: none; counter-reset: step; padding: 0; margin: 12px 0; }
