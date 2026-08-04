@@ -221,8 +221,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.8.0';
+const APP_VERSION = '3.8.1';
 const CHANGELOG = [
+  ['3.8.1', 'App in „Festival" umbenannt.'],
   ['3.8.0', 'Für Laptop & Querformat optimiert: am Desktop wird die Inhaltsspalte klar eingerahmt (statt „verloren" auf breitem Bildschirm) und Karten/Buttons haben dezente Maus-Hover-Effekte; im Querformat (niedrige Höhe) sind Kopfzeile und untere Leiste kompakter, sodass mehr Inhalt sichtbar ist.'],
   ['3.7.0', 'Line-Up überarbeitet: Tag auswählen (Chips wie im Dienstplan) und zwei Ansichten – „Bühnen" (durchsuchbare Liste je Bühne) und „Raster" (Timetable: Bühnen × Zeit nebeneinander, quer scrollbar – man sieht, was gleichzeitig läuft). Favoriten funktionieren in beiden Ansichten (Act antippen).'],
   ['3.6.0', 'Neues Festival San Hejmo 2026 (Airport Weeze, 14.–15.08.): komplette Crew-Infos aus der offiziellen Crew-Info-Seite als Anleitungen – Grundlagen, Akkreditierung & Check-in, Cashless & Pfand, Anreise & Crew-Parking (P21/P25), Crew Camp, Sicherheit, Crew Knigge, Anlaufstellen & Notfall, Crew Catering (mit Öffnungszeiten), Funkgeräte, Öffnungszeiten und Gewerke-Übersicht. Offizielle Kontakte in der Referenz. Line-Up im Line-Up-Tab (Do/Fr/Sa, alle Stages – durchsuchbar, mit Favoriten). San Hejmo nutzt ein eigenes Cashless-System – GET-Anleitungen laufen dort nicht mit.'],
@@ -311,7 +312,7 @@ export function renderMore() {
 
       <div class="card">
         <div class="card-title">Info</div>
-        <div class="muted small">Festival Clearing &amp; Crew · v${APP_VERSION}</div>
+        <div class="muted small">Festival · v${APP_VERSION}</div>
         <div class="muted small" style="margin-top:6px">Anleitungen, Referenz &amp; Fallnotizen für Festival-Crews (Cashless-Clearing, Dienstpläne u. a.). Inhalte ohne Gewähr – im Zweifel Teamlead / Support fragen.</div>
         <button class="row-btn" style="margin-top:10px" onclick="openChangelog()"><span class="row-ic">${ICO.info}</span><span>Changelog</span><span class="row-arrow">v${APP_VERSION}</span></button>
       </div>

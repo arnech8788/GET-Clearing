@@ -4,7 +4,7 @@ Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-**Festival Clearing & Crew** ist eine PWA für Festival-Crews: **Anleitungen für
+**Festival** ist eine PWA für Festival-Crews: **Anleitungen für
 Problemfälle** (Cashless-Clearing/Troubleshooting), Referenzdaten, Dienstpläne und
 **eigene Fallnotizen**, damit man Vorgänge wiederfindet, wenn ein Gast später nochmal
 kommt. Die App ist **festivalübergreifend** aufgebaut: der **Umschalter** oben (auf
