@@ -28,7 +28,8 @@ export const CATEGORIES = [
   { id: 'rar', name: 'Rock am Ring – Clearing & Bändchen', icon: 'flag', color: '#e23b3b' },
   { id: 'pv', name: 'Parookaville – Crew-Infos', icon: 'flag', color: '#2d9cdb' },
   { id: 'pv-checkin', name: 'Parookaville – Check-in & Akkreditierung', icon: 'ticket', color: '#1abc9c' },
-  { id: 'no', name: 'NATURE ONE – Crew-Infos', icon: 'flag', color: '#27ae60' }
+  { id: 'no', name: 'NATURE ONE – Crew-Infos', icon: 'flag', color: '#27ae60' },
+  { id: 'sh', name: 'San Hejmo – Crew-Infos', icon: 'flag', color: '#ec4899' }
 ];
 
 export const GUIDES = [
@@ -1502,6 +1503,232 @@ export const GUIDES = [
     body: [
       { ul: ['E-Mail: member@spektralwerk.de', 'WhatsApp: 06541 – 81 41 222 (Message & Call)', 'Telefon/SMS: 0171 – 30 55 115', 'Personalbüro während des Einsatzes (24h): 01522 5255614'] },
       { note: 'Für Fahrgemeinschaften gibt es eine WhatsApp-Gruppe für die NATURE ONE 2026 – Beitritt über den von Spektralwerk verschickten Einladungslink.' }
+    ]
+  },
+  {
+    id: 'sh-grundlagen',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Grundlagen & Orientierung',
+    problem: 'Was ist San Hejmo, und wo finde ich Plan/Map?',
+    tags: ['sanhejmo', 'sh', 'grundlagen', 'crew guide', 'produktionsplan', 'app', 'map', 'orientierung'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { p: 'Das 1LIVE San Hejmo ist ein Wohlfühlfestival am Airport Weeze – Live-Musik, Street Art (Urban Art District), Workshops/DIY und vielfältiges Food.' },
+      { h: 'Crew Guide / Produktionsplan' },
+      { p: 'Wichtige Produktionsinfos + Geländeplan als kompakter Faltflyer – Abholung im Produktionsbüro.' },
+      { h: 'San Hejmo App / Festival Map' },
+      { p: 'Für aktuelle Infos während des Festivals: San Hejmo App (Timetable, Map, News). Kurz vor dem Festival gibt es zusätzlich eine interaktive Festival Map.' }
+    ]
+  },
+  {
+    id: 'sh-akkreditierung',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Akkreditierung & Crew-Check-in',
+    problem: 'Was brauche ich für den Check-in, und wann hat er auf?',
+    tags: ['sanhejmo', 'sh', 'akkreditierung', 'check-in', 'produktionsbüro', 'klever tor', 'ausweis', 'crew ticket'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { warn: 'Zum Crew-Check-in immer Personalausweis UND Crew-Ticket mitführen – Führerscheine o. Ä. werden nicht akzeptiert! Zeitpuffer für Wartezeiten einplanen.' },
+      { p: 'Jede Person auf dem Gelände braucht eine gültige Akkreditierung (persönlicher Zugang + erlaubte Bereiche). Wird vorab vom Gewerk/den Mitarbeitenden ausgefüllt.' },
+      { h: 'Produktionsbüro (Check-in) – Öffnungszeiten' },
+      { ul: ['31.07.–01.08.: 08:00–14:00', '02.08.: geschlossen', '03.–06.08.: 07:00–14:00', '07.08.: 08:00–18:00', '08.08.: 07:00–20:00', '09.08.: 08:00–18:00', '10.–11.08.: 07:00–20:00', '16.–21.08.: 08:00–18:00'] },
+      { h: 'Klever Tor 2 (Produktionszufahrt)' },
+      { ul: ['10.–12.08.: 07:00–20:00', '13.–15.08.: 07:00–23:00'] },
+      { note: 'Kein Crew-Ticket, als Reserve akkreditiert und sollst arbeiten, oder Fragen zu Zutrittsbereichen? → schnellstmöglich an Gewerke-/Teamleiter:in wenden.' }
+    ]
+  },
+  {
+    id: 'sh-cashless',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Cashless & Pfand',
+    problem: 'Wie funktioniert Bezahlen und Pfand?',
+    tags: ['sanhejmo', 'sh', 'cashless', 'wristband', 'rfid', 'aufladen', 'refund', 'pfand'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Cashless' },
+      { ul: ['San-Hejmo-Wristband mit Akkreditierung hat einen RFID-Chip', 'Aufladen: Self-Service-Stationen (Karte/Bar) oder online cashless.sanhejmo.com (UID/PIN von der Rückseite)', 'Kontaktloses Bezahlen auf dem Festival (außer in den Supermärkten auf der Campsite)', 'Restguthaben nach dem Festival online rückerstattbar', 'Aktivierungsgebühr bei Erstaufladung entfällt für die Crew'] },
+      { note: 'Bei Chip-Problemen helfen die Trouble-Shooting-Points vor Ort.' },
+      { h: 'Pfand' },
+      { ul: ['Alle Getränkebehälter im freien Verkauf sind bepfandet; Pfand läuft über den RFID-Chip', 'Keine zentralen Rückgabestationen – leere Becher/Dosen an den Theken abgeben', 'Getränke dürfen grundsätzlich nicht aufs Festivalgelände mitgenommen werden', 'Dosen auf der Campsite nur bei PENNY (0,25 €) zurückgeben'] }
+    ]
+  },
+  {
+    id: 'sh-anreise',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Anreise & Crew-Parking',
+    problem: 'Wie reise ich an und wo parke ich (P21/P25)?',
+    tags: ['sanhejmo', 'sh', 'anreise', 'parken', 'p21', 'p25', 'fahrgemeinschaft', 'öpnv', 'shuttle', 'route'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Mit dem PKW' },
+      { ul: ['Zufahrt nur mit gültiger Akkreditierung + ggf. Parkticket/Zufahrtsschein (sichtbar hinter der Windschutzscheibe)', 'Fahrgemeinschaftspflicht: mind. 2 Personen (Parkplätze stark begrenzt)', 'Zu Stoßzeiten alternativ über NL via A73 / N271 statt A57', 'LKW/Bus/Nightliner vorab mit den Ansprechpersonen abstimmen', 'Parktickets/Zufahrtsscheine über Gewerke-/Teamleiter:in'] },
+      { h: 'P21 Crew Festival (Parkticket P21)' },
+      { ul: ['Zentraler Crew-/Presse-Parkplatz nahe Check-in', 'Geöffnet ab Mi 12.08. 06:00–23:00 Uhr, bis Mo 17.08. 19:00', 'Route: über Kevelaer, Veenweg westlich des Flughafens, Lieferanten-Beschilderung folgen; Einfahrt rechts von der K37', 'Übernachten im Auto verboten'] },
+      { h: 'P25 Crew Camp (Parkticket P25)' },
+      { ul: ['Nur für Crew im Crew Camp; von hier zu Fuß zum Einsatzort', 'Route: über Kevelaer, Veenweg; Einfahrt links von der K37 / Baaler Straße 23–26; nach ca. 100 m rechts ein Feldweg zum Camp'] },
+      { h: 'Mit ÖPNV' },
+      { ul: ['Ab Bahnhof Weeze kostenloser Shuttle gegen Vorlage der Akkreditierung', 'Shuttle fährt erst ab ca. 13:15 Uhr und hält an keinem Crew-Check-in', 'Crew-Bändchen trotzdem vor dem ersten Zutritt am Check-in abholen'] }
+    ]
+  },
+  {
+    id: 'sh-crewcamp',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Crew Camp',
+    problem: 'Wo schlafe ich, und wie buche ich einen Platz?',
+    tags: ['sanhejmo', 'sh', 'crew camp', 'camping', 'unterkunft', 'zeltplatz', 'hausordnung'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { ul: ['Unterkunfts-/Aufenthaltsbereich für Mitarbeiter:innen (Schlafen, Entspannen)', 'Öffnungszeiten: Mi 12.08. ab 12:00 bis Mo 16.08. 18:00 Uhr', 'Ohne Crew-Camp-Berechtigung: nach Verfügbarkeit Zeltplatz gegen 57,50 € Selbstbeteiligung', 'Buchung vorab per E-Mail an crewcamp@sanhejmo.com'] },
+      { note: 'Sonderregelungen fürs Team erfährst du über deine Teamleiter:innen. Hausordnung beachten.' }
+    ]
+  },
+  {
+    id: 'sh-sicherheit',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Sicherheit',
+    problem: 'Was gilt bei Wetter, Warnweste und Verkehr?',
+    tags: ['sanhejmo', 'sh', 'sicherheit', 'wetter', 'regen', 'warnweste', 'psa', 'verkehr', 'helm'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Wetter' },
+      { ul: ['Wetterinfos über die Gewerke-/Teamleitung', 'Auffälligkeiten (Wind, Regen, Gewitter) an die Leitung melden – „See something, tell someone"'] },
+      { h: 'Regen' },
+      { p: 'Kostenlose Regenponchos an allen Theken – nur bei starkem Regen und nach Freigabe (über Funk/Vorgesetzte).' },
+      { h: 'PSA / Warnwestenpflicht' },
+      { warn: 'Solange das Gelände nicht für Besucher geöffnet ist: Pflicht zum Tragen einer fluoreszierenden Warnweste (keine Fahrrad-Leibchen/Reflexstreifen) – durchgehend, bis zum Verlassen des Geländes.' },
+      { h: 'Verkehr' },
+      { ul: ['Max. 20 km/h auf dem gesamten Gelände', 'Anschnallpflicht (vorhandene Gurte nutzen)', 'Helmpflicht bei Quads, Rollern u. Ä.'] }
+    ]
+  },
+  {
+    id: 'sh-knigge',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Crew Knigge (Verhalten & Regeln)',
+    problem: 'Welche Verhaltensregeln gelten (Artists, Foto, Alkohol, Kleidung)?',
+    tags: ['sanhejmo', 'sh', 'knigge', 'verhalten', 'artist village', 'foto', 'social media', 'alkohol', 'drogen', 'kleidung', 'müll'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Allgemein' },
+      { ul: ['Professionelles, respektvolles Auftreten; Zutritt nur mit passender Akkreditierung', 'Besucher:innen/Crew freundlich & deeskalierend begegnen, lösungsorientiert bleiben', 'Diskriminierendes/aggressives Verhalten wird nicht geduldet'] },
+      { h: 'Artist Village / Backstage' },
+      { ul: ['Respektvoll & diskret; Artists nur ansprechen, wenn es zur Aufgabe gehört', 'Stage-Zugang nur mit Genehmigung des Stage Managers', 'Keine Fotos/Selfies mit Artists oder in Backstage-Bereichen', 'Nichts aus Artist-Ridern entnehmen'] },
+      { h: 'Foto/Video & Social Media' },
+      { ul: ['Produktionszeit: Aufnahmen auf dem ganzen Gelände untersagt', 'Show: in öffentlichen Bereichen erlaubt (Profi-Equipment nur mit Akkreditierung)', 'Backstage/interne Bereiche: jederzeit untersagt'] },
+      { warn: 'Alkohol/Drogen während der Arbeitszeit strikt verboten – bei Verstoß sofort Dienstentbindung und Geländeverweis.' },
+      { h: 'Weiteres' },
+      { ul: ['Verbotene Gegenstände (Gelände/Campsite/Womo) beachten', 'Nur nötige persönliche Gegenstände; begrenzt Locker fürs Thekenpersonal', 'Müll trennen: Restmüll, Altmetall, Glas, Holz, Folie/Verpackung, Pappe/Papier, Pfand', 'Arbeitskleidung: festes, geschlossenes Schuhwerk Pflicht; im Theken-/Servicebereich keine Kopfbedeckung, lange Haare zusammenbinden', 'Stage Hands: schwarze, unauffällige Kleidung; Sicherheitsschuhe (mind. S1)'] }
+    ]
+  },
+  {
+    id: 'sh-anlaufstellen',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Anlaufstellen & Notfall',
+    problem: 'Wer hilft wobei (Produktionsbüro, Johanniter, Awareness, Polizei)?',
+    tags: ['sanhejmo', 'sh', 'anlaufstellen', 'notfall', 'produktionsbüro', 'johanniter', 'sanitäter', 'awareness', 'polizei', 'infopoint', 'medi shop'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Produktionsbüro' },
+      { ul: ['Zentrale Anlaufstelle: Crew Guide, Funkgeräte, Vignetten, Pläne, Schlüssel, Produktionsordnung', 'Notfallausstattung: Notfallkoffer + Defibrillator (AED)'] },
+      { warn: 'Notfall: 112 rufen → AED aus dem Produktionsbüro holen → Anweisungen folgen → Ersthelfer informieren.' },
+      { h: 'Johanniter (Sanitätsdienst)' },
+      { p: 'Feste Standorte während der Showzeiten (Standorte TBA) + mobile Sanitäter:innen auf dem Gelände.' },
+      { h: 'Awareness & Safe Space' },
+      { ul: ['Greift, wenn sich jemand unwohl/unsicher/belästigt fühlt', 'Diskret & ruhig reagieren, ohne Nachfragen; Awareness-Beauftragte:n im Team informieren', 'Person in geschützten Bereich (Backstage) begleiten; Sanitätsdienst über Funkkanal 1 (mit Planquadrat)', '„Take it seriously. Always." – Awareness-Sätze nicht hinterfragen'] },
+      { h: 'Ordnungsdienst & Polizei' },
+      { ul: ['Ordnungsdienst: Zugangskontrollen, Crowdmanagement, sensible Bereiche', 'Polizei nicht frei zugänglich – Weiterleitung über Ordnungsdienst/Infopoints', 'Akute Vorfälle (Verletzung/Täter vor Ort): sofort Ordnungs-/Sanitätsdienst alarmieren'] },
+      { h: 'Infopoints & Medi Shop' },
+      { ul: ['Infopoint (Festivalgelände): Lost & Found, Festival Guide, Cashless-Trouble-Shoot', 'Medi Shop (im Infopoint): kleinere Anliegen – Notfälle immer über die Johanniter!'] }
+    ]
+  },
+  {
+    id: 'sh-catering',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Crew Catering',
+    problem: 'Wann und wie bekomme ich Essen?',
+    tags: ['sanhejmo', 'sh', 'catering', 'essen', 'öffnungszeiten', 'buchung', 'stornieren', 'wasser'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { warn: 'Mahlzeiten müssen vorab über Gewerke-/Teamleiter:in gebucht werden – keine Nachbestellung/Barzahlung vor Ort. Akkreditierung beim Check-in bereithalten.' },
+      { h: 'Öffnungszeiten' },
+      { ul: [
+        'Frühstück – 03.–12.08.: 07:00–09:00 · 13.08.: 07:00–11:30 · Festival 14.–15.08.: 07:00–11:30 · 16.–21.08.: 07:00–09:00',
+        'Mittagessen – 03.–12.08.: 12:00–14:00 · 13.08.: 12:00–18:00 · Festival 14.–15.08.: 12:00–18:00 · 16.–21.08.: 12:00–14:00',
+        'Abendessen – 03.–12.08.: 18:00–19:30 · 13.08.: 18:00–21:00 · Festival 14.–15.08.: 18:00–01:00 · 16.–21.08.: 18:00–20:00',
+        'Trouble Shoot (Einlass): täglich 16:00–18:30'
+      ] },
+      { h: 'Standort & Regeln' },
+      { ul: ['Shelter nahe Tagesbesuchereingang (Beschilderung gegenüber der WG-Party)', 'T-Shirt-Pflicht im Cateringbereich; Geschirr selbst zurückbringen', 'Kostenloses Wasser in Pfandflaschen (keine größeren Mengen mitnehmen)'] },
+      { note: 'Mahlzeit stornieren: spätestens bis 18:00 Uhr am Vortag (über Gewerke-/Teamleiter:in bzw. am Check-in-Container). Kurzfristige Änderungen vorbehalten.' }
+    ]
+  },
+  {
+    id: 'sh-funk',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Funkgeräte',
+    problem: 'Wie funke ich richtig, und wo bekomme ich ein Gerät?',
+    tags: ['sanhejmo', 'sh', 'funk', 'funkgerät', 'funkalphabet', 'kanal', 'produktionsbüro'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Richtig funken' },
+      { ol: ['Seitlichen Knopf drücken', 'Kurz warten', 'Klar & deutlich sprechen – mit „Zielperson für Position" starten', 'Danach loslassen, damit der Kanal frei ist', 'Auf „hört" warten'] },
+      { ul: ['Knapp & auf den Punkt: max. 3 Sätze', 'Direktwahl (nicht alle Geräte): P2-Taste + Nummer + OK', 'Akkus bei Bedarf im Produktionsbüro tauschen', 'Vollständige Funklisten im Produktionsbüro / über die Teamleitung'] },
+      { note: 'Funkalphabet: Alpha, Bravo, Charlie, Delta, Echo, Foxtrott, Golf, Hotel, India, Juliet, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Viktor, Whiskey, X-Ray, Yankee, Zulu.' }
+    ]
+  },
+  {
+    id: 'sh-oeffnungszeiten',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Öffnungszeiten (Überblick)',
+    problem: 'Wann hat was auf (Gelände, Campsite, Camp, Maschinenpark)?',
+    tags: ['sanhejmo', 'sh', 'öffnungszeiten', 'festivalgelände', 'campsite', 'crew camp', 'maschinenpark'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { h: 'Festivalgelände' },
+      { ul: ['Freitag 14.08.: 14:00–04:00', 'Samstag 15.08.: 14:00–04:00'] },
+      { h: 'Campsite' },
+      { ul: ['Check-in: Do 13.08. ab 09:00', 'Check-out: So 16.08. bis 16:00'] },
+      { h: 'Crew Parking P21 / Crew Camp' },
+      { ul: ['Crew Parking P21: Mi 12.08. 06:00–23:00, bis Mo 17.08. 19:00', 'Crew Camp: Mi 12.08. 12:00 – Mo 16.08. 18:00'] },
+      { h: 'Maschinenpark' },
+      { ul: ['Mo–Sa: 08:00–12:00 / 14:00–18:00', 'So 09.08. & So 16.08.: 08:00–12:00 / 14:00–18:00', '14.–15.08.: geschlossen', 'Nur nach vorheriger Bestellung durch Gewerkeleiter:in; Fahrzeuge betankt & gereinigt zurückgeben'] },
+      { note: 'Produktionsbüro-/Klever-Tor-Zeiten siehe „Akkreditierung & Crew-Check-in"; Catering-Zeiten siehe „Crew Catering". Kurzfristige Änderungen vorbehalten.' }
+    ]
+  },
+  {
+    id: 'sh-crewuebersicht',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Crew-Übersicht (Gewerke)',
+    problem: 'Welche Einsatzbereiche/Gewerke gibt es?',
+    tags: ['sanhejmo', 'sh', 'gewerke', 'crew', 'theken', 'verkehr', 'volunteers', 'infopoint', 'übersicht'],
+    source: 'San Hejmo 2026 – Crew Info (sanhejmo.com/de/crew-info)',
+    body: [
+      { p: 'Kurzüberblick der Einsatzbereiche:' },
+      { ul: [
+        'Catering Crew: Buffet auffüllen, Küchenteam unterstützen, Einlass/Trouble-Shoot Crew Catering',
+        'Verkehr: Streckenposten, Parkplatzkoordination, Busshuttle',
+        'Area Manager:innen: Sanitäranlagen Campsite (Zahlung, Ansprechpartner)',
+        'Ordner:innen: Notausgänge auf den Campsites bewachen/freihalten',
+        'Volunteers: Eingänge (Bändchenausgabe, Taschenkontrolle), Blockerfunktion',
+        'Artist Team / Rider Runner: Versorgung & Betreuung der Artists',
+        'SH-Technik: interne Sitecrew, Auf-/Abbau, Reparaturen',
+        'Zufahrtskontrolle: Vignetten/Zufahrtsscheine prüfen (Klever Tor 1/2, Alte Zollstraße)',
+        'Foodies: Foodstände Gelände/Campsite',
+        'Thekenpersonal: Thekenchef:in, Kellner/Mischer/Zapfer, Runner, Logistik',
+        'Infopoints: Orientierung, Timetable, Lost & Found, Camping, Friendship Camp Check-in'
+      ] },
+      { warn: 'An den Theken: nur das gestellte T-Shirt, feste Schuhe, keine Caps/Hüte. Kostenloses Herausgeben/Tauschen von Produkten = Diebstahl → Geländeverweis + Anzeige.' }
     ]
   }
 ];

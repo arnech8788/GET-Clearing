@@ -40,6 +40,15 @@ export const SHIPPED_CONTACTS = [
     ]
   },
   {
+    event: 'sanhejmo',
+    group: 'San Hejmo – Crew (offiziell)',
+    entries: [
+      { name: 'Crew Camp – Buchung / Anfragen', value: 'crewcamp@sanhejmo.com', mail: 'crewcamp@sanhejmo.com' },
+      { name: 'Cashless-Portal (Aufladen / Refund)', value: 'cashless.sanhejmo.com', url: 'https://cashless.sanhejmo.com' },
+      { name: 'Crew-Info-Seite', value: 'sanhejmo.com/de/crew-info', url: 'https://www.sanhejmo.com/de/crew-info' }
+    ]
+  },
+  {
     event: 'all',
     group: 'GET – Online-Plattformen',
     entries: [

@@ -58,6 +58,16 @@ export const EVENTS = [
     color: '#27ae60',
     selectable: true,
     standalone: true // eigener Cashless-/Arbeitgeber-Kontext → keine alwaysOn-Inhalte (z. B. GET) mitzeigen
+  },
+  {
+    id: 'sanhejmo',
+    kind: 'festival',
+    name: 'San Hejmo 2026',
+    short: 'SH',
+    desc: 'Airport Weeze · Festival 14.–15.08.2026 (Camping ab 13.08.) · eigenes Cashless',
+    color: '#ec4899',
+    selectable: true,
+    standalone: true // eigenes Cashless-System → keine GET-Anleitungen mitzeigen
   }
 ];
 

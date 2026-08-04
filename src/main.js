@@ -221,8 +221,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.5.0';
+const APP_VERSION = '3.6.0';
 const CHANGELOG = [
+  ['3.6.0', 'Neues Festival San Hejmo 2026 (Airport Weeze, 14.–15.08.): komplette Crew-Infos aus der offiziellen Crew-Info-Seite als Anleitungen – Grundlagen, Akkreditierung & Check-in, Cashless & Pfand, Anreise & Crew-Parking (P21/P25), Crew Camp, Sicherheit, Crew Knigge, Anlaufstellen & Notfall, Crew Catering (mit Öffnungszeiten), Funkgeräte, Öffnungszeiten und Gewerke-Übersicht. Offizielle Kontakte in der Referenz. Line-Up im Line-Up-Tab (Do/Fr/Sa, alle Stages – durchsuchbar, mit Favoriten). San Hejmo nutzt ein eigenes Cashless-System – GET-Anleitungen laufen dort nicht mit.'],
   ['3.5.0', 'Line-Up ist jetzt ein eigener Tab (unten, statt „Bestand"; Bestand liegt jetzt unter „Mehr"). Alle Geländekarten – die illustrierten Übersichten (Pydna/Clubfloors, Camping Village, Camp-Floors, Silent Camp, Overview) und die Detailpläne – findest du bei NATURE ONE unter „Referenz → Infos".'],
   ['3.4.0', 'NATURE ONE Line-Up jetzt durchsuchbar und mit Favoriten: alle Headfloor-Sets (Fr & Sa, Open Air Floor / Century Circus / Classic Terminal / Syndicate Zone) als Liste – nach Act suchen, einzelne Sets per Stern merken und über „Nur Favoriten" filtern. Die Original-Grafik lässt sich weiterhin in voller Auflösung öffnen.'],
   ['3.3.0', 'Neues Festival NATURE ONE 2026 (Crew via Spektralwerk): Crew-Infos aus Personal-Briefing (I-Motion) und Running Order (Spektralwerk) als Anleitungen – Anreise/Parken, Crew-Basics & Funk, Cashless, Notfall, Checkliste, Ablauf/Öffnungszeiten, Akkreditierung, Catering, Check-in/-out, Kleidung/Verhalten, Funken, Kontakt. Eigene Einsatzzeiten im Dienstplan; offizielle Kontakte in der Referenz; Geländekarten (Übersicht, Festival-Kern, CampingVillage) offline verfügbar. NATURE ONE nutzt ein eigenes (I-Motion) Cashless-System – die GET-Cashless-Anleitungen laufen dort bewusst nicht mit.'],
