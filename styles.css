@@ -380,3 +380,28 @@ svg { width: 22px; height: 22px; flex: none; }
 
 mark { background: color-mix(in srgb, var(--accent) 40%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
 a { color: var(--accent); }
+
+/* ===== Desktop / Laptop (breite Screens) ===== */
+@media (min-width: 800px) {
+  /* Die zentrierte Spalte klar vom Hintergrund abheben */
+  body { background: color-mix(in srgb, var(--bg) 58%, #000 42%); }
+  .app { background: var(--bg); border-inline: 1px solid var(--bdr); }
+  .nav { border-inline: 1px solid var(--bdr); }
+}
+/* Sanfte Hover-Effekte nur mit echtem Zeiger (Maus/Trackpad) */
+@media (hover: hover) and (pointer: fine) {
+  .guide-card, .note-card, .row-btn, .contact-row, .catchip, .tab, .chip, .lu-set, .event-row { transition: filter .12s ease, background .12s ease; }
+  .guide-card:hover, .note-card:hover, .row-btn:hover, .contact-row:hover, .event-row:hover, .lu-set:hover { filter: brightness(1.08); }
+  .catchip:hover, .tab:hover, .chip:hover, .nav button:hover { filter: brightness(1.12); }
+}
+
+/* ===== Querformat / niedrige Höhe (z. B. Handy quer) ===== */
+@media (max-height: 500px) {
+  :root { --nav-h: 50px; }
+  .topbar { padding-top: calc(env(safe-area-inset-top) + 6px); padding-bottom: 6px; }
+  .topbar h1 { font-size: 18px; }
+  .detail-title { font-size: 20px !important; }
+  .search-wrap { margin: 8px 0; }
+  .nav button { font-size: 9px; gap: 2px; }
+  .nav button svg { width: 19px; height: 19px; }
+}
