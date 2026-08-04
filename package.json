@@ -1,7 +1,7 @@
 {
   "name": "get-clearing",
   "version": "1.0.0",
-  "description": "Festival Clearing & Troubleshooting PWA für GET Cashless-Events (Rock am Ring u.a.)",
+  "description": "Festival – PWA für Festival-Crews (Anleitungen, Dienstpläne, Line-Up, Referenz).",
   "type": "module",
   "scripts": {
     "dev": "vite",
