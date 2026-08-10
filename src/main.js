@@ -221,8 +221,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.8.1';
+const APP_VERSION = '3.9.0';
 const CHANGELOG = [
+  ['3.9.0', 'San Hejmo erweitert und Klangpiraten-Inhalte getrennt: San Hejmo läuft über GET Cashless – die GET-Anleitungen erscheinen dort jetzt mit; neue San-Hejmo-Guides „Zufahrt Klever Tor & Z4" und Geländekarten (Referenz → Infos). Klangpiraten-spezifisches ist klar getrennt: die allgemeinen „Klangpiraten – Verhaltensregeln" liegen im Klangpiraten-Tab, die San-Hejmo-spezifischen Klangpiraten-Infos (Dienstplan/Schichttausch, Arbeitszeiten/Pausen, Anhänge/Crewlove) in der eigenen Kategorie „San Hejmo – Klangpiraten". Neu im GET-Bereich: offizielle Bild-Leitfäden für Top-Up (P400) und Ticket Swap.'],
   ['3.8.1', 'App in „Festival" umbenannt.'],
   ['3.8.0', 'Für Laptop & Querformat optimiert: am Desktop wird die Inhaltsspalte klar eingerahmt (statt „verloren" auf breitem Bildschirm) und Karten/Buttons haben dezente Maus-Hover-Effekte; im Querformat (niedrige Höhe) sind Kopfzeile und untere Leiste kompakter, sodass mehr Inhalt sichtbar ist.'],
   ['3.7.0', 'Line-Up überarbeitet: Tag auswählen (Chips wie im Dienstplan) und zwei Ansichten – „Bühnen" (durchsuchbare Liste je Bühne) und „Raster" (Timetable: Bühnen × Zeit nebeneinander, quer scrollbar – man sieht, was gleichzeitig läuft). Favoriten funktionieren in beiden Ansichten (Act antippen).'],
