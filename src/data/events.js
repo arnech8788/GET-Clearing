@@ -64,10 +64,9 @@ export const EVENTS = [
     kind: 'festival',
     name: 'San Hejmo 2026',
     short: 'SH',
-    desc: 'Airport Weeze · Festival 14.–15.08.2026 (Camping ab 13.08.) · eigenes Cashless',
+    desc: 'Airport Weeze · Festival 14.–15.08.2026 (Camping ab 13.08.) · Crew-Infos',
     color: '#ec4899',
-    selectable: true,
-    standalone: true // eigenes Cashless-System → keine GET-Anleitungen mitzeigen
+    selectable: true
   }
 ];
 

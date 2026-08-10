@@ -29,7 +29,9 @@ export const CATEGORIES = [
   { id: 'pv', name: 'Parookaville – Crew-Infos', icon: 'flag', color: '#2d9cdb' },
   { id: 'pv-checkin', name: 'Parookaville – Check-in & Akkreditierung', icon: 'ticket', color: '#1abc9c' },
   { id: 'no', name: 'NATURE ONE – Crew-Infos', icon: 'flag', color: '#27ae60' },
-  { id: 'sh', name: 'San Hejmo – Crew-Infos', icon: 'flag', color: '#ec4899' }
+  { id: 'sh', name: 'San Hejmo – Crew-Infos', icon: 'flag', color: '#ec4899' },
+  { id: 'sh-kp', name: 'San Hejmo – Klangpiraten', icon: 'flag', color: '#9b59b6' },
+  { id: 'kp', name: 'Klangpiraten – Allgemein', icon: 'flag', color: '#9b59b6' }
 ];
 
 export const GUIDES = [
@@ -1729,6 +1731,125 @@ export const GUIDES = [
         'Infopoints: Orientierung, Timetable, Lost & Found, Camping, Friendship Camp Check-in'
       ] },
       { warn: 'An den Theken: nur das gestellte T-Shirt, feste Schuhe, keine Caps/Hüte. Kostenloses Herausgeben/Tauschen von Produkten = Diebstahl → Geländeverweis + Anzeige.' }
+    ]
+  },
+  {
+    id: 'sh-z4',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Zufahrt Klever Tor & Z4',
+    problem: 'Wie komme ich im Auf-/Abbau aufs Gelände, und was gilt zu den Showzeiten?',
+    tags: ['sanhejmo', 'sh', 'zufahrt', 'z4', 'klever tor', 'anreise', 'sperrung', 'aufbau', 'abbau'],
+    source: 'San Hejmo 2026 – Zufahrtsberechtigung (Z4)',
+    body: [
+      { p: 'Zufahrtsberechtigung „Klever Tor" für Lieferanten, Crew und Behörden im Auf- und Abbau. Außerhalb der Showzeiten sind alle Ziele über diese Zufahrt erreichbar (Kontrollen → Wartezeiten einplanen).' },
+      { warn: 'Zufahrtsschein VOR der Zufahrt vollständig ausfüllen und gut lesbar hinter die Windschutzscheibe legen; die angegebene Telefonnummer muss erreichbar sein. Ohne vollständigen Schein keine Zufahrt.' },
+      { h: 'Keine Zufahrt während der Showzeiten' },
+      { ul: ['Fr 14.08.2026: 12:00–06:00 Uhr', 'Sa 15.08.2026: 12:00–06:00 Uhr'] },
+      { p: 'Zufahrt zu Showzeiten nur mit speziellen Zufahrtsscheinen/Vignetten.' },
+      { h: 'Straßensperrung Baal / K37' },
+      { p: 'Do 13.08.2026 00:00 – Mo 17.08.2026 15:00 ist das Klever Tor nur über die Route B+C2 erreichbar. Anfahrtspläne/Zeiten beachten.' },
+      { note: 'Fahrzeuge nur auf vorgesehenen Flächen abstellen; Anweisungen der Mitarbeiter befolgen. Falschparker können kostenpflichtig abgeschleppt werden.' }
+    ]
+  },
+  {
+    id: 'sh-kp-dienstplan',
+    cat: 'sh-kp',
+    events: ['sanhejmo'],
+    title: 'Dienstplan & Schichttausch (Klangpiraten)',
+    problem: 'Wann kommt der Plan, und wie tausche ich Schichten?',
+    tags: ['sanhejmo', 'sh', 'klangpiraten', 'dienstplan', 'schichttausch', 'whatsapp'],
+    source: 'Klangpiraten Infomail – San Hejmo 2026',
+    body: [
+      { h: 'Dienstplan' },
+      { p: 'Der Einsatzplan wird spätestens am Mittwoch per Mail verschickt.' },
+      { h: 'Schichttausch' },
+      { ul: ['Über die Schichttausch-WhatsApp-Gruppe möglich – jeden Tag', 'Kein Tausch mit Personen aus dem Akkreditierungsteam', 'Jeder Tausch muss genehmigt werden – nicht alle Wünsche können erfüllt werden', 'Genaue Anleitung in der Gruppenbeschreibung'] }
+    ]
+  },
+  {
+    id: 'sh-kp-arbeitszeiten',
+    cat: 'sh-kp',
+    events: ['sanhejmo'],
+    title: 'Arbeitszeiten & Pausen (Klangpiraten)',
+    problem: 'Wie werden Arbeitszeiten dokumentiert, welche Pausen gelten?',
+    tags: ['sanhejmo', 'sh', 'klangpiraten', 'arbeitszeit', 'pausen', 'pausenregelung'],
+    source: 'Klangpiraten Infomail – San Hejmo 2026',
+    body: [
+      { ul: ['Arbeits- und Pausenzeiten werden von der Stationsleitung vor Ort dokumentiert', 'Alle müssen für ihre Arbeitszeiten unterschreiben', 'Bei Fragen direkt die Stationsleitung / zuständige Schichttausch-Person'] },
+      { h: 'Pausen (verpflichtend)' },
+      { ul: ['0–6 h: keine Pause', '6,1–8 h: 30 min', '8,1–10 h: 45 min', '10,1–12 h: 60 min'] },
+      { warn: 'Keine selbstständige Pausennahme – nur nach Bestätigung durch die Stationsleitung. Pausenzeiten genau einhalten!' },
+      { note: 'Arbeitszeit über 10 h nur in Ausnahmen und mit Einverständnis der Mitarbeiter*innen & der Gesamtleitung.' }
+    ]
+  },
+  {
+    id: 'sh-kp-crew',
+    cat: 'sh-kp',
+    events: ['sanhejmo'],
+    title: 'Anhänge & Crewlove (Klangpiraten)',
+    problem: 'Welche Leitfäden gelten, und was erwartet Klangpiraten?',
+    tags: ['sanhejmo', 'sh', 'klangpiraten', 'anhänge', 'leitfäden', 'crewlove', 'verhaltensregeln'],
+    source: 'Klangpiraten Infomail – San Hejmo 2026',
+    body: [
+      { h: 'Anhänge / Leitfäden' },
+      { ul: ['Klangpiraten-Verhaltensregeln – im Tab „Klangpiraten"', 'Leitfaden TopUp – im Bereich „GET Cashless"', 'Leitfaden Ticket Swap – im Bereich „GET Cashless"', 'Z4 – Zufahrtsbescheinigung – siehe Guide „Zufahrt Klever Tor & Z4"'] },
+      { h: 'Crewlove' },
+      { p: 'Zuverlässigkeit & verantwortliches Handeln, achtsamer und wertschätzender Umgang, keine Diskriminierung/Diffamierung. Genießt das San Hejmo – arbeitet fleißig, lernt Leute kennen, schaut euch Bands & DJ-Sets an, habt Spaß. Nach Feierabend sind wir auch „Gäste des Festivals".' }
+    ]
+  },
+  {
+    id: 'kp-verhaltensregeln',
+    cat: 'kp',
+    events: ['klangpiraten'],
+    title: 'Klangpiraten – Verhaltensregeln',
+    problem: 'Wie treten wir als Klangpiraten-Crew auf (Vorbereitung, Gäste, Eskalation)?',
+    tags: ['klangpiraten', 'kp', 'verhaltensregeln', 'knigge', 'gäste', 'sicherheit', 'diebstahl', 'übergriff'],
+    source: 'Klangpiraten – Verhaltensregeln 2026',
+    body: [
+      { h: 'Vorbereitung & Allgemein' },
+      { ul: ['Kleidung für jede Wetterlage (Regen, Sonne, Kälte)', 'Festes Schuhwerk (keine FlipFlops/Badelatschen während der Arbeit)', 'Sonnencreme; regenfestes Zelt/Campingausrüstung', 'Gefüllte Trinkflasche/Thermoskanne dabei', 'Nüchtern – kein Alkohol/Drogen vor und während der Arbeit', 'Warnwestenpflicht (besonders an Aufbautagen)'] },
+      { h: 'Gegenüber Gästen' },
+      { ul: ['Immer freundlich, aber bestimmt; auf keine Diskussionen einlassen', 'Keine internen Infos herausgeben (Arbeitsweisen, Kolleg*innen, Gästezahl …)'] },
+      { h: 'Bei Eskalation' },
+      { ul: ['Ausfallende Gäste: Ruhe bewahren, nicht zurückbrüllen, bestimmt verweisen', 'Übergriffe: sich & Arbeitsmaterial schützen, laut ansprechen, Sitznachbarn aufmerksam machen, dann Stationsleitung & Ordner rufen', 'Diebstähle: sofort Stationsleitung & Ordner rufen, Material sichern – NIEMALS verdächtige Personen stellen oder verfolgen'] },
+      { p: 'Wir erwarten Zuverlässigkeit und verantwortliches Handeln, pflegen einen achtsamen und wertschätzenden Umgang und lehnen jede Diskriminierung ab – offen, respektvoll, freundlich, hilfsbereit. „Die Klangpiraten – crew love is true love!"' }
+    ]
+  },
+  {
+    id: 'get-topup-leitfaden',
+    cat: 'topup',
+    events: ['all'],
+    title: 'Bemanntes Top-Up (P400) – Bild-Leitfaden',
+    problem: 'Offizielle Schritt-für-Schritt-Anleitung von GET zum bemannten Top-Up am P400.',
+    tags: ['topup', 'top-up', 'p400', 'get', 'leitfaden', 'aufladen', 'bar', 'karte'],
+    source: 'GET – Bemanntes Top-Up via P400',
+    body: [
+      { note: 'Offizieller GET-Leitfaden – zum Vergrößern antippen.' },
+      { img: '/get-topup-2.jpg', alt: 'GET Top-Up – Überblick' },
+      { img: '/get-topup-3.jpg', alt: 'GET Top-Up – Schritt' },
+      { img: '/get-topup-4.jpg', alt: 'GET Top-Up – Schritt' },
+      { img: '/get-topup-5.jpg', alt: 'GET Top-Up – Schritt' },
+      { img: '/get-topup-6.jpg', alt: 'GET Top-Up – Schritt' },
+      { img: '/get-topup-7.jpg', alt: 'GET Top-Up – Schritt' },
+      { img: '/get-topup-8.jpg', alt: 'GET Top-Up – Schritt' },
+      { img: '/get-topup-9.jpg', alt: 'GET Top-Up – Schritt' }
+    ]
+  },
+  {
+    id: 'get-swap-leitfaden',
+    cat: 'swap',
+    events: ['all'],
+    title: 'Ticket Swap – Bild-Leitfaden',
+    problem: 'Offizielle Schritt-für-Schritt-Anleitung von GET zum Ticket Swap.',
+    tags: ['ticket swap', 'swap', 'get', 'leitfaden', 'ticketscanner', 'umbuchen'],
+    source: 'GET – Ticket Swap Leitfaden',
+    body: [
+      { note: 'Offizieller GET-Leitfaden – zum Vergrößern antippen.' },
+      { img: '/get-swap-2.jpg', alt: 'GET Ticket Swap – Schritt' },
+      { img: '/get-swap-3.jpg', alt: 'GET Ticket Swap – Schritt' },
+      { img: '/get-swap-4.jpg', alt: 'GET Ticket Swap – Schritt' },
+      { img: '/get-swap-5.jpg', alt: 'GET Ticket Swap – Schritt' }
     ]
   }
 ];

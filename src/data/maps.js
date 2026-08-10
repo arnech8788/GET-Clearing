@@ -12,5 +12,9 @@ export const EVENT_MAPS = {
     { src: '/no-karte-uebersicht.jpg', title: 'Detailplan – Gesamtübersicht' },
     { src: '/no-karte-festival.jpg', title: 'Detailplan – Festival-Kern (Theken / Cashless)' },
     { src: '/no-karte-camping.jpg', title: 'Detailplan – CampingVillage' }
+  ],
+  sanhejmo: [
+    { src: '/sh-karte-1.jpg', title: 'Crew Guide – Festival-Kern & Infos' },
+    { src: '/sh-karte-2.jpg', title: 'Geländeplan – Eventgelände & Campsite' }
   ]
 };
