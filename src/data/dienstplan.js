@@ -14,7 +14,8 @@
 export const DIENSTPLAN_META = {
   "rar": { "title": "Klangpiraten · Rock am Ring 2026 – Einsatzpläne" },
   "parookaville": { "title": "Klangpiraten · Parookaville 2026 – Einsatzpläne" },
-  "natureone": { "title": "NATURE ONE 2026 · Spektralwerk – deine Einsatzzeiten" }
+  "natureone": { "title": "NATURE ONE 2026 · Spektralwerk – deine Einsatzzeiten" },
+  "sanhejmo": { "title": "Klangpiraten · San Hejmo 2026 – Einsatzpläne" }
 };
 
 export const SHIFT_CHANGES = [];
@@ -16703,6 +16704,1851 @@ export const DIENSTPLAN_DAYS = [
         ]
       }
     ]
+  },
+  {
+    "id": "sh-dp-13-08",
+    "event": "sanhejmo",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Donnerstag, 13. August 2026",
+    "short": "Do 13.08.",
+    "stations": [
+      {
+        "name": "Bänder - Campsite",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Mathea Valerius",
+            "pos": "Schleuse 1 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 2,
+            "name": "Sophie Paß",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 16 Uhr - 22Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 3,
+            "name": "Dennis Knoll",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 16 Uhr - 22Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 4,
+            "name": "Maurice Hilpert",
+            "pos": "Schleuse 4 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 5,
+            "name": "Tamara Moll",
+            "pos": "Schleuse 5 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Tanja Maaßen",
+            "pos": "Schleuse 6 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 7,
+            "name": "Tallulah Devinast",
+            "pos": "Schleuse 7 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Nele Scheil",
+            "pos": "Schleuse 8 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 9,
+            "name": "Silvana Gietmanns",
+            "pos": "Schleuse 9 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Marc Schröer",
+            "pos": "Schleuse 1 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 11,
+            "name": "Vera Kienle",
+            "pos": "Schleuse 2 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Theresa Hartmann",
+            "pos": "Schleuse 3 Sp",
+            "von": "16:30",
+            "bis": "21:00",
+            "note": ""
+          },
+          {
+            "nr": 13,
+            "name": "Svenja Gehrmann",
+            "pos": "Schleuse 4 Sp",
+            "von": "16:30",
+            "bis": "21:00",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Julia Gard",
+            "pos": "Schleuse 2 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 15,
+            "name": "Jessica Kot",
+            "pos": "Schleuse 5 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Andy Kot",
+            "pos": "Schleuse 6 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 17,
+            "name": "Laura Hammes",
+            "pos": "Schleuse 3 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Aileen von Arnstadt",
+            "pos": "Spätschleuse",
+            "von": "23:30",
+            "bis": "07:00",
+            "note": ""
+          },
+          {
+            "nr": 19,
+            "name": "Kim Banka",
+            "pos": "VIP Früh",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Sophia Ebenhöh",
+            "pos": "VIP Spät",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 1",
+            "von": "07:30",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 2",
+            "von": "09:00",
+            "bis": "19:30",
+            "note": ""
+          },
+          {
+            "nr": 23,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 3",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 24,
+            "name": "Elly Wistuba",
+            "pos": "Schleuse 1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 25,
+            "name": "Kathy Gindorff",
+            "pos": "Schleuse 2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Chloe Schmedes",
+            "pos": "Schleuse 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Neo Kecht",
+            "pos": "Schleuse 2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Busshuttle",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 28,
+            "name": "Nisha Bhonsle",
+            "pos": "Schleuse 1",
+            "von": "07:30",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Leon Molé",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Neele Armbrecht",
+            "pos": "Schleuse 1",
+            "von": "14:30",
+            "bis": "22:30",
+            "note": ""
+          },
+          {
+            "nr": 31,
+            "name": "Viktoria Luft genannt Plaisier",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Hanna Kümpel",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Julie Steeger",
+            "pos": "VIP",
+            "von": "07:30",
+            "bis": "15:00",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Annalena Ehren",
+            "pos": "VIP",
+            "von": "14:30",
+            "bis": "22:30",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Shawn Gigla",
+            "pos": "Flexibel",
+            "von": "07:30",
+            "bis": "15:00",
+            "note": "Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 36,
+            "name": "Malin Hirschfeld",
+            "pos": "Flexibel",
+            "von": "14:30",
+            "bis": "22:30",
+            "note": "Unterstützend für Pausenvertetung und Bänderverteilung"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping & Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 37,
+            "name": "Zoé Siewert (Karkatsch)",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 38,
+            "name": "Jennifer Kalinowski",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 39,
+            "name": "Alma Daun",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 40,
+            "name": "Clara Daun",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 41,
+            "name": "Carmen Nowak",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 42,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 4",
+            "von": "15:00",
+            "bis": "21:00",
+            "note": "eigenes Kasse öffnen"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Arne Chudobba",
+            "pos": "Campsite",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 44,
+            "name": "Pfitzi Pfitzner",
+            "pos": "Campsite",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 45,
+            "name": "Naomi Kron da Silva",
+            "pos": "Campsite",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 46,
+            "name": "Sarah Egbert",
+            "pos": "Campsite",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 47,
+            "name": "Philipp Jansen",
+            "pos": "Schleuse 10 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": "ACHTUNG! BÄNDERTAUSCH BASE CAMP - Schleuse 10"
+          },
+          {
+            "nr": 48,
+            "name": "Lea Dichter",
+            "pos": "Schleuse 11 Fr",
+            "von": "07:30",
+            "bis": "17:00",
+            "note": "ACHTUNG! BÄNDERTAUSCH BASE CAMP - Schleuse 11"
+          },
+          {
+            "nr": 49,
+            "name": "Kathi Stremel",
+            "pos": "Pausenvertr.",
+            "von": "12:00",
+            "bis": "15:30",
+            "note": "Pausenvertretung - Bänder Campsite"
+          },
+          {
+            "nr": 50,
+            "name": "Noelia Schlotthauer",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 51,
+            "name": "Sara Hennings",
+            "pos": "Pausenvertr.",
+            "von": "12:00",
+            "bis": "15:30",
+            "note": "Pausenvertretung - Bänder Campsite"
+          },
+          {
+            "nr": 52,
+            "name": "Runa Rolf",
+            "pos": "Pausenvertr.",
+            "von": "12:00",
+            "bis": "15:30",
+            "note": "Pausenvertretung - Bänder Caravan & Busshuttle"
+          },
+          {
+            "nr": 53,
+            "name": "Marius Preuß",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 54,
+            "name": "Mareike Preuß",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 55,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "15:00",
+            "bis": "21:00",
+            "note": "Troubleshoot - Cashless Campsite"
+          },
+          {
+            "nr": 56,
+            "name": "Anika Lohmann",
+            "pos": "Troubleshoot",
+            "von": "18:00",
+            "bis": "00:00",
+            "note": "Troubleshoot - Bänder Campsite - Übernahme von GET"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen / Crewbetreuung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 57,
+            "name": "Anna Böker",
+            "pos": "Runner*in",
+            "von": "06:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "06:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "15:30",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 60,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "15:30",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 61,
+            "name": "Jo Frank",
+            "pos": "Crewbetreuung",
+            "von": "10:00",
+            "bis": "19:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 62,
+            "name": "Valeska Cernoch",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 63,
+            "name": "Oskar Brunner",
+            "pos": "Schleuse 7 Sp",
+            "von": "16:30",
+            "bis": "21:00",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Philipp Neugart",
+            "pos": "Schleuse 8 Sp",
+            "von": "16:30",
+            "bis": "21:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Klangpiraten - Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 65,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 67,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "11:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "11:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 69,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sh-dp-14-08",
+    "event": "sanhejmo",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Freitag, 14. August 2026",
+    "short": "Fr 14.08.",
+    "stations": [
+      {
+        "name": "Bänder - Campsite",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Mathea Valerius",
+            "pos": "Schleuse 1",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 2,
+            "name": "Sophie Paß",
+            "pos": "Schleuse 2",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 3,
+            "name": "Dennis Knoll",
+            "pos": "Schleuse 3",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Maurice Hilpert",
+            "pos": "Schleuse 4",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 5,
+            "name": "Tamara Moll",
+            "pos": "Pausenvertr.",
+            "von": "18:30",
+            "bis": "03:00",
+            "note": "Pausenvertretung - Bänder Campsite / ab 21:30 > Bänder Busshuttle Schleuse 1"
+          },
+          {
+            "nr": 6,
+            "name": "Tanja Maaßen",
+            "pos": "Pausenvertr.",
+            "von": "18:30",
+            "bis": "03:00",
+            "note": "Pausenvertretung - Bänder Campsite / ab 21:30 > Bänder Busshuttle Schleuse 2"
+          },
+          {
+            "nr": 7,
+            "name": "Tallulah Devinast",
+            "pos": "Schleuse 1",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Nele Scheil",
+            "pos": "Schleuse 2",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 9,
+            "name": "Silvana Gietmanns",
+            "pos": "Schleuse 3",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Marc Schröer",
+            "pos": "Schleuse 4",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 11,
+            "name": "Vera Kienle",
+            "pos": "Schleuse 5",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Theresa Hartmann",
+            "pos": "Schleuse 6",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 13,
+            "name": "Svenja Gehrmann",
+            "pos": "Schleuse 7",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Julia Gard",
+            "pos": "Schleuse 8",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 15,
+            "name": "Jessica Kot",
+            "pos": "Schleuse 9",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 16,
+            "name": "Andy Kot",
+            "pos": "Schleuse 10",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 17,
+            "name": "Laura Hammes",
+            "pos": "Schleuse 11",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Aileen von Arnstadt",
+            "pos": "Spätschleuse",
+            "von": "22:00",
+            "bis": "04:00",
+            "note": "inkl. Troubleshoot ab 2 Uhr"
+          },
+          {
+            "nr": 19,
+            "name": "Kim Banka",
+            "pos": "VIP Früh",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Sophia Ebenhöh",
+            "pos": "VIP Spät",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 1",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 2",
+            "von": "13:00",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 23,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 3",
+            "von": "16:30",
+            "bis": "04:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 24,
+            "name": "Elly Wistuba",
+            "pos": "Schleuse 1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 25,
+            "name": "Kathy Gindorff",
+            "pos": "Schleuse 2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Chloe Schmedes",
+            "pos": "Schleuse 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Neo Kecht",
+            "pos": "Schleuse 2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Busshuttle",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 28,
+            "name": "Nisha Bhonsle",
+            "pos": "Schleuse 1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Leon Molé",
+            "pos": "Schleuse 2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Neele Armbrecht",
+            "pos": "Schleuse 1",
+            "von": "15:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 31,
+            "name": "Viktoria Luft genannt Plaisier",
+            "pos": "Schleuse 2",
+            "von": "15:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Hanna Kümpel",
+            "pos": "Schleuse 3",
+            "von": "13:00",
+            "bis": "19:00",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Julie Steeger",
+            "pos": "VIP",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Annalena Ehren",
+            "pos": "VIP",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Shawn Gigla",
+            "pos": "Flexibel",
+            "von": "07:30",
+            "bis": "15:00",
+            "note": "Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 36,
+            "name": "Malin Hirschfeld",
+            "pos": "Flexibel",
+            "von": "14:30",
+            "bis": "22:30",
+            "note": "Unterstützend für Pausenvertetung und Bänderverteilung"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping & Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 37,
+            "name": "Zoé Siewert (Karkatsch)",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Jennifer Kalinowski",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Alma Daun",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Clara Daun",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Carmen Nowak",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 4",
+            "von": "11:30",
+            "bis": "22:00",
+            "note": "Starten in Cashless Camping 11:30 - 18:00 - eigene Kasse öffnen"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Arne Chudobba",
+            "pos": "Campsite",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 44,
+            "name": "Pfitzi Pfitzner",
+            "pos": "Campsite",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 45,
+            "name": "Naomi Kron da Silva",
+            "pos": "Campsite",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 46,
+            "name": "Sarah Egbert",
+            "pos": "Campsite",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 47,
+            "name": "Philipp Jansen",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Lea Dichter",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 49,
+            "name": "Kathi Stremel",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 50,
+            "name": "Noelia Schlotthauer",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 51,
+            "name": "Sara Hennings",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 52,
+            "name": "Runa Rolf",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 53,
+            "name": "Marius Preuß",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Mareike Preuß",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "11:30",
+            "bis": "18:00",
+            "note": "Troubleshoot - Cashless Campsite"
+          },
+          {
+            "nr": 56,
+            "name": "Anika Lohmann",
+            "pos": "Troubleshoot",
+            "von": "20:30",
+            "bis": "02:00",
+            "note": "Troubleshoot - Bänder Campsite - Übernahme von GET"
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen / Crewbetreuung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 57,
+            "name": "Anna Böker",
+            "pos": "Runner*in",
+            "von": "06:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "06:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "15:00",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 60,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "15:00",
+            "bis": "00:30",
+            "note": ""
+          },
+          {
+            "nr": 61,
+            "name": "Jo Frank",
+            "pos": "Crewbetreuung",
+            "von": "10:00",
+            "bis": "19:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 62,
+            "name": "Valeska Cernoch",
+            "pos": "Pausenvertr.",
+            "von": "18:30",
+            "bis": "22:00",
+            "note": "Pausenvertretung - Bänder Campsite"
+          },
+          {
+            "nr": 63,
+            "name": "Oskar Brunner",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 64,
+            "name": "Philipp Neugart",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          }
+        ]
+      },
+      {
+        "name": "Klangpiraten - Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 65,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 67,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "11:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "11:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 69,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sh-dp-15-08",
+    "event": "sanhejmo",
+    "plan": "Bändertausch / Cashless / Akkreditierung",
+    "label": "Samstag, 15. August 2026",
+    "short": "Sa 15.08.",
+    "stations": [
+      {
+        "name": "Bänder - Campsite",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 1,
+            "name": "Mathea Valerius",
+            "pos": "Schleuse 8 Sp",
+            "von": "13:30",
+            "bis": "21:00",
+            "note": "ab 16:30 Uhr > Pausenvertretung - Bänder Campsite"
+          },
+          {
+            "nr": 2,
+            "name": "Sophie Paß",
+            "pos": "Schleuse 1 Fr",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 3,
+            "name": "Dennis Knoll",
+            "pos": "Schleuse 2 Fr",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 4,
+            "name": "Maurice Hilpert",
+            "pos": "Schleuse 9 Sp",
+            "von": "13:30",
+            "bis": "21:00",
+            "note": "ab 16:30 Uhr > Pausenvertretung - Bänder Campsite"
+          },
+          {
+            "nr": 5,
+            "name": "Tamara Moll",
+            "pos": "Frei",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 6,
+            "name": "Tanja Maaßen",
+            "pos": "Frei",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 7,
+            "name": "Tallulah Devinast",
+            "pos": "Schleuse 8 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 8,
+            "name": "Nele Scheil",
+            "pos": "Schleuse 1 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 9,
+            "name": "Silvana Gietmanns",
+            "pos": "Schleuse 2 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 10,
+            "name": "Marc Schröer",
+            "pos": "Schleuse 3 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 11,
+            "name": "Vera Kienle",
+            "pos": "Schleuse 4 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 12,
+            "name": "Theresa Hartmann",
+            "pos": "Schleuse 5 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 13,
+            "name": "Svenja Gehrmann",
+            "pos": "Schleuse 6 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 14,
+            "name": "Julia Gard",
+            "pos": "Schleuse 7 Sp",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 15,
+            "name": "Jessica Kot",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 16,
+            "name": "Andy Kot",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": "Telefonisch erreichbar sein! 9 Uhr - 18Uhr (Keine Arbeitszeit, Tatsächliche Einsatzzeiten können variieren)"
+          },
+          {
+            "nr": 17,
+            "name": "Laura Hammes",
+            "pos": "Schleuse 10 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 18,
+            "name": "Aileen von Arnstadt",
+            "pos": "Spätschleuse",
+            "von": "22:00",
+            "bis": "04:00",
+            "note": "inkl. Troubleshoot ab 2 Uhr"
+          },
+          {
+            "nr": 19,
+            "name": "Kim Banka",
+            "pos": "VIP Früh",
+            "von": "07:00",
+            "bis": "17:00",
+            "note": ""
+          },
+          {
+            "nr": 20,
+            "name": "Sophia Ebenhöh",
+            "pos": "VIP Spät",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 21,
+            "name": "Lisa Mann",
+            "pos": "Stationsleitung 1",
+            "von": "07:00",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 22,
+            "name": "Hannah Greitemann",
+            "pos": "Stationsleitung 2",
+            "von": "12:00",
+            "bis": "22:30",
+            "note": ""
+          },
+          {
+            "nr": 23,
+            "name": "Anna Mischkalla",
+            "pos": "Stationsleitung 3",
+            "von": "16:30",
+            "bis": "04:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Caravan",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 24,
+            "name": "Elly Wistuba",
+            "pos": "Schleuse 1",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 25,
+            "name": "Kathy Gindorff",
+            "pos": "Schleuse 2",
+            "von": "07:30",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 26,
+            "name": "Chloe Schmedes",
+            "pos": "Schleuse 1",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 27,
+            "name": "Neo Kecht",
+            "pos": "Schleuse 2",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Bänder - Busshuttle",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 28,
+            "name": "Nisha Bhonsle",
+            "pos": "Schleuse 1",
+            "von": "12:30",
+            "bis": "18:30",
+            "note": ""
+          },
+          {
+            "nr": 29,
+            "name": "Leon Molé",
+            "pos": "Schleuse 2",
+            "von": "12:30",
+            "bis": "18:30",
+            "note": ""
+          },
+          {
+            "nr": 30,
+            "name": "Neele Armbrecht",
+            "pos": "Schleuse 1",
+            "von": "18:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 31,
+            "name": "Viktoria Luft genannt Plaisier",
+            "pos": "Schleuse 2",
+            "von": "18:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 32,
+            "name": "Hanna Kümpel",
+            "pos": "Schleuse 3",
+            "von": "12:30",
+            "bis": "18:30",
+            "note": ""
+          },
+          {
+            "nr": 33,
+            "name": "Julie Steeger",
+            "pos": "VIP",
+            "von": "12:30",
+            "bis": "18:30",
+            "note": ""
+          },
+          {
+            "nr": 34,
+            "name": "Annalena Ehren",
+            "pos": "VIP",
+            "von": "18:00",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 35,
+            "name": "Shawn Gigla",
+            "pos": "Flexibel",
+            "von": "12:30",
+            "bis": "20:00",
+            "note": "Unterstützend für Pausenvertetung und Bänderverteilung"
+          },
+          {
+            "nr": 36,
+            "name": "Malin Hirschfeld",
+            "pos": "Flexibel",
+            "von": "19:30",
+            "bis": "03:00",
+            "note": "Unterstützend für Pausenvertetung und Bänderverteilung"
+          }
+        ]
+      },
+      {
+        "name": "Cashless - Camping & Infield",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 37,
+            "name": "Zoé Siewert (Karkatsch)",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 38,
+            "name": "Jennifer Kalinowski",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 39,
+            "name": "Alma Daun",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "20:00",
+            "note": ""
+          },
+          {
+            "nr": 40,
+            "name": "Clara Daun",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 41,
+            "name": "Carmen Nowak",
+            "pos": "Tagesbesucher",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          },
+          {
+            "nr": 42,
+            "name": "Erika Wilches Quintero",
+            "pos": "Stationsleitung 4",
+            "von": "13:30",
+            "bis": "22:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Troubleshoot / Akkreditierung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 43,
+            "name": "Arne Chudobba",
+            "pos": "Campsite",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 44,
+            "name": "Pfitzi Pfitzner",
+            "pos": "Campsite",
+            "von": "07:00",
+            "bis": "16:00",
+            "note": ""
+          },
+          {
+            "nr": 45,
+            "name": "Naomi Kron da Silva",
+            "pos": "Campsite",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 46,
+            "name": "Sarah Egbert",
+            "pos": "Campsite",
+            "von": "15:30",
+            "bis": "00:00",
+            "note": ""
+          },
+          {
+            "nr": 47,
+            "name": "Philipp Jansen",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 48,
+            "name": "Lea Dichter",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 49,
+            "name": "Kathi Stremel",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 50,
+            "name": "Noelia Schlotthauer",
+            "pos": "Klever Tor 2",
+            "von": "07:00",
+            "bis": "15:30",
+            "note": ""
+          },
+          {
+            "nr": 51,
+            "name": "Sara Hennings",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 52,
+            "name": "Runa Rolf",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 53,
+            "name": "Marius Preuß",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 54,
+            "name": "Mareike Preuß",
+            "pos": "Klever Tor 2",
+            "von": "15:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 55,
+            "name": "Toni Kirchhoff",
+            "pos": "Troubleshoot",
+            "von": "21:00",
+            "bis": "02:00",
+            "note": "Troubleshoot - Bänder Campsite - Übernahme von GET"
+          },
+          {
+            "nr": 56,
+            "name": "Anika Lohmann",
+            "pos": "Frei",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Runner*innen / Crewbetreuung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 57,
+            "name": "Anna Böker",
+            "pos": "Runner*in",
+            "von": "06:30",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 58,
+            "name": "Franziska Pietzonka",
+            "pos": "Runner*in",
+            "von": "06:30",
+            "bis": "17:30",
+            "note": ""
+          },
+          {
+            "nr": 59,
+            "name": "Mark Schrader",
+            "pos": "Runner*in",
+            "von": "17:00",
+            "bis": "04:00",
+            "note": ""
+          },
+          {
+            "nr": 60,
+            "name": "Manu Jäger",
+            "pos": "Runner*in",
+            "von": "17:00",
+            "bis": "04:00",
+            "note": ""
+          },
+          {
+            "nr": 61,
+            "name": "Jo Frank",
+            "pos": "Crewbetreuung",
+            "von": "10:00",
+            "bis": "19:00",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Springer/Ersatz",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 62,
+            "name": "Valeska Cernoch",
+            "pos": "Schleuse 9 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": "ACHTUNG! BÄNDERTAUSCH BASE CAMP - Schleuse 9"
+          },
+          {
+            "nr": 63,
+            "name": "Oskar Brunner",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 64,
+            "name": "Philipp Neugart",
+            "pos": "Schleuse 11 Sp",
+            "von": "16:30",
+            "bis": "00:00",
+            "note": "ACHTUNG! BÄNDERTAUSCH BASE CAMP - Schleuse 11"
+          }
+        ]
+      },
+      {
+        "name": "Klangpiraten - Social Media",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 65,
+            "name": "Jessica Ratz",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          },
+          {
+            "nr": 66,
+            "name": "Julia Hauck",
+            "pos": "",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Aufgabenverteilung",
+        "kb": "",
+        "rows": [
+          {
+            "nr": 67,
+            "name": "Pia Hiller",
+            "pos": "Cashless & Büro",
+            "von": "11:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 68,
+            "name": "Holger Tingelhoff",
+            "pos": "Bänder",
+            "von": "11:00",
+            "bis": "23:00",
+            "note": ""
+          },
+          {
+            "nr": 69,
+            "name": "Raphael Siemers",
+            "pos": "Gesamt",
+            "von": "",
+            "bis": "",
+            "note": ""
+          }
+        ]
+      }
+    ]
   }
 ];
 
@@ -17088,5 +18934,79 @@ export const DIENSTPLAN_CONTACTS = {
     { "name": "Personalbüro (während des Einsatzes)", "role": "24h erreichbar", "phone": "01522 5255614", "tel": "015225255614" },
     { "name": "Spektralwerk Hotline", "role": "WhatsApp & Call", "phone": "06541 8141222", "tel": "065418141222" },
     { "name": "Spektralwerk", "role": "Telefon & SMS", "phone": "0171 3055115", "tel": "01713055115" }
+  ],
+  "sanhejmo": [
+    {
+      "name": "Raphael Siemers",
+      "role": "Gesamt",
+      "phone": "0152 27605462",
+      "tel": "015227605462"
+    },
+    {
+      "name": "Holger Tingelhoff",
+      "role": "Bänder",
+      "phone": "0151 16792582",
+      "tel": "015116792582"
+    },
+    {
+      "name": "Pia Hiller",
+      "role": "Cashless & Büro",
+      "phone": "0178 1326632",
+      "tel": "01781326632"
+    },
+    {
+      "name": "Anna Böker",
+      "role": "Runner*in",
+      "phone": "0170 1927767",
+      "tel": "01701927767"
+    },
+    {
+      "name": "Franziska Pietzonka",
+      "role": "Runner*in",
+      "phone": "0176 36375316",
+      "tel": "017636375316"
+    },
+    {
+      "name": "Mark Schrader",
+      "role": "Runner*in",
+      "phone": "0176 10815723",
+      "tel": "017610815723"
+    },
+    {
+      "name": "Manu Jäger",
+      "role": "Runner*in",
+      "phone": "0152 08952076",
+      "tel": "015208952076"
+    },
+    {
+      "name": "Jo Frank",
+      "role": "Crewbetreuung",
+      "phone": "0157 36447320",
+      "tel": "015736447320"
+    },
+    {
+      "name": "Lisa Mann",
+      "role": "Stationsleitung 1",
+      "phone": "0172 8623061",
+      "tel": "01728623061"
+    },
+    {
+      "name": "Hannah Greitemann",
+      "role": "Stationsleitung 2",
+      "phone": "0151 59134110",
+      "tel": "015159134110"
+    },
+    {
+      "name": "Anna Mischkalla",
+      "role": "Stationsleitung 3",
+      "phone": "0176 34429926",
+      "tel": "017634429926"
+    },
+    {
+      "name": "Erika Wilches Quintero",
+      "role": "Stationsleitung 4",
+      "phone": "0162 4421574",
+      "tel": "01624421574"
+    }
   ]
 };
