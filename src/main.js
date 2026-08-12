@@ -221,8 +221,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.9.1';
+const APP_VERSION = '3.9.2';
 const CHANGELOG = [
+  ['3.9.2', 'San-Hejmo-Crew-Catering übersichtlicher: die Öffnungszeiten sind jetzt eine kompakte Tabelle (Zeitraum × Frühstück/Mittag/Abend) statt langer Textzeilen.'],
   ['3.9.1', 'San-Hejmo-Dienstplan hinterlegt: Einsatzplan „Bändertausch / Cashless / Akkreditierung" für Do 13.08. bis Sa 15.08. (alle Stationen), inkl. Namenssuche, Ansprechpersonen und Kalender-Export (.ics) je Schicht.'],
   ['3.9.0', 'San Hejmo erweitert und Klangpiraten-Inhalte getrennt: San Hejmo läuft über GET Cashless – die GET-Anleitungen erscheinen dort jetzt mit; neue San-Hejmo-Guides „Zufahrt Klever Tor & Z4" und Geländekarten (Referenz → Infos). Klangpiraten-spezifisches ist klar getrennt: die allgemeinen „Klangpiraten – Verhaltensregeln" liegen im Klangpiraten-Tab, die San-Hejmo-spezifischen Klangpiraten-Infos (Dienstplan/Schichttausch, Arbeitszeiten/Pausen, Anhänge/Crewlove) in der eigenen Kategorie „San Hejmo – Klangpiraten". Neu im GET-Bereich: offizielle Bild-Leitfäden für Top-Up (P400) und Ticket Swap.'],
   ['3.8.1', 'App in „Festival" umbenannt.'],

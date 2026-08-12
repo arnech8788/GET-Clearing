@@ -1661,12 +1661,16 @@ export const GUIDES = [
     body: [
       { warn: 'Mahlzeiten müssen vorab über Gewerke-/Teamleiter:in gebucht werden – keine Nachbestellung/Barzahlung vor Ort. Akkreditierung beim Check-in bereithalten.' },
       { h: 'Öffnungszeiten' },
-      { ul: [
-        'Frühstück – 03.–12.08.: 07:00–09:00 · 13.08.: 07:00–11:30 · Festival 14.–15.08.: 07:00–11:30 · 16.–21.08.: 07:00–09:00',
-        'Mittagessen – 03.–12.08.: 12:00–14:00 · 13.08.: 12:00–18:00 · Festival 14.–15.08.: 12:00–18:00 · 16.–21.08.: 12:00–14:00',
-        'Abendessen – 03.–12.08.: 18:00–19:30 · 13.08.: 18:00–21:00 · Festival 14.–15.08.: 18:00–01:00 · 16.–21.08.: 18:00–20:00',
-        'Trouble Shoot (Einlass): täglich 16:00–18:30'
-      ] },
+      { table: {
+        head: ['Zeitraum', 'Frühstück', 'Mittag', 'Abend'],
+        rows: [
+          ['03.–12.08.', '07:00–09:00', '12:00–14:00', '18:00–19:30'],
+          ['13.08.', '07:00–11:30', '12:00–18:00', '18:00–21:00'],
+          ['Festival 14.–15.08.', '07:00–11:30', '12:00–18:00', '18:00–01:00'],
+          ['16.–21.08.', '07:00–09:00', '12:00–14:00', '18:00–20:00']
+        ]
+      } },
+      { note: 'Crew-Catering Trouble Shoot (Einlass): täglich 16:00–18:30.' },
       { h: 'Standort & Regeln' },
       { ul: ['Shelter nahe Tagesbesuchereingang (Beschilderung gegenüber der WG-Party)', 'T-Shirt-Pflicht im Cateringbereich; Geschirr selbst zurückbringen', 'Kostenloses Wasser in Pfandflaschen (keine größeren Mengen mitnehmen)'] },
       { note: 'Mahlzeit stornieren: spätestens bis 18:00 Uhr am Vortag (über Gewerke-/Teamleiter:in bzw. am Check-in-Container). Kurzfristige Änderungen vorbehalten.' }
