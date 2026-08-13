@@ -1855,6 +1855,45 @@ export const GUIDES = [
       { img: '/get-swap-4.jpg', alt: 'GET Ticket Swap – Schritt' },
       { img: '/get-swap-5.jpg', alt: 'GET Ticket Swap – Schritt' }
     ]
+  },
+  {
+    id: 'sh-get-access',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'Ticketing & Access Specials (GET)',
+    problem: 'Was gilt bei San Hejmo für Tageswechsel, Tickets und Zonen?',
+    tags: ['sanhejmo', 'sh', 'get', 'ticket', 'zutritt', 'tageswechsel', 'ticketguard', 'parkticket', 'crew', 'zonen'],
+    source: 'GET Troubleshoot Support – San Hejmo Specials',
+    body: [
+      { h: 'Zutritts-Logik & Tageswechsel (wichtig!)' },
+      { ul: ['Der Event-Tag wechselt immer morgens um 06:00 Uhr', 'Samstag-Tickets: gelten verlängert bis Sonntag 15:59 Uhr (Abreise)', 'Sonntag: reiner Abreisetag (nur für Camper), keine neuen Tageszutritte'] },
+      { h: 'Ticket-Spezifikationen' },
+      { ul: ['TicketGuard aktiv: pro Tag kann nur EIN Personenticket auf einen Chip geswappt werden – das Gerät zeigt automatisch an, welches Bändchen/Badge ausgehändigt werden muss', 'Bändchen-Anzeige: beim Scannen zeigt das Gerät das passende Medium an', 'Parktickets: Wochenend-Parktickets sind exakt 1× pro Festival-Tag scanbar'] },
+      { h: 'Falsches Ticket / falscher Bereich' },
+      { ul: ['Tageskarten / 2-Day-Tickets ohne Camping gewähren keinen Zutritt zu den Campsites', 'VIP-Upgrades: gewähren erst ab dem Gültigkeitstag Zugang und müssen per Scanner auf das vorhandene Festival-Armband hinzugefügt/geswappt werden'] },
+      { h: 'Sonderfälle Crew' },
+      { note: 'Crew-Check: bei Crew-Chips am Gerät die „Tag-Info" nutzen – dort erscheint eine Kachel-Übersicht aller freigegebenen Zonen (z. B. Mainstage, Backstage, Artist Village).' }
+    ]
+  },
+  {
+    id: 'sh-get-troubleshoot',
+    cat: 'sh',
+    events: ['sanhejmo'],
+    title: 'GET-Troubleshoot – Zuständigkeit, Chip & Support',
+    problem: 'Wer ist wofür zuständig, und wie löse ich Chip-/Ticket-Probleme?',
+    tags: ['sanhejmo', 'sh', 'get', 'troubleshoot', 'support', 'chip', 'ticketpay', 'guthaben', 'verloren', 'sync'],
+    source: 'GET Troubleshoot Support – SOPs & San Hejmo Specials',
+    body: [
+      { h: 'Wer ist zuständig?' },
+      { ul: ['GET Support (wir): Systemfehler (Scanner bricht ab), Chip-Reparatur, manuelle Freischaltungen', 'TicketPay (Container): Ticketkauf, Namensänderungen (Umpersonalisierung), falsche Buchungen, Resale – Sync neuer Tickets ins GET-System dauert ~10–15 Min', 'Akkreditierung / Organized: Crew-Badges, Pressekarten, Dienstpläne, Worker-Armbänder', 'Veranstalter: Kulanzentscheidungen, Spezialfälle (z. B. Schwerbehinderte + Begleitpersonen)'] },
+      { h: 'Ticket- & Sync-Probleme' },
+      { ul: ['Neukauf/Resale/Umpersonalisierung: Sync TicketPay → GET dauert ~10–15 Min – Gast bitten, kurz zu warten', 'Ticket bereits verwendet / Scan-Abbruch: bricht der Erst-Scan ab, ist das Ticket oft entwertet, aber nicht auf dem Chip verbucht → Ticket-ID zur manuellen Freischaltung senden'] },
+      { h: 'Chip-Handling, Verlust & Guthaben' },
+      { ul: ['Chip defekt („not responding") / Scan bricht ab: Chip-Repair-Gerät nutzen; im Dropdown „Ja, ich habe den Chip bereits angehalten" wählen, UID manuell eintippen und auf neuen Chip übertragen', 'Bändchen verloren: Ticket im System suchen (Manage → Troubleshoot → Search), Bändchennummer (UID) + PIN (Secure Code) ablesen, Daten via Chip-Repair-Gerät („Chip verloren") auf neues Armband übertragen', 'Guthaben bei Umpersonalisierung: Restguthaben bleibt am „alten" Ticket gebunden – kann NICHT vor Ort transferiert werden (Auszahlung online nach dem Event)'] },
+      { h: 'GET-Support – die 4 Infos für den Chat' },
+      { ul: ['Foto: Vollbild des Tickets / der Fehlermeldung (Barcode sichtbar)', 'Nummer: Ticket-ID / Barcode / Chip-UID als Text (für Copy & Paste)', 'Name: Vor- & Nachname des Gastes', 'Problem: kurze Schilderung (z. B. „Bändchen verloren", „Scan bricht ab")'] },
+      { note: 'Fehlen diese Daten, verzögert sich die Hilfe – bitte als Standard-Nachricht übernehmen.' }
+    ]
   }
 ];
 
