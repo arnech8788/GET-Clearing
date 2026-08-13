@@ -8,7 +8,8 @@ import { ICO, escapeHtml, highlight } from './ui.js';
 import { state, save, eventChipsHtml } from './main.js';
 import { LINEUP } from './data/lineup.js';
 
-let lv = { query: '', favOnly: false, day: null, mode: 'stage' };
+let lv = { query: '', favOnly: false, day: null, mode: 'stage', open: new Set() };
+const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>';
 
 function setId(ev, day, floor, s) { return [ev, day, floor, s.von, s.artist].join('|'); }
 function isFav(id) { return (state.lineupFavorites || []).includes(id); }
@@ -30,6 +31,11 @@ export function toggleLineupFav(token) {
   save();
   renderLineup({ keepFocus: lv.mode === 'stage' });
 }
+export function toggleLineupInfo(token) {
+  const id = decodeURIComponent(token);
+  if (lv.open.has(id)) lv.open.delete(id); else lv.open.add(id);
+  renderLineup();
+}
 
 function activeDay(days) {
   if (!lv.day || !days.some((d) => d.day === lv.day)) lv.day = days[0] && days[0].day;
@@ -39,14 +45,23 @@ function activeDay(days) {
 // ---- Bühnen-Liste ----------------------------------------------------------
 function setRow(ev, day, floor, s, q) {
   const id = setId(ev, day, floor, s);
+  const token = encodeURIComponent(id);
   const fav = isFav(id);
+  const hasInfo = !!s.info;
+  const open = hasInfo && lv.open.has(id);
   const time = s.von ? `${escapeHtml(s.von)}–${escapeHtml(s.bis)}` : escapeHtml(s.note || '—');
   const extra = (s.note && s.von) ? ` <span class="lu-note">${escapeHtml(s.note)}</span>` : '';
+  const inner = `<span class="lu-time">${time}</span><span class="lu-artist">${highlight(escapeHtml(s.artist), q)}${extra}</span>${hasInfo ? `<span class="lu-chev">${CHEV}</span>` : ''}`;
+  const tap = hasInfo
+    ? `<button class="lu-settap" onclick="toggleLineupInfo('${token}')" aria-expanded="${open}">${inner}</button>`
+    : `<div class="lu-settap lu-settap-plain">${inner}</div>`;
   return `
-    <div class="lu-set">
-      <span class="lu-time">${time}</span>
-      <span class="lu-artist">${highlight(escapeHtml(s.artist), q)}${extra}</span>
-      <button class="lu-star ${fav ? 'on' : ''}" onclick="toggleLineupFav('${encodeURIComponent(id)}')" aria-label="Favorit">${ICO.star}</button>
+    <div class="lu-set ${open ? 'open' : ''}">
+      <div class="lu-setrow">
+        ${tap}
+        <button class="lu-star ${fav ? 'on' : ''}" onclick="toggleLineupFav('${token}')" aria-label="Favorit">${ICO.star}</button>
+      </div>
+      ${open ? `<div class="lu-info">${escapeHtml(s.info)}</div>` : ''}
     </div>`;
 }
 
@@ -162,4 +177,4 @@ export function renderLineup(opts = {}) {
   }
 }
 
-Object.assign(window, { setLineupSearch, toggleLineupFavOnly, toggleLineupFav, setLineupDay, setLineupMode });
+Object.assign(window, { setLineupSearch, toggleLineupFavOnly, toggleLineupFav, toggleLineupInfo, setLineupDay, setLineupMode });
