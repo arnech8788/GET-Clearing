@@ -221,8 +221,9 @@ function initTheme() {
 }
 
 // ---- "Mehr" / Einstellungen ----------------------------------------------
-const APP_VERSION = '3.10.0';
+const APP_VERSION = '3.11.0';
 const CHANGELOG = [
+  ['3.11.0', 'Line-Up: Acts mit hinterlegter Info lassen sich jetzt antippen und klappen eine Kurzbeschreibung auf (Akkordeon). Erste Infos für bekannte Headliner sind hinterlegt – weitere folgen.'],
   ['3.10.0', 'San-Hejmo-GET-Troubleshoot-Merkblatt aufgenommen: neue Guides „Ticketing & Access Specials (GET)" (Tageswechsel 06:00, Samstag-Ticket bis So 15:59, TicketGuard, Parktickets, Crew-Zonen) und „GET-Troubleshoot – Zuständigkeit, Chip & Support" (Zuständigkeiten, Ticket/Sync, Chip-Reparatur/Verlust/Guthaben, Chat-Syntax).'],
   ['3.9.3', 'San-Hejmo-Catering: Mittagessen-Zeit korrigiert – immer 12:00–17:30 Uhr.'],
   ['3.9.2', 'San-Hejmo-Crew-Catering übersichtlicher: die Öffnungszeiten sind jetzt eine kompakte Tabelle (Zeitraum × Frühstück/Mittag/Abend) statt langer Textzeilen.'],

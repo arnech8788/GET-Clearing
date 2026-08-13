@@ -153,7 +153,14 @@ svg { width: 22px; height: 22px; flex: none; }
 .lu-graphic svg { width: 16px; height: 16px; }
 .lu-day { font-size: 18px; font-weight: 800; margin: 20px 0 6px; }
 .lu-floor { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--cc, var(--accent)); border-left: 3px solid var(--cc, var(--accent)); padding-left: 8px; margin: 14px 0 6px; }
-.lu-set { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--bdr); }
+.lu-set { border-bottom: 1px solid var(--bdr); }
+.lu-setrow { display: flex; align-items: center; gap: 6px; }
+.lu-settap { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; background: none; border: none; padding: 8px 0; margin: 0; text-align: left; color: inherit; font: inherit; cursor: pointer; }
+.lu-settap-plain { cursor: default; }
+.lu-chev { margin-left: auto; flex: none; color: var(--tx3); display: inline-flex; transition: transform .18s ease; }
+.lu-chev svg { width: 18px; height: 18px; }
+.lu-set.open .lu-chev { transform: rotate(180deg); }
+.lu-info { padding: 2px 0 12px; font-size: 14px; line-height: 1.5; color: var(--tx2); white-space: pre-wrap; }
 .lu-time { flex: none; width: 92px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--tx2); }
 .lu-artist { flex: 1; min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.35; }
 .lu-note { font-size: 12px; font-weight: 600; color: var(--tx3); }

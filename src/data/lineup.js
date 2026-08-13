@@ -16,7 +16,7 @@ export const LINEUP = {
           { floor: 'Open Air Floor', color: '#e5399a', sets: [
             { von: '19:00', bis: '21:00', artist: 'Jasmin Blust' },
             { von: '21:00', bis: '22:30', artist: 'Dominik Eulberg' },
-            { von: '22:30', bis: '00:00', artist: 'Paul Kalkbrenner' },
+            { von: '22:30', bis: '00:00', artist: 'Paul Kalkbrenner', info: 'Berliner Techno-Produzent & Live-Act – bekannt durch „Berlin Calling" und „Sky and Sand".' },
             { von: '00:00', bis: '01:30', artist: 'Paul van Dyk' },
             { von: '01:30', bis: '03:00', artist: 'Neelix' },
             { von: '03:00', bis: '04:30', artist: 'Bennett' },
@@ -26,7 +26,7 @@ export const LINEUP = {
             { von: '19:00', bis: '21:00', artist: 'Ties van Dun' },
             { von: '21:00', bis: '22:30', artist: 'Felix Kröcher' },
             { von: '22:30', bis: '00:00', artist: 'Schrotthagen' },
-            { von: '00:00', bis: '01:30', artist: 'Sven Väth' },
+            { von: '00:00', bis: '01:30', artist: 'Sven Väth', info: 'Techno-Urgestein aus Frankfurt und Gründer des Cocoon-Labels.' },
             { von: '01:30', bis: '03:00', artist: 'Klaudia Gawlas' },
             { von: '03:00', bis: '04:30', artist: 'Fantasm' },
             { von: '04:30', bis: '06:00', artist: 'A.N.I.' }
@@ -47,7 +47,7 @@ export const LINEUP = {
             { von: '23:00', bis: '00:00', artist: 'Predator vs. Vince' },
             { von: '00:00', bis: '01:00', artist: 'Hysta' },
             { von: '01:00', bis: '02:00', artist: 'D-Fence vs. Karun' },
-            { von: '02:00', bis: '03:00', artist: 'Angerfist' },
+            { von: '02:00', bis: '03:00', artist: 'Angerfist', info: 'Niederländischer Hardcore-/Gabber-DJ – einer der bekanntesten des Genres.' },
             { von: '03:00', bis: '04:00', artist: 'N-Vitral' },
             { von: '04:00', bis: '05:00', artist: '99prblmz' },
             { von: '05:00', bis: '06:00', artist: 'DRS' },
@@ -63,7 +63,7 @@ export const LINEUP = {
             { von: '19:00', bis: '20:30', artist: 'Nick Schwenderling' },
             { von: '20:30', bis: '22:00', artist: 'Gestört aber Geil' },
             { von: '22:00', bis: '23:30', artist: 'Felix Jaehn' },
-            { von: '23:30', bis: '01:10', artist: 'Fatboy Slim' },
+            { von: '23:30', bis: '01:10', artist: 'Fatboy Slim', info: 'Britischer Big-Beat-DJ (Norman Cook) – „Praise You", „Right Here, Right Now".' },
             { von: '01:10', bis: '01:30', artist: 'Nature One Inc.' },
             { von: '01:30', bis: '03:00', artist: 'Alle Farben' },
             { von: '03:00', bis: '04:30', artist: 'Holy Priest' },
@@ -138,8 +138,8 @@ export const LINEUP = {
             { von: '16:30', bis: '17:30', artist: 'Leony' },
             { von: '18:15', bis: '19:15', artist: 'Kamrad' },
             { von: '20:00', bis: '21:15', artist: 'Roy Bianco & Die Abbrunzati Boys' },
-            { von: '22:15', bis: '23:30', artist: 'Bebe Rexha' },
-            { von: '00:30', bis: '02:00', artist: 'Jason Derulo' }
+            { von: '22:15', bis: '23:30', artist: 'Bebe Rexha', info: 'US-amerikanische Pop-Sängerin – u. a. „I\'m Good (Blue)" mit David Guetta.' },
+            { von: '00:30', bis: '02:00', artist: 'Jason Derulo', info: 'US-amerikanischer Pop-/R&B-Star mit zahlreichen Chart-Hits.' }
           ] },
           { floor: 'Electronic Stage', color: '#8b5cf6', sets: [
             { von: '15:00', bis: '16:30', artist: 'Felicia Bianco' },
@@ -207,8 +207,8 @@ export const LINEUP = {
             { von: '16:45', bis: '17:45', artist: 'Juli' },
             { von: '18:30', bis: '19:30', artist: 'Nura' },
             { von: '20:15', bis: '21:15', artist: 'Montez' },
-            { von: '22:15', bis: '23:30', artist: 'Marteria' },
-            { von: '00:30', bis: '02:00', artist: 'SDP' }
+            { von: '22:15', bis: '23:30', artist: 'Marteria', info: 'Deutscher Rapper aus Rostock (Marten Laciny).' },
+            { von: '00:30', bis: '02:00', artist: 'SDP', info: 'Deutsches Pop-/Hip-Hop-Duo aus Berlin.' }
           ] },
           { floor: 'Electronic Stage', color: '#8b5cf6', sets: [
             { von: '15:00', bis: '16:30', artist: 'Angie Mill' },
