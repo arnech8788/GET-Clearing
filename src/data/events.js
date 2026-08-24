@@ -67,6 +67,16 @@ export const EVENTS = [
     desc: 'Airport Weeze · Festival 14.–15.08.2026 (Camping ab 13.08.) · Crew-Infos',
     color: '#ec4899',
     selectable: true
+  },
+  {
+    id: 'gluecksgefuehle',
+    kind: 'festival',
+    name: 'Glücksgefühle Festival 2026',
+    short: 'GG',
+    desc: '03.–05.09.2026 (Pre-Party Do 03.09.) · Besucher-Infos (Line-Up & Geländeplan)',
+    color: '#7c3aed',
+    selectable: true,
+    standalone: true // eigener Cashless-Kontext (Glücks-Coin) → keine GET-alwaysOn-Inhalte mitzeigen
   }
 ];
 

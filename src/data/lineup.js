@@ -265,5 +265,117 @@ export const LINEUP = {
         ]
       }
     ]
+  },
+
+  gluecksgefuehle: {
+    title: 'Glücksgefühle Festival 2026 · Timetable (Pre-Party Do · Fr · Sa)',
+    days: [
+      {
+        day: 'Donnerstag (Pre-Party)',
+        floors: [
+          { floor: 'Dopamin Stage', color: '#f5b301', sets: [
+            { von: '17:00', bis: '17:50', artist: 'Knolldoll' },
+            { von: '18:05', bis: '18:50', artist: 'Alexander Marcus' },
+            { von: '19:00', bis: '19:30', artist: 'Pietro Lombardi' },
+            { von: '19:35', bis: '20:05', artist: 'Malle Anja' },
+            { von: '20:10', bis: '21:10', artist: 'Alle Farben' },
+            { von: '21:15', bis: '22:00', artist: 'Jebroer' }
+          ] },
+          { floor: 'Technobus', color: '#8b5cf6', sets: [
+            { von: '17:00', bis: '19:00', artist: 'Nightoftech' },
+            { von: '19:00', bis: '20:30', artist: 'Caro van Ee' },
+            { von: '20:30', bis: '22:00', artist: 'QRIS' },
+            { von: '22:00', bis: '23:55', artist: 'Pappenheimer' }
+          ] }
+        ]
+      },
+      {
+        day: 'Freitag',
+        floors: [
+          { floor: 'Euphoria Stage', color: '#e5399a', sets: [
+            { von: '14:00', bis: '14:30', artist: 'Loi' },
+            { von: '15:00', bis: '15:45', artist: 'Tom Gregory' },
+            { von: '16:15', bis: '16:45', artist: 'Leony' },
+            { von: '17:15', bis: '18:00', artist: 'Montez' },
+            { von: '18:30', bis: '19:30', artist: 'Scooter' },
+            { von: '20:15', bis: '21:15', artist: 'Ayliva' },
+            { von: '22:00', bis: '23:00', artist: 'Marteria', info: 'Rapper aus Rostock – Hits wie „Kids (2 Finger an den Kopf)" und „Lila Wolken".' }
+          ] },
+          { floor: 'Dopamin Stage', color: '#f5b301', sets: [
+            { von: '14:00', bis: '14:20', artist: 'Grüngürtelrosen' },
+            { von: '14:30', bis: '15:00', artist: 'Alphaville' },
+            { von: '15:30', bis: '16:15', artist: 'Nura' },
+            { von: '16:30', bis: '17:30', artist: 'Mia Julia' },
+            { von: '18:00', bis: '19:00', artist: '01099' },
+            { von: '19:45', bis: '20:30', artist: 'Andreas Gabalier' },
+            { von: '21:30', bis: '22:45', artist: 'Ski Aggu' }
+          ] },
+          { floor: 'Cloud 9 Stage', color: '#2f8fc7', sets: [
+            { von: '14:00', bis: '15:00', artist: 'Noel Holler' },
+            { von: '15:00', bis: '16:00', artist: 'Ely Oaks' },
+            { von: '16:00', bis: '17:00', artist: 'Brennan Heart' },
+            { von: '17:00', bis: '18:00', artist: 'David Puentez' },
+            { von: '18:00', bis: '19:15', artist: 'Bunt.' },
+            { von: '19:15', bis: '20:30', artist: 'Boris Brejcha' },
+            { von: '20:30', bis: '21:45', artist: 'Dimitri Vegas & Like Mike' },
+            { von: '21:45', bis: '23:00', artist: 'Hardwell' }
+          ] },
+          { floor: 'Technobus', color: '#8b5cf6', sets: [
+            { von: '12:30', bis: '14:00', artist: 'Chroove' },
+            { von: '14:00', bis: '15:30', artist: 'Jetset Jourdain' },
+            { von: '15:30', bis: '17:00', artist: 'Isek' },
+            { von: '17:00', bis: '18:30', artist: 'Chany Dakota' },
+            { von: '18:30', bis: '20:00', artist: 'noch offen', note: 'Act noch nicht bestätigt' },
+            { von: '20:00', bis: '21:30', artist: 'Bovski' },
+            { von: '21:30', bis: '23:00', artist: 'Anvee' },
+            { von: '23:00', bis: '00:55', artist: 'Kxxma' }
+          ] }
+        ]
+      },
+      {
+        day: 'Samstag',
+        floors: [
+          { floor: 'Euphoria Stage', color: '#e5399a', sets: [
+            { von: '14:00', bis: '14:45', artist: 'Blue' },
+            { von: '15:15', bis: '16:00', artist: 'Jazeek' },
+            { von: '16:30', bis: '17:15', artist: 'Max Giesinger' },
+            { von: '17:20', bis: '17:40', artist: 'Mark Medlock' },
+            { von: '18:00', bis: '19:00', artist: 'Zartmann' },
+            { von: '19:30', bis: '20:30', artist: 'Mark Forster' },
+            { von: '21:30', bis: '22:45', artist: 'David Guetta', info: 'French House-/EDM-Superstar – „Titanium", „When Love Takes Over", „Memories".' },
+            { von: '22:45', bis: '23:00', artist: 'Closing Ritual' }
+          ] },
+          { floor: 'Dopamin Stage', color: '#f5b301', sets: [
+            { von: '14:00', bis: '14:30', artist: 'Milleniumkid' },
+            { von: '15:00', bis: '15:30', artist: 'Julian Sommer' },
+            { von: '16:00', bis: '16:30', artist: 'Culcha Candela' },
+            { von: '17:00', bis: '17:45', artist: 'Bausa' },
+            { von: '18:00', bis: '19:00', artist: 'HBz' },
+            { von: '19:30', bis: '20:15', artist: 'No Angels' },
+            { von: '21:00', bis: '22:30', artist: 'SDP', info: 'Berliner Pop-/Hip-Hop-Duo – bekannt für „Ich will nur dass du weißt" und energiegeladene Live-Shows.' }
+          ] },
+          { floor: 'Cloud 9 Stage', color: '#2f8fc7', sets: [
+            { von: '14:00', bis: '15:00', artist: 'Fast Boy' },
+            { von: '15:00', bis: '16:00', artist: 'Nervo' },
+            { von: '16:00', bis: '17:00', artist: 'Felix Jaehn' },
+            { von: '17:00', bis: '18:00', artist: 'Neelix' },
+            { von: '18:00', bis: '19:00', artist: 'KSHMR' },
+            { von: '19:00', bis: '20:00', artist: 'Lost Frequencies' },
+            { von: '20:00', bis: '21:15', artist: 'W&W' },
+            { von: '21:15', bis: '22:30', artist: 'Timmy Trumpet' }
+          ] },
+          { floor: 'Technobus', color: '#8b5cf6', sets: [
+            { von: '12:30', bis: '14:00', artist: 'Max Bering' },
+            { von: '14:00', bis: '15:30', artist: 'Peter Pahn' },
+            { von: '15:30', bis: '17:00', artist: 'Jason Wats' },
+            { von: '17:00', bis: '18:30', artist: 'Matthias Olck' },
+            { von: '18:30', bis: '20:00', artist: 'Ava Crown' },
+            { von: '20:00', bis: '21:30', artist: 'Drumkomplex' },
+            { von: '21:30', bis: '23:00', artist: 'noch offen', note: 'Act noch nicht bestätigt' },
+            { von: '23:00', bis: '00:55', artist: 'Nick Schwenderling' }
+          ] }
+        ]
+      }
+    ]
   }
 };
