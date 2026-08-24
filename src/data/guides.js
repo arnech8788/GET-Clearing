@@ -31,7 +31,8 @@ export const CATEGORIES = [
   { id: 'no', name: 'NATURE ONE – Crew-Infos', icon: 'flag', color: '#27ae60' },
   { id: 'sh', name: 'San Hejmo – Crew-Infos', icon: 'flag', color: '#ec4899' },
   { id: 'sh-kp', name: 'San Hejmo – Klangpiraten', icon: 'flag', color: '#9b59b6' },
-  { id: 'kp', name: 'Klangpiraten – Allgemein', icon: 'flag', color: '#9b59b6' }
+  { id: 'kp', name: 'Klangpiraten – Allgemein', icon: 'flag', color: '#9b59b6' },
+  { id: 'gg', name: 'Glücksgefühle – Besucher-Infos', icon: 'flag', color: '#7c3aed' }
 ];
 
 export const GUIDES = [
@@ -1893,6 +1894,104 @@ export const GUIDES = [
       { h: 'GET-Support – die 4 Infos für den Chat' },
       { ul: ['Foto: Vollbild des Tickets / der Fehlermeldung (Barcode sichtbar)', 'Nummer: Ticket-ID / Barcode / Chip-UID als Text (für Copy & Paste)', 'Name: Vor- & Nachname des Gastes', 'Problem: kurze Schilderung (z. B. „Bändchen verloren", „Scan bricht ab")'] },
       { note: 'Fehlen diese Daten, verzögert sich die Hilfe – bitte als Standard-Nachricht übernehmen.' }
+    ]
+  },
+
+  // ---- Glücksgefühle Festival 2026 (Besucher-Infos) ------------------------
+  {
+    id: 'gg-basics',
+    cat: 'gg',
+    events: ['gluecksgefuehle'],
+    title: 'Basics: Cashless, Gehörschutz & Service',
+    problem: 'Wie bezahle ich, und wo sind Info Point, Locker & Co.?',
+    tags: ['gluecksgefuehle', 'gg', 'glücks-coin', 'coin', 'cashless', 'top up', 'bezahlen', 'info point', 'helpdesk', 'gehörschutz', 'locker', 'powerbank', 'ec automat', 'geld'],
+    source: 'Glücksgefühle Festival – Besucher-Infos (Geländeplan)',
+    body: [
+      { h: 'Bezahlen: Glücks-Coin (Cashless)' },
+      { ul: ['Bezahlt wird bargeldlos mit dem Glücks-Coin', 'Aufladen an den Glücks-Coin Top-Up-Stationen auf dem Gelände', 'EC-Automat auf dem Gelände vorhanden, falls du Bargeld brauchst'] },
+      { h: 'Hilfe & Service' },
+      { ul: ['Info Point & Cashless Helpdesk: Anlaufstelle bei Fragen und Cashless-Problemen', 'Locker: abschließbare Schließfächer', 'Powerbank-Station: Handy laden / Powerbank leihen', 'Gehörschutz-Verkauf am Eingang', 'Barrierefreiheit: Rollstuhl-Podest vorhanden'] },
+      { note: 'Du bist nur am Samstag da – lade den Glücks-Coin gleich am Eingang auf, dann sparst du dir später die Wege zu den Top-Up-Stationen.' }
+    ]
+  },
+  {
+    id: 'gg-orientierung',
+    cat: 'gg',
+    events: ['gluecksgefuehle'],
+    title: 'Geländeplan / Orientierung (Legende & Punkte 1–61)',
+    problem: 'Wo ist welche Bühne, welcher Stand, welche Nummer auf dem Plan?',
+    tags: ['gluecksgefuehle', 'gg', 'geländeplan', 'plan', 'karte', 'map', 'orientierung', 'bühne', 'stage', 'euphoria', 'dopamin', 'cloud 9', 'technobus', 'street food', 'riesenrad', 'eingang', 'merch'],
+    source: 'Glücksgefühle Festival – Geländeplan (Besucher)',
+    body: [
+      { h: 'Symbole auf dem Plan' },
+      { ul: ['Glücks-Coin Top-Up-Station', 'Food', 'Drink', 'WC', 'Info Point & Cashless Helpdesk', 'VIP-Decks', 'Sky Access', 'Powerbank-Station', 'Locker', 'Rollstuhl-Podest', 'EC-Automat'] },
+      { h: 'Bühnen (auf einen Blick)' },
+      { ul: ['24 · Euphoria Stage', '35 · Cloud 9 Stage', '37 · Camp Asbach Stage', '38 · Dopamin Stage', '53 · Glossy Stage (Graffiti Area)', '57 · Technobus'] },
+      { h: 'Alle Punkte 1–61' },
+      { table: { head: ['Nr.', 'Ort'], rows: [
+        ['1', 'Eingang / Ausgang'],
+        ['2', 'Gehörschutz-Verkauf'],
+        ['3', 'Merch Cube'],
+        ['4', 'Fiat Casa & Testdrive'],
+        ['5', 'AIDA Festival Dock'],
+        ['6', 'LP10 Supreme Base'],
+        ['7', 'Fielmann Sonnendeck'],
+        ['8', 'Lidl Festiwelt'],
+        ['9', 'The Vino Garden'],
+        ['10', 'Zip-Line'],
+        ['11', "Jim Beam The Friends' Place"],
+        ['12', 'Aeronaut Kettenflieger'],
+        ['13', 'Oral-B Smile Station'],
+        ['14', 'Schauinsland-Reisen Happy Beach'],
+        ['15', 'Glücksoase by Schauinsland-Reisen'],
+        ['16', 'Capri-Sun Bar'],
+        ['17', 'Place de Lillet'],
+        ['18', 'Three Sixty World'],
+        ['19', 'Red Bull Energy Station'],
+        ['20', 'Glücksbrunnen'],
+        ['21', 'Knut Hansen Barcontainer'],
+        ['22', 'DKMS – Are You A Match?'],
+        ['23', 'Fan-Base by Union Investment'],
+        ['24', 'Euphoria Stage'],
+        ['25', 'VCARB Garage Sessions'],
+        ['26', 'Sneaker Designs by Tise'],
+        ['27', 'Merch Boutique'],
+        ['28', 'GLS Point'],
+        ['29', 'VCARB Garage Sessions'],
+        ['30', 'Red Bull Bar'],
+        ['31', 'Riesenrad'],
+        ['32', 'IQOS House of Remix'],
+        ['33', 'Bacardi Mixed with Coca-Cola Boom Box'],
+        ['34', 'Fritt Glücksbase'],
+        ['35', 'Cloud 9 Stage'],
+        ['36', 'Street Food Meile'],
+        ['37', 'Camp Asbach Stage'],
+        ['38', 'Dopamin Stage'],
+        ['39', 'New Yorker Festival Store & Karaoke Stage'],
+        ['40', 'IQOS House of Remix Station'],
+        ['41', 'Mom Said No Tattoo'],
+        ['42', 'More Nutrition'],
+        ['43', 'Polizei BW Karriere'],
+        ['44', 'Winamax Box & Winamax E-Kartbahn'],
+        ['45', 'TSG-Robokeeper'],
+        ['46', 'Lidl Padel Zone'],
+        ['47', 'Adler Mannheim Powerplayground'],
+        ['48', 'Beachvolleyball by Irle'],
+        ['49', 'Poldis Sports Club'],
+        ['50', 'Postcode Lotterie – Glücksgefühle im Anflug'],
+        ['51', 'Breakdancer'],
+        ['52', 'Motocross Stunt Show by Circus Flic Flac'],
+        ['53', 'Graffiti Area & Glossy Stage'],
+        ['54', 'Level Axe'],
+        ['55', 'Holy Circus'],
+        ['56', 'Game Planet'],
+        ['57', 'Technobus'],
+        ['58', 'Eingang Supreme Camping'],
+        ['59', 'Breakfast Club'],
+        ['60', 'Wellness Area'],
+        ['61', 'The DJ Bus']
+      ] } },
+      { note: 'Legende & Nummern aus dem offiziellen Geländeplan übernommen. Die Plan-Grafik selbst kann bei Bedarf als Bild ergänzt werden.' }
     ]
   }
 ];
